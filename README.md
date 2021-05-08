@@ -1,10 +1,11 @@
 # Revit API Windows Help Files (.chm)
 
-A collection of the Revit API CHM Windows Help Files from the Revit SDKs
+A collection of the Revit API CHM Windows Help Files from the Revit SDKs.
 
-_Because sometimes you just want that .chm file without having to download and install each SDK_
+_Because sometimes you just want that .chm file without having to download and install each SDK_.
 
-These files are also used to generate [revitapidocs.com](https://www.revitapidocs.com/) and [apidocs.co](https://apidocs.co/) which are web presentation of the same content. You should probably use them instead wink wink.
+These files are also used to generate [revitapidocs.com](https://www.revitapidocs.com/) and [apidocs.co](https://apidocs.co/) which are web presentation of the same content.
+You should probably use them instead wink wink.
 
 ### LFS
 
