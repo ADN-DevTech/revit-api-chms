@@ -20,6 +20,10 @@ Due to the growing size of the CHM files, we were forced to turn on
 the [Git Large File Storage (LFS)](https://git-lfs.github.com/) and move the repository to a new location in the ADN-DevTech organisation
 at [github.com/ADN-DevTech/revit-api-chms](https://github.com/ADN-DevTech/revit-api-chms).
 
+### Credits
+This repository is a fork of [gtalarico/revit-api-chms](https://github.com/gtalarico/revit-api-chms). The content was moved to a ADN-DevTech repository due to cost associated with hosting LFS.
+
+
 ### Disclaimer
 
 Content is provided free of charge for education and information purposes.
