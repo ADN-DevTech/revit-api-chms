@@ -1,0 +1,168 @@
+﻿<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="Microsoft.Help.SelfBranded" content="true" /><meta name="Language" content="en-us" /><meta name="Microsoft.Help.Locale" content="en-us" /><meta name="Microsoft.Help.TopicLocale" content="en-us" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" type="text/css" href="../styles/branding.css" /><link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" /><script type="text/javascript" src="../scripts/branding.js"></script><title>Solid.IntersectWithCurve Method</title><meta name="Title" content="IntersectWithCurve Method" /><meta name="Microsoft.Help.Id" content="M:Autodesk.Revit.DB.Solid.IntersectWithCurve(Autodesk.Revit.DB.Curve,Autodesk.Revit.DB.SolidCurveIntersectionOptions)" /><meta name="Microsoft.Help.ContentType" content="Reference" /><meta name="System.Keywords" content="Solid.IntersectWithCurve method" /><meta name="System.Keywords" content="IntersectWithCurve method" /><meta name="Microsoft.Help.F1" content="Autodesk.Revit.DB.Solid.IntersectWithCurve" /><meta name="Microsoft.Help.F1" content="Solid.IntersectWithCurve" /><meta name="Microsoft.Help.F1" content="IntersectWithCurve" /><meta name="container" content="Autodesk.Revit.DB" /><meta name="file" content="8e04f956-b262-7f3e-59cb-d2c02c2769d7" /><meta name="guid" content="8e04f956-b262-7f3e-59cb-d2c02c2769d7" /><meta name="Microsoft.Help.Category" content="CSharp" /><meta name="Microsoft.Help.Category" content="VB" /><meta name="Description" content="Calculates and returns the intersection between a curve and this solid." /><link type="text/css" rel="stylesheet" href="../styles/highlight.css" /><script type="text/javascript" src="../scripts/highlight.js"> </script><link rel="stylesheet" type="text/css" href="../styles/branding-Help1.css" /></head><body onload="SetDefaultLanguage('cs');"><input type="hidden" id="userDataCache" class="userDataStyle" /><div id="PageHeader" class="pageHeader">Revit 2025 API</div><div class="pageBody"><div id="TopicContent" class="topicContent"><table class="titleTable"><tr><td class="titleColumn"><h1>Solid<span id="LST3FD8D6B1_0" data-languageSpecificText="cpp=::|nu=."></span>Intersect<wbr />With<wbr />Curve Method</h1></td></tr></table><div class="summary">
+   Calculates and returns the intersection between a curve and this solid.
+</div><br /><strong>Namespace:</strong> <a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB</a><br /><strong>Assembly:</strong> RevitAPI (in RevitAPI.dll) Version: 25.0.0.0 (25.0.0.0)<div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDB')" onkeypress="SectionExpandCollapse_CheckKey('IDB', event)" tabindex="0"><img id="IDBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Syntax</span></div><div id="IDBSection" class="collapsibleSection"><div id="IDAB" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAB_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cs','1','4');return false;">C#</a></div><div id="IDAB_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','vb','2','4');return false;">VB</a></div><div id="IDAB_tab3" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cpp','3','4');return false;">C++</a></div><div id="IDAB_tab4" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAB_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAB');return false;" title="Copy">Copy</a></div></div><div id="IDAB_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="keyword">public</span> <span class="identifier">SolidCurveIntersection</span> <span class="identifier">IntersectWithCurve</span>(
+	<span class="identifier">Curve</span> <span class="parameter">curve</span>,
+	<span class="identifier">SolidCurveIntersectionOptions</span> <span class="parameter">options</span>
+)</pre></div><div id="IDAB_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">Public</span> <span class="keyword">Function</span> <span class="identifier">IntersectWithCurve</span> ( 
+	<span class="parameter">curve</span> <span class="keyword">As</span> <span class="identifier">Curve</span>,
+	<span class="parameter">options</span> <span class="keyword">As</span> <span class="identifier">SolidCurveIntersectionOptions</span>
+) <span class="keyword">As</span> <span class="identifier">SolidCurveIntersection</span></pre></div><div id="IDAB_code_Div3" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">public</span>:
+<span class="identifier">SolidCurveIntersection</span>^ <span class="identifier">IntersectWithCurve</span>(
+	<span class="identifier">Curve</span>^ <span class="parameter">curve</span>, 
+	<span class="identifier">SolidCurveIntersectionOptions</span>^ <span class="parameter">options</span>
+)</pre></div><div id="IDAB_code_Div4" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">member</span> <span class="identifier">IntersectWithCurve</span> : 
+        <span class="parameter">curve</span> : <span class="identifier">Curve</span> * 
+        <span class="parameter">options</span> : <span class="identifier">SolidCurveIntersectionOptions</span> <span class="keyword">-&gt;</span> <span class="identifier">SolidCurveIntersection</span> </pre></div></div></div><h4>Parameters</h4><dl><dt class="has-text-weight-normal"><span class="parameter">curve</span>  <a href="400cc9b6-9ff7-de85-6fd8-c20002209d25.htm">Curve</a></dt><dd>
+   The curve.
+</dd><dt class="has-text-weight-normal"><span class="parameter">options</span>  <a href="fce58e1d-47c7-9afb-d701-ec73d97d0f2b.htm">SolidCurveIntersectionOptions</a></dt><dd>
+   The options.  If NULL, the default options will be used.
+</dd></dl><h4>Return Value</h4><a href="888716e3-376f-c4db-abe3-4e826c799656.htm">SolidCurveIntersection</a><br />
+   The intersection results.
+</div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDEC')" onkeypress="SectionExpandCollapse_CheckKey('IDEC', event)" tabindex="0"><img id="IDECToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Exceptions</span></div><div id="IDECSection" class="collapsibleSection"><table><tr><th>Exception</th><th>Condition</th></tr><tr><td><a href="2e6e4206-97a8-dd4b-df5d-4269f4bb6088.htm">ArgumentException</a></td><td>
+   The input curve is not bound.
+   -or-
+   The input solid is not a closed volume.
+</td></tr><tr><td><a href="631e1424-60f4-929b-4e52-dda9dcd26316.htm">ArgumentNullException</a></td><td>
+   A non-optional argument was NULL
+</td></tr></table></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDHC')" onkeypress="SectionExpandCollapse_CheckKey('IDHC', event)" tabindex="0"><img id="IDHCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Example</span></div><div id="IDHCSection" class="collapsibleSection"><div id="IDAHC" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAHC_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAHC','cs','1','4');return false;">C#</a></div><div id="IDAHC_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAHC','vb','2','4');return false;">VB</a></div><div id="IDAHC_tab3" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDAHC','cpp','3','4');return false;">C++</a></div><div id="IDAHC_tab4" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDAHC','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAHC_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAHC');return false;" title="Copy">Copy</a></div></div><div id="IDAHC_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="highlight-keyword">private</span> <span class="highlight-keyword">void</span> FindColumnRebarIntersections(Document document, FamilyInstance column)
+{
+    <span class="highlight-comment">// We will be computing the total length of the rebar inside the column</span>
+    <span class="highlight-keyword">double</span> totalRebarLengthInColumn = <span class="highlight-number">0</span>;
+
+    <span class="highlight-comment">// Find rebar hosted by this column</span>
+    RebarHostData rebarHostData = RebarHostData.GetRebarHostData(column);
+    <span class="highlight-keyword">if</span> (rebarHostData == <span class="highlight-keyword">null</span>)
+    {
+        <span class="highlight-keyword">return</span>;
+    }
+
+    IList&lt;Rebar&gt; rebars = rebarHostData.GetRebarsInHost();
+    <span class="highlight-keyword">if</span> (rebars.Count == <span class="highlight-number">0</span>)
+    {
+        <span class="highlight-keyword">return</span>;
+    }
+
+    <span class="highlight-comment">// Retrieve geometry of the column</span>
+    Options geomOptions = <span class="highlight-keyword">new</span> Options();
+    geomOptions.ComputeReferences = <span class="highlight-keyword">true</span>;
+    geomOptions.DetailLevel = ViewDetailLevel.Fine;
+    GeometryElement elemGeometry = column.get_Geometry(geomOptions);
+
+    <span class="highlight-comment">// Examine all geometry primitives of the column</span>
+    <span class="highlight-keyword">foreach</span> (GeometryObject elemPrimitive <span class="highlight-keyword">in</span> elemGeometry)
+    {
+
+        <span class="highlight-comment">// Skip objects that are not geometry instances</span>
+        GeometryInstance gInstance = elemPrimitive <span class="highlight-keyword">as</span> GeometryInstance;
+        <span class="highlight-keyword">if</span> (gInstance == <span class="highlight-keyword">null</span>)
+        {
+            <span class="highlight-keyword">continue</span>;
+        }
+
+        <span class="highlight-comment">// Retrieve geometry of each found geometry instance</span>
+        GeometryElement instGeometry = gInstance.GetInstanceGeometry();
+        <span class="highlight-keyword">foreach</span> (GeometryObject instPrimitive <span class="highlight-keyword">in</span> instGeometry)
+        {
+
+            <span class="highlight-comment">// Skip non-solid sobject</span>
+            Solid solid = instPrimitive <span class="highlight-keyword">as</span> Solid;
+            <span class="highlight-keyword">if</span> (solid == <span class="highlight-keyword">null</span>)
+            {
+                <span class="highlight-keyword">continue</span>;
+            }
+
+            SolidCurveIntersectionOptions intersectOptions = <span class="highlight-keyword">new</span> SolidCurveIntersectionOptions();
+            <span class="highlight-keyword">foreach</span> (Rebar rebar <span class="highlight-keyword">in</span> rebars)
+            {
+                <span class="highlight-comment">// Get the centerlines for the rebar to find their intersection with the column</span>
+                <span class="highlight-keyword">bool</span> selfIntersection = <span class="highlight-keyword">false</span>;
+                <span class="highlight-keyword">bool</span> suppresHooks = <span class="highlight-keyword">false</span>;
+                <span class="highlight-keyword">bool</span> suppresBends = <span class="highlight-keyword">false</span>;
+                IList&lt;Curve&gt; curves = rebar.GetCenterlineCurves(selfIntersection, suppresHooks, suppresBends, MultiplanarOption.IncludeOnlyPlanarCurves, <span class="highlight-number">0</span>);
+
+                <span class="highlight-comment">// Examine every segment of every curve of the centerline</span>
+                <span class="highlight-keyword">foreach</span> (Curve curve <span class="highlight-keyword">in</span> curves)
+                {
+                    SolidCurveIntersection intersection = solid.IntersectWithCurve(curve, intersectOptions);
+                    <span class="highlight-keyword">for</span> (<span class="highlight-keyword">int</span> segment = <span class="highlight-number">0</span>; segment &lt;= intersection.SegmentCount - <span class="highlight-number">1</span>; segment++)
+                    {
+                        <span class="highlight-comment">// Calculate length of the rebar that is inside the column</span>
+                        Curve curveInside = intersection.GetCurveSegment(segment);
+                        <span class="highlight-keyword">double</span> rebarLengthInColumn = curveInside.Length;
+                        totalRebarLengthInColumn = totalRebarLengthInColumn + rebarLengthInColumn;
+                    }
+                }
+
+            }
+        }
+    }
+
+}</pre></div><div id="IDAHC_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="highlight-keyword">Private</span> <span class="highlight-keyword">Sub</span> FindColumnRebarIntersections(document <span class="highlight-keyword">As</span> Document, column <span class="highlight-keyword">As</span> FamilyInstance)
+    <span class="highlight-comment">' We will be computing the total length of the rebar inside the column</span>
+    <span class="highlight-keyword">Dim</span> totalRebarLengthInColumn <span class="highlight-keyword">As</span> <span class="highlight-keyword">Double</span> = <span class="highlight-number">0</span>
+
+    <span class="highlight-comment">' Find rebar hosted by this column</span>
+    <span class="highlight-keyword">Dim</span> rebarHostData__1 <span class="highlight-keyword">As</span> RebarHostData = RebarHostData.GetRebarHostData(column)
+    <span class="highlight-keyword">If</span> rebarHostData__1 <span class="highlight-keyword">Is</span> <span class="highlight-keyword">Nothing</span> <span class="highlight-keyword">Then</span>
+        <span class="highlight-keyword">Return</span>
+    <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+
+    <span class="highlight-keyword">Dim</span> rebars <span class="highlight-keyword">As</span> IList(<span class="highlight-keyword">Of</span> Rebar) = rebarHostData__1.GetRebarsInHost()
+    <span class="highlight-keyword">If</span> rebars.Count = <span class="highlight-number">0</span> <span class="highlight-keyword">Then</span>
+        <span class="highlight-keyword">Return</span>
+    <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+
+    <span class="highlight-comment">' Retrieve geometry of the column</span>
+    <span class="highlight-keyword">Dim</span> geomOptions <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> Options()
+    geomOptions.ComputeReferences = <span class="highlight-keyword">True</span>
+    geomOptions.DetailLevel = ViewDetailLevel.Fine
+    <span class="highlight-keyword">Dim</span> elemGeometry <span class="highlight-keyword">As</span> GeometryElement = column.Geometry(geomOptions)
+
+    <span class="highlight-comment">' Examine all geometry primitives of the column</span>
+    <span class="highlight-keyword">For</span> <span class="highlight-keyword">Each</span> elemPrimitive <span class="highlight-keyword">As</span> GeometryObject <span class="highlight-keyword">In</span> elemGeometry
+
+        <span class="highlight-comment">' Skip objects that are not geometry instances</span>
+        <span class="highlight-keyword">Dim</span> gInstance <span class="highlight-keyword">As</span> GeometryInstance = <span class="highlight-keyword">TryCast</span>(elemPrimitive, GeometryInstance)
+        <span class="highlight-keyword">If</span> gInstance <span class="highlight-keyword">Is</span> <span class="highlight-keyword">Nothing</span> <span class="highlight-keyword">Then</span>
+            <span class="highlight-keyword">Continue</span> <span class="highlight-keyword">For</span>
+        <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+
+        <span class="highlight-comment">' Retrieve geometry of each found geometry instance</span>
+        <span class="highlight-keyword">Dim</span> instGeometry <span class="highlight-keyword">As</span> GeometryElement = gInstance.GetInstanceGeometry()
+        <span class="highlight-keyword">For</span> <span class="highlight-keyword">Each</span> instPrimitive <span class="highlight-keyword">As</span> GeometryObject <span class="highlight-keyword">In</span> instGeometry
+
+            <span class="highlight-comment">' Skip non-solid sobject</span>
+            <span class="highlight-keyword">Dim</span> solid <span class="highlight-keyword">As</span> Solid = <span class="highlight-keyword">TryCast</span>(instPrimitive, Solid)
+            <span class="highlight-keyword">If</span> solid <span class="highlight-keyword">Is</span> <span class="highlight-keyword">Nothing</span> <span class="highlight-keyword">Then</span>
+                <span class="highlight-keyword">Continue</span> <span class="highlight-keyword">For</span>
+            <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+
+            <span class="highlight-keyword">Dim</span> intersectOptions <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> SolidCurveIntersectionOptions()
+            <span class="highlight-keyword">For</span> <span class="highlight-keyword">Each</span> rebar <span class="highlight-keyword">As</span> Rebar <span class="highlight-keyword">In</span> rebars
+                <span class="highlight-comment">' Get the centerlines for the rebar to find their intersection with the column</span>
+                <span class="highlight-keyword">Dim</span> selfIntersection <span class="highlight-keyword">As</span> <span class="highlight-keyword">Boolean</span> = <span class="highlight-keyword">False</span>
+                <span class="highlight-keyword">Dim</span> suppresHooks <span class="highlight-keyword">As</span> <span class="highlight-keyword">Boolean</span> = <span class="highlight-keyword">False</span>
+                <span class="highlight-keyword">Dim</span> suppresBends <span class="highlight-keyword">As</span> <span class="highlight-keyword">Boolean</span> = <span class="highlight-keyword">False</span>
+                <span class="highlight-keyword">Dim</span> curves <span class="highlight-keyword">As</span> IList(<span class="highlight-keyword">Of</span> Curve) = rebar.GetCenterlineCurves(selfIntersection, suppresHooks, suppresBends, MultiplanarOption.IncludeOnlyPlanarCurves, <span class="highlight-number">0</span>)
+
+                <span class="highlight-comment">' Examine every segment of every curve of the centerline</span>
+                <span class="highlight-keyword">For</span> <span class="highlight-keyword">Each</span> curve <span class="highlight-keyword">As</span> Curve <span class="highlight-keyword">In</span> curves
+                    <span class="highlight-keyword">Dim</span> intersection <span class="highlight-keyword">As</span> SolidCurveIntersection = solid.IntersectWithCurve(curve, intersectOptions)
+                    <span class="highlight-keyword">For</span> segment <span class="highlight-keyword">As</span> <span class="highlight-keyword">Integer</span> = <span class="highlight-number">0</span> <span class="highlight-keyword">To</span> intersection.SegmentCount - <span class="highlight-number">1</span>
+                        <span class="highlight-comment">' Calculate length of the rebar that is inside the column</span>
+                        <span class="highlight-keyword">Dim</span> curveInside <span class="highlight-keyword">As</span> Curve = intersection.GetCurveSegment(segment)
+                        <span class="highlight-keyword">Dim</span> rebarLengthInColumn <span class="highlight-keyword">As</span> <span class="highlight-keyword">Double</span> = curveInside.Length
+                        totalRebarLengthInColumn = totalRebarLengthInColumn + rebarLengthInColumn
+                    <span class="highlight-keyword">Next</span>
+
+                <span class="highlight-keyword">Next</span>
+            <span class="highlight-keyword">Next</span>
+        <span class="highlight-keyword">Next</span>
+    <span class="highlight-keyword">Next</span>
+
+<span class="highlight-keyword">End</span> <span class="highlight-keyword">Sub</span></pre></div><div id="IDAHC_code_Div3" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div><div id="IDAHC_code_Div4" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div></div></div></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('seeAlso')" onkeypress="SectionExpandCollapse_CheckKey('seeAlso', event)" tabindex="0"><img id="seeAlsoToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="seeAlsoSection" class="collapsibleSection"><h4>Reference</h4><div><a href="7a3b5ac1-c66d-9f81-a11d-9bcd4e026295.htm">Solid Class</a></div><div><a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB Namespace</a></div></div></div></div><div id="PageFooter" class="pageFooter"><div class="feedbackLink">Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:revitapifeedback%40autodesk.com?Subject=Revit%202025%20API">Autodesk</a></div>
+        <script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        HT_mailLink.href += ": " + document.title + "\u0026body=" + encodeURIComponent("Your feedback is used to improve the documentation and the product. Your e-mail address will not be used for any other purpose and is disposed of after the issue you report is resolved. While working to resolve the issue that you report, you may be contacted via e-mail to get further details or clarification on the feedback you sent. After the issue you report has been addressed, you may receive an e-mail to let you know that your feedback has been addressed.");
+        </script></div></body></html>

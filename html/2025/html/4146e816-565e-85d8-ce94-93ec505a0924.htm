@@ -1,0 +1,61 @@
+﻿<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="Microsoft.Help.SelfBranded" content="true" /><meta name="Language" content="en-us" /><meta name="Microsoft.Help.Locale" content="en-us" /><meta name="Microsoft.Help.TopicLocale" content="en-us" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" type="text/css" href="../styles/branding.css" /><link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" /><script type="text/javascript" src="../scripts/branding.js"></script><title>Document.EnableCloudWorksharing Method</title><meta name="Title" content="EnableCloudWorksharing Method" /><meta name="Microsoft.Help.Id" content="M:Autodesk.Revit.DB.Document.EnableCloudWorksharing" /><meta name="Microsoft.Help.ContentType" content="Reference" /><meta name="System.Keywords" content="Document.EnableCloudWorksharing method" /><meta name="System.Keywords" content="EnableCloudWorksharing method" /><meta name="Microsoft.Help.F1" content="Autodesk.Revit.DB.Document.EnableCloudWorksharing" /><meta name="Microsoft.Help.F1" content="Document.EnableCloudWorksharing" /><meta name="Microsoft.Help.F1" content="EnableCloudWorksharing" /><meta name="container" content="Autodesk.Revit.DB" /><meta name="file" content="4146e816-565e-85d8-ce94-93ec505a0924" /><meta name="guid" content="4146e816-565e-85d8-ce94-93ec505a0924" /><meta name="Description" content="Enables cloud worksharing for a cloud model" /><link rel="stylesheet" type="text/css" href="../styles/branding-Help1.css" /></head><body onload="SetDefaultLanguage('cs');"><input type="hidden" id="userDataCache" class="userDataStyle" /><div id="PageHeader" class="pageHeader">Revit 2025 API</div><div class="pageBody"><div id="TopicContent" class="topicContent"><table class="titleTable"><tr><td class="titleColumn"><h1>Document<span id="LSTD0C6270A_0" data-languageSpecificText="cpp=::|nu=."></span>Enable<wbr />Cloud<wbr />Worksharing Method</h1></td></tr></table><div class="summary">
+   Enables cloud worksharing for a cloud model
+</div><br /><strong>Namespace:</strong> <a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB</a><br /><strong>Assembly:</strong> RevitAPI (in RevitAPI.dll) Version: 25.0.0.0 (25.0.0.0)<div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDB')" onkeypress="SectionExpandCollapse_CheckKey('IDB', event)" tabindex="0"><img id="IDBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Syntax</span></div><div id="IDBSection" class="collapsibleSection"><div id="IDAB" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAB_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cs','1','4');return false;">C#</a></div><div id="IDAB_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','vb','2','4');return false;">VB</a></div><div id="IDAB_tab3" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cpp','3','4');return false;">C++</a></div><div id="IDAB_tab4" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAB_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAB');return false;" title="Copy">Copy</a></div></div><div id="IDAB_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="keyword">public</span> <span class="keyword">void</span> <span class="identifier">EnableCloudWorksharing</span>()</pre></div><div id="IDAB_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">Public</span> <span class="keyword">Sub</span> <span class="identifier">EnableCloudWorksharing</span></pre></div><div id="IDAB_code_Div3" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">public</span>:
+<span class="keyword">void</span> <span class="identifier">EnableCloudWorksharing</span>()</pre></div><div id="IDAB_code_Div4" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">member</span> <span class="identifier">EnableCloudWorksharing</span> : <span class="keyword">unit</span> <span class="keyword">-&gt;</span> <span class="keyword">unit</span> </pre></div></div></div></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDCC')" onkeypress="SectionExpandCollapse_CheckKey('IDCC', event)" tabindex="0"><img id="IDCCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Exceptions</span></div><div id="IDCCSection" class="collapsibleSection"><table><tr><th>Exception</th><th>Condition</th></tr><tr><td><a href="3e38b7b1-1ee8-c7f0-6cdd-bacf67bf61f4.htm">CentralModelAccessDeniedException</a></td><td>
+   Access to the cloud model was denied due to lack of access privileges.
+   -or-
+   Access to the central model was denied. A possible reason is because the model was under maintenance.
+</td></tr><tr><td><a href="ad511076-c435-23c1-5720-1205c4ed28b9.htm">CentralModelContentionException</a></td><td>
+   The central model is locked by another client.
+</td></tr><tr><td><a href="0e2ac15f-ca64-42c3-b3ef-e6f7ca1cb59a.htm">CentralModelException</a></td><td>
+   The model in cloud is missing.
+   -or-
+   The model in cloud is incompatible.
+   -or-
+   The model in cloud is corrupt or not an RVT file.
+   -or-
+   The model in cloud was rolled back.
+   -or-
+   An internal error happened on the model in cloud , please contact the administrator.
+</td></tr><tr><td><a href="73250198-dbc6-e760-4297-ec062f00f574.htm">FileNotFoundException</a></td><td>
+   Cannot access the local cache.
+</td></tr><tr><td><a href="9e715f03-3884-e539-4dd6-8d7545733adc.htm">InvalidOperationException</a></td><td>
+   This Document is not a primary document, it is a linked document.
+   -or-
+   This Document is read-only: It cannot be modified.
+   -or-
+   This Document has an open editing transaction and is accepting changes.
+   -or-
+   This Document is not a project document.
+   -or-
+   This Document is in an edit mode.
+   -or-
+   Saving is not allowed in the current application mode.
+   -or-
+   This Document does not have a central location: Worksharing needs to be enabled and central model saved.
+   -or-
+   The file is read-only, can not be saved.
+   -or-
+   The cloud model does not allow cloud worksharing to be enabled.
+   -or-
+   Operation is not permitted when there is any open sub-transaction, transaction, or transaction group.
+</td></tr><tr><td><a href="a0003d89-0113-6623-65da-0db5c568bfb6.htm">RevitServerCommunicationException</a></td><td>
+   Could be for any of the reasons related to network.
+</td></tr><tr><td><a href="6dcd093c-d643-07cd-535f-36ffa9d2db52.htm">RevitServerInternalException</a></td><td>
+   Could be for any of the reasons that conversion fails with RevitServerInternalException.
+</td></tr><tr><td><a href="b9b68e56-c767-4680-a65b-73d268ee8860.htm">RevitServerUnauthenticatedUserException</a></td><td>
+   User is not signed in with Autodesk id.
+</td></tr><tr><td><a href="9e8c1efc-8719-fe01-f311-cfade7b177ed.htm">RevitServerUnauthorizedException</a></td><td>
+   You do not have workshared cloud model entitlement to access this resource in cloud
+   -or-
+   User is not authorized to access the specified cloud project.
+</td></tr></table></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDBC')" onkeypress="SectionExpandCollapse_CheckKey('IDBC', event)" tabindex="0"><img id="IDBCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Remarks</span></div><div id="IDBCSection" class="collapsibleSection">
+   This operation will convert an existing cloud model to a workshared cloud model.
+   This method cannot be used if current model is not a cloud model.
+   This method cannot be used if the current user doesn't have the workshared cloud model entitlement.
+</div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('seeAlso')" onkeypress="SectionExpandCollapse_CheckKey('seeAlso', event)" tabindex="0"><img id="seeAlsoToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="seeAlsoSection" class="collapsibleSection"><h4>Reference</h4><div><a href="db03274b-a107-aa32-9034-f3e0df4bb1ec.htm">Document Class</a></div><div><a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB Namespace</a></div></div></div></div><div id="PageFooter" class="pageFooter"><div class="feedbackLink">Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:revitapifeedback%40autodesk.com?Subject=Revit%202025%20API">Autodesk</a></div>
+        <script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        HT_mailLink.href += ": " + document.title + "\u0026body=" + encodeURIComponent("Your feedback is used to improve the documentation and the product. Your e-mail address will not be used for any other purpose and is disposed of after the issue you report is resolved. While working to resolve the issue that you report, you may be contacted via e-mail to get further details or clarification on the feedback you sent. After the issue you report has been addressed, you may receive an e-mail to let you know that your feedback has been addressed.");
+        </script></div></body></html>

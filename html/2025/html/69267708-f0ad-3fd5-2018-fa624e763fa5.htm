@@ -1,0 +1,159 @@
+﻿<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="Microsoft.Help.SelfBranded" content="true" /><meta name="Language" content="en-us" /><meta name="Microsoft.Help.Locale" content="en-us" /><meta name="Microsoft.Help.TopicLocale" content="en-us" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" type="text/css" href="../styles/branding.css" /><link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" /><script type="text/javascript" src="../scripts/branding.js"></script><title>AreaReinforcement.Create(Document, Element, IList&lt;Curve&gt;, XYZ, ElementId, ElementId, ElementId) Method</title><meta name="Title" content="Create(Document, Element, IList&lt;Curve&gt;, XYZ, ElementId, ElementId, ElementId) Method" /><meta name="Microsoft.Help.Id" content="M:Autodesk.Revit.DB.Structure.AreaReinforcement.Create(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.Element,System.Collections.Generic.IList{Autodesk.Revit.DB.Curve},Autodesk.Revit.DB.XYZ,Autodesk.Revit.DB.ElementId,Autodesk.Revit.DB.ElementId,Autodesk.Revit.DB.ElementId)" /><meta name="Microsoft.Help.ContentType" content="Reference" /><meta name="container" content="Autodesk.Revit.DB.Structure" /><meta name="file" content="69267708-f0ad-3fd5-2018-fa624e763fa5" /><meta name="guid" content="69267708-f0ad-3fd5-2018-fa624e763fa5" /><meta name="Microsoft.Help.Category" content="CSharp" /><meta name="Microsoft.Help.Category" content="VB" /><meta name="Description" content="Creates a new AreaReinforcement object from an array of curves. This method replaces the NewAreaReinforcement method, which has been deprecated." /><link type="text/css" rel="stylesheet" href="../styles/highlight.css" /><script type="text/javascript" src="../scripts/highlight.js"> </script><link rel="stylesheet" type="text/css" href="../styles/branding-Help1.css" /></head><body onload="SetDefaultLanguage('cs');"><input type="hidden" id="userDataCache" class="userDataStyle" /><div id="PageHeader" class="pageHeader">Revit 2025 API</div><div class="pageBody"><div id="TopicContent" class="topicContent"><table class="titleTable"><tr><td class="titleColumn"><h1>Area<wbr />Reinforcement<span id="LST72EAB9A_0" data-languageSpecificText="cpp=::|nu=."></span>Create(Document, Element, IList<span id="LST72EAB9A_1" data-languageSpecificText="cpp=&lt;|cs=&lt;|fs=&lt;|vb=(Of |nu=("></span>Curve<span id="LST72EAB9A_2" data-languageSpecificText="cpp=&gt;|cs=&gt;|fs=&gt;|vb=)|nu=)"></span>, XYZ, Element<wbr />Id, Element<wbr />Id, Element<wbr />Id) Method</h1></td></tr></table><div class="summary">
+   Creates a new AreaReinforcement object from an array of curves.
+   This method replaces the NewAreaReinforcement method, which has been deprecated.
+</div><br /><strong>Namespace:</strong> <a href="d586b341-f687-9d90-e96d-255806b7d4fc.htm">Autodesk.Revit.DB.Structure</a><br /><strong>Assembly:</strong> RevitAPI (in RevitAPI.dll) Version: 25.0.0.0 (25.0.0.0)<div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDB')" onkeypress="SectionExpandCollapse_CheckKey('IDB', event)" tabindex="0"><img id="IDBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Syntax</span></div><div id="IDBSection" class="collapsibleSection"><div id="IDAB" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAB_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cs','1','4');return false;">C#</a></div><div id="IDAB_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','vb','2','4');return false;">VB</a></div><div id="IDAB_tab3" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cpp','3','4');return false;">C++</a></div><div id="IDAB_tab4" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAB_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAB');return false;" title="Copy">Copy</a></div></div><div id="IDAB_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="keyword">public</span> <span class="keyword">static</span> <span class="identifier">AreaReinforcement</span> <span class="identifier">Create</span>(
+	<span class="identifier">Document</span> <span class="parameter">document</span>,
+	<span class="identifier">Element</span> <span class="parameter">hostElement</span>,
+	<span class="identifier">IList</span>&lt;<span class="identifier">Curve</span>&gt; <span class="parameter">curveArray</span>,
+	<span class="identifier">XYZ</span> <span class="parameter">majorDirection</span>,
+	<span class="identifier">ElementId</span> <span class="parameter">areaReinforcementTypeId</span>,
+	<span class="identifier">ElementId</span> <span class="parameter">rebarBarTypeId</span>,
+	<span class="identifier">ElementId</span> <span class="parameter">rebarHookTypeId</span>
+)</pre></div><div id="IDAB_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">Public</span> <span class="keyword">Shared</span> <span class="keyword">Function</span> <span class="identifier">Create</span> ( 
+	<span class="parameter">document</span> <span class="keyword">As</span> <span class="identifier">Document</span>,
+	<span class="parameter">hostElement</span> <span class="keyword">As</span> <span class="identifier">Element</span>,
+	<span class="parameter">curveArray</span> <span class="keyword">As</span> <span class="identifier">IList</span>(<span class="keyword">Of</span> <span class="identifier">Curve</span>),
+	<span class="parameter">majorDirection</span> <span class="keyword">As</span> <span class="identifier">XYZ</span>,
+	<span class="parameter">areaReinforcementTypeId</span> <span class="keyword">As</span> <span class="identifier">ElementId</span>,
+	<span class="parameter">rebarBarTypeId</span> <span class="keyword">As</span> <span class="identifier">ElementId</span>,
+	<span class="parameter">rebarHookTypeId</span> <span class="keyword">As</span> <span class="identifier">ElementId</span>
+) <span class="keyword">As</span> <span class="identifier">AreaReinforcement</span></pre></div><div id="IDAB_code_Div3" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">public</span>:
+<span class="keyword">static</span> <span class="identifier">AreaReinforcement</span>^ <span class="identifier">Create</span>(
+	<span class="identifier">Document</span>^ <span class="parameter">document</span>, 
+	<span class="identifier">Element</span>^ <span class="parameter">hostElement</span>, 
+	<span class="identifier">IList</span>&lt;<span class="identifier">Curve</span>^&gt;^ <span class="parameter">curveArray</span>, 
+	<span class="identifier">XYZ</span>^ <span class="parameter">majorDirection</span>, 
+	<span class="identifier">ElementId</span>^ <span class="parameter">areaReinforcementTypeId</span>, 
+	<span class="identifier">ElementId</span>^ <span class="parameter">rebarBarTypeId</span>, 
+	<span class="identifier">ElementId</span>^ <span class="parameter">rebarHookTypeId</span>
+)</pre></div><div id="IDAB_code_Div4" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">static</span> <span class="keyword">member</span> <span class="identifier">Create</span> : 
+        <span class="parameter">document</span> : <span class="identifier">Document</span> * 
+        <span class="parameter">hostElement</span> : <span class="identifier">Element</span> * 
+        <span class="parameter">curveArray</span> : <span class="identifier">IList</span>&lt;<span class="identifier">Curve</span>&gt; * 
+        <span class="parameter">majorDirection</span> : <span class="identifier">XYZ</span> * 
+        <span class="parameter">areaReinforcementTypeId</span> : <span class="identifier">ElementId</span> * 
+        <span class="parameter">rebarBarTypeId</span> : <span class="identifier">ElementId</span> * 
+        <span class="parameter">rebarHookTypeId</span> : <span class="identifier">ElementId</span> <span class="keyword">-&gt;</span> <span class="identifier">AreaReinforcement</span> </pre></div></div></div><h4>Parameters</h4><dl><dt class="has-text-weight-normal"><span class="parameter">document</span>  <a href="db03274b-a107-aa32-9034-f3e0df4bb1ec.htm">Document</a></dt><dd>
+   The document.
+</dd><dt class="has-text-weight-normal"><span class="parameter">hostElement</span>  <a href="eb16114f-69ea-f4de-0d0d-f7388b105a16.htm">Element</a></dt><dd>
+   The element that will host the AreaReinforcement. The host can be a Structural Floor, Structural Wall, Structural Slab, or a Part created from a structural layer belonging to one of those element types.
+</dd><dt class="has-text-weight-normal"><span class="parameter">curveArray</span>  <a href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1" target="_blank" rel="noopener noreferrer">IList</a><span id="LST72EAB9A_3" data-languageSpecificText="cpp=&lt;|cs=&lt;|fs=&lt;|vb=(Of |nu=("></span><a href="400cc9b6-9ff7-de85-6fd8-c20002209d25.htm">Curve</a><span id="LST72EAB9A_4" data-languageSpecificText="cpp=&gt;|cs=&gt;|fs=&gt;|vb=)|nu=)"></span></dt><dd>
+   An array of curves that will define the outline of the AreaReinforcement.
+</dd><dt class="has-text-weight-normal"><span class="parameter">majorDirection</span>  <a href="c2fd995c-95c0-58fb-f5de-f3246cbc5600.htm">XYZ</a></dt><dd>
+   A vector to define the major direction of the AreaReinforcement.
+</dd><dt class="has-text-weight-normal"><span class="parameter">areaReinforcementTypeId</span>  <a href="44f3f7b1-3229-3404-93c9-dc5e70337dd6.htm">ElementId</a></dt><dd>
+   The id of the AreaReinforcementType.
+</dd><dt class="has-text-weight-normal"><span class="parameter">rebarBarTypeId</span>  <a href="44f3f7b1-3229-3404-93c9-dc5e70337dd6.htm">ElementId</a></dt><dd>
+   The id of the RebarBarType.
+</dd><dt class="has-text-weight-normal"><span class="parameter">rebarHookTypeId</span>  <a href="44f3f7b1-3229-3404-93c9-dc5e70337dd6.htm">ElementId</a></dt><dd>
+   The id of the RebarHookType.
+   If this parameter is InvalidElementId, it means to create a rebar with no hooks.
+</dd></dl><h4>Return Value</h4><a href="889aa3cf-9b32-dd78-b660-bcfbad2cf87e.htm">AreaReinforcement</a><br />
+   The newly created AreaReinforcement.
+</div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDJC')" onkeypress="SectionExpandCollapse_CheckKey('IDJC', event)" tabindex="0"><img id="IDJCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Exceptions</span></div><div id="IDJCSection" class="collapsibleSection"><table><tr><th>Exception</th><th>Condition</th></tr><tr><td><a href="2e6e4206-97a8-dd4b-df5d-4269f4bb6088.htm">ArgumentException</a></td><td>
+   The input curveArray is empty.
+   -or-
+   The input curveArray contains at least one helical curve and is not supported for this operation.
+   -or-
+   The element hostElement was not found in the given document.
+   -or-
+   the host Element is not a valid host for Area Reinforcement, Path Reinforcement, Fabric Area or Fabric Sheet.
+   -or-
+   Curves in curveArray are not closed and continuous.
+   -or-
+   areaReinforcementTypeId should refer to an AreaReinforcementType element.
+   -or-
+   rebarBarTypeId should refer to an RebarBarType element.
+   -or-
+   rebarHookTypeId should be invalid or refer to an RebarHookType element.
+</td></tr><tr><td><a href="631e1424-60f4-929b-4e52-dda9dcd26316.htm">ArgumentNullException</a></td><td>
+   A non-optional argument was null
+</td></tr><tr><td><a href="60f148c9-ece0-a6bb-4e12-bb4a9c8c8a24.htm">ArgumentOutOfRangeException</a></td><td>
+   majorDirection has zero length.
+</td></tr><tr><td><a href="c5b911f6-1e8f-2cd4-6965-286f41221fe0.htm">ForbiddenForDynamicUpdateException</a></td><td>
+   This method may not be called during dynamic update.
+</td></tr></table></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDOC')" onkeypress="SectionExpandCollapse_CheckKey('IDOC', event)" tabindex="0"><img id="IDOCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Example</span></div><div id="IDOCSection" class="collapsibleSection"><div id="IDAOC" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAOC_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAOC','cs','1','4');return false;">C#</a></div><div id="IDAOC_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAOC','vb','2','4');return false;">VB</a></div><div id="IDAOC_tab3" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDAOC','cpp','3','4');return false;">C++</a></div><div id="IDAOC_tab4" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDAOC','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAOC_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAOC');return false;" title="Copy">Copy</a></div></div><div id="IDAOC_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve">AreaReinforcement CreateAreaReinforcementInWall(Wall wall, Autodesk.Revit.DB.Document document)
+{
+   AnalyticalToPhysicalAssociationManager assocManager = AnalyticalToPhysicalAssociationManager.GetAnalyticalToPhysicalAssociationManager(document);
+   AnalyticalPanel panel = <span class="highlight-keyword">null</span>;
+   <span class="highlight-keyword">if</span> (assocManager != <span class="highlight-keyword">null</span>)
+   {
+      ElementId associatedElementId = assocManager.GetAssociatedElementId(wall.Id);
+      <span class="highlight-keyword">if</span> (associatedElementId != ElementId.InvalidElementId)
+      {
+         Element associatedElem = document.GetElement(associatedElementId);
+         <span class="highlight-keyword">if</span> (associatedElem != <span class="highlight-keyword">null</span> &amp;&amp; associatedElem <span class="highlight-keyword">is</span> AnalyticalPanel)
+         {
+            panel = associatedElem <span class="highlight-keyword">as</span> AnalyticalPanel;
+         }
+      }
+   }
+   <span class="highlight-comment">// Get the wall analytical profile whose curves will define the boundary of the the area reinforcement </span>
+   <span class="highlight-keyword">if</span> (<span class="highlight-keyword">null</span> == panel)
+   {
+      <span class="highlight-keyword">throw</span> <span class="highlight-keyword">new</span> Exception(<span class="highlight-literal">"Can't get AnalyticalModel from the selected wall"</span>);
+   }
+
+   IList&lt;Curve&gt; curves = panel.GetOuterContour().ToList();
+
+   <span class="highlight-comment">//define the Major Direction of AreaReinforcement,</span>
+   <span class="highlight-comment">//we get direction of first Line on the Wall as the Major Direction</span>
+   Line firstLine = (Line)(curves[<span class="highlight-number">0</span>]);
+   XYZ majorDirection = <span class="highlight-keyword">new</span> XYZ(
+    firstLine.GetEndPoint(<span class="highlight-number">1</span>).X - firstLine.GetEndPoint(<span class="highlight-number">0</span>).X,
+    firstLine.GetEndPoint(<span class="highlight-number">1</span>).Y - firstLine.GetEndPoint(<span class="highlight-number">0</span>).Y,
+    firstLine.GetEndPoint(<span class="highlight-number">1</span>).Z - firstLine.GetEndPoint(<span class="highlight-number">0</span>).Z);
+
+   <span class="highlight-comment">// Obtain the default types</span>
+   ElementId defaultRebarBarTypeId = document.GetDefaultElementTypeId(ElementTypeGroup.RebarBarType);
+   ElementId defaultAreaReinforcementTypeId = document.GetDefaultElementTypeId(ElementTypeGroup.AreaReinforcementType);
+   ElementId defaultHookTypeId = ElementId.InvalidElementId;
+
+   <span class="highlight-comment">// Create the area reinforcement</span>
+   AreaReinforcement rein = AreaReinforcement.Create(document, wall, curves, majorDirection, defaultAreaReinforcementTypeId, defaultRebarBarTypeId, defaultHookTypeId);
+
+   <span class="highlight-keyword">return</span> rein;
+}</pre></div><div id="IDAOC_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="highlight-keyword">Private</span> <span class="highlight-keyword">Function</span> CreateAreaReinforcementInWall(wall <span class="highlight-keyword">As</span> Wall, document <span class="highlight-keyword">As</span> Autodesk.Revit.DB.Document) <span class="highlight-keyword">As</span> AreaReinforcement
+   <span class="highlight-comment">' Get the wall analytical profile whose curves will define the boundary of the the area reinforcement </span>
+   <span class="highlight-keyword">Dim</span> analytical <span class="highlight-keyword">As</span> Autodesk.Revit.DB.<span class="highlight-keyword">Structure</span>.AnalyticalPanel = <span class="highlight-keyword">Nothing</span>
+   <span class="highlight-keyword">Dim</span> relManager <span class="highlight-keyword">As</span> Autodesk.Revit.DB.<span class="highlight-keyword">Structure</span>.AnalyticalToPhysicalAssociationManager = Autodesk.Revit.DB.<span class="highlight-keyword">Structure</span>.AnalyticalToPhysicalAssociationManager.GetAnalyticalToPhysicalAssociationManager(document)
+
+   <span class="highlight-keyword">If</span> (relManager <span class="highlight-keyword">Is</span> <span class="highlight-keyword">Nothing</span>) <span class="highlight-keyword">Then</span>
+      <span class="highlight-keyword">Throw</span> <span class="highlight-keyword">New</span> Exception(<span class="highlight-literal">"Can't get AnalyticalModel from the selected wall"</span>)
+   <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+
+   <span class="highlight-keyword">Dim</span> counterpartId <span class="highlight-keyword">As</span> ElementId = relManager.GetAssociatedElementId(wall.Id)
+   <span class="highlight-keyword">If</span> (counterpartId <span class="highlight-keyword">Is</span> <span class="highlight-keyword">Nothing</span>) <span class="highlight-keyword">Then</span>
+      <span class="highlight-keyword">Throw</span> <span class="highlight-keyword">New</span> Exception(<span class="highlight-literal">"Can't get AnalyticalModel from the selected wall"</span>)
+   <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+
+   analytical = document.GetElement(counterpartId)
+   <span class="highlight-keyword">If</span> analytical <span class="highlight-keyword">Is</span> <span class="highlight-keyword">Nothing</span> <span class="highlight-keyword">Then</span>
+      <span class="highlight-comment">' the profile reference can't be retrieved.</span>
+      <span class="highlight-keyword">Throw</span> <span class="highlight-keyword">New</span> Exception(<span class="highlight-literal">"Can't get AnalyticalModel from the selected wall"</span>)
+   <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+
+
+   <span class="highlight-keyword">Dim</span> curves <span class="highlight-keyword">As</span> IList(<span class="highlight-keyword">Of</span> Curve) = analytical.GetOuterContour().ToList()
+
+   <span class="highlight-comment">'define the Major Direction of AreaReinforcement,</span>
+   <span class="highlight-comment">'we get direction of first Line on the Wall as the Major Direction</span>
+   <span class="highlight-keyword">Dim</span> firstLine <span class="highlight-keyword">As</span> Line = <span class="highlight-keyword">DirectCast</span>(curves(<span class="highlight-number">0</span>), Line)
+   <span class="highlight-keyword">Dim</span> majorDirection <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> XYZ(firstLine.GetEndPoint(<span class="highlight-number">1</span>).X - firstLine.GetEndPoint(<span class="highlight-number">0</span>).X, firstLine.GetEndPoint(<span class="highlight-number">1</span>).Y - firstLine.GetEndPoint(<span class="highlight-number">0</span>).Y, firstLine.GetEndPoint(<span class="highlight-number">1</span>).Z - firstLine.GetEndPoint(<span class="highlight-number">0</span>).Z)
+
+   <span class="highlight-comment">' Obtain the default types</span>
+   <span class="highlight-keyword">Dim</span> defaultRebarBarTypeId <span class="highlight-keyword">As</span> ElementId = document.GetDefaultElementTypeId(ElementTypeGroup.RebarBarType)
+   <span class="highlight-keyword">Dim</span> defaultAreaReinforcementTypeId <span class="highlight-keyword">As</span> ElementId = document.GetDefaultElementTypeId(ElementTypeGroup.AreaReinforcementType)
+   <span class="highlight-keyword">Dim</span> defaultHookTypeId <span class="highlight-keyword">As</span> ElementId = ElementId.InvalidElementId
+
+   <span class="highlight-comment">' Create the area reinforcement</span>
+   <span class="highlight-keyword">Dim</span> rein <span class="highlight-keyword">As</span> AreaReinforcement = AreaReinforcement.Create(document, wall, curves, majorDirection, defaultAreaReinforcementTypeId, defaultRebarBarTypeId,
+       defaultHookTypeId)
+
+   <span class="highlight-keyword">Return</span> rein
+<span class="highlight-keyword">End</span> <span class="highlight-keyword">Function</span></pre></div><div id="IDAOC_code_Div3" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div><div id="IDAOC_code_Div4" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div></div></div></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('seeAlso')" onkeypress="SectionExpandCollapse_CheckKey('seeAlso', event)" tabindex="0"><img id="seeAlsoToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="seeAlsoSection" class="collapsibleSection"><h4>Reference</h4><div><a href="889aa3cf-9b32-dd78-b660-bcfbad2cf87e.htm">AreaReinforcement Class</a></div><div><a href="ce8506a4-9d6f-ef8b-fd9e-9f79edeb936e.htm">Create Overload</a></div><div><a href="d586b341-f687-9d90-e96d-255806b7d4fc.htm">Autodesk.Revit.DB.Structure Namespace</a></div></div></div></div><div id="PageFooter" class="pageFooter"><div class="feedbackLink">Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:revitapifeedback%40autodesk.com?Subject=Revit%202025%20API">Autodesk</a></div>
+        <script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        HT_mailLink.href += ": " + document.title + "\u0026body=" + encodeURIComponent("Your feedback is used to improve the documentation and the product. Your e-mail address will not be used for any other purpose and is disposed of after the issue you report is resolved. While working to resolve the issue that you report, you may be contacted via e-mail to get further details or clarification on the feedback you sent. After the issue you report has been addressed, you may receive an e-mail to let you know that your feedback has been addressed.");
+        </script></div></body></html>

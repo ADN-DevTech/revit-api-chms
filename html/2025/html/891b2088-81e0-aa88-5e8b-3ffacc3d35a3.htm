@@ -1,0 +1,174 @@
+﻿<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="Microsoft.Help.SelfBranded" content="true" /><meta name="Language" content="en-us" /><meta name="Microsoft.Help.Locale" content="en-us" /><meta name="Microsoft.Help.TopicLocale" content="en-us" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" type="text/css" href="../styles/branding.css" /><link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" /><script type="text/javascript" src="../scripts/branding.js"></script><title>DisplacementElement.Create Method</title><meta name="Title" content="Create Method" /><meta name="Microsoft.Help.Id" content="M:Autodesk.Revit.DB.DisplacementElement.Create(Autodesk.Revit.DB.Document,System.Collections.Generic.ICollection{Autodesk.Revit.DB.ElementId},Autodesk.Revit.DB.XYZ,Autodesk.Revit.DB.View,Autodesk.Revit.DB.DisplacementElement)" /><meta name="Microsoft.Help.ContentType" content="Reference" /><meta name="System.Keywords" content="DisplacementElement.Create method" /><meta name="System.Keywords" content="Create method" /><meta name="Microsoft.Help.F1" content="Autodesk.Revit.DB.DisplacementElement.Create" /><meta name="Microsoft.Help.F1" content="DisplacementElement.Create" /><meta name="Microsoft.Help.F1" content="Create" /><meta name="container" content="Autodesk.Revit.DB" /><meta name="file" content="891b2088-81e0-aa88-5e8b-3ffacc3d35a3" /><meta name="guid" content="891b2088-81e0-aa88-5e8b-3ffacc3d35a3" /><meta name="Microsoft.Help.Category" content="CSharp" /><meta name="Microsoft.Help.Category" content="VB" /><meta name="Description" content="Creates a new DisplacementElement as a child of the specified parent DisplacementElement." /><link type="text/css" rel="stylesheet" href="../styles/highlight.css" /><script type="text/javascript" src="../scripts/highlight.js"> </script><link rel="stylesheet" type="text/css" href="../styles/branding-Help1.css" /></head><body onload="SetDefaultLanguage('cs');"><input type="hidden" id="userDataCache" class="userDataStyle" /><div id="PageHeader" class="pageHeader">Revit 2025 API</div><div class="pageBody"><div id="TopicContent" class="topicContent"><table class="titleTable"><tr><td class="titleColumn"><h1>Displacement<wbr />Element<span id="LST3760669F_0" data-languageSpecificText="cpp=::|nu=."></span>Create Method</h1></td></tr></table><div class="summary">
+   Creates a new DisplacementElement as a child of the specified parent DisplacementElement.
+</div><br /><strong>Namespace:</strong> <a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB</a><br /><strong>Assembly:</strong> RevitAPI (in RevitAPI.dll) Version: 25.0.0.0 (25.0.0.0)<div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDB')" onkeypress="SectionExpandCollapse_CheckKey('IDB', event)" tabindex="0"><img id="IDBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Syntax</span></div><div id="IDBSection" class="collapsibleSection"><div id="IDAB" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAB_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cs','1','4');return false;">C#</a></div><div id="IDAB_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','vb','2','4');return false;">VB</a></div><div id="IDAB_tab3" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cpp','3','4');return false;">C++</a></div><div id="IDAB_tab4" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAB_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAB');return false;" title="Copy">Copy</a></div></div><div id="IDAB_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="keyword">public</span> <span class="keyword">static</span> <span class="identifier">DisplacementElement</span> <span class="identifier">Create</span>(
+	<span class="identifier">Document</span> <span class="parameter">document</span>,
+	<span class="identifier">ICollection</span>&lt;<span class="identifier">ElementId</span>&gt; <span class="parameter">elementsToDisplace</span>,
+	<span class="identifier">XYZ</span> <span class="parameter">displacement</span>,
+	<span class="identifier">View</span> <span class="parameter">ownerDBView</span>,
+	<span class="identifier">DisplacementElement</span> <span class="parameter">parentDisplacementElement</span>
+)</pre></div><div id="IDAB_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">Public</span> <span class="keyword">Shared</span> <span class="keyword">Function</span> <span class="identifier">Create</span> ( 
+	<span class="parameter">document</span> <span class="keyword">As</span> <span class="identifier">Document</span>,
+	<span class="parameter">elementsToDisplace</span> <span class="keyword">As</span> <span class="identifier">ICollection</span>(<span class="keyword">Of</span> <span class="identifier">ElementId</span>),
+	<span class="parameter">displacement</span> <span class="keyword">As</span> <span class="identifier">XYZ</span>,
+	<span class="parameter">ownerDBView</span> <span class="keyword">As</span> <span class="identifier">View</span>,
+	<span class="parameter">parentDisplacementElement</span> <span class="keyword">As</span> <span class="identifier">DisplacementElement</span>
+) <span class="keyword">As</span> <span class="identifier">DisplacementElement</span></pre></div><div id="IDAB_code_Div3" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">public</span>:
+<span class="keyword">static</span> <span class="identifier">DisplacementElement</span>^ <span class="identifier">Create</span>(
+	<span class="identifier">Document</span>^ <span class="parameter">document</span>, 
+	<span class="identifier">ICollection</span>&lt;<span class="identifier">ElementId</span>^&gt;^ <span class="parameter">elementsToDisplace</span>, 
+	<span class="identifier">XYZ</span>^ <span class="parameter">displacement</span>, 
+	<span class="identifier">View</span>^ <span class="parameter">ownerDBView</span>, 
+	<span class="identifier">DisplacementElement</span>^ <span class="parameter">parentDisplacementElement</span>
+)</pre></div><div id="IDAB_code_Div4" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">static</span> <span class="keyword">member</span> <span class="identifier">Create</span> : 
+        <span class="parameter">document</span> : <span class="identifier">Document</span> * 
+        <span class="parameter">elementsToDisplace</span> : <span class="identifier">ICollection</span>&lt;<span class="identifier">ElementId</span>&gt; * 
+        <span class="parameter">displacement</span> : <span class="identifier">XYZ</span> * 
+        <span class="parameter">ownerDBView</span> : <span class="identifier">View</span> * 
+        <span class="parameter">parentDisplacementElement</span> : <span class="identifier">DisplacementElement</span> <span class="keyword">-&gt;</span> <span class="identifier">DisplacementElement</span> </pre></div></div></div><h4>Parameters</h4><dl><dt class="has-text-weight-normal"><span class="parameter">document</span>  <a href="db03274b-a107-aa32-9034-f3e0df4bb1ec.htm">Document</a></dt><dd>
+   The Document
+</dd><dt class="has-text-weight-normal"><span class="parameter">elementsToDisplace</span>  <a href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1" target="_blank" rel="noopener noreferrer">ICollection</a><span id="LST3760669F_1" data-languageSpecificText="cpp=&lt;|cs=&lt;|fs=&lt;|vb=(Of |nu=("></span><a href="44f3f7b1-3229-3404-93c9-dc5e70337dd6.htm">ElementId</a><span id="LST3760669F_2" data-languageSpecificText="cpp=&gt;|cs=&gt;|fs=&gt;|vb=)|nu=)"></span></dt><dd>
+   The elements to be displaced.
+</dd><dt class="has-text-weight-normal"><span class="parameter">displacement</span>  <a href="c2fd995c-95c0-58fb-f5de-f3246cbc5600.htm">XYZ</a></dt><dd>
+   The translation to be applied to the graphics of the displaced elements.
+</dd><dt class="has-text-weight-normal"><span class="parameter">ownerDBView</span>  <a href="fb92a4e7-f3a7-ef14-e631-342179b18de9.htm">View</a></dt><dd>
+   The 3D view which will own the DisplacementElement.
+</dd><dt class="has-text-weight-normal"><span class="parameter">parentDisplacementElement</span>  <a href="08113547-eaaa-5ec1-5ff1-de609fe7c29c.htm">DisplacementElement</a></dt><dd>
+   An existing DisplacementElement that will be the parent of the one being created.
+   It must be owned by ownerDBView.
+   The relative transform of new DisplacementElement will be concatenated with the
+   absolute transform of the parent DisplacementElement.
+   If the elements specified by displacedElemIds are already displaced by another
+   DisplacementElement, then this must be that element.
+</dd></dl><h4>Return Value</h4><a href="08113547-eaaa-5ec1-5ff1-de609fe7c29c.htm">DisplacementElement</a><br />
+   The id of the new DisplacementElement.
+</div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDHC')" onkeypress="SectionExpandCollapse_CheckKey('IDHC', event)" tabindex="0"><img id="IDHCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Exceptions</span></div><div id="IDHCSection" class="collapsibleSection"><table><tr><th>Exception</th><th>Condition</th></tr><tr><td><a href="2e6e4206-97a8-dd4b-df5d-4269f4bb6088.htm">ArgumentException</a></td><td>
+   #elementIds# contains no element ids.
+   -or-
+   ownerDBView is not a 3D view.
+   -or-
+   For each individual element in the set elementsToDisplace, isAllowedAsDisplacedElement must return true, and the
+   elements must either not already be displaced in the specified view, or else they
+   must all be displaced by the same displacement element in the view.
+   -or-
+   The DisplacementElement parentDisplacementElement in not owned by the view ownerDBView.
+</td></tr><tr><td><a href="631e1424-60f4-929b-4e52-dda9dcd26316.htm">ArgumentNullException</a></td><td>
+   A non-optional argument was null
+</td></tr></table></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDKC')" onkeypress="SectionExpandCollapse_CheckKey('IDKC', event)" tabindex="0"><img id="IDKCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Example</span></div><div id="IDKCSection" class="collapsibleSection"><div id="IDAKC" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAKC_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAKC','cs','1','4');return false;">C#</a></div><div id="IDAKC_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAKC','vb','2','4');return false;">VB</a></div><div id="IDAKC_tab3" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDAKC','cpp','3','4');return false;">C++</a></div><div id="IDAKC_tab4" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDAKC','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAKC_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAKC');return false;" title="Copy">Copy</a></div></div><div id="IDAKC_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="highlight-keyword">public</span> <span class="highlight-keyword">static</span> <span class="highlight-keyword">void</span> CreateDisplacementAndPath(Document doc, View view)
+{
+    <span class="highlight-comment">// Find roof</span>
+    FilteredElementCollector fec = <span class="highlight-keyword">new</span> FilteredElementCollector(doc);
+    fec.OfClass(<span class="highlight-keyword">typeof</span>(RoofBase));
+    RoofBase roof = fec.FirstElement() <span class="highlight-keyword">as</span> RoofBase;
+
+    <span class="highlight-comment">// Get a geometric reference for the path</span>
+    Reference edgeRef = GetHorizontalEdgeReference(roof);
+
+    <span class="highlight-keyword">using</span> (Transaction t = <span class="highlight-keyword">new</span> Transaction(doc, <span class="highlight-literal">"CreateDisplacementAndPath"</span>))
+    {
+        t.Start();
+        <span class="highlight-comment">// Create a new top level DisplacementElement</span>
+        DisplacementElement dispElem = DisplacementElement.Create(doc, <span class="highlight-keyword">new</span> ElementId[] { roof.Id }, <span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">10</span>, <span class="highlight-number">0</span>, <span class="highlight-number">20</span>), view, <span class="highlight-keyword">null</span>);
+
+        <span class="highlight-comment">// Create the path associated to the element</span>
+        DisplacementPath.Create(doc, dispElem, edgeRef, <span class="highlight-number">0.5</span>);
+        t.Commit();
+    }
+}
+
+<span class="highlight-keyword">private</span> <span class="highlight-keyword">static</span> Reference GetHorizontalEdgeReference(Element elem)
+{
+    <span class="highlight-comment">//Find target edge from lower face of roof</span>
+    Options options = <span class="highlight-keyword">new</span> Options();
+    options.ComputeReferences = <span class="highlight-keyword">true</span>;
+
+    GeometryElement geomElem = elem.get_Geometry(options);
+
+    <span class="highlight-keyword">foreach</span> (<span class="highlight-keyword">var</span> geomObj <span class="highlight-keyword">in</span> geomElem)
+    {
+        <span class="highlight-keyword">if</span> (geomObj <span class="highlight-keyword">is</span> Solid)
+        {
+            Solid solid = geomObj <span class="highlight-keyword">as</span> Solid;
+            <span class="highlight-keyword">var</span> faces = solid.Faces;
+
+            <span class="highlight-keyword">foreach</span> (Face face <span class="highlight-keyword">in</span> faces)
+            {
+                BoundingBoxUV box = face.GetBoundingBox();
+                UV midpoint = (box.Min + box.Max) / <span class="highlight-number">2.0</span>;
+                <span class="highlight-keyword">if</span> (face.ComputeNormal(midpoint).Normalize().Z &lt; <span class="highlight-number">-0.1</span>) <span class="highlight-comment">// Downward facing, this is good enough</span>
+                {
+                    <span class="highlight-keyword">var</span> edgeLoops = face.EdgeLoops;
+                    <span class="highlight-keyword">foreach</span> (EdgeArray edgeArray <span class="highlight-keyword">in</span> edgeLoops)
+                    {
+                        <span class="highlight-keyword">foreach</span> (Edge edge <span class="highlight-keyword">in</span> edgeArray)
+                        {
+                            <span class="highlight-comment">// horizontal?</span>
+                            <span class="highlight-keyword">if</span> (Math.Abs(edge.AsCurve().ComputeDerivatives(<span class="highlight-number">0.0</span>, <span class="highlight-keyword">true</span>).BasisX.DotProduct(XYZ.BasisZ)) - <span class="highlight-number">1</span> &lt;= <span class="highlight-number">0.00001</span>)
+                            {
+                                <span class="highlight-keyword">return</span> edge.Reference;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    <span class="highlight-keyword">return</span> <span class="highlight-keyword">null</span>;
+}</pre></div><div id="IDAKC_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="highlight-keyword">Public</span> <span class="highlight-keyword">Shared</span> <span class="highlight-keyword">Sub</span> CreateDisplacementAndPath(doc <span class="highlight-keyword">As</span> Document, view <span class="highlight-keyword">As</span> View)
+    <span class="highlight-comment">' Find roof</span>
+    <span class="highlight-keyword">Dim</span> fec <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> FilteredElementCollector(doc)
+    fec.OfClass(<span class="highlight-keyword">GetType</span>(RoofBase))
+    <span class="highlight-keyword">Dim</span> roof <span class="highlight-keyword">As</span> RoofBase = <span class="highlight-keyword">TryCast</span>(fec.FirstElement(), RoofBase)
+
+    <span class="highlight-comment">' Get a geometric reference for the path</span>
+    <span class="highlight-keyword">Dim</span> edgeRef <span class="highlight-keyword">As</span> Reference = GetHorizontalEdgeReference(roof)
+
+    <span class="highlight-keyword">Using</span> t <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> Transaction(doc, <span class="highlight-literal">"CreateDisplacementAndPath"</span>)
+        t.Start()
+        <span class="highlight-comment">' Create a new top level DisplacementElement</span>
+        <span class="highlight-keyword">Dim</span> dispElem <span class="highlight-keyword">As</span> DisplacementElement = DisplacementElement.Create(doc, <span class="highlight-keyword">New</span> ElementId() {roof.Id}, <span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">10</span>, <span class="highlight-number">0</span>, <span class="highlight-number">20</span>), view, <span class="highlight-keyword">Nothing</span>)
+
+        <span class="highlight-comment">' Create the path associated to the element</span>
+        DisplacementPath.Create(doc, dispElem, edgeRef, <span class="highlight-number">0.5</span>)
+        t.Commit()
+    <span class="highlight-keyword">End</span> <span class="highlight-keyword">Using</span>
+<span class="highlight-keyword">End</span> <span class="highlight-keyword">Sub</span>
+
+<span class="highlight-keyword">Private</span> <span class="highlight-keyword">Shared</span> <span class="highlight-keyword">Function</span> GetHorizontalEdgeReference(elem <span class="highlight-keyword">As</span> Element) <span class="highlight-keyword">As</span> Reference
+    <span class="highlight-comment">'Find target edge from lower face of roof</span>
+    <span class="highlight-keyword">Dim</span> options <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> Options()
+    options.ComputeReferences = <span class="highlight-keyword">True</span>
+
+    <span class="highlight-keyword">Dim</span> geomElem <span class="highlight-keyword">As</span> GeometryElement = elem.Geometry(options)
+
+    <span class="highlight-keyword">For</span> <span class="highlight-keyword">Each</span> geomObj <span class="highlight-keyword">As</span> GeometryObject <span class="highlight-keyword">In</span> geomElem
+        <span class="highlight-keyword">If</span> <span class="highlight-keyword">TypeOf</span> geomObj <span class="highlight-keyword">Is</span> Solid <span class="highlight-keyword">Then</span>
+            <span class="highlight-keyword">Dim</span> solid <span class="highlight-keyword">As</span> Solid = <span class="highlight-keyword">TryCast</span>(geomObj, Solid)
+            <span class="highlight-keyword">Dim</span> faces = solid.Faces
+
+            <span class="highlight-keyword">For</span> <span class="highlight-keyword">Each</span> face <span class="highlight-keyword">As</span> Face <span class="highlight-keyword">In</span> faces
+                <span class="highlight-keyword">Dim</span> box <span class="highlight-keyword">As</span> BoundingBoxUV = face.GetBoundingBox()
+                <span class="highlight-keyword">Dim</span> midpoint <span class="highlight-keyword">As</span> UV = (box.Min + box.Max) / <span class="highlight-number">2.0</span>
+                <span class="highlight-keyword">If</span> face.ComputeNormal(midpoint).Normalize().Z &lt; <span class="highlight-number">-0.1</span> <span class="highlight-keyword">Then</span>
+                    <span class="highlight-comment">' Downward facing, this is good enough</span>
+                    <span class="highlight-keyword">Dim</span> edgeLoops = face.EdgeLoops
+                    <span class="highlight-keyword">For</span> <span class="highlight-keyword">Each</span> edgeArray <span class="highlight-keyword">As</span> EdgeArray <span class="highlight-keyword">In</span> edgeLoops
+                        <span class="highlight-keyword">For</span> <span class="highlight-keyword">Each</span> edge <span class="highlight-keyword">As</span> Edge <span class="highlight-keyword">In</span> edgeArray
+                            <span class="highlight-comment">' horizontal?</span>
+                            <span class="highlight-keyword">If</span> Math.Abs(edge.AsCurve().ComputeDerivatives(<span class="highlight-number">0.0</span>, <span class="highlight-keyword">True</span>).BasisX.DotProduct(XYZ.BasisZ)) - <span class="highlight-number">1</span> &lt;= <span class="highlight-number">0.00001</span> <span class="highlight-keyword">Then</span>
+                                <span class="highlight-keyword">Return</span> edge.Reference
+                            <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+                        <span class="highlight-keyword">Next</span>
+                    <span class="highlight-keyword">Next</span>
+                <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+            <span class="highlight-keyword">Next</span>
+        <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+    <span class="highlight-keyword">Next</span>
+
+    <span class="highlight-keyword">Return</span> <span class="highlight-keyword">Nothing</span>
+<span class="highlight-keyword">End</span> <span class="highlight-keyword">Function</span></pre></div><div id="IDAKC_code_Div3" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div><div id="IDAKC_code_Div4" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div></div></div></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('seeAlso')" onkeypress="SectionExpandCollapse_CheckKey('seeAlso', event)" tabindex="0"><img id="seeAlsoToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="seeAlsoSection" class="collapsibleSection"><h4>Reference</h4><div><a href="08113547-eaaa-5ec1-5ff1-de609fe7c29c.htm">DisplacementElement Class</a></div><div><a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB Namespace</a></div></div></div></div><div id="PageFooter" class="pageFooter"><div class="feedbackLink">Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:revitapifeedback%40autodesk.com?Subject=Revit%202025%20API">Autodesk</a></div>
+        <script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        HT_mailLink.href += ": " + document.title + "\u0026body=" + encodeURIComponent("Your feedback is used to improve the documentation and the product. Your e-mail address will not be used for any other purpose and is disposed of after the issue you report is resolved. While working to resolve the issue that you report, you may be contacted via e-mail to get further details or clarification on the feedback you sent. After the issue you report has been addressed, you may receive an e-mail to let you know that your feedback has been addressed.");
+        </script></div></body></html>

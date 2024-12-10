@@ -1,0 +1,104 @@
+﻿<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="Microsoft.Help.SelfBranded" content="true" /><meta name="Language" content="en-us" /><meta name="Microsoft.Help.Locale" content="en-us" /><meta name="Microsoft.Help.TopicLocale" content="en-us" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" type="text/css" href="../styles/branding.css" /><link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" /><script type="text/javascript" src="../scripts/branding.js"></script><title>IExportContext.OnViewBegin Method</title><meta name="Title" content="OnViewBegin Method" /><meta name="Microsoft.Help.Id" content="M:Autodesk.Revit.DB.IExportContext.OnViewBegin(Autodesk.Revit.DB.ViewNode)" /><meta name="Microsoft.Help.ContentType" content="Reference" /><meta name="System.Keywords" content="IExportContext.OnViewBegin method" /><meta name="System.Keywords" content="OnViewBegin method" /><meta name="Microsoft.Help.F1" content="Autodesk.Revit.DB.IExportContext.OnViewBegin" /><meta name="Microsoft.Help.F1" content="IExportContext.OnViewBegin" /><meta name="Microsoft.Help.F1" content="OnViewBegin" /><meta name="container" content="Autodesk.Revit.DB" /><meta name="file" content="959602b7-5257-d2c1-2c00-0b7649f145f5" /><meta name="guid" content="959602b7-5257-d2c1-2c00-0b7649f145f5" /><meta name="Microsoft.Help.Category" content="CSharp" /><meta name="Microsoft.Help.Category" content="VB" /><meta name="Description" content="This method marks the beginning of a 3D view to be exported." /><link type="text/css" rel="stylesheet" href="../styles/highlight.css" /><script type="text/javascript" src="../scripts/highlight.js"> </script><link rel="stylesheet" type="text/css" href="../styles/branding-Help1.css" /></head><body onload="SetDefaultLanguage('cs');"><input type="hidden" id="userDataCache" class="userDataStyle" /><div id="PageHeader" class="pageHeader">Revit 2025 API</div><div class="pageBody"><div id="TopicContent" class="topicContent"><table class="titleTable"><tr><td class="titleColumn"><h1>IExport<wbr />Context<span id="LSTEC41BFC8_0" data-languageSpecificText="cpp=::|nu=."></span>On<wbr />View<wbr />Begin Method</h1></td></tr></table><div class="summary">
+   This method marks the beginning of a 3D view to be exported.
+</div><br /><strong>Namespace:</strong> <a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB</a><br /><strong>Assembly:</strong> RevitAPI (in RevitAPI.dll) Version: 25.0.0.0 (25.0.0.0)<div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDB')" onkeypress="SectionExpandCollapse_CheckKey('IDB', event)" tabindex="0"><img id="IDBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Syntax</span></div><div id="IDBSection" class="collapsibleSection"><div id="IDAB" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAB_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cs','1','4');return false;">C#</a></div><div id="IDAB_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','vb','2','4');return false;">VB</a></div><div id="IDAB_tab3" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cpp','3','4');return false;">C++</a></div><div id="IDAB_tab4" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAB_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAB');return false;" title="Copy">Copy</a></div></div><div id="IDAB_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="identifier">RenderNodeAction</span> <span class="identifier">OnViewBegin</span>(
+	<span class="identifier">ViewNode</span> <span class="parameter">node</span>
+)</pre></div><div id="IDAB_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">Function</span> <span class="identifier">OnViewBegin</span> ( 
+	<span class="parameter">node</span> <span class="keyword">As</span> <span class="identifier">ViewNode</span>
+) <span class="keyword">As</span> <span class="identifier">RenderNodeAction</span></pre></div><div id="IDAB_code_Div3" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="identifier">RenderNodeAction</span> <span class="identifier">OnViewBegin</span>(
+	<span class="identifier">ViewNode</span>^ <span class="parameter">node</span>
+)</pre></div><div id="IDAB_code_Div4" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">abstract</span> <span class="identifier">OnViewBegin</span> : 
+        <span class="parameter">node</span> : <span class="identifier">ViewNode</span> <span class="keyword">-&gt;</span> <span class="identifier">RenderNodeAction</span> </pre></div></div></div><h4>Parameters</h4><dl><dt class="has-text-weight-normal"><span class="parameter">node</span>  <a href="7cadfd9b-70df-5235-038f-a0535eee6f28.htm">ViewNode</a></dt><dd>
+   Geometry node associated with the view.
+</dd></dl><h4>Return Value</h4><a href="39f98799-628b-8d65-765c-ca86949ce7ed.htm">RenderNodeAction</a><br />
+   Return RenderNodeAction.Skip if you wish to skip exporting this view,
+   or return RenderNodeAction.Proceed otherwise.
+</div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDEC')" onkeypress="SectionExpandCollapse_CheckKey('IDEC', event)" tabindex="0"><img id="IDECToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Example</span></div><div id="IDECSection" class="collapsibleSection"><div id="IDAEC" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAEC_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAEC','cs','1','4');return false;">C#</a></div><div id="IDAEC_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAEC','vb','2','4');return false;">VB</a></div><div id="IDAEC_tab3" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDAEC','cpp','3','4');return false;">C++</a></div><div id="IDAEC_tab4" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDAEC','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAEC_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAEC');return false;" title="Copy">Copy</a></div></div><div id="IDAEC_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="highlight-comment">/// &lt;summary&gt;</span>
+<span class="highlight-comment">/// This method marks the start of processing a view (a 3D view)</span>
+<span class="highlight-comment">/// &lt;/summary&gt;</span>
+<span class="highlight-keyword">public</span> RenderNodeAction OnViewBegin(ViewNode node)
+{
+   <span class="highlight-comment">// If we did not do so before we invoked the custom export</span>
+   <span class="highlight-comment">// we can get information about the view from the supplied view node,</span>
+   <span class="highlight-comment">// That includes : rendering settings, sun settings, camera data, etc.</span>
+
+   <span class="highlight-comment">// Get the view information from the node.</span>
+   View3D theView = m_document.GetElement(node.ViewId) <span class="highlight-keyword">as</span> View3D;
+   <span class="highlight-keyword">string</span> viewName = theView.Name;
+
+   <span class="highlight-comment">// Get the view's Orientation information.</span>
+   ViewOrientation3D theOrientation = theView.GetOrientation();
+
+   <span class="highlight-comment">// Get the view's camera information, such as whether is a perspective view.</span>
+   CameraInfo camera = node.GetCameraInfo();
+   <span class="highlight-keyword">bool</span> isPerspective = camera.IsPespective;
+
+   <span class="highlight-comment">// Get the view's render setting information, such as background style.</span>
+   RenderingSettings renderSettings = theView.GetRenderingSettings();
+   BackgroundStyle bkStyle = renderSettings.BackgroundStyle;
+
+   <span class="highlight-comment">// Get the view's sun related information</span>
+   SunAndShadowSettings sun = theView.SunAndShadowSettings;
+
+   <span class="highlight-comment">// We can also determine whether we need to process instance of light objects (OnLight)</span>
+   <span class="highlight-keyword">bool</span> needToExportLight =
+      (renderSettings.LightingSource != LightingSource.ExteriorSun) &amp;&amp;
+      (renderSettings.LightingSource != LightingSource.InteriorSun);
+
+   <span class="highlight-comment">// We can either skip this view or proceed with rendering it</span>
+   <span class="highlight-keyword">return</span> RenderNodeAction.Proceed;
+}
+
+<span class="highlight-comment">/// &lt;summary&gt;</span>
+<span class="highlight-comment">/// This method marks the end of processing a view (a 3D view)</span>
+<span class="highlight-comment">/// &lt;/summary&gt;</span>
+<span class="highlight-keyword">public</span> <span class="highlight-keyword">void</span> OnViewEnd(ElementId elementId)
+{
+   <span class="highlight-comment">// elementId it indicates which view has just been exported</span>
+
+   <span class="highlight-comment">// Note: This method is invoked even for a view that was skipped.</span>
+}</pre></div><div id="IDAEC_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="highlight-comment">' &lt;summary&gt;</span>
+<span class="highlight-comment">' This method marks the start of processing a view (a 3D view)</span>
+<span class="highlight-comment">' &lt;/summary&gt;</span>
+<span class="highlight-keyword">Public</span> <span class="highlight-keyword">Function</span> OnViewBegin(node <span class="highlight-keyword">As</span> ViewNode) <span class="highlight-keyword">As</span> RenderNodeAction <span class="highlight-keyword">Implements</span> IExportContext.OnViewBegin
+    <span class="highlight-comment">' If we did not do so before we invoked the custom export</span>
+    <span class="highlight-comment">' we can get information about the view from the supplied view node,</span>
+    <span class="highlight-comment">' That includes : rendering settings, sun settings, camera data, etc.</span>
+
+    <span class="highlight-comment">' Get the view information from the node.</span>
+    <span class="highlight-keyword">Dim</span> theView <span class="highlight-keyword">As</span> View3D = <span class="highlight-keyword">TryCast</span>(m_document.GetElement(node.ViewId), View3D)
+    <span class="highlight-keyword">Dim</span> viewName <span class="highlight-keyword">As</span> <span class="highlight-keyword">String</span> = theView.Name
+
+    <span class="highlight-comment">' Get the view's Orientation information.</span>
+    <span class="highlight-keyword">Dim</span> theOrientation <span class="highlight-keyword">As</span> ViewOrientation3D = theView.GetOrientation()
+
+    <span class="highlight-comment">' Get the view's camera information, such as whether is a perspective view.</span>
+    <span class="highlight-keyword">Dim</span> camera <span class="highlight-keyword">As</span> CameraInfo = node.GetCameraInfo()
+    <span class="highlight-keyword">Dim</span> isPerspective <span class="highlight-keyword">As</span> <span class="highlight-keyword">Boolean</span> = camera.IsPespective
+
+    <span class="highlight-comment">' Get the view's render setting information, such as background style.</span>
+    <span class="highlight-keyword">Dim</span> renderSettings <span class="highlight-keyword">As</span> RenderingSettings = theView.GetRenderingSettings()
+    <span class="highlight-keyword">Dim</span> bkStyle <span class="highlight-keyword">As</span> BackgroundStyle = renderSettings.BackgroundStyle
+
+    <span class="highlight-comment">' Get the view's sun related information</span>
+    <span class="highlight-keyword">Dim</span> sun <span class="highlight-keyword">As</span> SunAndShadowSettings = theView.SunAndShadowSettings
+
+    <span class="highlight-comment">' We can also determine whether we need to process instance of light objects (OnLight)</span>
+    <span class="highlight-keyword">Dim</span> needToExportLight <span class="highlight-keyword">As</span> <span class="highlight-keyword">Boolean</span> = (renderSettings.LightingSource &lt;&gt; LightingSource.ExteriorSun) <span class="highlight-keyword">AndAlso</span> (renderSettings.LightingSource &lt;&gt; LightingSource.InteriorSun)
+
+    <span class="highlight-comment">' We can either skip this view or proceed with rendering it</span>
+    <span class="highlight-keyword">Return</span> RenderNodeAction.Proceed
+<span class="highlight-keyword">End</span> <span class="highlight-keyword">Function</span>
+
+<span class="highlight-comment">' &lt;summary&gt;</span>
+<span class="highlight-comment">' This method marks the end of processing a view (a 3D view)</span>
+<span class="highlight-comment">' &lt;/summary&gt;</span>
+<span class="highlight-keyword">Public</span> <span class="highlight-keyword">Sub</span> OnViewEnd(elementId <span class="highlight-keyword">As</span> ElementId) <span class="highlight-keyword">Implements</span> IExportContext.OnViewEnd
+    <span class="highlight-comment">' elementId it indicates which view has just been exported</span>
+
+    <span class="highlight-comment">' Note: This method is invoked even for a view that was skipped.</span>
+<span class="highlight-keyword">End</span> <span class="highlight-keyword">Sub</span></pre></div><div id="IDAEC_code_Div3" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div><div id="IDAEC_code_Div4" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div></div></div></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('seeAlso')" onkeypress="SectionExpandCollapse_CheckKey('seeAlso', event)" tabindex="0"><img id="seeAlsoToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="seeAlsoSection" class="collapsibleSection"><h4>Reference</h4><div><a href="7d0dc6df-db0e-6a07-3b42-8dde1bedb3c1.htm">IExportContext Interface</a></div><div><a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB Namespace</a></div></div></div></div><div id="PageFooter" class="pageFooter"><div class="feedbackLink">Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:revitapifeedback%40autodesk.com?Subject=Revit%202025%20API">Autodesk</a></div>
+        <script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        HT_mailLink.href += ": " + document.title + "\u0026body=" + encodeURIComponent("Your feedback is used to improve the documentation and the product. Your e-mail address will not be used for any other purpose and is disposed of after the issue you report is resolved. While working to resolve the issue that you report, you may be contacted via e-mail to get further details or clarification on the feedback you sent. After the issue you report has been addressed, you may receive an e-mail to let you know that your feedback has been addressed.");
+        </script></div></body></html>

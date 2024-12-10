@@ -1,0 +1,222 @@
+﻿<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="Microsoft.Help.SelfBranded" content="true" /><meta name="Language" content="en-us" /><meta name="Microsoft.Help.Locale" content="en-us" /><meta name="Microsoft.Help.TopicLocale" content="en-us" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" type="text/css" href="../styles/branding.css" /><link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" /><script type="text/javascript" src="../scripts/branding.js"></script><title>BRepBuilder Class</title><meta name="Title" content="BRepBuilder Class" /><meta name="Microsoft.Help.Id" content="T:Autodesk.Revit.DB.BRepBuilder" /><meta name="Microsoft.Help.ContentType" content="Reference" /><meta name="System.Keywords" content="Autodesk.Revit.DB.BRepBuilder class" /><meta name="System.Keywords" content="BRepBuilder class" /><meta name="Microsoft.Help.F1" content="Autodesk.Revit.DB.BRepBuilder" /><meta name="Microsoft.Help.F1" content="BRepBuilder" /><meta name="container" content="Autodesk.Revit.DB" /><meta name="file" content="94c1fef4-2933-ce67-9c2d-361cbf8a42b4" /><meta name="guid" content="94c1fef4-2933-ce67-9c2d-361cbf8a42b4" /><meta name="Microsoft.Help.Category" content="CSharp" /><meta name="Microsoft.Help.Category" content="VB" /><meta name="Description" content="A class that allows direct construction of geometry objects (solids, open shells, etc.)." /><link type="text/css" rel="stylesheet" href="../styles/highlight.css" /><script type="text/javascript" src="../scripts/highlight.js"> </script><link rel="stylesheet" type="text/css" href="../styles/branding-Help1.css" /></head><body onload="SetDefaultLanguage('cs');"><input type="hidden" id="userDataCache" class="userDataStyle" /><div id="PageHeader" class="pageHeader">Revit 2025 API</div><div class="pageBody"><div id="TopicContent" class="topicContent"><table class="titleTable"><tr><td class="titleColumn"><h1>BRep<wbr />Builder Class</h1></td></tr></table><div class="summary">
+   A class that allows direct construction of geometry objects (solids, open shells, etc.).
+</div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDDA')" onkeypress="SectionExpandCollapse_CheckKey('IDDA', event)" tabindex="0"><img id="IDDAToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Inheritance Hierarchy</span></div><div id="IDDASection" class="collapsibleSection"><a href="https://learn.microsoft.com/dotnet/api/system.object" target="_blank" rel="noopener noreferrer">System<span id="LST53DC5919_0" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>Object</a><br />  <a href="66c1678c-2e01-e0de-1386-5a0e1eb3ccff.htm">Autodesk.Revit.DB<span id="LST53DC5919_1" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>ShapeBuilder</a><br />    <span class="selflink">Autodesk.Revit.DB<span id="LST53DC5919_2" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>BRepBuilder</span><br /></div><br /><strong>Namespace:</strong> <a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB</a><br /><strong>Assembly:</strong> RevitAPI (in RevitAPI.dll) Version: 25.0.0.0 (25.0.0.0)<div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDB')" onkeypress="SectionExpandCollapse_CheckKey('IDB', event)" tabindex="0"><img id="IDBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Syntax</span></div><div id="IDBSection" class="collapsibleSection"><div id="IDAB" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAB_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cs','1','4');return false;">C#</a></div><div id="IDAB_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','vb','2','4');return false;">VB</a></div><div id="IDAB_tab3" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cpp','3','4');return false;">C++</a></div><div id="IDAB_tab4" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAB_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAB');return false;" title="Copy">Copy</a></div></div><div id="IDAB_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="keyword">public</span> <span class="keyword">class</span> <span class="identifier">BRepBuilder</span> : <span class="identifier">ShapeBuilder</span></pre></div><div id="IDAB_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">Public</span> <span class="keyword">Class</span> <span class="identifier">BRepBuilder</span>
+	<span class="keyword">Inherits</span> <span class="identifier">ShapeBuilder</span></pre></div><div id="IDAB_code_Div3" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">public</span> <span class="keyword">ref class</span> <span class="identifier">BRepBuilder</span> : <span class="keyword">public</span> <span class="identifier">ShapeBuilder</span></pre></div><div id="IDAB_code_Div4" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">type</span> <span class="identifier">BRepBuilder</span> = 
+    <span class="keyword">class</span>
+        <span class="keyword">inherit</span> <span class="identifier">ShapeBuilder</span>
+    <span class="keyword">end</span></pre></div></div></div></div><p>The <span class="selflink">BRepBuilder</span> type exposes the following members.</p><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDAEA')" onkeypress="SectionExpandCollapse_CheckKey('IDAEA', event)" tabindex="0"><img id="IDAEAToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Constructors</span></div><div id="IDAEASection" class="collapsibleSection"><table id="ConstructorList" class="members"><tr><th class="iconColumn"> </th><th>Name</th><th>Description</th></tr><tr><td><img src="../icons/pubMethod.gif" alt="Public method" title="Public method" /></td><td><a href="b3eb95b6-2297-44dc-df94-38aed1940b8c.htm">BRepBuilder</a></td><td>
+   Construct a BRepBuilder to use in constructing geometry.
+</td></tr></table><a href="#PageHeader">Top</a></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDZEA')" onkeypress="SectionExpandCollapse_CheckKey('IDZEA', event)" tabindex="0"><img id="IDZEAToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Properties</span></div><div id="IDZEASection" class="collapsibleSection"><table id="PropertyList" class="members"><tr><th class="iconColumn"> </th><th>Name</th><th>Description</th></tr><tr><td><img src="../icons/pubProperty.gif" alt="Public property" title="Public property" /></td><td><a href="6a5c7474-6ea6-4886-d356-204405406596.htm">IsValidObject</a></td><td>
+   Specifies whether the .NET object represents a valid Revit entity.
+<br />(Inherited from <a href="66c1678c-2e01-e0de-1386-5a0e1eb3ccff.htm">ShapeBuilder</a>)</td></tr></table><a href="#PageHeader">Top</a></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDBEA')" onkeypress="SectionExpandCollapse_CheckKey('IDBEA', event)" tabindex="0"><img id="IDBEAToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Methods</span></div><div id="IDBEASection" class="collapsibleSection"><table id="MethodList" class="members"><tr><th class="iconColumn"> </th><th>Name</th><th>Description</th></tr><tr><td><img src="../icons/pubMethod.gif" alt="Public method" title="Public method" /></td><td><a href="c4713a48-712b-e293-6745-a266af97e195.htm">AddCoEdge</a></td><td>
+   Add a co-edge associated to a previously added edge. A co-edge represents the use of an edge on one
+   of the edge's faces. BrepBuilder allows at most two faces per edge, hence at most two co-edges per edge,
+   and the co-edges must have opposite bCoEdgeIsReversed flags. The co-edges in a loop must be added in the
+   order in which they occur in the loop (i.e., in their topological order).
+</td></tr><tr><td><img src="../icons/pubMethod.gif" alt="Public method" title="Public method" /></td><td><a href="75963b10-7aec-dd68-e160-4a198161dadc.htm">AddEdge</a></td><td>
+   Add a new edge to the geometry being built. The BRepBuilder uses edges only to store edge geometry and to track
+   pairs of co-edges that share an edge.
+</td></tr><tr><td><img src="../icons/pubMethod.gif" alt="Public method" title="Public method" /></td><td><a href="cb899f6d-c4e0-0983-ab70-bae0a620dc8d.htm">AddFace</a></td><td>
+   Creates an empty face in the geometry being built. Other BRepBuilder methods are used to add loops to the face.
+</td></tr><tr><td><img src="../icons/pubMethod.gif" alt="Public method" title="Public method" /></td><td><a href="169a75b9-2b82-09ec-a6f1-a9b82e8f32fe.htm">AddLoop</a></td><td>
+   Creates an empty loop in a given face of the geometry being built. Other BRepBuilder methods are used to add co-edges to the loop.
+</td></tr><tr><td><img src="../icons/pubMethod.gif" alt="Public method" title="Public method" /></td><td><a href="727b6da1-e4d9-8077-c974-e7c1fb8ce34c.htm">AllowRemovalOfProblematicFaces</a></td><td>
+   Allow BRepBuilder to remove problematic faces (e.g., due to inaccurate edge geometry). If this option is enabled and
+   BRepBuilder removes some faces, the output geometry's type will be OpenShell regardless of the expected type specified
+   when the BRepBuilder was created.
+</td></tr><tr><td><img src="../icons/pubMethod.gif" alt="Public method" title="Public method" /></td><td><a href="8bf14f8a-bbf4-c661-1588-1626e574238b.htm">CanAddGeometry</a></td><td>
+   A validator function that checks the state of this BRepBuilder object. Returns true if this BRepBuilder object is accepting b-rep data, false otherwise.
+</td></tr><tr><td><img src="../icons/pubMethod.gif" alt="Public method" title="Public method" /></td><td><a href="efbfadf8-519d-7f66-8553-e887ed3058f1.htm">Dispose</a></td><td><br />(Inherited from <a href="66c1678c-2e01-e0de-1386-5a0e1eb3ccff.htm">ShapeBuilder</a>)</td></tr><tr><td><img src="../icons/pubMethod.gif" alt="Public method" title="Public method" /></td><td><a href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)" target="_blank" rel="noopener noreferrer">Equals</a></td><td>Determines whether the specified object is equal to the current object.<br />(Inherited from <a href="https://learn.microsoft.com/dotnet/api/system.object" target="_blank" rel="noopener noreferrer">Object</a>)</td></tr><tr><td><img src="../icons/pubMethod.gif" alt="Public method" title="Public method" /></td><td><a href="4e7da30b-68cf-5572-39d1-979dffef8d5a.htm">Finish</a></td><td>
+   Complete construction of the geometry. The geometry will be validated and, if valid, stored in this BRepBuilder. Otherwise it will be deleted.
+</td></tr><tr><td><img src="../icons/pubMethod.gif" alt="Public method" title="Public method" /></td><td><a href="2d5b2123-3d60-f87c-2f5f-b61fd2db62ce.htm">FinishFace</a></td><td>
+   Indicates that the caller has finished defining the given face.
+</td></tr><tr><td><img src="../icons/pubMethod.gif" alt="Public method" title="Public method" /></td><td><a href="cf38cd16-7b71-62d3-8c4f-56694125a4be.htm">FinishLoop</a></td><td>
+   Indicates that the caller has finished defining the given loop.
+</td></tr><tr><td><img src="../icons/pubMethod.gif" alt="Public method" title="Public method" /></td><td><a href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode#system-object-gethashcode" target="_blank" rel="noopener noreferrer">GetHashCode</a></td><td>Serves as the default hash function.<br />(Inherited from <a href="https://learn.microsoft.com/dotnet/api/system.object" target="_blank" rel="noopener noreferrer">Object</a>)</td></tr><tr><td><img src="../icons/pubMethod.gif" alt="Public method" title="Public method" /></td><td><a href="b1cb34d1-a485-8926-f437-23edb67cdc32.htm">GetResult<span id="LST53DC5919_3" data-languageSpecificText="cs=()|vb=|cpp=()|nu=()|fs=()"></span></a></td><td>
+   Get the <a href="7a3b5ac1-c66d-9f81-a11d-9bcd4e026295.htm">Solid</a> built by this BRepBuilder. This will clear the built geometry stored in the BRepBuilder.
+   This function will throw if this BRepBuilder hasn't completed building the b-rep. Use IsResultAvailable() to verify that this BRepBuilder contains a valid result.
+</td></tr><tr><td><img src="../icons/pubMethod.gif" alt="Public method" title="Public method" /></td><td><a href="b72c5abd-629e-96aa-0b87-95b5cc763f80.htm">GetResult(ExternalGeometryId, BRepBuilderPersistentIds)</a></td><td>
+   Get the <a href="58a208f6-2ce5-d6cf-d17e-f4968fae5b31.htm">ExternallyTaggedBRep</a> built by this BRepBuilder. This will clear the built geometry stored in the BRepBuilder.
+   This function will throw if this BRepBuilder hasn't completed building the b-rep. Use IsResultAvailable() to verify that this BRepBuilder contains a valid result.
+</td></tr><tr><td><img src="../icons/pubMethod.gif" alt="Public method" title="Public method" /></td><td><a href="https://learn.microsoft.com/dotnet/api/system.object.gettype#system-object-gettype" target="_blank" rel="noopener noreferrer">GetType</a></td><td>Gets the <a href="https://learn.microsoft.com/dotnet/api/system.type" target="_blank" rel="noopener noreferrer">Type</a> of the current instance.<br />(Inherited from <a href="https://learn.microsoft.com/dotnet/api/system.object" target="_blank" rel="noopener noreferrer">Object</a>)</td></tr><tr><td><img src="../icons/pubMethod.gif" alt="Public method" title="Public method" /><img src="../icons/Static.gif" alt="Static member" title="Static member" /></td><td><a href="040692f6-8493-74dc-4d6c-8b8668a2fe27.htm">IsPermittedSurfaceType</a></td><td>
+   A validator function that checks whether the surface object is of type supported as face surface by BRepBuilder.
+</td></tr><tr><td><img src="../icons/pubMethod.gif" alt="Public method" title="Public method" /></td><td><a href="e4316883-9ea0-b9a5-7cc5-3ba58d1c7418.htm">IsResultAvailable</a></td><td>
+   A validator function that checks the state of this BRepBuilder object. Returns true if this BRepBuilder object has successfully built a b-rep.
+</td></tr><tr><td><img src="../icons/pubMethod.gif" alt="Public method" title="Public method" /></td><td><a href="3572f388-f282-9c72-fdec-9147b2687638.htm">IsValidEdgeId</a></td><td>
+   A validator function that checks whether the edge id corresponds to an edge previously added to this BRepBuilder object.
+</td></tr><tr><td><img src="../icons/pubMethod.gif" alt="Public method" title="Public method" /></td><td><a href="476756cc-99d9-b891-9583-3fe7dff48c75.htm">IsValidFaceId</a></td><td>
+   A validator function that checks whether the face id corresponds to a face previously added to this BRepBuilder object.
+</td></tr><tr><td><img src="../icons/pubMethod.gif" alt="Public method" title="Public method" /></td><td><a href="8688abac-8e16-f7f7-d6ad-e84d8620d503.htm">IsValidLoopId</a></td><td>
+   A validator function that checks whether the loop id corresponds to a loop previously added to this BRepBuilder object.
+</td></tr><tr><td><img src="../icons/pubMethod.gif" alt="Public method" title="Public method" /></td><td><a href="4169de01-5062-fd9c-024f-c7958fc85402.htm">IsValidPersistentIdsMap</a></td><td>
+   A validator function that makes sure that all BRepBuilderGeometryIds in the input map can be found in this BRepBuilder object.
+</td></tr><tr><td><img src="../icons/pubMethod.gif" alt="Public method" title="Public method" /></td><td><a href="e5cb0e49-8c1a-9bd0-7867-c6a18b2d258a.htm">RemovedSomeFaces</a></td><td>
+   Returns 'true' if BRepBuilder removed some problematic faces from the output geometry, 'false' if not.
+   If allowRemovalOfProblematicFaces was not called to enable removal of problematic faces, this function
+   will return 'false'. Note that if some faces were removed, the output geometry's type will be OpenShell
+   regardless of the expected type that was specified when the BRepBuilder was created.
+</td></tr><tr><td><img src="../icons/pubMethod.gif" alt="Public method" title="Public method" /></td><td><a href="2e0f0e48-a219-7abe-96c4-b755cb5b687b.htm">SetAllowShortEdges</a></td><td>
+   Make BRepBuilder allow edges that it would normally disallow as being too short for Revit geometry.
+</td></tr><tr><td><img src="../icons/pubMethod.gif" alt="Public method" title="Public method" /></td><td><a href="8b7c7bed-57ef-a1e0-0fe2-529fe742e64a.htm">SetFaceMaterialId</a></td><td>
+   Sets material id to a face.
+</td></tr><tr><td><img src="../icons/pubMethod.gif" alt="Public method" title="Public method" /></td><td><a href="https://learn.microsoft.com/dotnet/api/system.object.tostring#system-object-tostring" target="_blank" rel="noopener noreferrer">ToString</a></td><td>Returns a string that represents the current object.<br />(Inherited from <a href="https://learn.microsoft.com/dotnet/api/system.object" target="_blank" rel="noopener noreferrer">Object</a>)</td></tr></table><a href="#PageHeader">Top</a></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDCC')" onkeypress="SectionExpandCollapse_CheckKey('IDCC', event)" tabindex="0"><img id="IDCCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Example</span></div><div id="IDCCSection" class="collapsibleSection"><div id="IDACC" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDACC_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDACC','cs','1','4');return false;">C#</a></div><div id="IDACC_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDACC','vb','2','4');return false;">VB</a></div><div id="IDACC_tab3" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDACC','cpp','3','4');return false;">C++</a></div><div id="IDACC_tab4" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDACC','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDACC_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDACC');return false;" title="Copy">Copy</a></div></div><div id="IDACC_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="highlight-keyword">private</span> <span class="highlight-keyword">void</span> CreateDirectShapeFromCylinder(Document doc)
+{
+    <span class="highlight-comment">// Naming convention for faces and edges: we assume that x is to the left and pointing down, y is horizontal and pointing to the right, z is up</span>
+    BRepBuilder brepBuilder = <span class="highlight-keyword">new</span> BRepBuilder(BRepType.Solid);
+
+    <span class="highlight-comment">// The surfaces of the four faces.</span>
+    Frame basis = <span class="highlight-keyword">new</span> Frame(<span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">50</span>, <span class="highlight-number">-100</span>, <span class="highlight-number">0</span>), <span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">0</span>, <span class="highlight-number">1</span>, <span class="highlight-number">0</span>), <span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">-1</span>, <span class="highlight-number">0</span>, <span class="highlight-number">0</span>), <span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">0</span>, <span class="highlight-number">0</span>, <span class="highlight-number">1</span>));
+    CylindricalSurface cylSurf = CylindricalSurface.Create(basis, <span class="highlight-number">50</span>);
+    Plane top = Plane.CreateByNormalAndOrigin(<span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">0</span>, <span class="highlight-number">0</span>, <span class="highlight-number">1</span>), <span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">0</span>, <span class="highlight-number">0</span>, <span class="highlight-number">100</span>));  <span class="highlight-comment">// normal points outside the cylinder</span>
+    Plane bottom = Plane.CreateByNormalAndOrigin(<span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">0</span>, <span class="highlight-number">0</span>, <span class="highlight-number">1</span>), <span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">0</span>, <span class="highlight-number">0</span>, <span class="highlight-number">0</span>)); <span class="highlight-comment">// normal points inside the cylinder</span>
+
+    <span class="highlight-comment">// Add the four faces</span>
+    BRepBuilderGeometryId frontCylFaceId = brepBuilder.AddFace(BRepBuilderSurfaceGeometry.Create(cylSurf, <span class="highlight-keyword">null</span>), <span class="highlight-keyword">false</span>);
+    BRepBuilderGeometryId backCylFaceId = brepBuilder.AddFace(BRepBuilderSurfaceGeometry.Create(cylSurf, <span class="highlight-keyword">null</span>), <span class="highlight-keyword">false</span>);
+    BRepBuilderGeometryId topFaceId = brepBuilder.AddFace(BRepBuilderSurfaceGeometry.Create(top, <span class="highlight-keyword">null</span>), <span class="highlight-keyword">false</span>);
+    BRepBuilderGeometryId bottomFaceId = brepBuilder.AddFace(BRepBuilderSurfaceGeometry.Create(bottom, <span class="highlight-keyword">null</span>), <span class="highlight-keyword">true</span>);
+
+    <span class="highlight-comment">// Geometry for the four semi-circular edges and two vertical linear edges</span>
+    BRepBuilderEdgeGeometry frontEdgeBottom = BRepBuilderEdgeGeometry.Create(Arc.Create(<span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">0</span>, <span class="highlight-number">-100</span>, <span class="highlight-number">0</span>), <span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">100</span>, <span class="highlight-number">-100</span>, <span class="highlight-number">0</span>), <span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">50</span>, <span class="highlight-number">-50</span>, <span class="highlight-number">0</span>)));
+    BRepBuilderEdgeGeometry backEdgeBottom = BRepBuilderEdgeGeometry.Create(Arc.Create(<span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">100</span>, <span class="highlight-number">-100</span>, <span class="highlight-number">0</span>), <span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">0</span>, <span class="highlight-number">-100</span>, <span class="highlight-number">0</span>), <span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">50</span>, <span class="highlight-number">-150</span>, <span class="highlight-number">0</span>)));
+
+    BRepBuilderEdgeGeometry frontEdgeTop = BRepBuilderEdgeGeometry.Create(Arc.Create(<span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">0</span>, <span class="highlight-number">-100</span>, <span class="highlight-number">100</span>), <span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">100</span>, <span class="highlight-number">-100</span>, <span class="highlight-number">100</span>), <span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">50</span>, <span class="highlight-number">-50</span>, <span class="highlight-number">100</span>)));
+    BRepBuilderEdgeGeometry backEdgeTop = BRepBuilderEdgeGeometry.Create(Arc.Create(<span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">0</span>, <span class="highlight-number">-100</span>, <span class="highlight-number">100</span>), <span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">100</span>, <span class="highlight-number">-100</span>, <span class="highlight-number">100</span>), <span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">50</span>, <span class="highlight-number">-150</span>, <span class="highlight-number">100</span>)));
+
+    BRepBuilderEdgeGeometry linearEdgeFront = BRepBuilderEdgeGeometry.Create(<span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">100</span>, <span class="highlight-number">-100</span>, <span class="highlight-number">0</span>), <span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">100</span>, <span class="highlight-number">-100</span>, <span class="highlight-number">100</span>));
+    BRepBuilderEdgeGeometry linearEdgeBack = BRepBuilderEdgeGeometry.Create(<span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">0</span>, <span class="highlight-number">-100</span>, <span class="highlight-number">0</span>), <span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">0</span>, <span class="highlight-number">-100</span>, <span class="highlight-number">100</span>));
+
+    <span class="highlight-comment">// Add the six edges</span>
+    BRepBuilderGeometryId frontEdgeBottomId = brepBuilder.AddEdge(frontEdgeBottom);
+    BRepBuilderGeometryId frontEdgeTopId = brepBuilder.AddEdge(frontEdgeTop);
+    BRepBuilderGeometryId linearEdgeFrontId = brepBuilder.AddEdge(linearEdgeFront);
+    BRepBuilderGeometryId linearEdgeBackId = brepBuilder.AddEdge(linearEdgeBack);
+    BRepBuilderGeometryId backEdgeBottomId = brepBuilder.AddEdge(backEdgeBottom);
+    BRepBuilderGeometryId backEdgeTopId = brepBuilder.AddEdge(backEdgeTop);
+
+    <span class="highlight-comment">// Loops of the four faces</span>
+    BRepBuilderGeometryId loopId_Top = brepBuilder.AddLoop(topFaceId);
+    BRepBuilderGeometryId loopId_Bottom = brepBuilder.AddLoop(bottomFaceId);
+    BRepBuilderGeometryId loopId_Front = brepBuilder.AddLoop(frontCylFaceId);
+    BRepBuilderGeometryId loopId_Back = brepBuilder.AddLoop(backCylFaceId);
+
+    <span class="highlight-comment">// Add coedges for the loop of the front face</span>
+    brepBuilder.AddCoEdge(loopId_Front, linearEdgeBackId, <span class="highlight-keyword">false</span>);
+    brepBuilder.AddCoEdge(loopId_Front, frontEdgeTopId, <span class="highlight-keyword">false</span>);
+    brepBuilder.AddCoEdge(loopId_Front, linearEdgeFrontId, <span class="highlight-keyword">true</span>);
+    brepBuilder.AddCoEdge(loopId_Front, frontEdgeBottomId, <span class="highlight-keyword">true</span>);
+    brepBuilder.FinishLoop(loopId_Front);
+    brepBuilder.FinishFace(frontCylFaceId);
+
+    <span class="highlight-comment">// Add coedges for the loop of the back face</span>
+    brepBuilder.AddCoEdge(loopId_Back, linearEdgeBackId, <span class="highlight-keyword">true</span>);
+    brepBuilder.AddCoEdge(loopId_Back, backEdgeBottomId, <span class="highlight-keyword">true</span>);
+    brepBuilder.AddCoEdge(loopId_Back, linearEdgeFrontId, <span class="highlight-keyword">false</span>);
+    brepBuilder.AddCoEdge(loopId_Back, backEdgeTopId, <span class="highlight-keyword">true</span>);
+    brepBuilder.FinishLoop(loopId_Back);
+    brepBuilder.FinishFace(backCylFaceId);
+
+    <span class="highlight-comment">// Add coedges for the loop of the top face</span>
+    brepBuilder.AddCoEdge(loopId_Top, backEdgeTopId, <span class="highlight-keyword">false</span>);
+    brepBuilder.AddCoEdge(loopId_Top, frontEdgeTopId, <span class="highlight-keyword">true</span>);
+    brepBuilder.FinishLoop(loopId_Top);
+    brepBuilder.FinishFace(topFaceId);
+
+    <span class="highlight-comment">// Add coedges for the loop of the bottom face</span>
+    brepBuilder.AddCoEdge(loopId_Bottom, frontEdgeBottomId, <span class="highlight-keyword">false</span>);
+    brepBuilder.AddCoEdge(loopId_Bottom, backEdgeBottomId, <span class="highlight-keyword">false</span>);
+    brepBuilder.FinishLoop(loopId_Bottom);
+    brepBuilder.FinishFace(bottomFaceId);
+
+    brepBuilder.Finish();
+
+    <span class="highlight-keyword">using</span> (Transaction tr = <span class="highlight-keyword">new</span> Transaction(doc, <span class="highlight-literal">"Create a DirectShape"</span>))
+    {
+        tr.Start();
+        DirectShape ds = DirectShape.CreateElement(doc, <span class="highlight-keyword">new</span> ElementId(BuiltInCategory.OST_GenericModel));
+        ds.SetShape(brepBuilder);
+        tr.Commit();
+    }
+}</pre></div><div id="IDACC_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="highlight-keyword">Private</span> <span class="highlight-keyword">Sub</span> CreateDirectShapeFromCylinder(doc <span class="highlight-keyword">As</span> Document)
+    <span class="highlight-comment">' Naming convention for faces and edges: we assume that x is to the left and pointing down, y is horizontal and pointing to the right, z is up</span>
+    <span class="highlight-keyword">Dim</span> brepBuilder <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> BRepBuilder(BRepType.Solid)
+
+    <span class="highlight-comment">' The surfaces of the four faces.</span>
+    <span class="highlight-keyword">Dim</span> basis <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> Frame(<span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">50</span>, <span class="highlight-number">-100</span>, <span class="highlight-number">0</span>), <span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">0</span>, <span class="highlight-number">1</span>, <span class="highlight-number">0</span>), <span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">-1</span>, <span class="highlight-number">0</span>, <span class="highlight-number">0</span>), <span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">0</span>, <span class="highlight-number">0</span>, <span class="highlight-number">1</span>))
+    <span class="highlight-keyword">Dim</span> cylSurf <span class="highlight-keyword">As</span> CylindricalSurface = CylindricalSurface.Create(basis, <span class="highlight-number">50</span>)
+    <span class="highlight-keyword">Dim</span> top <span class="highlight-keyword">As</span> Plane = Plane.CreateByNormalAndOrigin(<span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">0</span>, <span class="highlight-number">0</span>, <span class="highlight-number">1</span>), <span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">0</span>, <span class="highlight-number">0</span>, <span class="highlight-number">100</span>))
+    <span class="highlight-comment">' normal points outside the cylinder</span>
+    <span class="highlight-keyword">Dim</span> bottom <span class="highlight-keyword">As</span> Plane = Plane.CreateByNormalAndOrigin(<span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">0</span>, <span class="highlight-number">0</span>, <span class="highlight-number">1</span>), <span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">0</span>, <span class="highlight-number">0</span>, <span class="highlight-number">0</span>))
+    <span class="highlight-comment">' normal points inside the cylinder</span>
+    <span class="highlight-comment">' Add the four faces</span>
+    <span class="highlight-keyword">Dim</span> frontCylFaceId <span class="highlight-keyword">As</span> BRepBuilderGeometryId = brepBuilder.AddFace(BRepBuilderSurfaceGeometry.Create(cylSurf, <span class="highlight-keyword">Nothing</span>), <span class="highlight-keyword">False</span>)
+    <span class="highlight-keyword">Dim</span> backCylFaceId <span class="highlight-keyword">As</span> BRepBuilderGeometryId = brepBuilder.AddFace(BRepBuilderSurfaceGeometry.Create(cylSurf, <span class="highlight-keyword">Nothing</span>), <span class="highlight-keyword">False</span>)
+    <span class="highlight-keyword">Dim</span> topFaceId <span class="highlight-keyword">As</span> BRepBuilderGeometryId = brepBuilder.AddFace(BRepBuilderSurfaceGeometry.Create(top, <span class="highlight-keyword">Nothing</span>), <span class="highlight-keyword">False</span>)
+    <span class="highlight-keyword">Dim</span> bottomFaceId <span class="highlight-keyword">As</span> BRepBuilderGeometryId = brepBuilder.AddFace(BRepBuilderSurfaceGeometry.Create(bottom, <span class="highlight-keyword">Nothing</span>), <span class="highlight-keyword">True</span>)
+
+    <span class="highlight-comment">' Geometry for the four semi-circular edges and two vertical linear edges</span>
+    <span class="highlight-keyword">Dim</span> frontEdgeBottom <span class="highlight-keyword">As</span> BRepBuilderEdgeGeometry = BRepBuilderEdgeGeometry.Create(Arc.Create(<span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">0</span>, <span class="highlight-number">-100</span>, <span class="highlight-number">0</span>), <span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">100</span>, <span class="highlight-number">-100</span>, <span class="highlight-number">0</span>), <span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">50</span>, <span class="highlight-number">-50</span>, <span class="highlight-number">0</span>)))
+    <span class="highlight-keyword">Dim</span> backEdgeBottom <span class="highlight-keyword">As</span> BRepBuilderEdgeGeometry = BRepBuilderEdgeGeometry.Create(Arc.Create(<span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">100</span>, <span class="highlight-number">-100</span>, <span class="highlight-number">0</span>), <span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">0</span>, <span class="highlight-number">-100</span>, <span class="highlight-number">0</span>), <span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">50</span>, <span class="highlight-number">-150</span>, <span class="highlight-number">0</span>)))
+
+    <span class="highlight-keyword">Dim</span> frontEdgeTop <span class="highlight-keyword">As</span> BRepBuilderEdgeGeometry = BRepBuilderEdgeGeometry.Create(Arc.Create(<span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">0</span>, <span class="highlight-number">-100</span>, <span class="highlight-number">100</span>), <span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">100</span>, <span class="highlight-number">-100</span>, <span class="highlight-number">100</span>), <span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">50</span>, <span class="highlight-number">-50</span>, <span class="highlight-number">100</span>)))
+    <span class="highlight-keyword">Dim</span> backEdgeTop <span class="highlight-keyword">As</span> BRepBuilderEdgeGeometry = BRepBuilderEdgeGeometry.Create(Arc.Create(<span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">0</span>, <span class="highlight-number">-100</span>, <span class="highlight-number">100</span>), <span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">100</span>, <span class="highlight-number">-100</span>, <span class="highlight-number">100</span>), <span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">50</span>, <span class="highlight-number">-150</span>, <span class="highlight-number">100</span>)))
+
+    <span class="highlight-keyword">Dim</span> linearEdgeFront <span class="highlight-keyword">As</span> BRepBuilderEdgeGeometry = BRepBuilderEdgeGeometry.Create(<span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">100</span>, <span class="highlight-number">-100</span>, <span class="highlight-number">0</span>), <span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">100</span>, <span class="highlight-number">-100</span>, <span class="highlight-number">100</span>))
+    <span class="highlight-keyword">Dim</span> linearEdgeBack <span class="highlight-keyword">As</span> BRepBuilderEdgeGeometry = BRepBuilderEdgeGeometry.Create(<span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">0</span>, <span class="highlight-number">-100</span>, <span class="highlight-number">0</span>), <span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">0</span>, <span class="highlight-number">-100</span>, <span class="highlight-number">100</span>))
+
+    <span class="highlight-comment">' Add the six edges</span>
+    <span class="highlight-keyword">Dim</span> frontEdgeBottomId <span class="highlight-keyword">As</span> BRepBuilderGeometryId = brepBuilder.AddEdge(frontEdgeBottom)
+    <span class="highlight-keyword">Dim</span> frontEdgeTopId <span class="highlight-keyword">As</span> BRepBuilderGeometryId = brepBuilder.AddEdge(frontEdgeTop)
+    <span class="highlight-keyword">Dim</span> linearEdgeFrontId <span class="highlight-keyword">As</span> BRepBuilderGeometryId = brepBuilder.AddEdge(linearEdgeFront)
+    <span class="highlight-keyword">Dim</span> linearEdgeBackId <span class="highlight-keyword">As</span> BRepBuilderGeometryId = brepBuilder.AddEdge(linearEdgeBack)
+    <span class="highlight-keyword">Dim</span> backEdgeBottomId <span class="highlight-keyword">As</span> BRepBuilderGeometryId = brepBuilder.AddEdge(backEdgeBottom)
+    <span class="highlight-keyword">Dim</span> backEdgeTopId <span class="highlight-keyword">As</span> BRepBuilderGeometryId = brepBuilder.AddEdge(backEdgeTop)
+
+    <span class="highlight-comment">' Loops of the four faces</span>
+    <span class="highlight-keyword">Dim</span> loopId_Top <span class="highlight-keyword">As</span> BRepBuilderGeometryId = brepBuilder.AddLoop(topFaceId)
+    <span class="highlight-keyword">Dim</span> loopId_Bottom <span class="highlight-keyword">As</span> BRepBuilderGeometryId = brepBuilder.AddLoop(bottomFaceId)
+    <span class="highlight-keyword">Dim</span> loopId_Front <span class="highlight-keyword">As</span> BRepBuilderGeometryId = brepBuilder.AddLoop(frontCylFaceId)
+    <span class="highlight-keyword">Dim</span> loopId_Back <span class="highlight-keyword">As</span> BRepBuilderGeometryId = brepBuilder.AddLoop(backCylFaceId)
+
+    <span class="highlight-comment">' Add coedges for the loop of the front face</span>
+    brepBuilder.AddCoEdge(loopId_Front, linearEdgeBackId, <span class="highlight-keyword">False</span>)
+    brepBuilder.AddCoEdge(loopId_Front, frontEdgeTopId, <span class="highlight-keyword">False</span>)
+    brepBuilder.AddCoEdge(loopId_Front, linearEdgeFrontId, <span class="highlight-keyword">True</span>)
+    brepBuilder.AddCoEdge(loopId_Front, frontEdgeBottomId, <span class="highlight-keyword">True</span>)
+    brepBuilder.FinishLoop(loopId_Front)
+    brepBuilder.FinishFace(frontCylFaceId)
+
+    <span class="highlight-comment">' Add coedges for the loop of the back face</span>
+    brepBuilder.AddCoEdge(loopId_Back, linearEdgeBackId, <span class="highlight-keyword">True</span>)
+    brepBuilder.AddCoEdge(loopId_Back, backEdgeBottomId, <span class="highlight-keyword">True</span>)
+    brepBuilder.AddCoEdge(loopId_Back, linearEdgeFrontId, <span class="highlight-keyword">False</span>)
+    brepBuilder.AddCoEdge(loopId_Back, backEdgeTopId, <span class="highlight-keyword">True</span>)
+    brepBuilder.FinishLoop(loopId_Back)
+    brepBuilder.FinishFace(backCylFaceId)
+
+    <span class="highlight-comment">' Add coedges for the loop of the top face</span>
+    brepBuilder.AddCoEdge(loopId_Top, backEdgeTopId, <span class="highlight-keyword">False</span>)
+    brepBuilder.AddCoEdge(loopId_Top, frontEdgeTopId, <span class="highlight-keyword">True</span>)
+    brepBuilder.FinishLoop(loopId_Top)
+    brepBuilder.FinishFace(topFaceId)
+
+    <span class="highlight-comment">' Add coedges for the loop of the bottom face</span>
+    brepBuilder.AddCoEdge(loopId_Bottom, frontEdgeBottomId, <span class="highlight-keyword">False</span>)
+    brepBuilder.AddCoEdge(loopId_Bottom, backEdgeBottomId, <span class="highlight-keyword">False</span>)
+    brepBuilder.FinishLoop(loopId_Bottom)
+    brepBuilder.FinishFace(bottomFaceId)
+
+    brepBuilder.Finish()
+
+    <span class="highlight-keyword">Using</span> tr <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> Transaction(doc, <span class="highlight-literal">"Create a DirectShape"</span>)
+        tr.Start()
+        <span class="highlight-keyword">Dim</span> ds <span class="highlight-keyword">As</span> DirectShape = DirectShape.CreateElement(doc, <span class="highlight-keyword">New</span> ElementId(BuiltInCategory.OST_GenericModel))
+        ds.SetShape(brepBuilder)
+        tr.Commit()
+    <span class="highlight-keyword">End</span> <span class="highlight-keyword">Using</span>
+<span class="highlight-keyword">End</span> <span class="highlight-keyword">Sub</span></pre></div><div id="IDACC_code_Div3" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div><div id="IDACC_code_Div4" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div></div></div></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('seeAlso')" onkeypress="SectionExpandCollapse_CheckKey('seeAlso', event)" tabindex="0"><img id="seeAlsoToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="seeAlsoSection" class="collapsibleSection"><h4>Reference</h4><div><a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB Namespace</a></div></div></div></div><div id="PageFooter" class="pageFooter"><div class="feedbackLink">Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:revitapifeedback%40autodesk.com?Subject=Revit%202025%20API">Autodesk</a></div>
+        <script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        HT_mailLink.href += ": " + document.title + "\u0026body=" + encodeURIComponent("Your feedback is used to improve the documentation and the product. Your e-mail address will not be used for any other purpose and is disposed of after the issue you report is resolved. While working to resolve the issue that you report, you may be contacted via e-mail to get further details or clarification on the feedback you sent. After the issue you report has been addressed, you may receive an e-mail to let you know that your feedback has been addressed.");
+        </script></div></body></html>

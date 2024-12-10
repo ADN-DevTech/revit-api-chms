@@ -1,0 +1,57 @@
+﻿<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="Microsoft.Help.SelfBranded" content="true" /><meta name="Language" content="en-us" /><meta name="Microsoft.Help.Locale" content="en-us" /><meta name="Microsoft.Help.TopicLocale" content="en-us" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" type="text/css" href="../styles/branding.css" /><link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" /><script type="text/javascript" src="../scripts/branding.js"></script><title>ArcLengthDimension.Create Method</title><meta name="Title" content="Create Method" /><meta name="Microsoft.Help.Id" content="M:Autodesk.Revit.DB.ArcLengthDimension.Create(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.View,Autodesk.Revit.DB.Arc,Autodesk.Revit.DB.Reference,System.Collections.Generic.IList{Autodesk.Revit.DB.Reference})" /><meta name="Microsoft.Help.ContentType" content="Reference" /><meta name="System.Keywords" content="ArcLengthDimension.Create method" /><meta name="System.Keywords" content="Create method" /><meta name="Microsoft.Help.F1" content="Autodesk.Revit.DB.ArcLengthDimension.Create" /><meta name="Microsoft.Help.F1" content="ArcLengthDimension.Create" /><meta name="Microsoft.Help.F1" content="Create" /><meta name="container" content="Autodesk.Revit.DB" /><meta name="file" content="90ff5bb4-24db-868c-ecc3-3e42006a70f0" /><meta name="guid" content="90ff5bb4-24db-868c-ecc3-3e42006a70f0" /><meta name="Description" content="Creates a new instance of an Arc Length Dimension element within the project." /><link rel="stylesheet" type="text/css" href="../styles/branding-Help1.css" /></head><body onload="SetDefaultLanguage('cs');"><input type="hidden" id="userDataCache" class="userDataStyle" /><div id="PageHeader" class="pageHeader">Revit 2025 API</div><div class="pageBody"><div id="TopicContent" class="topicContent"><table class="titleTable"><tr><td class="titleColumn"><h1>Arc<wbr />Length<wbr />Dimension<span id="LST5E3C320B_0" data-languageSpecificText="cpp=::|nu=."></span>Create Method</h1></td></tr></table><div class="summary">
+   Creates a new instance of an Arc Length Dimension element within the project.
+</div><br /><strong>Namespace:</strong> <a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB</a><br /><strong>Assembly:</strong> RevitAPI (in RevitAPI.dll) Version: 25.0.0.0 (25.0.0.0)<div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDB')" onkeypress="SectionExpandCollapse_CheckKey('IDB', event)" tabindex="0"><img id="IDBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Syntax</span></div><div id="IDBSection" class="collapsibleSection"><div id="IDAB" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAB_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cs','1','4');return false;">C#</a></div><div id="IDAB_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','vb','2','4');return false;">VB</a></div><div id="IDAB_tab3" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cpp','3','4');return false;">C++</a></div><div id="IDAB_tab4" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAB_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAB');return false;" title="Copy">Copy</a></div></div><div id="IDAB_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="keyword">public</span> <span class="keyword">static</span> <span class="identifier">ArcLengthDimension</span> <span class="identifier">Create</span>(
+	<span class="identifier">Document</span> <span class="parameter">document</span>,
+	<span class="identifier">View</span> <span class="parameter">dbView</span>,
+	<span class="identifier">Arc</span> <span class="parameter">arc</span>,
+	<span class="identifier">Reference</span> <span class="parameter">ArcRef</span>,
+	<span class="identifier">IList</span>&lt;<span class="identifier">Reference</span>&gt; <span class="parameter">references</span>
+)</pre></div><div id="IDAB_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">Public</span> <span class="keyword">Shared</span> <span class="keyword">Function</span> <span class="identifier">Create</span> ( 
+	<span class="parameter">document</span> <span class="keyword">As</span> <span class="identifier">Document</span>,
+	<span class="parameter">dbView</span> <span class="keyword">As</span> <span class="identifier">View</span>,
+	<span class="parameter">arc</span> <span class="keyword">As</span> <span class="identifier">Arc</span>,
+	<span class="parameter">ArcRef</span> <span class="keyword">As</span> <span class="identifier">Reference</span>,
+	<span class="parameter">references</span> <span class="keyword">As</span> <span class="identifier">IList</span>(<span class="keyword">Of</span> <span class="identifier">Reference</span>)
+) <span class="keyword">As</span> <span class="identifier">ArcLengthDimension</span></pre></div><div id="IDAB_code_Div3" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">public</span>:
+<span class="keyword">static</span> <span class="identifier">ArcLengthDimension</span>^ <span class="identifier">Create</span>(
+	<span class="identifier">Document</span>^ <span class="parameter">document</span>, 
+	<span class="identifier">View</span>^ <span class="parameter">dbView</span>, 
+	<span class="identifier">Arc</span>^ <span class="parameter">arc</span>, 
+	<span class="identifier">Reference</span>^ <span class="parameter">ArcRef</span>, 
+	<span class="identifier">IList</span>&lt;<span class="identifier">Reference</span>^&gt;^ <span class="parameter">references</span>
+)</pre></div><div id="IDAB_code_Div4" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">static</span> <span class="keyword">member</span> <span class="identifier">Create</span> : 
+        <span class="parameter">document</span> : <span class="identifier">Document</span> * 
+        <span class="parameter">dbView</span> : <span class="identifier">View</span> * 
+        <span class="parameter">arc</span> : <span class="identifier">Arc</span> * 
+        <span class="parameter">ArcRef</span> : <span class="identifier">Reference</span> * 
+        <span class="parameter">references</span> : <span class="identifier">IList</span>&lt;<span class="identifier">Reference</span>&gt; <span class="keyword">-&gt;</span> <span class="identifier">ArcLengthDimension</span> </pre></div></div></div><h4>Parameters</h4><dl><dt class="has-text-weight-normal"><span class="parameter">document</span>  <a href="db03274b-a107-aa32-9034-f3e0df4bb1ec.htm">Document</a></dt><dd>
+   The document where the new Arc Length Dimension is created.
+</dd><dt class="has-text-weight-normal"><span class="parameter">dbView</span>  <a href="fb92a4e7-f3a7-ef14-e631-342179b18de9.htm">View</a></dt><dd>
+   The view in which the Arc Length Dimension will appear.
+</dd><dt class="has-text-weight-normal"><span class="parameter">arc</span>  <a href="1f5f541e-9335-aef3-0e75-59eed9ae2221.htm">Arc</a></dt><dd>
+   The Arc of the annotation itself
+</dd><dt class="has-text-weight-normal"><span class="parameter">ArcRef</span>  <a href="d28155ae-817b-1f31-9c3f-c9c6a28acc0d.htm">Reference</a></dt><dd>
+   Reference for the arc to be measured
+</dd><dt class="has-text-weight-normal"><span class="parameter">references</span>  <a href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1" target="_blank" rel="noopener noreferrer">IList</a><span id="LST5E3C320B_1" data-languageSpecificText="cpp=&lt;|cs=&lt;|fs=&lt;|vb=(Of |nu=("></span><a href="d28155ae-817b-1f31-9c3f-c9c6a28acc0d.htm">Reference</a><span id="LST5E3C320B_2" data-languageSpecificText="cpp=&gt;|cs=&gt;|fs=&gt;|vb=)|nu=)"></span></dt><dd>
+   The segments which the Arc Length Dimension will witness.
+</dd></dl><h4>Return Value</h4><a href="e9808e40-a7f1-5c89-4000-32a94305bd25.htm">ArcLengthDimension</a><br />
+   The newly created Arc Length Dimension instance, or <span class="keyword"><span id="LST5E3C320B_3" data-languageSpecificText="cpp=nullptr|vb=Nothing|nu=null"></span></span> if the operation fails.
+</div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDHC')" onkeypress="SectionExpandCollapse_CheckKey('IDHC', event)" tabindex="0"><img id="IDHCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Exceptions</span></div><div id="IDHCSection" class="collapsibleSection"><table><tr><th>Exception</th><th>Condition</th></tr><tr><td><a href="2e6e4206-97a8-dd4b-df5d-4269f4bb6088.htm">ArgumentException</a></td><td>
+   References should be: at least two and intersecting the ends of the arc passed.
+</td></tr><tr><td><a href="631e1424-60f4-929b-4e52-dda9dcd26316.htm">ArgumentNullException</a></td><td>
+   A non-optional argument was null
+</td></tr><tr><td><a href="53205486-5917-7c33-8e67-e362106ddc97.htm">ModificationForbiddenException</a></td><td>
+   The document is in failure mode: an operation has failed,
+   and Revit requires the user to either cancel the operation
+   or fix the problem (usually by deleting certain elements).
+   -or-
+   The document is being loaded, or is in the midst of another
+   sensitive process.
+</td></tr><tr><td><a href="8f025460-c283-ea99-aa8a-5a36e11528f4.htm">ModificationOutsideTransactionException</a></td><td>
+   The document has no open transaction.
+</td></tr></table></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('seeAlso')" onkeypress="SectionExpandCollapse_CheckKey('seeAlso', event)" tabindex="0"><img id="seeAlsoToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="seeAlsoSection" class="collapsibleSection"><h4>Reference</h4><div><a href="e9808e40-a7f1-5c89-4000-32a94305bd25.htm">ArcLengthDimension Class</a></div><div><a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB Namespace</a></div></div></div></div><div id="PageFooter" class="pageFooter"><div class="feedbackLink">Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:revitapifeedback%40autodesk.com?Subject=Revit%202025%20API">Autodesk</a></div>
+        <script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        HT_mailLink.href += ": " + document.title + "\u0026body=" + encodeURIComponent("Your feedback is used to improve the documentation and the product. Your e-mail address will not be used for any other purpose and is disposed of after the issue you report is resolved. While working to resolve the issue that you report, you may be contacted via e-mail to get further details or clarification on the feedback you sent. After the issue you report has been addressed, you may receive an e-mail to let you know that your feedback has been addressed.");
+        </script></div></body></html>

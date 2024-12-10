@@ -1,0 +1,134 @@
+﻿<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="Microsoft.Help.SelfBranded" content="true" /><meta name="Language" content="en-us" /><meta name="Microsoft.Help.Locale" content="en-us" /><meta name="Microsoft.Help.TopicLocale" content="en-us" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" type="text/css" href="../styles/branding.css" /><link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" /><script type="text/javascript" src="../scripts/branding.js"></script><title>RebarShape.Create(Document, RebarShapeDefinition, RebarShapeMultiplanarDefinition, RebarStyle, StirrupTieAttachmentType, Int32, RebarHookOrientation, Int32, RebarHookOrientation, Int32, Double, Double, ElementId, ElementId) Method</title><meta name="Title" content="Create(Document, RebarShapeDefinition, RebarShapeMultiplanarDefinition, RebarStyle, StirrupTieAttachmentType, Int32, RebarHookOrientation, Int32, RebarHookOrientation, Int32, Double, Double, ElementId, ElementId) Method" /><meta name="Microsoft.Help.Id" content="M:Autodesk.Revit.DB.Structure.RebarShape.Create(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.Structure.RebarShapeDefinition,Autodesk.Revit.DB.Structure.RebarShapeMultiplanarDefinition,Autodesk.Revit.DB.Structure.RebarStyle,Autodesk.Revit.DB.Structure.StirrupTieAttachmentType,System.Int32,Autodesk.Revit.DB.Structure.RebarHookOrientation,System.Int32,Autodesk.Revit.DB.Structure.RebarHookOrientation,System.Int32,System.Double,System.Double,Autodesk.Revit.DB.ElementId,Autodesk.Revit.DB.ElementId)" /><meta name="Microsoft.Help.ContentType" content="Reference" /><meta name="container" content="Autodesk.Revit.DB.Structure" /><meta name="file" content="4ec14822-777d-be9a-580c-fd90a4ce28c2" /><meta name="guid" content="4ec14822-777d-be9a-580c-fd90a4ce28c2" /><meta name="Description" content="Create a new instance of a Rebar Shape, which defines the shape of a rebar." /><link rel="stylesheet" type="text/css" href="../styles/branding-Help1.css" /></head><body onload="SetDefaultLanguage('cs');"><input type="hidden" id="userDataCache" class="userDataStyle" /><div id="PageHeader" class="pageHeader">Revit 2025 API</div><div class="pageBody"><div id="TopicContent" class="topicContent"><table class="titleTable"><tr><td class="titleColumn"><h1>Rebar<wbr />Shape<span id="LSTD9D6FBE5_0" data-languageSpecificText="cpp=::|nu=."></span>Create(Document, Rebar<wbr />Shape<wbr />Definition, Rebar<wbr />Shape<wbr />Multiplanar<wbr />Definition, Rebar<wbr />Style, Stirrup<wbr />Tie<wbr />Attachment<wbr />Type, Int<wbr />32, Rebar<wbr />Hook<wbr />Orientation, Int<wbr />32, Rebar<wbr />Hook<wbr />Orientation, Int<wbr />32, Double, Double, Element<wbr />Id, Element<wbr />Id) Method</h1></td></tr></table><div class="summary">
+   Create a new instance of a Rebar Shape, which defines the shape of a rebar.
+</div><br /><strong>Namespace:</strong> <a href="d586b341-f687-9d90-e96d-255806b7d4fc.htm">Autodesk.Revit.DB.Structure</a><br /><strong>Assembly:</strong> RevitAPI (in RevitAPI.dll) Version: 25.0.0.0 (25.0.0.0)<div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDB')" onkeypress="SectionExpandCollapse_CheckKey('IDB', event)" tabindex="0"><img id="IDBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Syntax</span></div><div id="IDBSection" class="collapsibleSection"><div id="IDAB" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAB_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cs','1','4');return false;">C#</a></div><div id="IDAB_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','vb','2','4');return false;">VB</a></div><div id="IDAB_tab3" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cpp','3','4');return false;">C++</a></div><div id="IDAB_tab4" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAB_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAB');return false;" title="Copy">Copy</a></div></div><div id="IDAB_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="keyword">public</span> <span class="keyword">static</span> <span class="identifier">RebarShape</span> <span class="identifier">Create</span>(
+	<span class="identifier">Document</span> <span class="parameter">doc</span>,
+	<span class="identifier">RebarShapeDefinition</span> <span class="parameter">definition</span>,
+	<span class="identifier">RebarShapeMultiplanarDefinition</span> <span class="parameter">multiplanarDefinition</span>,
+	<span class="identifier">RebarStyle</span> <span class="parameter">style</span>,
+	<span class="identifier">StirrupTieAttachmentType</span> <span class="parameter">attachmentType</span>,
+	<span class="identifier">int</span> <span class="parameter">startHookAngle</span>,
+	<span class="identifier">RebarHookOrientation</span> <span class="parameter">startHookOrientation</span>,
+	<span class="identifier">int</span> <span class="parameter">endHookAngle</span>,
+	<span class="identifier">RebarHookOrientation</span> <span class="parameter">endHookOrientation</span>,
+	<span class="identifier">int</span> <span class="parameter">higherEnd</span>,
+	<span class="identifier">double</span> <span class="parameter">hookRotationAngleAtStart</span>,
+	<span class="identifier">double</span> <span class="parameter">hookRotationAngleAtEnd</span>,
+	<span class="identifier">ElementId</span> <span class="parameter">endTreatmentTypeIdAtStart</span>,
+	<span class="identifier">ElementId</span> <span class="parameter">endTreatmentTypeIdAtEnd</span>
+)</pre></div><div id="IDAB_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">Public</span> <span class="keyword">Shared</span> <span class="keyword">Function</span> <span class="identifier">Create</span> ( 
+	<span class="parameter">doc</span> <span class="keyword">As</span> <span class="identifier">Document</span>,
+	<span class="parameter">definition</span> <span class="keyword">As</span> <span class="identifier">RebarShapeDefinition</span>,
+	<span class="parameter">multiplanarDefinition</span> <span class="keyword">As</span> <span class="identifier">RebarShapeMultiplanarDefinition</span>,
+	<span class="parameter">style</span> <span class="keyword">As</span> <span class="identifier">RebarStyle</span>,
+	<span class="parameter">attachmentType</span> <span class="keyword">As</span> <span class="identifier">StirrupTieAttachmentType</span>,
+	<span class="parameter">startHookAngle</span> <span class="keyword">As</span> <span class="identifier">Integer</span>,
+	<span class="parameter">startHookOrientation</span> <span class="keyword">As</span> <span class="identifier">RebarHookOrientation</span>,
+	<span class="parameter">endHookAngle</span> <span class="keyword">As</span> <span class="identifier">Integer</span>,
+	<span class="parameter">endHookOrientation</span> <span class="keyword">As</span> <span class="identifier">RebarHookOrientation</span>,
+	<span class="parameter">higherEnd</span> <span class="keyword">As</span> <span class="identifier">Integer</span>,
+	<span class="parameter">hookRotationAngleAtStart</span> <span class="keyword">As</span> <span class="identifier">Double</span>,
+	<span class="parameter">hookRotationAngleAtEnd</span> <span class="keyword">As</span> <span class="identifier">Double</span>,
+	<span class="parameter">endTreatmentTypeIdAtStart</span> <span class="keyword">As</span> <span class="identifier">ElementId</span>,
+	<span class="parameter">endTreatmentTypeIdAtEnd</span> <span class="keyword">As</span> <span class="identifier">ElementId</span>
+) <span class="keyword">As</span> <span class="identifier">RebarShape</span></pre></div><div id="IDAB_code_Div3" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">public</span>:
+<span class="keyword">static</span> <span class="identifier">RebarShape</span>^ <span class="identifier">Create</span>(
+	<span class="identifier">Document</span>^ <span class="parameter">doc</span>, 
+	<span class="identifier">RebarShapeDefinition</span>^ <span class="parameter">definition</span>, 
+	<span class="identifier">RebarShapeMultiplanarDefinition</span>^ <span class="parameter">multiplanarDefinition</span>, 
+	<span class="identifier">RebarStyle</span> <span class="parameter">style</span>, 
+	<span class="identifier">StirrupTieAttachmentType</span> <span class="parameter">attachmentType</span>, 
+	<span class="identifier">int</span> <span class="parameter">startHookAngle</span>, 
+	<span class="identifier">RebarHookOrientation</span> <span class="parameter">startHookOrientation</span>, 
+	<span class="identifier">int</span> <span class="parameter">endHookAngle</span>, 
+	<span class="identifier">RebarHookOrientation</span> <span class="parameter">endHookOrientation</span>, 
+	<span class="identifier">int</span> <span class="parameter">higherEnd</span>, 
+	<span class="identifier">double</span> <span class="parameter">hookRotationAngleAtStart</span>, 
+	<span class="identifier">double</span> <span class="parameter">hookRotationAngleAtEnd</span>, 
+	<span class="identifier">ElementId</span>^ <span class="parameter">endTreatmentTypeIdAtStart</span>, 
+	<span class="identifier">ElementId</span>^ <span class="parameter">endTreatmentTypeIdAtEnd</span>
+)</pre></div><div id="IDAB_code_Div4" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">static</span> <span class="keyword">member</span> <span class="identifier">Create</span> : 
+        <span class="parameter">doc</span> : <span class="identifier">Document</span> * 
+        <span class="parameter">definition</span> : <span class="identifier">RebarShapeDefinition</span> * 
+        <span class="parameter">multiplanarDefinition</span> : <span class="identifier">RebarShapeMultiplanarDefinition</span> * 
+        <span class="parameter">style</span> : <span class="identifier">RebarStyle</span> * 
+        <span class="parameter">attachmentType</span> : <span class="identifier">StirrupTieAttachmentType</span> * 
+        <span class="parameter">startHookAngle</span> : <span class="identifier">int</span> * 
+        <span class="parameter">startHookOrientation</span> : <span class="identifier">RebarHookOrientation</span> * 
+        <span class="parameter">endHookAngle</span> : <span class="identifier">int</span> * 
+        <span class="parameter">endHookOrientation</span> : <span class="identifier">RebarHookOrientation</span> * 
+        <span class="parameter">higherEnd</span> : <span class="identifier">int</span> * 
+        <span class="parameter">hookRotationAngleAtStart</span> : <span class="identifier">float</span> * 
+        <span class="parameter">hookRotationAngleAtEnd</span> : <span class="identifier">float</span> * 
+        <span class="parameter">endTreatmentTypeIdAtStart</span> : <span class="identifier">ElementId</span> * 
+        <span class="parameter">endTreatmentTypeIdAtEnd</span> : <span class="identifier">ElementId</span> <span class="keyword">-&gt;</span> <span class="identifier">RebarShape</span> </pre></div></div></div><h4>Parameters</h4><dl><dt class="has-text-weight-normal"><span class="parameter">doc</span>  <a href="db03274b-a107-aa32-9034-f3e0df4bb1ec.htm">Document</a></dt><dd>
+   A document to contain the RebarShape.
+</dd><dt class="has-text-weight-normal"><span class="parameter">definition</span>  <a href="bb1f59be-c95e-a45b-8d2b-8121df179676.htm">RebarShapeDefinition</a></dt><dd>
+   The definition of the rebar shape, as a set of curves in a plane
+   driven by parameters.
+</dd><dt class="has-text-weight-normal"><span class="parameter">multiplanarDefinition</span>  <a href="47a3135c-ce53-c041-f551-0795767eaa41.htm">RebarShapeMultiplanarDefinition</a></dt><dd>
+   If not <span class="keyword"><span id="LSTD9D6FBE5_1" data-languageSpecificText="cpp=nullptr|vb=Nothing|nu=null"></span></span>, the created RebarShape will be a 3D shape. The shape
+   is built out of the planar RebarShapeDefinition, with additional
+   out-of-plane segments defined by the RebarShapeMultiplanarDefinition
+   object. Not supported in conjunction with RebarShapeDefinitionByArc
+   of type Spiral or LappedCircle.
+</dd><dt class="has-text-weight-normal"><span class="parameter">style</span>  <a href="a9ac65a6-29e6-25e5-caca-502e21385f47.htm">RebarStyle</a></dt><dd>
+   Whether the shape is to be used as a standard bar or a stirrup/tie.
+</dd><dt class="has-text-weight-normal"><span class="parameter">attachmentType</span>  <a href="01887c64-36b1-1f7f-5ff9-1fb3ba4f3023.htm">StirrupTieAttachmentType</a></dt><dd>
+   When the style is stirrup/tie, specify whether it will attach to the
+   interior of cover (cover is measured to the stirrups), or to the
+   exterior of cover (cover is measured to the standard bars).
+   Ignored when the style is Standard.
+</dd><dt class="has-text-weight-normal"><span class="parameter">startHookAngle</span>  <a href="https://learn.microsoft.com/dotnet/api/system.int32" target="_blank" rel="noopener noreferrer">Int32</a></dt><dd>
+   The start hook angle, expressed as an integral number of degrees.
+   If 0, the shape will have no start hook. Common values are 0, 90, 135, and 180.
+</dd><dt class="has-text-weight-normal"><span class="parameter">startHookOrientation</span>  <a href="e8365754-0811-8d4e-864a-55bf34af3a87.htm">RebarHookOrientation</a></dt><dd>
+   The orientation of the start hook.
+   Ignored when startHookAngle is 0.
+</dd><dt class="has-text-weight-normal"><span class="parameter">endHookAngle</span>  <a href="https://learn.microsoft.com/dotnet/api/system.int32" target="_blank" rel="noopener noreferrer">Int32</a></dt><dd>
+   The end hook angle, expressed as an integral number of degrees.
+   If 0, the shape will have no end hook. Common values are 0, 90, 135, and 180.
+</dd><dt class="has-text-weight-normal"><span class="parameter">endHookOrientation</span>  <a href="e8365754-0811-8d4e-864a-55bf34af3a87.htm">RebarHookOrientation</a></dt><dd>
+   The orientation of the end hook.
+   Ignored when endHookAngle is 0.
+</dd><dt class="has-text-weight-normal"><span class="parameter">higherEnd</span>  <a href="https://learn.microsoft.com/dotnet/api/system.int32" target="_blank" rel="noopener noreferrer">Int32</a></dt><dd>
+   When the rebar crosses itself, one end will be "lifted" to avoid self-intersection.
+   Specify which end should be lifted: 0 for start, 1 for end.
+</dd><dt class="has-text-weight-normal"><span class="parameter">hookRotationAngleAtStart</span>  <a href="https://learn.microsoft.com/dotnet/api/system.double" target="_blank" rel="noopener noreferrer">Double</a></dt><dd>
+   The out of plane hook rotation angle at the start of the bar.
+</dd><dt class="has-text-weight-normal"><span class="parameter">hookRotationAngleAtEnd</span>  <a href="https://learn.microsoft.com/dotnet/api/system.double" target="_blank" rel="noopener noreferrer">Double</a></dt><dd>
+   The out of plane hook rotation angle at the end of the bar.
+</dd><dt class="has-text-weight-normal"><span class="parameter">endTreatmentTypeIdAtStart</span>  <a href="44f3f7b1-3229-3404-93c9-dc5e70337dd6.htm">ElementId</a></dt><dd>
+   The end treatment type id at the start of the bar.
+</dd><dt class="has-text-weight-normal"><span class="parameter">endTreatmentTypeIdAtEnd</span>  <a href="44f3f7b1-3229-3404-93c9-dc5e70337dd6.htm">ElementId</a></dt><dd>
+   The end treatment type id at the end of the bar.
+</dd></dl><h4>Return Value</h4><a href="0a370e32-eaba-785e-7e1f-9330929525fc.htm">RebarShape</a><br />
+   A new RebarShape instance.
+</div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDQC')" onkeypress="SectionExpandCollapse_CheckKey('IDQC', event)" tabindex="0"><img id="IDQCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Exceptions</span></div><div id="IDQCSection" class="collapsibleSection"><table><tr><th>Exception</th><th>Condition</th></tr><tr><td><a href="2e6e4206-97a8-dd4b-df5d-4269f4bb6088.htm">ArgumentException</a></td><td>
+   definition is linked to a Document other than doc.
+   -or-
+   A multiplanar definition is specified when the given RebarShapeDefinition
+   does not support it. The following RebarShapeDefinitions do not support
+   multiplanar: a simple line; spiral; lapped circle.
+   -or-
+   The DepthParamId property of multiplanarDefinition
+   is invalid or has not been added to definition.
+   -or-
+   the parameter endTreatmentTypeIdAtStart is not an EndTreatmentType element.
+   -or-
+   the parameter endTreatmentTypeIdAtEnd is not an EndTreatmentType element.
+</td></tr><tr><td><a href="631e1424-60f4-929b-4e52-dda9dcd26316.htm">ArgumentNullException</a></td><td>
+   A non-optional argument was null
+</td></tr><tr><td><a href="60f148c9-ece0-a6bb-4e12-bb4a9c8c8a24.htm">ArgumentOutOfRangeException</a></td><td>
+   startHookAngle must be at least 0 and no more than 180.
+   -or-
+   endHookAngle must be at least 0 and no more than 180.
+   -or-
+   higherEnd must be 0 or 1.
+   -or-
+   A value passed for an enumeration argument is not a member of that enumeration
+</td></tr></table></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('seeAlso')" onkeypress="SectionExpandCollapse_CheckKey('seeAlso', event)" tabindex="0"><img id="seeAlsoToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="seeAlsoSection" class="collapsibleSection"><h4>Reference</h4><div><a href="0a370e32-eaba-785e-7e1f-9330929525fc.htm">RebarShape Class</a></div><div><a href="dd926f0a-458d-d64d-1c85-07f3d2c68baa.htm">Create Overload</a></div><div><a href="d586b341-f687-9d90-e96d-255806b7d4fc.htm">Autodesk.Revit.DB.Structure Namespace</a></div></div></div></div><div id="PageFooter" class="pageFooter"><div class="feedbackLink">Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:revitapifeedback%40autodesk.com?Subject=Revit%202025%20API">Autodesk</a></div>
+        <script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        HT_mailLink.href += ": " + document.title + "\u0026body=" + encodeURIComponent("Your feedback is used to improve the documentation and the product. Your e-mail address will not be used for any other purpose and is disposed of after the issue you report is resolved. While working to resolve the issue that you report, you may be contacted via e-mail to get further details or clarification on the feedback you sent. After the issue you report has been addressed, you may receive an e-mail to let you know that your feedback has been addressed.");
+        </script></div></body></html>

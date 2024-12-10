@@ -1,0 +1,83 @@
+﻿<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="Microsoft.Help.SelfBranded" content="true" /><meta name="Language" content="en-us" /><meta name="Microsoft.Help.Locale" content="en-us" /><meta name="Microsoft.Help.TopicLocale" content="en-us" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" type="text/css" href="../styles/branding.css" /><link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" /><script type="text/javascript" src="../scripts/branding.js"></script><title>Document.SaveAsCloudModel Method</title><meta name="Title" content="SaveAsCloudModel Method" /><meta name="Microsoft.Help.Id" content="M:Autodesk.Revit.DB.Document.SaveAsCloudModel(System.Guid,System.Guid,System.String,System.String)" /><meta name="Microsoft.Help.ContentType" content="Reference" /><meta name="System.Keywords" content="Document.SaveAsCloudModel method" /><meta name="System.Keywords" content="SaveAsCloudModel method" /><meta name="Microsoft.Help.F1" content="Autodesk.Revit.DB.Document.SaveAsCloudModel" /><meta name="Microsoft.Help.F1" content="Document.SaveAsCloudModel" /><meta name="Microsoft.Help.F1" content="SaveAsCloudModel" /><meta name="container" content="Autodesk.Revit.DB" /><meta name="file" content="2fd26edf-b1f8-905b-e5d7-b56eaa2a2eeb" /><meta name="guid" content="2fd26edf-b1f8-905b-e5d7-b56eaa2a2eeb" /><meta name="Description" content="Saves current non-workshared or workshared model as a cloud model or workshared cloud model in BIM 360 Docs or Autodesk Docs." /><link rel="stylesheet" type="text/css" href="../styles/branding-Help1.css" /></head><body onload="SetDefaultLanguage('cs');"><input type="hidden" id="userDataCache" class="userDataStyle" /><div id="PageHeader" class="pageHeader">Revit 2025 API</div><div class="pageBody"><div id="TopicContent" class="topicContent"><table class="titleTable"><tr><td class="titleColumn"><h1>Document<span id="LSTF3FF2B40_0" data-languageSpecificText="cpp=::|nu=."></span>Save<wbr />As<wbr />Cloud<wbr />Model Method</h1></td></tr></table><div class="summary">
+   Saves current non-workshared or workshared model as a cloud model or workshared cloud model in BIM 360 Docs or Autodesk Docs.
+</div><br /><strong>Namespace:</strong> <a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB</a><br /><strong>Assembly:</strong> RevitAPI (in RevitAPI.dll) Version: 25.0.0.0 (25.0.0.0)<div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDB')" onkeypress="SectionExpandCollapse_CheckKey('IDB', event)" tabindex="0"><img id="IDBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Syntax</span></div><div id="IDBSection" class="collapsibleSection"><div id="IDAB" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAB_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cs','1','4');return false;">C#</a></div><div id="IDAB_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','vb','2','4');return false;">VB</a></div><div id="IDAB_tab3" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cpp','3','4');return false;">C++</a></div><div id="IDAB_tab4" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAB_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAB');return false;" title="Copy">Copy</a></div></div><div id="IDAB_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="keyword">public</span> <span class="keyword">void</span> <span class="identifier">SaveAsCloudModel</span>(
+	<span class="identifier">Guid</span> <span class="parameter">accountId</span>,
+	<span class="identifier">Guid</span> <span class="parameter">projectId</span>,
+	<span class="identifier">string</span> <span class="parameter">folderId</span>,
+	<span class="identifier">string</span> <span class="parameter">modelName</span>
+)</pre></div><div id="IDAB_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">Public</span> <span class="keyword">Sub</span> <span class="identifier">SaveAsCloudModel</span> ( 
+	<span class="parameter">accountId</span> <span class="keyword">As</span> <span class="identifier">Guid</span>,
+	<span class="parameter">projectId</span> <span class="keyword">As</span> <span class="identifier">Guid</span>,
+	<span class="parameter">folderId</span> <span class="keyword">As</span> <span class="identifier">String</span>,
+	<span class="parameter">modelName</span> <span class="keyword">As</span> <span class="identifier">String</span>
+)</pre></div><div id="IDAB_code_Div3" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">public</span>:
+<span class="keyword">void</span> <span class="identifier">SaveAsCloudModel</span>(
+	<span class="identifier">Guid</span> <span class="parameter">accountId</span>, 
+	<span class="identifier">Guid</span> <span class="parameter">projectId</span>, 
+	<span class="identifier">String</span>^ <span class="parameter">folderId</span>, 
+	<span class="identifier">String</span>^ <span class="parameter">modelName</span>
+)</pre></div><div id="IDAB_code_Div4" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">member</span> <span class="identifier">SaveAsCloudModel</span> : 
+        <span class="parameter">accountId</span> : <span class="identifier">Guid</span> * 
+        <span class="parameter">projectId</span> : <span class="identifier">Guid</span> * 
+        <span class="parameter">folderId</span> : <span class="identifier">string</span> * 
+        <span class="parameter">modelName</span> : <span class="identifier">string</span> <span class="keyword">-&gt;</span> <span class="keyword">unit</span> </pre></div></div></div><h4>Parameters</h4><dl><dt class="has-text-weight-normal"><span class="parameter">accountId</span>  <a href="https://learn.microsoft.com/dotnet/api/system.guid" target="_blank" rel="noopener noreferrer">Guid</a></dt><dd>
+   The BIM 360 Docs or Autodesk Docs account Id.
+   You can use one of the following methods to get this Id:
+   <ul><li> If you get the hub Id with Forge Data Management API, remove the prefix "b." of the Id string and convert the rest to a Guid. </li><li> If you get the account Id with Forge BIM 360 Docs or Autodesk Docs API, just convert the Id string to a Guid. </li></ul></dd><dt class="has-text-weight-normal"><span class="parameter">projectId</span>  <a href="https://learn.microsoft.com/dotnet/api/system.guid" target="_blank" rel="noopener noreferrer">Guid</a></dt><dd>
+   The BIM 360 Docs or Autodesk Docs project Id.
+   You can use one of the following methods to get this Id:
+   <ul><li> If you get the project Id with Forge Data Management API, remove the prefix "b." of the Id string and convert the rest to a Guid. </li><li> If you get the project Id with Forge BIM 360 Docs or Autodesk Docs API, just convert the Id string to a Guid. </li></ul></dd><dt class="has-text-weight-normal"><span class="parameter">folderId</span>  <a href="https://learn.microsoft.com/dotnet/api/system.string" target="_blank" rel="noopener noreferrer">String</a></dt><dd>
+   Folder identity in BIM 360 Docs or Autodesk Docs to save the model.
+   You can use one of the following methods to get this Id:
+   <ul><li> The folder Id string from Forge Data Management API. </li><li> The folder Id string from Forge BIM 360 Docs or Autodesk Docs API. </li></ul></dd><dt class="has-text-weight-normal"><span class="parameter">modelName</span>  <a href="https://learn.microsoft.com/dotnet/api/system.string" target="_blank" rel="noopener noreferrer">String</a></dt><dd>
+   Model name in BIM 360 Docs or Autodesk Docs to save the model.
+</dd></dl></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDGC')" onkeypress="SectionExpandCollapse_CheckKey('IDGC', event)" tabindex="0"><img id="IDGCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Exceptions</span></div><div id="IDGCSection" class="collapsibleSection"><table><tr><th>Exception</th><th>Condition</th></tr><tr><td><a href="2e6e4206-97a8-dd4b-df5d-4269f4bb6088.htm">ArgumentException</a></td><td>
+   folderId is an empty string.
+   -or-
+   modelName is an empty string.
+   -or-
+   The input file name "modelName" does not represent a valid file name.
+   -or-
+   Thrown when the input BIM 360 Docs or Autodesk Docs account Id or project Id is invalid or unmatched.
+</td></tr><tr><td><a href="631e1424-60f4-929b-4e52-dda9dcd26316.htm">ArgumentNullException</a></td><td>
+   A non-optional argument was null
+</td></tr><tr><td><a href="c5b911f6-1e8f-2cd4-6965-286f41221fe0.htm">ForbiddenForDynamicUpdateException</a></td><td>
+   SaveAs may not be called during dynamic update.
+</td></tr><tr><td><a href="9e715f03-3884-e539-4dd6-8d7545733adc.htm">InvalidOperationException</a></td><td>
+   Saving is not allowed in the current application mode.
+   -or-
+   This Document is not a project document.
+   -or-
+   This Document is in an edit mode.
+   -or-
+   This Document is not a primary document, it is a linked document.
+   -or-
+   SaveAs is temporarily disabled.
+   -or-
+   This Document is a cloud model, cannot be saved as a cloud model.
+   -or-
+   There is a transaction phase left open (such as a transaction, sub-transaction of transaction group) at the time of invoking this method.
+</td></tr><tr><td><a href="a0003d89-0113-6623-65da-0db5c568bfb6.htm">RevitServerCommunicationException</a></td><td>
+   Could be for any of the reasons related to network.
+</td></tr><tr><td><a href="6dcd093c-d643-07cd-535f-36ffa9d2db52.htm">RevitServerInternalException</a></td><td>
+   Could be for any of the reasons that saveAs fails with RevitServerInternalException.
+</td></tr><tr><td><a href="a3ed0157-0a46-0b62-62db-08112e1645bd.htm">RevitServerModelAlreadyExistsException</a></td><td>
+   Failed due to there is a model with the same name already exists at the specified location.
+</td></tr><tr><td><a href="ec0e702a-f076-1b44-4277-feefd39045d4.htm">RevitServerModelNameBreaksConventionException</a></td><td>
+   Failed due to the model name is breaking project naming convention.
+</td></tr><tr><td><a href="b9b68e56-c767-4680-a65b-73d268ee8860.htm">RevitServerUnauthenticatedUserException</a></td><td>
+   User is not signed in with Autodesk id.
+</td></tr><tr><td><a href="9e8c1efc-8719-fe01-f311-cfade7b177ed.htm">RevitServerUnauthorizedException</a></td><td>
+   You don't have the entitlement to perform the operation to this this Document.
+   -or-
+   User is not authorized to access the specified cloud project.
+</td></tr></table></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDBC')" onkeypress="SectionExpandCollapse_CheckKey('IDBC', event)" tabindex="0"><img id="IDBCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Remarks</span></div><div id="IDBCSection" class="collapsibleSection"><p>Assumes that user is currently signed in BIM 360 Docs or Autodesk Docs and has access to Autodesk cloud services.
+   This operation will create a model on cloud and then create a local cache of the cloud model.
+   This method cannot be used when current document is already in cloud. </p><p>You can use one of the following methods to save a local model as a workshared cloud model in BIM 360 Docs or Autodesk Docs.
+   <ul><li> If the local model is a workshared model, then it will be a workshared cloud model after you use this method successfully. </li><li> If the local model is a non-workshared model, you can enable the workset with <a href="7c29717e-1d8c-4e02-20ad-65c53ea8eaaa.htm">EnableWorksharing(String, String)</a> and then save as a workshared cloud model. </li><li> If the local model is a non-workshared model, and you have already saved it as a non-workshared cloud model in BIM 360 Docs or Autodesk Docs, you can still enable the workset with
+   <a href="4146e816-565e-85d8-ce94-93ec505a0924.htm">EnableCloudWorksharing<span id="LSTF3FF2B40_1" data-languageSpecificText="cs=()|vb=|cpp=()|nu=()|fs=()"></span></a> to convert it to a workshared cloud model. </li></ul></p><p>You cannot save a local workshared model as a non-workshared cloud model in BIM 360 Docs or Autodesk Docs.</p></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('seeAlso')" onkeypress="SectionExpandCollapse_CheckKey('seeAlso', event)" tabindex="0"><img id="seeAlsoToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="seeAlsoSection" class="collapsibleSection"><h4>Reference</h4><div><a href="db03274b-a107-aa32-9034-f3e0df4bb1ec.htm">Document Class</a></div><div><a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB Namespace</a></div></div></div></div><div id="PageFooter" class="pageFooter"><div class="feedbackLink">Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:revitapifeedback%40autodesk.com?Subject=Revit%202025%20API">Autodesk</a></div>
+        <script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        HT_mailLink.href += ": " + document.title + "\u0026body=" + encodeURIComponent("Your feedback is used to improve the documentation and the product. Your e-mail address will not be used for any other purpose and is disposed of after the issue you report is resolved. While working to resolve the issue that you report, you may be contacted via e-mail to get further details or clarification on the feedback you sent. After the issue you report has been addressed, you may receive an e-mail to let you know that your feedback has been addressed.");
+        </script></div></body></html>

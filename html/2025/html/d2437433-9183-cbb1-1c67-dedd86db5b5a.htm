@@ -1,0 +1,118 @@
+﻿<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="Microsoft.Help.SelfBranded" content="true" /><meta name="Language" content="en-us" /><meta name="Microsoft.Help.Locale" content="en-us" /><meta name="Microsoft.Help.TopicLocale" content="en-us" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" type="text/css" href="../styles/branding.css" /><link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" /><script type="text/javascript" src="../scripts/branding.js"></script><title>CustomExporter Class</title><meta name="Title" content="CustomExporter Class" /><meta name="Microsoft.Help.Id" content="T:Autodesk.Revit.DB.CustomExporter" /><meta name="Microsoft.Help.ContentType" content="Reference" /><meta name="System.Keywords" content="Autodesk.Revit.DB.CustomExporter class" /><meta name="System.Keywords" content="CustomExporter class" /><meta name="Microsoft.Help.F1" content="Autodesk.Revit.DB.CustomExporter" /><meta name="Microsoft.Help.F1" content="CustomExporter" /><meta name="container" content="Autodesk.Revit.DB" /><meta name="file" content="d2437433-9183-cbb1-1c67-dedd86db5b5a" /><meta name="guid" content="d2437433-9183-cbb1-1c67-dedd86db5b5a" /><meta name="Microsoft.Help.Category" content="CSharp" /><meta name="Microsoft.Help.Category" content="VB" /><meta name="Description" content="A class that allows exporting 3D or 2D views via an export context." /><link type="text/css" rel="stylesheet" href="../styles/highlight.css" /><script type="text/javascript" src="../scripts/highlight.js"> </script><link rel="stylesheet" type="text/css" href="../styles/branding-Help1.css" /></head><body onload="SetDefaultLanguage('cs');"><input type="hidden" id="userDataCache" class="userDataStyle" /><div id="PageHeader" class="pageHeader">Revit 2025 API</div><div class="pageBody"><div id="TopicContent" class="topicContent"><table class="titleTable"><tr><td class="titleColumn"><h1>Custom<wbr />Exporter Class</h1></td></tr></table><div class="summary">
+   A class that allows exporting 3D or 2D views via an export context.
+</div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDDA')" onkeypress="SectionExpandCollapse_CheckKey('IDDA', event)" tabindex="0"><img id="IDDAToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Inheritance Hierarchy</span></div><div id="IDDASection" class="collapsibleSection"><a href="https://learn.microsoft.com/dotnet/api/system.object" target="_blank" rel="noopener noreferrer">System<span id="LST6E3989B3_0" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>Object</a><br />  <span class="selflink">Autodesk.Revit.DB<span id="LST6E3989B3_1" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>CustomExporter</span><br /></div><br /><strong>Namespace:</strong> <a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB</a><br /><strong>Assembly:</strong> RevitAPI (in RevitAPI.dll) Version: 25.0.0.0 (25.0.0.0)<div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDB')" onkeypress="SectionExpandCollapse_CheckKey('IDB', event)" tabindex="0"><img id="IDBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Syntax</span></div><div id="IDBSection" class="collapsibleSection"><div id="IDAB" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAB_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cs','1','4');return false;">C#</a></div><div id="IDAB_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','vb','2','4');return false;">VB</a></div><div id="IDAB_tab3" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cpp','3','4');return false;">C++</a></div><div id="IDAB_tab4" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAB_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAB');return false;" title="Copy">Copy</a></div></div><div id="IDAB_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="keyword">public</span> <span class="keyword">class</span> <span class="identifier">CustomExporter</span> : <span class="identifier">IDisposable</span></pre></div><div id="IDAB_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">Public</span> <span class="keyword">Class</span> <span class="identifier">CustomExporter</span>
+	<span class="keyword">Implements</span> <span class="identifier">IDisposable</span></pre></div><div id="IDAB_code_Div3" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">public</span> <span class="keyword">ref class</span> <span class="identifier">CustomExporter</span> : <span class="identifier">IDisposable</span></pre></div><div id="IDAB_code_Div4" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">type</span> <span class="identifier">CustomExporter</span> = 
+    <span class="keyword">class</span>
+        <span class="keyword">interface</span> <span class="identifier">IDisposable</span>
+    <span class="keyword">end</span></pre></div></div></div></div><p>The <span class="selflink">CustomExporter</span> type exposes the following members.</p><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDAFA')" onkeypress="SectionExpandCollapse_CheckKey('IDAFA', event)" tabindex="0"><img id="IDAFAToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Constructors</span></div><div id="IDAFASection" class="collapsibleSection"><table id="ConstructorList" class="members"><tr><th class="iconColumn"> </th><th>Name</th><th>Description</th></tr><tr><td><img src="../icons/pubMethod.gif" alt="Public method" title="Public method" /></td><td><a href="98f23174-e29e-36a5-e3a4-c72144708553.htm">CustomExporter</a></td><td>
+   Constructs a new instance of a CustomExporter for a given document
+   using the input instance of IExportContext as the output device.
+</td></tr></table><a href="#PageHeader">Top</a></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDIFA')" onkeypress="SectionExpandCollapse_CheckKey('IDIFA', event)" tabindex="0"><img id="IDIFAToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Properties</span></div><div id="IDIFASection" class="collapsibleSection"><table id="PropertyList" class="members"><tr><th class="iconColumn"> </th><th>Name</th><th>Description</th></tr><tr><td><img src="../icons/pubProperty.gif" alt="Public property" title="Public property" /></td><td><a href="47ed429b-289a-207d-0176-707158a46df0.htm">Export2DForceDisplayStyle</a></td><td>
+   This value tells the exporter of 2D views to force the given display mode for the view.
+</td></tr><tr><td><img src="../icons/pubProperty.gif" alt="Public property" title="Public property" /></td><td><a href="34ed2a39-a5e6-6ef1-1f6d-cceebd2bae7f.htm">Export2DGeometricObjectsIncludingPatternLines</a></td><td>
+   This flag sets the exporter of 2D views to either include or exclude
+   output of face pattern lines as part of geometric objects
+   when the model is being processed by the export context.
+</td></tr><tr><td><img src="../icons/pubProperty.gif" alt="Public property" title="Public property" /></td><td><a href="1a22bfd6-bb08-c368-f981-d02151986b5c.htm">Export2DIncludingAnnotationObjects</a></td><td>
+   This flag sets the exporter of 2D views to either include or exclude
+   output of annotation objects
+   when the model is being processed by the export context.
+</td></tr><tr><td><img src="../icons/pubProperty.gif" alt="Public property" title="Public property" /></td><td><a href="2ce1075e-380e-01e7-6459-b7467c2a2414.htm">IncludeGeometricObjects</a></td><td>
+   This flag sets the exporter to either include or exclude
+   output of geometric objects such as faces and curves
+   when the model is being processed by the export context.
+</td></tr><tr><td><img src="../icons/pubProperty.gif" alt="Public property" title="Public property" /></td><td><a href="6686c741-6cac-5940-4297-52c49a8234c9.htm">IsValidObject</a></td><td>
+   Specifies whether the .NET object represents a valid Revit entity.
+</td></tr><tr><td><img src="../icons/pubProperty.gif" alt="Public property" title="Public property" /></td><td><a href="bc21fee5-c194-4d19-cd12-0a285e854a5e.htm">ShouldStopOnError</a></td><td>
+   This flag instructs the exporting process to either stop or continue
+   in case an error occurs during any of the exporting methods.
+</td></tr></table><a href="#PageHeader">Top</a></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDBFA')" onkeypress="SectionExpandCollapse_CheckKey('IDBFA', event)" tabindex="0"><img id="IDBFAToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Methods</span></div><div id="IDBFASection" class="collapsibleSection"><table id="MethodList" class="members"><tr><th class="iconColumn"> </th><th>Name</th><th>Description</th></tr><tr><td><img src="../icons/pubMethod.gif" alt="Public method" title="Public method" /></td><td><a href="2a3e9fca-a6a5-f0a4-4ebf-aeea322333ce.htm">Dispose</a></td><td>Releases all resources used by the <span class="selflink">CustomExporter</span></td></tr><tr><td><img src="../icons/pubMethod.gif" alt="Public method" title="Public method" /></td><td><a href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)" target="_blank" rel="noopener noreferrer">Equals</a></td><td>Determines whether the specified object is equal to the current object.<br />(Inherited from <a href="https://learn.microsoft.com/dotnet/api/system.object" target="_blank" rel="noopener noreferrer">Object</a>)</td></tr><tr><td><img src="../icons/pubMethod.gif" alt="Public method" title="Public method" /></td><td><a href="58d06458-fd6a-bdef-c457-2c52b50a70e8.htm">Export(IList<span id="LST6E3989B3_2" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>ElementId<span id="LST6E3989B3_3" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>)</a></td><td>
+   Exports a collection of 3D or 2D views
+</td></tr><tr><td><img src="../icons/pubMethod.gif" alt="Public method" title="Public method" /></td><td><a href="5a648f8c-62a0-d4c7-873c-8eab9f7abe7d.htm">Export(View)</a></td><td>
+   Exports one 3D or 2D view
+</td></tr><tr><td><img src="../icons/pubMethod.gif" alt="Public method" title="Public method" /></td><td><a href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode#system-object-gethashcode" target="_blank" rel="noopener noreferrer">GetHashCode</a></td><td>Serves as the default hash function.<br />(Inherited from <a href="https://learn.microsoft.com/dotnet/api/system.object" target="_blank" rel="noopener noreferrer">Object</a>)</td></tr><tr><td><img src="../icons/pubMethod.gif" alt="Public method" title="Public method" /></td><td><a href="https://learn.microsoft.com/dotnet/api/system.object.gettype#system-object-gettype" target="_blank" rel="noopener noreferrer">GetType</a></td><td>Gets the <a href="https://learn.microsoft.com/dotnet/api/system.type" target="_blank" rel="noopener noreferrer">Type</a> of the current instance.<br />(Inherited from <a href="https://learn.microsoft.com/dotnet/api/system.object" target="_blank" rel="noopener noreferrer">Object</a>)</td></tr><tr><td><img src="../icons/pubMethod.gif" alt="Public method" title="Public method" /><img src="../icons/Static.gif" alt="Static member" title="Static member" /></td><td><a href="50882930-42d7-5d6c-f70c-c5f665b22900.htm">IsRenderingSupported</a></td><td>
+   Checks if view rendering is currently supported in the running instance of Revit.
+</td></tr><tr><td><img src="../icons/pubMethod.gif" alt="Public method" title="Public method" /></td><td><a href="https://learn.microsoft.com/dotnet/api/system.object.tostring#system-object-tostring" target="_blank" rel="noopener noreferrer">ToString</a></td><td>Returns a string that represents the current object.<br />(Inherited from <a href="https://learn.microsoft.com/dotnet/api/system.object" target="_blank" rel="noopener noreferrer">Object</a>)</td></tr></table><a href="#PageHeader">Top</a></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDBC')" onkeypress="SectionExpandCollapse_CheckKey('IDBC', event)" tabindex="0"><img id="IDBCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Remarks</span></div><div id="IDBCSection" class="collapsibleSection"><p>
+   The Export method of this class triggers standard rendering or exporting
+   process in Revit, but instead of displaying the result on screen or printer,
+   the output is channeled through the given custom context that handles
+   processing of the geometric as well as non-geometric information.
+   </p><p>
+   Revit will process the exporting algorithm depending on the type
+   of given context. If an instance of <a href="d09d4ea2-1090-f2b9-8073-5fb8a796babf.htm">IPhotoRenderContext</a>
+   is used, then Revit will output the model as if executing the Render command,
+   thus only such entities that would be visible in a rendered view
+   will be sent to the context.
+   </p><p>
+   Alternatively, if an instance of <a href="4309af43-f04e-4e42-2539-3fd1d64cdc6d.htm">IModelExportContext</a>
+   is used, Revit will output the model as if exporting it to a CAD format,
+   a process which results outputting also objects that would not
+   appear in a rendered image, such as model curves and text annotations.
+   </p><p>
+   For 2D views, an instance of <a href="a4578846-6ecf-e354-668d-96d8ef5d1a32.htm">IExportContext2D</a>
+   has to be used. Revit will output the contents of the 2D view as it is displayed on the screen.
+   Export can be modified by setting properties pertaining to 2D views:
+   <a href="34ed2a39-a5e6-6ef1-1f6d-cceebd2bae7f.htm">Export2DGeometricObjectsIncludingPatternLines</a>,
+   <a href="1a22bfd6-bb08-c368-f981-d02151986b5c.htm">Export2DIncludingAnnotationObjects</a>.
+   <a href="47ed429b-289a-207d-0176-707158a46df0.htm">Export2DForceDisplayStyle</a>.
+
+   See notes for 2D export in <a href="a4578846-6ecf-e354-668d-96d8ef5d1a32.htm">IExportContext2D</a>.
+   </p></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDDC')" onkeypress="SectionExpandCollapse_CheckKey('IDDC', event)" tabindex="0"><img id="IDDCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Example</span></div><div id="IDDCSection" class="collapsibleSection"><div id="IDADC" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDADC_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDADC','cs','1','4');return false;">C#</a></div><div id="IDADC_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDADC','vb','2','4');return false;">VB</a></div><div id="IDADC_tab3" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDADC','cpp','3','4');return false;">C++</a></div><div id="IDADC_tab4" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDADC','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDADC_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDADC');return false;" title="Copy">Copy</a></div></div><div id="IDADC_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="highlight-comment">/// &lt;summary&gt;</span>
+<span class="highlight-comment">/// This method initiates a custom export process for a given 3D view.</span>
+<span class="highlight-comment">/// &lt;/summary&gt;</span>
+<span class="highlight-keyword">internal</span> <span class="highlight-keyword">void</span> ExportA3DView(Document document, View a3DView)
+{
+   <span class="highlight-comment">// Instantiate an export context - the class that receives the output data during </span>
+   <span class="highlight-comment">// export process. The context class must implement the IExportContext interface.</span>
+   MyExportContext context = <span class="highlight-keyword">new</span> MyExportContext(document);
+
+   <span class="highlight-comment">// Create an instance of a custom exporter by giving it a document and the context.</span>
+   CustomExporter exporter = <span class="highlight-keyword">new</span> CustomExporter(document, context);
+
+   <span class="highlight-comment">// Optionally set attributes that should apply to the export process. For example:</span>
+
+   <span class="highlight-comment">// a) Exclude OnFaceBegin and OnFaceEnd method from being invoked in the export</span>
+   <span class="highlight-comment">//    context if data about faces and edges are not relevant to the export.</span>
+   <span class="highlight-comment">//    Excluding face nodes would dramatically speed up the export process.</span>
+   <span class="highlight-comment">//    Note: Excluding faces just excludes the calls, not the actual processing of</span>
+   <span class="highlight-comment">//    face tessellation. Meshes of the faces will still be received by the context.</span>
+   exporter.IncludeGeometricObjects = <span class="highlight-keyword">false</span>;
+
+   <span class="highlight-comment">// b) Set TRUE or FALSE to abort the export process should an error occur</span>
+   exporter.ShouldStopOnError = <span class="highlight-keyword">true</span>;
+
+   <span class="highlight-comment">// Initiate the export process by calling one of Exporter's 'export' method,</span>
+   <span class="highlight-comment">// in this case the one that takes a single 3D view as an argument.</span>
+   exporter.Export(a3DView);
+}</pre></div><div id="IDADC_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="highlight-comment">' &lt;summary&gt;</span>
+<span class="highlight-comment">' This method initiates a custom export process for a given 3D view.</span>
+<span class="highlight-comment">' &lt;/summary&gt;</span>
+<span class="highlight-keyword">Friend</span> <span class="highlight-keyword">Sub</span> ExportA3DView(document <span class="highlight-keyword">As</span> Document, a3DView <span class="highlight-keyword">As</span> View)
+    <span class="highlight-comment">' Instantiate an export context - the class that receives the output data during </span>
+    <span class="highlight-comment">' export process. The context class must implement the IExportContext interface.</span>
+    <span class="highlight-keyword">Dim</span> context <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> MyExportContext(document)
+
+    <span class="highlight-comment">' Create an instance of a custom exporter by giving it a document and the context.</span>
+    <span class="highlight-keyword">Dim</span> exporter <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> CustomExporter(document, context)
+
+    <span class="highlight-comment">' Optionally set attributes that should apply to the export process. For example:</span>
+
+    <span class="highlight-comment">' a) Exclude OnFaceBegin and OnFaceEnd method from being invoked in the export</span>
+    <span class="highlight-comment">'    context if data about faces and edges are not relevant to the export.</span>
+    <span class="highlight-comment">'    Excluding face nodes would dramatically speed up the export process.</span>
+    <span class="highlight-comment">'    Note: Excluding faces just excludes the calls, not the actual processing of</span>
+    <span class="highlight-comment">'    face tessellation. Meshes of the faces will still be received by the context.</span>
+    exporter.IncludeGeometricObjects = <span class="highlight-keyword">False</span>
+
+    <span class="highlight-comment">' b) Set TRUE or FALSE to abort the export process should an error occur</span>
+    exporter.ShouldStopOnError = <span class="highlight-keyword">True</span>
+
+    <span class="highlight-comment">' Initiate the export process by calling one of Exporter's 'export' method,</span>
+    <span class="highlight-comment">' in this case the one that takes a single 3D view as an argument.</span>
+    exporter.Export(a3DView)
+<span class="highlight-keyword">End</span> <span class="highlight-keyword">Sub</span></pre></div><div id="IDADC_code_Div3" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div><div id="IDADC_code_Div4" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div></div></div></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('seeAlso')" onkeypress="SectionExpandCollapse_CheckKey('seeAlso', event)" tabindex="0"><img id="seeAlsoToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="seeAlsoSection" class="collapsibleSection"><h4>Reference</h4><div><a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB Namespace</a></div></div></div></div><div id="PageFooter" class="pageFooter"><div class="feedbackLink">Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:revitapifeedback%40autodesk.com?Subject=Revit%202025%20API">Autodesk</a></div>
+        <script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        HT_mailLink.href += ": " + document.title + "\u0026body=" + encodeURIComponent("Your feedback is used to improve the documentation and the product. Your e-mail address will not be used for any other purpose and is disposed of after the issue you report is resolved. While working to resolve the issue that you report, you may be contacted via e-mail to get further details or clarification on the feedback you sent. After the issue you report has been addressed, you may receive an e-mail to let you know that your feedback has been addressed.");
+        </script></div></body></html>

@@ -1,0 +1,113 @@
+﻿<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="Microsoft.Help.SelfBranded" content="true" /><meta name="Language" content="en-us" /><meta name="Microsoft.Help.Locale" content="en-us" /><meta name="Microsoft.Help.TopicLocale" content="en-us" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" type="text/css" href="../styles/branding.css" /><link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" /><script type="text/javascript" src="../scripts/branding.js"></script><title>ItemFactoryBase.NewFamilyInstance(Face, Line, FamilySymbol) Method</title><meta name="Title" content="NewFamilyInstance(Face, Line, FamilySymbol) Method" /><meta name="Microsoft.Help.Id" content="M:Autodesk.Revit.Creation.ItemFactoryBase.NewFamilyInstance(Autodesk.Revit.DB.Face,Autodesk.Revit.DB.Line,Autodesk.Revit.DB.FamilySymbol)" /><meta name="Microsoft.Help.ContentType" content="Reference" /><meta name="container" content="Autodesk.Revit.Creation" /><meta name="file" content="993bb1aa-d039-d50b-7485-5f404add7cfa" /><meta name="guid" content="993bb1aa-d039-d50b-7485-5f404add7cfa" /><meta name="Microsoft.Help.Category" content="CSharp" /><meta name="Microsoft.Help.Category" content="VB" /><meta name="Description" content="Inserts a new instance of a family onto a face of an existing element, using a line on that face for its position, and a type/symbol." /><link type="text/css" rel="stylesheet" href="../styles/highlight.css" /><script type="text/javascript" src="../scripts/highlight.js"> </script><link rel="stylesheet" type="text/css" href="../styles/branding-Help1.css" /></head><body onload="SetDefaultLanguage('cs');"><input type="hidden" id="userDataCache" class="userDataStyle" /><div id="PageHeader" class="pageHeader">Revit 2025 API</div><div class="pageBody"><div id="TopicContent" class="topicContent"><table class="titleTable"><tr><td class="titleColumn"><h1>Item<wbr />Factory<wbr />Base<span id="LSTAA609FC3_0" data-languageSpecificText="cpp=::|nu=."></span>New<wbr />Family<wbr />Instance(Face, Line, Family<wbr />Symbol) Method</h1></td></tr></table><div class="summary">Inserts a new instance of a family onto a face of an existing element,
+ using a line on that face for its position, and a type/symbol.</div><br /><strong>Namespace:</strong> <a href="ded320da-058a-4edd-0418-0582389559a7.htm">Autodesk.Revit.Creation</a><br /><strong>Assembly:</strong> RevitAPI (in RevitAPI.dll) Version: 25.0.0.0 (25.0.0.0)<div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDB')" onkeypress="SectionExpandCollapse_CheckKey('IDB', event)" tabindex="0"><img id="IDBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Syntax</span></div><div id="IDBSection" class="collapsibleSection"><div id="IDAB" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAB_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cs','1','4');return false;">C#</a></div><div id="IDAB_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','vb','2','4');return false;">VB</a></div><div id="IDAB_tab3" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cpp','3','4');return false;">C++</a></div><div id="IDAB_tab4" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAB_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAB');return false;" title="Copy">Copy</a></div></div><div id="IDAB_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="keyword">public</span> <span class="identifier">FamilyInstance</span> <span class="identifier">NewFamilyInstance</span>(
+	<span class="identifier">Face</span> <span class="parameter">face</span>,
+	<span class="identifier">Line</span> <span class="parameter">position</span>,
+	<span class="identifier">FamilySymbol</span> <span class="parameter">symbol</span>
+)</pre></div><div id="IDAB_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">Public</span> <span class="keyword">Function</span> <span class="identifier">NewFamilyInstance</span> ( 
+	<span class="parameter">face</span> <span class="keyword">As</span> <span class="identifier">Face</span>,
+	<span class="parameter">position</span> <span class="keyword">As</span> <span class="identifier">Line</span>,
+	<span class="parameter">symbol</span> <span class="keyword">As</span> <span class="identifier">FamilySymbol</span>
+) <span class="keyword">As</span> <span class="identifier">FamilyInstance</span></pre></div><div id="IDAB_code_Div3" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">public</span>:
+<span class="identifier">FamilyInstance</span>^ <span class="identifier">NewFamilyInstance</span>(
+	<span class="identifier">Face</span>^ <span class="parameter">face</span>, 
+	<span class="identifier">Line</span>^ <span class="parameter">position</span>, 
+	<span class="identifier">FamilySymbol</span>^ <span class="parameter">symbol</span>
+)</pre></div><div id="IDAB_code_Div4" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">member</span> <span class="identifier">NewFamilyInstance</span> : 
+        <span class="parameter">face</span> : <span class="identifier">Face</span> * 
+        <span class="parameter">position</span> : <span class="identifier">Line</span> * 
+        <span class="parameter">symbol</span> : <span class="identifier">FamilySymbol</span> <span class="keyword">-&gt;</span> <span class="identifier">FamilyInstance</span> </pre></div></div></div><h4>Parameters</h4><dl><dt class="has-text-weight-normal"><span class="parameter">face</span>  <a href="e32b3b1f-66fc-57cb-6e1c-aa81d1bf3e63.htm">Face</a></dt><dd>A face of a geometry object.</dd><dt class="has-text-weight-normal"><span class="parameter">position</span>  <a href="e7329450-434a-918b-661c-65e15e0585a5.htm">Line</a></dt><dd>A line on the face defining where the symbol is to be placed.</dd><dt class="has-text-weight-normal"><span class="parameter">symbol</span>  <a href="a1acaed0-6a62-4c1d-94f5-4e27ce0923d3.htm">FamilySymbol</a></dt><dd>A FamilySymbol object that represents the type of the instance that is to be inserted.
+Note that this symbol must represent a family whose <a href="7fcd2fda-21c3-9b9b-8ef3-ae2e53e02a05.htm">FamilyPlacementType</a> 
+is WorkPlaneBased or CurveBased.</dd></dl><h4>Return Value</h4><a href="0d2231f8-91e6-794f-92ae-16aad8014b27.htm">FamilyInstance</a><br />An instance of the new object if creation was successful, otherwise <span class="keyword"><span id="LSTAA609FC3_1" data-languageSpecificText="cpp=nullptr|vb=Nothing|nu=null"></span></span>.</div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDGC')" onkeypress="SectionExpandCollapse_CheckKey('IDGC', event)" tabindex="0"><img id="IDGCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Exceptions</span></div><div id="IDGCSection" class="collapsibleSection"><table><tr><th>Exception</th><th>Condition</th></tr><tr><td><a href="631e1424-60f4-929b-4e52-dda9dcd26316.htm">ArgumentNullException</a></td><td>Thrown when a non-optional argument was null.</td></tr><tr><td><a href="2e6e4206-97a8-dd4b-df5d-4269f4bb6088.htm">ArgumentException</a></td><td>Thrown when the function cannot get the Reference 
+from the face, or, Family cannot be placed as line-based on an input face reference, because its FamilyPlacementType 
+is not WorkPlaneBased or CurveBased</td></tr><tr><td><a href="05972c68-fa6d-3a83-d720-ad84fbc4780f.htm">ArgumentsInconsistentException</a></td><td>Thrown when the family cannot be placed on 
+this line as it does not coincide with the input face.</td></tr><tr><td><a href="9e715f03-3884-e539-4dd6-8d7545733adc.htm">InvalidOperationException</a></td><td>Thrown when Revit is unable to place the family
+instance.</td></tr><tr><td><a href="2e6e4206-97a8-dd4b-df5d-4269f4bb6088.htm">ArgumentException</a></td><td>Thrown if The symbol is not active.</td></tr></table></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDFC')" onkeypress="SectionExpandCollapse_CheckKey('IDFC', event)" tabindex="0"><img id="IDFCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Remarks</span></div><div id="IDFCSection" class="collapsibleSection">Use this method to insert one family instance on a face of another element, 
+using a line on the face to define the position and direction of the new symbol.  
+<p>The type/symbol that is used must be loaded into the document before this method
+is called. Families and their symbols can be loaded using the Document.LoadFamily or
+Document.LoadFamilySymbol methods.</p><p>The host object must support insertion of instances, otherwise this method 
+will fail. If the instance fails to be created an exception may be thrown.</p><p>Note: if the created family instance includes nested instances, the API framework will automatically regenerate 
+the document during this method call.</p></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDLC')" onkeypress="SectionExpandCollapse_CheckKey('IDLC', event)" tabindex="0"><img id="IDLCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Example</span></div><div id="IDLCSection" class="collapsibleSection"><div id="IDALC" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDALC_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDALC','cs','1','4');return false;">C#</a></div><div id="IDALC_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDALC','vb','2','4');return false;">VB</a></div><div id="IDALC_tab3" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDALC','cpp','3','4');return false;">C++</a></div><div id="IDALC_tab4" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDALC','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDALC_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDALC');return false;" title="Copy">Copy</a></div></div><div id="IDALC_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="highlight-keyword">public</span> <span class="highlight-keyword">void</span> PlaceStiffenerOnWallFace(Autodesk.Revit.DB.Document doc, Wall wall)
+{
+    <span class="highlight-comment">// The structural stiffeners family type is compatible with line-based face placement</span>
+    FilteredElementCollector fsCollector = <span class="highlight-keyword">new</span> FilteredElementCollector(doc);
+    fsCollector.OfClass(<span class="highlight-keyword">typeof</span>(FamilySymbol)).OfCategory(BuiltInCategory.OST_StructuralStiffener);
+    FamilySymbol stiffenerSymbol = fsCollector.FirstElement() <span class="highlight-keyword">as</span> FamilySymbol;
+
+    <span class="highlight-comment">// The only way to get a Face to use with this NewFamilyInstance overload</span>
+    <span class="highlight-comment">// is from Element.Geometry with ComputeReferences turned on</span>
+    Face face = <span class="highlight-keyword">null</span>;
+    Options geomOptions = <span class="highlight-keyword">new</span> Options();
+    geomOptions.ComputeReferences = <span class="highlight-keyword">true</span>;
+    GeometryElement wallGeom = wall.get_Geometry(geomOptions);
+    <span class="highlight-keyword">foreach</span> (GeometryObject geomObj <span class="highlight-keyword">in</span> wallGeom)
+    {
+        Solid geomSolid = geomObj <span class="highlight-keyword">as</span> Solid;
+        <span class="highlight-keyword">if</span> (<span class="highlight-keyword">null</span> != geomSolid)
+        {
+            <span class="highlight-keyword">foreach</span> (Face geomFace <span class="highlight-keyword">in</span> geomSolid.Faces)
+            {
+                face = geomFace;
+                <span class="highlight-keyword">break</span>;
+            }
+            <span class="highlight-keyword">break</span>;
+        }
+    }
+
+    <span class="highlight-comment">// Generate line for path</span>
+    BoundingBoxUV bbox = face.GetBoundingBox();
+    UV lowerLeft = bbox.Min;
+    UV upperRight = bbox.Max;
+    <span class="highlight-keyword">double</span> deltaU = upperRight.U - lowerLeft.U;
+    <span class="highlight-keyword">double</span> deltaV = upperRight.V - lowerLeft.V;
+    <span class="highlight-keyword">double</span> vOffset = deltaV * <span class="highlight-number">0.80</span>; <span class="highlight-comment">// 80% up the wall face</span>
+
+    UV firstPoint = lowerLeft + <span class="highlight-keyword">new</span> UV(deltaU * <span class="highlight-number">0.30</span>, vOffset);
+    UV lastPoint = lowerLeft + <span class="highlight-keyword">new</span> UV(deltaU * <span class="highlight-number">0.70</span>, vOffset);
+
+    Line line = Line.CreateBound(face.Evaluate(firstPoint), face.Evaluate(lastPoint));
+
+    doc.Create.NewFamilyInstance(face, line, stiffenerSymbol);     
+}</pre></div><div id="IDALC_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="highlight-keyword">Public</span> <span class="highlight-keyword">Sub</span> PlaceStiffenerOnWallFace(doc <span class="highlight-keyword">As</span> Autodesk.Revit.DB.Document, wall <span class="highlight-keyword">As</span> Wall)
+    <span class="highlight-comment">' The structural stiffeners family type is compatible with line-based face placement</span>
+    <span class="highlight-keyword">Dim</span> fsCollector <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> FilteredElementCollector(doc)
+    fsCollector.OfClass(<span class="highlight-keyword">GetType</span>(FamilySymbol)).OfCategory(BuiltInCategory.OST_StructuralStiffener)
+    <span class="highlight-keyword">Dim</span> stiffenerSymbol <span class="highlight-keyword">As</span> FamilySymbol = <span class="highlight-keyword">TryCast</span>(fsCollector.FirstElement(), FamilySymbol)
+
+    <span class="highlight-comment">' The only way to get a Face to use with this NewFamilyInstance overload</span>
+    <span class="highlight-comment">' is from Element.Geometry with ComputeReferences turned on</span>
+    <span class="highlight-keyword">Dim</span> face <span class="highlight-keyword">As</span> Face = <span class="highlight-keyword">Nothing</span>
+    <span class="highlight-keyword">Dim</span> geomOptions <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> Options()
+    geomOptions.ComputeReferences = <span class="highlight-keyword">True</span>
+    <span class="highlight-keyword">Dim</span> wallGeom <span class="highlight-keyword">As</span> GeometryElement = wall.Geometry(geomOptions)
+    <span class="highlight-keyword">For</span> <span class="highlight-keyword">Each</span> geomObj <span class="highlight-keyword">As</span> GeometryObject <span class="highlight-keyword">In</span> wallGeom
+        <span class="highlight-keyword">Dim</span> geomSolid <span class="highlight-keyword">As</span> Solid = <span class="highlight-keyword">TryCast</span>(geomObj, Solid)
+        <span class="highlight-keyword">If</span> geomSolid <span class="highlight-keyword">IsNot</span> <span class="highlight-keyword">Nothing</span> <span class="highlight-keyword">Then</span>
+            <span class="highlight-keyword">For</span> <span class="highlight-keyword">Each</span> geomFace <span class="highlight-keyword">As</span> Face <span class="highlight-keyword">In</span> geomSolid.Faces
+                face = geomFace
+                <span class="highlight-keyword">Exit</span> <span class="highlight-keyword">For</span>
+            <span class="highlight-keyword">Next</span>
+            <span class="highlight-keyword">Exit</span> <span class="highlight-keyword">For</span>
+        <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+    <span class="highlight-keyword">Next</span>
+
+    <span class="highlight-comment">' Generate line for path</span>
+    <span class="highlight-keyword">Dim</span> bbox <span class="highlight-keyword">As</span> BoundingBoxUV = face.GetBoundingBox()
+    <span class="highlight-keyword">Dim</span> lowerLeft <span class="highlight-keyword">As</span> UV = bbox.Min
+    <span class="highlight-keyword">Dim</span> upperRight <span class="highlight-keyword">As</span> UV = bbox.Max
+    <span class="highlight-keyword">Dim</span> deltaU <span class="highlight-keyword">As</span> <span class="highlight-keyword">Double</span> = upperRight.U - lowerLeft.U
+    <span class="highlight-keyword">Dim</span> deltaV <span class="highlight-keyword">As</span> <span class="highlight-keyword">Double</span> = upperRight.V - lowerLeft.V
+    <span class="highlight-keyword">Dim</span> vOffset <span class="highlight-keyword">As</span> <span class="highlight-keyword">Double</span> = deltaV * <span class="highlight-number">0.8</span>
+    <span class="highlight-comment">' 80% up the wall face</span>
+    <span class="highlight-keyword">Dim</span> firstPoint <span class="highlight-keyword">As</span> UV = lowerLeft + <span class="highlight-keyword">New</span> UV(deltaU * <span class="highlight-number">0.3</span>, vOffset)
+    <span class="highlight-keyword">Dim</span> lastPoint <span class="highlight-keyword">As</span> UV = lowerLeft + <span class="highlight-keyword">New</span> UV(deltaU * <span class="highlight-number">0.7</span>, vOffset)
+
+    <span class="highlight-keyword">Dim</span> line__1 <span class="highlight-keyword">As</span> Line = Line.CreateBound(face.Evaluate(firstPoint), face.Evaluate(lastPoint))
+
+    doc.Create.NewFamilyInstance(face, line__1, stiffenerSymbol)
+<span class="highlight-keyword">End</span> <span class="highlight-keyword">Sub</span></pre></div><div id="IDALC_code_Div3" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div><div id="IDALC_code_Div4" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div></div></div></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('seeAlso')" onkeypress="SectionExpandCollapse_CheckKey('seeAlso', event)" tabindex="0"><img id="seeAlsoToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="seeAlsoSection" class="collapsibleSection"><h4>Reference</h4><div><a href="cba2c84a-22c0-e6e7-a99c-67656901853a.htm">ItemFactoryBase Class</a></div><div><a href="451ee414-cea0-e9bd-227b-c73bc93507dd.htm">NewFamilyInstance Overload</a></div><div><a href="ded320da-058a-4edd-0418-0582389559a7.htm">Autodesk.Revit.Creation Namespace</a></div></div></div></div><div id="PageFooter" class="pageFooter"><div class="feedbackLink">Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:revitapifeedback%40autodesk.com?Subject=Revit%202025%20API">Autodesk</a></div>
+        <script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        HT_mailLink.href += ": " + document.title + "\u0026body=" + encodeURIComponent("Your feedback is used to improve the documentation and the product. Your e-mail address will not be used for any other purpose and is disposed of after the issue you report is resolved. While working to resolve the issue that you report, you may be contacted via e-mail to get further details or clarification on the feedback you sent. After the issue you report has been addressed, you may receive an e-mail to let you know that your feedback has been addressed.");
+        </script></div></body></html>

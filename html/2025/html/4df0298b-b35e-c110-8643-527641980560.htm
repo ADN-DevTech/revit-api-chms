@@ -1,0 +1,80 @@
+﻿<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="Microsoft.Help.SelfBranded" content="true" /><meta name="Language" content="en-us" /><meta name="Microsoft.Help.Locale" content="en-us" /><meta name="Microsoft.Help.TopicLocale" content="en-us" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" type="text/css" href="../styles/branding.css" /><link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" /><script type="text/javascript" src="../scripts/branding.js"></script><title>UIApplication.OpenAndActivateDocument(ModelPath, OpenOptions, Boolean, IOpenFromCloudCallback) Method</title><meta name="Title" content="OpenAndActivateDocument(ModelPath, OpenOptions, Boolean, IOpenFromCloudCallback) Method" /><meta name="Microsoft.Help.Id" content="M:Autodesk.Revit.UI.UIApplication.OpenAndActivateDocument(Autodesk.Revit.DB.ModelPath,Autodesk.Revit.DB.OpenOptions,System.Boolean,Autodesk.Revit.DB.IOpenFromCloudCallback)" /><meta name="Microsoft.Help.ContentType" content="Reference" /><meta name="container" content="Autodesk.Revit.UI" /><meta name="file" content="4df0298b-b35e-c110-8643-527641980560" /><meta name="guid" content="4df0298b-b35e-c110-8643-527641980560" /><meta name="Description" content="Opens and activates a Revit document, include both local document or cloud document." /><link rel="stylesheet" type="text/css" href="../styles/branding-Help1.css" /></head><body onload="SetDefaultLanguage('cs');"><input type="hidden" id="userDataCache" class="userDataStyle" /><div id="PageHeader" class="pageHeader">Revit 2025 API</div><div class="pageBody"><div id="TopicContent" class="topicContent"><table class="titleTable"><tr><td class="titleColumn"><h1>UIApplication<span id="LSTAD724E4D_0" data-languageSpecificText="cpp=::|nu=."></span>Open<wbr />And<wbr />Activate<wbr />Document(Model<wbr />Path, Open<wbr />Options, Boolean, IOpen<wbr />From<wbr />Cloud<wbr />Callback) Method</h1></td></tr></table><div class="summary">
+   Opens and activates a Revit document, include both local document or cloud document.
+</div><br /><strong>Namespace:</strong> <a href="e86fd90a-8957-02a6-da7f-ced248966e3e.htm">Autodesk.Revit.UI</a><br /><strong>Assembly:</strong> RevitAPIUI (in RevitAPIUI.dll) Version: 25.0.0.0 (25.0.0.0)<div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDB')" onkeypress="SectionExpandCollapse_CheckKey('IDB', event)" tabindex="0"><img id="IDBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Syntax</span></div><div id="IDBSection" class="collapsibleSection"><div id="IDAB" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAB_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cs','1','4');return false;">C#</a></div><div id="IDAB_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','vb','2','4');return false;">VB</a></div><div id="IDAB_tab3" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cpp','3','4');return false;">C++</a></div><div id="IDAB_tab4" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAB_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAB');return false;" title="Copy">Copy</a></div></div><div id="IDAB_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="keyword">public</span> <span class="identifier">UIDocument</span> <span class="identifier">OpenAndActivateDocument</span>(
+	<span class="identifier">ModelPath</span> <span class="parameter">modelPath</span>,
+	<span class="identifier">OpenOptions</span> <span class="parameter">openOptions</span>,
+	<span class="identifier">bool</span> <span class="parameter">detachAndPrompt</span>,
+	<span class="identifier">IOpenFromCloudCallback</span> <span class="parameter">openFromCloudCallback</span>
+)</pre></div><div id="IDAB_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">Public</span> <span class="keyword">Function</span> <span class="identifier">OpenAndActivateDocument</span> ( 
+	<span class="parameter">modelPath</span> <span class="keyword">As</span> <span class="identifier">ModelPath</span>,
+	<span class="parameter">openOptions</span> <span class="keyword">As</span> <span class="identifier">OpenOptions</span>,
+	<span class="parameter">detachAndPrompt</span> <span class="keyword">As</span> <span class="identifier">Boolean</span>,
+	<span class="parameter">openFromCloudCallback</span> <span class="keyword">As</span> <span class="identifier">IOpenFromCloudCallback</span>
+) <span class="keyword">As</span> <span class="identifier">UIDocument</span></pre></div><div id="IDAB_code_Div3" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">public</span>:
+<span class="identifier">UIDocument</span>^ <span class="identifier">OpenAndActivateDocument</span>(
+	<span class="identifier">ModelPath</span>^ <span class="parameter">modelPath</span>, 
+	<span class="identifier">OpenOptions</span>^ <span class="parameter">openOptions</span>, 
+	<span class="identifier">bool</span> <span class="parameter">detachAndPrompt</span>, 
+	<span class="identifier">IOpenFromCloudCallback</span>^ <span class="parameter">openFromCloudCallback</span>
+)</pre></div><div id="IDAB_code_Div4" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">member</span> <span class="identifier">OpenAndActivateDocument</span> : 
+        <span class="parameter">modelPath</span> : <span class="identifier">ModelPath</span> * 
+        <span class="parameter">openOptions</span> : <span class="identifier">OpenOptions</span> * 
+        <span class="parameter">detachAndPrompt</span> : <span class="identifier">bool</span> * 
+        <span class="parameter">openFromCloudCallback</span> : <span class="identifier">IOpenFromCloudCallback</span> <span class="keyword">-&gt;</span> <span class="identifier">UIDocument</span> </pre></div></div></div><h4>Parameters</h4><dl><dt class="has-text-weight-normal"><span class="parameter">modelPath</span>  <a href="40a84c72-e4b8-72ac-2f71-3216c66a11b3.htm">ModelPath</a></dt><dd>
+   A path to a Revit file to be opened.
+   The file can be either a Revit project, template, or family document.
+</dd><dt class="has-text-weight-normal"><span class="parameter">openOptions</span>  <a href="c0004971-3810-eeb8-72bd-e116886ec3c8.htm">OpenOptions</a></dt><dd>
+   Options for opening the file.
+</dd><dt class="has-text-weight-normal"><span class="parameter">detachAndPrompt</span>  <a href="https://learn.microsoft.com/dotnet/api/system.boolean" target="_blank" rel="noopener noreferrer">Boolean</a></dt><dd>
+   True means if openOptions specifies DoNotDetach,
+   then for workshared models detach from central and query the user whether to preserve or discard worksets.
+   make no sense when opening a cloud document.
+</dd><dt class="has-text-weight-normal"><span class="parameter">openFromCloudCallback</span>  <a href="266c8a04-c451-539d-8885-1626b131931d.htm">IOpenFromCloudCallback</a></dt><dd>
+   Callback function that allow caller to handle cases when conflicts happen during opening a cloud document.
+   Make no sense when opening a non-cloud document.
+</dd></dl><h4>Return Value</h4><a href="295b48c8-0571-ad5c-eead-baea84a6787c.htm">UIDocument</a><br />
+   The opened document.
+</div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDHC')" onkeypress="SectionExpandCollapse_CheckKey('IDHC', event)" tabindex="0"><img id="IDHCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Exceptions</span></div><div id="IDHCSection" class="collapsibleSection"><table><tr><th>Exception</th><th>Condition</th></tr><tr><td><a href="2e6e4206-97a8-dd4b-df5d-4269f4bb6088.htm">ArgumentException</a></td><td>
+   If DetachFromCentralOption is not DoNotDetach when opening a cloud document.
+   <ul><li>If the active document is currently modifiable.</li><li>If an API event handler is currently being executed.</li></ul></td></tr><tr><td><a href="631e1424-60f4-929b-4e52-dda9dcd26316.htm">ArgumentNullException</a></td><td>
+   If <span class="keyword"><span id="LSTAD724E4D_1" data-languageSpecificText="cpp=nullptr|vb=Nothing|nu=null"></span></span> is passed as 'modelPath'.
+   -or-
+   If <span class="keyword"><span id="LSTAD724E4D_2" data-languageSpecificText="cpp=nullptr|vb=Nothing|nu=null"></span></span> is passed as 'openOptions'.
+   -or-
+   A non-optional argument was null
+</td></tr><tr><td><a href="13aac793-10be-9bed-90d8-5474a05f0fea.htm">CannotOpenBothCentralAndLocalException</a></td><td>
+   Cannot open the local model and the central model in the same Revit session. You can close one to open the other in the same Revit session.
+</td></tr><tr><td><a href="3e38b7b1-1ee8-c7f0-6cdd-bacf67bf61f4.htm">CentralModelAccessDeniedException</a></td><td>
+   Thrown when file is not found at the give path.
+</td></tr><tr><td><a href="0e2ac15f-ca64-42c3-b3ef-e6f7ca1cb59a.htm">CentralModelException</a></td><td><ul><li>Revit encountered serious errors while trying to open the central model.</li><li>An internal error happened on the central model, please contact the server administrator.</li></ul></td></tr><tr><td><a href="b1a877a7-6c68-c0e4-25c9-005ee153bc60.htm">CorruptModelException</a></td><td>
+   There are too many corrupt elements to open this model.
+</td></tr><tr><td><a href="187d56d7-0b37-699f-2abd-6ddebfa93f1e.htm">FileAccessException</a></td><td><ul><li>When file cannot be opened in Revit LT because it was last saved in a version of Revit prior to 8.1.</li><li>when file has an invalid extension. Try changing the file's extension and opening it again.</li></ul></td></tr><tr><td><a href="ca9ccaa9-ed08-d40d-31a7-1af3ad2dcb84.htm">FileArgumentNotFoundException</a></td><td>
+   The file specified by 'modelPath' cannot be found or the given 'modelPath' is not a Revit file (a project, template, or family document).
+</td></tr><tr><td><a href="658e57bc-6929-4883-d245-dcd832fed696.htm">InsufficientResourcesException</a></td><td>
+   This computer does not have enough memory, disk space, or other necessary resource to open the model.
+</td></tr><tr><td><a href="9e715f03-3884-e539-4dd6-8d7545733adc.htm">InvalidOperationException</a></td><td>
+   The cloud model is not saved in current release of Revit.
+   -or-
+   The model is not allowed to access.
+   -or-
+   <ul><li>The document can not be opened.</li><li>Open is temporarily disabled.</li><li>Revit cannot save the transmitted model as a new central because it is already opened.</li></ul></td></tr><tr><td><a href="aea34480-ceb5-b49f-129d-0799e7bb1c21.htm">OperationCanceledException</a></td><td>
+   Opening was canceled by the user or by an API event callback.
+</td></tr><tr><td><a href="a0003d89-0113-6623-65da-0db5c568bfb6.htm">RevitServerCommunicationException</a></td><td>
+   If there is any server internal error.
+</td></tr><tr><td><a href="b9b68e56-c767-4680-a65b-73d268ee8860.htm">RevitServerUnauthenticatedUserException</a></td><td>
+   User is not signed in with Autodesk id when trying to open a cloud model.
+</td></tr><tr><td><a href="9e8c1efc-8719-fe01-f311-cfade7b177ed.htm">RevitServerUnauthorizedException</a></td><td>
+   User is not authorized to access the cloud model.
+</td></tr><tr><td><a href="e445bf18-84d1-83f2-6b24-45a6a6fe2bd9.htm">WrongUserException</a></td><td>
+   The local file is not owned by the current user, who therefore is not allowed to modify it.
+</td></tr></table></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDBC')" onkeypress="SectionExpandCollapse_CheckKey('IDBC', event)" tabindex="0"><img id="IDBCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Remarks</span></div><div id="IDBCSection" class="collapsibleSection">
+   This method, if successful, changes the active document.
+   It is not allowed to have an open transaction in the active document when calling this method.
+   Consequently, this method can only be used in manual transaction mode, not in automatic mode.
+   Additionally, this method may not be called from inside an event handler.
+</div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('seeAlso')" onkeypress="SectionExpandCollapse_CheckKey('seeAlso', event)" tabindex="0"><img id="seeAlsoToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="seeAlsoSection" class="collapsibleSection"><h4>Reference</h4><div><a href="51ca80e2-3e5f-7dd2-9d95-f210950c72ae.htm">UIApplication Class</a></div><div><a href="5018fbdb-e7c3-6e32-7ca3-ee5c20dbc56f.htm">OpenAndActivateDocument Overload</a></div><div><a href="e86fd90a-8957-02a6-da7f-ced248966e3e.htm">Autodesk.Revit.UI Namespace</a></div></div></div></div><div id="PageFooter" class="pageFooter"><div class="feedbackLink">Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:revitapifeedback%40autodesk.com?Subject=Revit%202025%20API">Autodesk</a></div>
+        <script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        HT_mailLink.href += ": " + document.title + "\u0026body=" + encodeURIComponent("Your feedback is used to improve the documentation and the product. Your e-mail address will not be used for any other purpose and is disposed of after the issue you report is resolved. While working to resolve the issue that you report, you may be contacted via e-mail to get further details or clarification on the feedback you sent. After the issue you report has been addressed, you may receive an e-mail to let you know that your feedback has been addressed.");
+        </script></div></body></html>

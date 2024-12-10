@@ -1,0 +1,101 @@
+﻿<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="Microsoft.Help.SelfBranded" content="true" /><meta name="Language" content="en-us" /><meta name="Microsoft.Help.Locale" content="en-us" /><meta name="Microsoft.Help.TopicLocale" content="en-us" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" type="text/css" href="../styles/branding.css" /><link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" /><script type="text/javascript" src="../scripts/branding.js"></script><title>FamilyItemFactory.NewLinearDimension(View, Line, ReferenceArray) Method</title><meta name="Title" content="NewLinearDimension(View, Line, ReferenceArray) Method" /><meta name="Microsoft.Help.Id" content="M:Autodesk.Revit.Creation.FamilyItemFactory.NewLinearDimension(Autodesk.Revit.DB.View,Autodesk.Revit.DB.Line,Autodesk.Revit.DB.ReferenceArray)" /><meta name="Microsoft.Help.ContentType" content="Reference" /><meta name="container" content="Autodesk.Revit.Creation" /><meta name="file" content="903cf519-f35c-8af0-8918-68ab387db1e8" /><meta name="guid" content="903cf519-f35c-8af0-8918-68ab387db1e8" /><meta name="Microsoft.Help.Category" content="CSharp" /><meta name="Microsoft.Help.Category" content="VB" /><meta name="Description" content="Generate a new linear dimension object using the default dimension type." /><link type="text/css" rel="stylesheet" href="../styles/highlight.css" /><script type="text/javascript" src="../scripts/highlight.js"> </script><link rel="stylesheet" type="text/css" href="../styles/branding-Help1.css" /></head><body onload="SetDefaultLanguage('cs');"><input type="hidden" id="userDataCache" class="userDataStyle" /><div id="PageHeader" class="pageHeader">Revit 2025 API</div><div class="pageBody"><div id="TopicContent" class="topicContent"><table class="titleTable"><tr><td class="titleColumn"><h1>Family<wbr />Item<wbr />Factory<span id="LST1903250D_0" data-languageSpecificText="cpp=::|nu=."></span>New<wbr />Linear<wbr />Dimension(View, Line, Reference<wbr />Array) Method</h1></td></tr></table><div class="summary"> Generate a new linear dimension object using the default dimension type.</div><br /><strong>Namespace:</strong> <a href="ded320da-058a-4edd-0418-0582389559a7.htm">Autodesk.Revit.Creation</a><br /><strong>Assembly:</strong> RevitAPI (in RevitAPI.dll) Version: 25.0.0.0 (25.0.0.0)<div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDB')" onkeypress="SectionExpandCollapse_CheckKey('IDB', event)" tabindex="0"><img id="IDBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Syntax</span></div><div id="IDBSection" class="collapsibleSection"><div id="IDAB" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAB_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cs','1','4');return false;">C#</a></div><div id="IDAB_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','vb','2','4');return false;">VB</a></div><div id="IDAB_tab3" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cpp','3','4');return false;">C++</a></div><div id="IDAB_tab4" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAB_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAB');return false;" title="Copy">Copy</a></div></div><div id="IDAB_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="keyword">public</span> <span class="identifier">Dimension</span> <span class="identifier">NewLinearDimension</span>(
+	<span class="identifier">View</span> <span class="parameter">view</span>,
+	<span class="identifier">Line</span> <span class="parameter">line</span>,
+	<span class="identifier">ReferenceArray</span> <span class="parameter">references</span>
+)</pre></div><div id="IDAB_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">Public</span> <span class="keyword">Function</span> <span class="identifier">NewLinearDimension</span> ( 
+	<span class="parameter">view</span> <span class="keyword">As</span> <span class="identifier">View</span>,
+	<span class="parameter">line</span> <span class="keyword">As</span> <span class="identifier">Line</span>,
+	<span class="parameter">references</span> <span class="keyword">As</span> <span class="identifier">ReferenceArray</span>
+) <span class="keyword">As</span> <span class="identifier">Dimension</span></pre></div><div id="IDAB_code_Div3" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">public</span>:
+<span class="identifier">Dimension</span>^ <span class="identifier">NewLinearDimension</span>(
+	<span class="identifier">View</span>^ <span class="parameter">view</span>, 
+	<span class="identifier">Line</span>^ <span class="parameter">line</span>, 
+	<span class="identifier">ReferenceArray</span>^ <span class="parameter">references</span>
+)</pre></div><div id="IDAB_code_Div4" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">member</span> <span class="identifier">NewLinearDimension</span> : 
+        <span class="parameter">view</span> : <span class="identifier">View</span> * 
+        <span class="parameter">line</span> : <span class="identifier">Line</span> * 
+        <span class="parameter">references</span> : <span class="identifier">ReferenceArray</span> <span class="keyword">-&gt;</span> <span class="identifier">Dimension</span> </pre></div></div></div><h4>Parameters</h4><dl><dt class="has-text-weight-normal"><span class="parameter">view</span>  <a href="fb92a4e7-f3a7-ef14-e631-342179b18de9.htm">View</a></dt><dd> The view in which the dimension is to be visible. </dd><dt class="has-text-weight-normal"><span class="parameter">line</span>  <a href="e7329450-434a-918b-661c-65e15e0585a5.htm">Line</a></dt><dd> The extension line of the dimension. </dd><dt class="has-text-weight-normal"><span class="parameter">references</span>  <a href="bc9192b5-6666-a8de-0128-87dae479fd6a.htm">ReferenceArray</a></dt><dd> An array of geometric references to which the dimension is to be bound.
+You must supply at least two references, and all references supplied must be parallel to each other 
+and perpendicular to the extension line.
+</dd></dl><h4>Return Value</h4><a href="210f88be-e3c5-26a4-7dd8-3296f6725cce.htm">Dimension</a><br />If creation was successful the new linear dimension is returned, 
+otherwise an exception with failure information will be thrown.</div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDHC')" onkeypress="SectionExpandCollapse_CheckKey('IDHC', event)" tabindex="0"><img id="IDHCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Exceptions</span></div><div id="IDHCSection" class="collapsibleSection"><table><tr><th>Exception</th><th>Condition</th></tr><tr><td><a href="631e1424-60f4-929b-4e52-dda9dcd26316.htm">ArgumentNullException</a></td><td>
+Thrown when any input argument is <span class="keyword"><span id="LST1903250D_1" data-languageSpecificText="cpp=nullptr|vb=Nothing|nu=null"></span></span>.
+</td></tr><tr><td><a href="2e6e4206-97a8-dd4b-df5d-4269f4bb6088.htm">ArgumentException</a></td><td>
+Thrown when the argument "references" is invalid.
+</td></tr><tr><td><a href="9e715f03-3884-e539-4dd6-8d7545733adc.htm">InvalidOperationException</a></td><td>
+Thrown when the creation failed.
+</td></tr></table></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDGC')" onkeypress="SectionExpandCollapse_CheckKey('IDGC', event)" tabindex="0"><img id="IDGCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Remarks</span></div><div id="IDGCSection" class="collapsibleSection"> The currently user set default style is used for the created dimension. </div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDKC')" onkeypress="SectionExpandCollapse_CheckKey('IDKC', event)" tabindex="0"><img id="IDKCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Example</span></div><div id="IDKCSection" class="collapsibleSection"><div id="IDAKC" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAKC_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAKC','cs','1','4');return false;">C#</a></div><div id="IDAKC_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAKC','vb','2','4');return false;">VB</a></div><div id="IDAKC_tab3" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDAKC','cpp','3','4');return false;">C++</a></div><div id="IDAKC_tab4" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDAKC','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAKC_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAKC');return false;" title="Copy">Copy</a></div></div><div id="IDAKC_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="highlight-keyword">public</span> Dimension CreateLinearDimension(Document document)
+{
+    <span class="highlight-comment">// first create two lines</span>
+    XYZ pt1 = <span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">5</span>, <span class="highlight-number">5</span>, <span class="highlight-number">0</span>);
+    XYZ pt2 = <span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">5</span>, <span class="highlight-number">10</span>, <span class="highlight-number">0</span>);
+    Line line = Line.CreateBound(pt1, pt2);
+    Plane plane = Plane.CreateByNormalAndOrigin(pt1.CrossProduct(pt2), pt2);
+    SketchPlane skplane = SketchPlane.Create (document, plane);
+    ModelCurve modelcurve1 = document.FamilyCreate.NewModelCurve(line, skplane);
+
+    pt1 = <span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">10</span>, <span class="highlight-number">5</span>, <span class="highlight-number">0</span>);
+    pt2 = <span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">10</span>, <span class="highlight-number">10</span>, <span class="highlight-number">0</span>);
+    line = Line.CreateBound(pt1, pt2);
+    plane = Plane.CreateByNormalAndOrigin(pt1.CrossProduct(pt2), pt2);
+    skplane = SketchPlane.Create (document, plane);
+    ModelCurve modelcurve2 = document.FamilyCreate.NewModelCurve(line, skplane);
+
+    <span class="highlight-comment">// now create a linear dimension between them</span>
+    ReferenceArray ra = <span class="highlight-keyword">new</span> ReferenceArray();
+    ra.Append(modelcurve1.GeometryCurve.Reference);
+    ra.Append(modelcurve2.GeometryCurve.Reference);
+
+    pt1 = <span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">5</span>, <span class="highlight-number">10</span>, <span class="highlight-number">0</span>);
+    pt2 = <span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">10</span>, <span class="highlight-number">10</span>, <span class="highlight-number">0</span>);
+    line = Line.CreateBound(pt1, pt2);
+
+    Dimension dim = document.FamilyCreate.NewLinearDimension(document.ActiveView, line, ra);
+
+    <span class="highlight-comment">// create a label for the dimension called "width"</span>
+    FamilyParameter param = document.FamilyManager.AddParameter(<span class="highlight-literal">"width"</span>, 
+        GroupTypeId.Constraints,
+        SpecTypeId.Length, <span class="highlight-keyword">false</span>);
+
+    dim.FamilyLabel = param;
+
+    <span class="highlight-keyword">return</span> dim;
+}</pre></div><div id="IDAKC_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="highlight-keyword">Public</span> <span class="highlight-keyword">Function</span> CreateLinearDimension(document <span class="highlight-keyword">As</span> Document) <span class="highlight-keyword">As</span> Dimension
+    <span class="highlight-comment">' first create two lines</span>
+    <span class="highlight-keyword">Dim</span> pt1 <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">5</span>, <span class="highlight-number">5</span>, <span class="highlight-number">0</span>)
+    <span class="highlight-keyword">Dim</span> pt2 <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">5</span>, <span class="highlight-number">10</span>, <span class="highlight-number">0</span>)
+    <span class="highlight-keyword">Dim</span> line__1 <span class="highlight-keyword">As</span> Line = Line.CreateBound(pt1, pt2)
+ <span class="highlight-keyword">Dim</span> plane <span class="highlight-keyword">As</span> Plane = plane.CreateByNormalAndOrigin(pt1.CrossProduct(pt2), pt2)
+    <span class="highlight-keyword">Dim</span> skplane <span class="highlight-keyword">As</span> SketchPlane = SketchPlane.Create(document, plane)
+    <span class="highlight-keyword">Dim</span> modelcurve1 <span class="highlight-keyword">As</span> ModelCurve = document.FamilyCreate.NewModelCurve(line__1, skplane)
+
+    pt1 = <span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">10</span>, <span class="highlight-number">5</span>, <span class="highlight-number">0</span>)
+    pt2 = <span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">10</span>, <span class="highlight-number">10</span>, <span class="highlight-number">0</span>)
+    line__1 = Line.CreateBound(pt1, pt2)
+ plane = plane.CreateByNormalAndOrigin(pt1.CrossProduct(pt2), pt2)
+    skplane = SketchPlane.Create(document, plane)
+    <span class="highlight-keyword">Dim</span> modelcurve2 <span class="highlight-keyword">As</span> ModelCurve = document.FamilyCreate.NewModelCurve(line__1, skplane)
+
+    <span class="highlight-comment">' now create a linear dimension between them</span>
+    <span class="highlight-keyword">Dim</span> ra <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> ReferenceArray()
+    ra.Append(modelcurve1.GeometryCurve.Reference)
+    ra.Append(modelcurve2.GeometryCurve.Reference)
+
+    pt1 = <span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">5</span>, <span class="highlight-number">10</span>, <span class="highlight-number">0</span>)
+    pt2 = <span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">10</span>, <span class="highlight-number">10</span>, <span class="highlight-number">0</span>)
+    line__1 = Line.CreateBound(pt1, pt2)
+
+    <span class="highlight-keyword">Dim</span> [<span class="highlight-keyword">dim</span>] <span class="highlight-keyword">As</span> Dimension = document.FamilyCreate.NewLinearDimension(document.ActiveView, line__1, ra)
+
+    <span class="highlight-comment">' create a label for the dimension called "width"</span>
+    <span class="highlight-keyword">Dim</span> param <span class="highlight-keyword">As</span> FamilyParameter = document.FamilyManager.AddParameter(<span class="highlight-literal">"width"</span>, GroupTypeId.Constraints, SpecTypeId.Length, <span class="highlight-keyword">False</span>)
+
+    [<span class="highlight-keyword">dim</span>].FamilyLabel = param
+
+    <span class="highlight-keyword">Return</span> [<span class="highlight-keyword">dim</span>]
+<span class="highlight-keyword">End</span> <span class="highlight-keyword">Function</span></pre></div><div id="IDAKC_code_Div3" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div><div id="IDAKC_code_Div4" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div></div></div></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('seeAlso')" onkeypress="SectionExpandCollapse_CheckKey('seeAlso', event)" tabindex="0"><img id="seeAlsoToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="seeAlsoSection" class="collapsibleSection"><h4>Reference</h4><div><a href="a7622967-1381-c17f-ed04-1ebe40da0440.htm">FamilyItemFactory Class</a></div><div><a href="a95776fa-90a1-dff7-7ab9-53918a818e32.htm">NewLinearDimension Overload</a></div><div><a href="ded320da-058a-4edd-0418-0582389559a7.htm">Autodesk.Revit.Creation Namespace</a></div></div></div></div><div id="PageFooter" class="pageFooter"><div class="feedbackLink">Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:revitapifeedback%40autodesk.com?Subject=Revit%202025%20API">Autodesk</a></div>
+        <script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        HT_mailLink.href += ": " + document.title + "\u0026body=" + encodeURIComponent("Your feedback is used to improve the documentation and the product. Your e-mail address will not be used for any other purpose and is disposed of after the issue you report is resolved. While working to resolve the issue that you report, you may be contacted via e-mail to get further details or clarification on the feedback you sent. After the issue you report has been addressed, you may receive an e-mail to let you know that your feedback has been addressed.");
+        </script></div></body></html>

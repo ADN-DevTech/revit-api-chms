@@ -1,0 +1,71 @@
+﻿<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="Microsoft.Help.SelfBranded" content="true" /><meta name="Language" content="en-us" /><meta name="Microsoft.Help.Locale" content="en-us" /><meta name="Microsoft.Help.TopicLocale" content="en-us" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" type="text/css" href="../styles/branding.css" /><link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" /><script type="text/javascript" src="../scripts/branding.js"></script><title>MultiReferenceAnnotation.Create Method</title><meta name="Title" content="Create Method" /><meta name="Microsoft.Help.Id" content="M:Autodesk.Revit.DB.MultiReferenceAnnotation.Create(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.ElementId,Autodesk.Revit.DB.MultiReferenceAnnotationOptions)" /><meta name="Microsoft.Help.ContentType" content="Reference" /><meta name="System.Keywords" content="MultiReferenceAnnotation.Create method" /><meta name="System.Keywords" content="Create method" /><meta name="Microsoft.Help.F1" content="Autodesk.Revit.DB.MultiReferenceAnnotation.Create" /><meta name="Microsoft.Help.F1" content="MultiReferenceAnnotation.Create" /><meta name="Microsoft.Help.F1" content="Create" /><meta name="container" content="Autodesk.Revit.DB" /><meta name="file" content="b3646880-ef76-d0d4-68d9-2c976163c340" /><meta name="guid" content="b3646880-ef76-d0d4-68d9-2c976163c340" /><meta name="Description" content="Creates a new MultiReferenceAnnotation." /><link rel="stylesheet" type="text/css" href="../styles/branding-Help1.css" /></head><body onload="SetDefaultLanguage('cs');"><input type="hidden" id="userDataCache" class="userDataStyle" /><div id="PageHeader" class="pageHeader">Revit 2025 API</div><div class="pageBody"><div id="TopicContent" class="topicContent"><table class="titleTable"><tr><td class="titleColumn"><h1>Multi<wbr />Reference<wbr />Annotation<span id="LST6A7AA851_0" data-languageSpecificText="cpp=::|nu=."></span>Create Method</h1></td></tr></table><div class="summary">
+   Creates a new MultiReferenceAnnotation.
+</div><br /><strong>Namespace:</strong> <a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB</a><br /><strong>Assembly:</strong> RevitAPI (in RevitAPI.dll) Version: 25.0.0.0 (25.0.0.0)<div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDB')" onkeypress="SectionExpandCollapse_CheckKey('IDB', event)" tabindex="0"><img id="IDBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Syntax</span></div><div id="IDBSection" class="collapsibleSection"><div id="IDAB" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAB_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cs','1','4');return false;">C#</a></div><div id="IDAB_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','vb','2','4');return false;">VB</a></div><div id="IDAB_tab3" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cpp','3','4');return false;">C++</a></div><div id="IDAB_tab4" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAB_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAB');return false;" title="Copy">Copy</a></div></div><div id="IDAB_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="keyword">public</span> <span class="keyword">static</span> <span class="identifier">MultiReferenceAnnotation</span> <span class="identifier">Create</span>(
+	<span class="identifier">Document</span> <span class="parameter">document</span>,
+	<span class="identifier">ElementId</span> <span class="parameter">ownerViewId</span>,
+	<span class="identifier">MultiReferenceAnnotationOptions</span> <span class="parameter">options</span>
+)</pre></div><div id="IDAB_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">Public</span> <span class="keyword">Shared</span> <span class="keyword">Function</span> <span class="identifier">Create</span> ( 
+	<span class="parameter">document</span> <span class="keyword">As</span> <span class="identifier">Document</span>,
+	<span class="parameter">ownerViewId</span> <span class="keyword">As</span> <span class="identifier">ElementId</span>,
+	<span class="parameter">options</span> <span class="keyword">As</span> <span class="identifier">MultiReferenceAnnotationOptions</span>
+) <span class="keyword">As</span> <span class="identifier">MultiReferenceAnnotation</span></pre></div><div id="IDAB_code_Div3" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">public</span>:
+<span class="keyword">static</span> <span class="identifier">MultiReferenceAnnotation</span>^ <span class="identifier">Create</span>(
+	<span class="identifier">Document</span>^ <span class="parameter">document</span>, 
+	<span class="identifier">ElementId</span>^ <span class="parameter">ownerViewId</span>, 
+	<span class="identifier">MultiReferenceAnnotationOptions</span>^ <span class="parameter">options</span>
+)</pre></div><div id="IDAB_code_Div4" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">static</span> <span class="keyword">member</span> <span class="identifier">Create</span> : 
+        <span class="parameter">document</span> : <span class="identifier">Document</span> * 
+        <span class="parameter">ownerViewId</span> : <span class="identifier">ElementId</span> * 
+        <span class="parameter">options</span> : <span class="identifier">MultiReferenceAnnotationOptions</span> <span class="keyword">-&gt;</span> <span class="identifier">MultiReferenceAnnotation</span> </pre></div></div></div><h4>Parameters</h4><dl><dt class="has-text-weight-normal"><span class="parameter">document</span>  <a href="db03274b-a107-aa32-9034-f3e0df4bb1ec.htm">Document</a></dt><dd>
+   The document to which the new MultiReferenceAnnotation will be added.
+</dd><dt class="has-text-weight-normal"><span class="parameter">ownerViewId</span>  <a href="44f3f7b1-3229-3404-93c9-dc5e70337dd6.htm">ElementId</a></dt><dd>
+   The view in which the multi-reference annotation will appear.
+</dd><dt class="has-text-weight-normal"><span class="parameter">options</span>  <a href="2e081b6c-38fd-4f03-a372-0dfa841e6248.htm">MultiReferenceAnnotationOptions</a></dt><dd>
+   The creation options for the new MultiReferenceAnnotation.
+</dd></dl><h4>Return Value</h4><a href="2224ac33-d7c0-bda8-70de-0005023c2149.htm">MultiReferenceAnnotation</a><br />
+   The new MultiReferenceAnnotation.
+</div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDGC')" onkeypress="SectionExpandCollapse_CheckKey('IDGC', event)" tabindex="0"><img id="IDGCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Exceptions</span></div><div id="IDGCSection" class="collapsibleSection"><table><tr><th>Exception</th><th>Condition</th></tr><tr><td><a href="2e6e4206-97a8-dd4b-df5d-4269f4bb6088.htm">ArgumentException</a></td><td>
+   document is not a project document.
+   -or-
+   The ElementId ownerViewId does not correspond to a View.
+   -or-
+   The ElementId ownerViewId is a view template.
+   -or-
+   The ElementId ownerViewId is a perspective view.
+   -or-
+   The 3D view ownerViewId is not locked.
+   -or-
+   The input 3D view cannot be used to place a MultiReferenceAnnotation object.
+   -or-
+   dimension line direction and dimension plane normal are not orthogonal.
+   -or-
+   There is at least one element that doesn't match the reference category of the MultiReferenceAnnotationType, or there are no elements.
+   -or-
+   for DimensionStyleType LinearFixed dimensions the dimension line direction must be parallel to either the view's vertical or horizontal direction.
+   -or-
+   some references can't be used with a DimensionStyleType Linear dimension of this direction.
+   References must either appear as points in the view or be linear references which are
+   perpendicular to the dimension line.
+   -or-
+   some references can't be used with a DimensionStyleType LinearFixed dimension.
+   Only references which appear as points in the view can be used.
+</td></tr><tr><td><a href="631e1424-60f4-929b-4e52-dda9dcd26316.htm">ArgumentNullException</a></td><td>
+   A non-optional argument was null
+</td></tr><tr><td><a href="53205486-5917-7c33-8e67-e362106ddc97.htm">ModificationForbiddenException</a></td><td>
+   The document is in failure mode: an operation has failed,
+   and Revit requires the user to either cancel the operation
+   or fix the problem (usually by deleting certain elements).
+   -or-
+   The document is being loaded, or is in the midst of another
+   sensitive process.
+</td></tr><tr><td><a href="8f025460-c283-ea99-aa8a-5a36e11528f4.htm">ModificationOutsideTransactionException</a></td><td>
+   The document has no open transaction.
+</td></tr></table></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDBC')" onkeypress="SectionExpandCollapse_CheckKey('IDBC', event)" tabindex="0"><img id="IDBCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Remarks</span></div><div id="IDBCSection" class="collapsibleSection">
+   New linear Dimension and IndependentTag elements will be created as children of the MultiReferenceAnnotation.
+   The IndependentTag will only be created if the MultiReferenceAnnotationType property TagTypeId is valid.
+</div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('seeAlso')" onkeypress="SectionExpandCollapse_CheckKey('seeAlso', event)" tabindex="0"><img id="seeAlsoToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="seeAlsoSection" class="collapsibleSection"><h4>Reference</h4><div><a href="2224ac33-d7c0-bda8-70de-0005023c2149.htm">MultiReferenceAnnotation Class</a></div><div><a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB Namespace</a></div></div></div></div><div id="PageFooter" class="pageFooter"><div class="feedbackLink">Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:revitapifeedback%40autodesk.com?Subject=Revit%202025%20API">Autodesk</a></div>
+        <script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        HT_mailLink.href += ": " + document.title + "\u0026body=" + encodeURIComponent("Your feedback is used to improve the documentation and the product. Your e-mail address will not be used for any other purpose and is disposed of after the issue you report is resolved. While working to resolve the issue that you report, you may be contacted via e-mail to get further details or clarification on the feedback you sent. After the issue you report has been addressed, you may receive an e-mail to let you know that your feedback has been addressed.");
+        </script></div></body></html>

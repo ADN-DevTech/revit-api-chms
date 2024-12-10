@@ -1,0 +1,122 @@
+﻿<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="Microsoft.Help.SelfBranded" content="true" /><meta name="Language" content="en-us" /><meta name="Microsoft.Help.Locale" content="en-us" /><meta name="Microsoft.Help.TopicLocale" content="en-us" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" type="text/css" href="../styles/branding.css" /><link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" /><script type="text/javascript" src="../scripts/branding.js"></script><title>ScheduleDefinition.AddFilter Method</title><meta name="Title" content="AddFilter Method" /><meta name="Microsoft.Help.Id" content="M:Autodesk.Revit.DB.ScheduleDefinition.AddFilter(Autodesk.Revit.DB.ScheduleFilter)" /><meta name="Microsoft.Help.ContentType" content="Reference" /><meta name="System.Keywords" content="ScheduleDefinition.AddFilter method" /><meta name="System.Keywords" content="AddFilter method" /><meta name="Microsoft.Help.F1" content="Autodesk.Revit.DB.ScheduleDefinition.AddFilter" /><meta name="Microsoft.Help.F1" content="ScheduleDefinition.AddFilter" /><meta name="Microsoft.Help.F1" content="AddFilter" /><meta name="container" content="Autodesk.Revit.DB" /><meta name="file" content="1acf54fa-2304-396b-8f4b-077cda826b6f" /><meta name="guid" content="1acf54fa-2304-396b-8f4b-077cda826b6f" /><meta name="Microsoft.Help.Category" content="CSharp" /><meta name="Microsoft.Help.Category" content="VB" /><meta name="Description" content="Adds a new filter at the end of the list." /><link type="text/css" rel="stylesheet" href="../styles/highlight.css" /><script type="text/javascript" src="../scripts/highlight.js"> </script><link rel="stylesheet" type="text/css" href="../styles/branding-Help1.css" /></head><body onload="SetDefaultLanguage('cs');"><input type="hidden" id="userDataCache" class="userDataStyle" /><div id="PageHeader" class="pageHeader">Revit 2025 API</div><div class="pageBody"><div id="TopicContent" class="topicContent"><table class="titleTable"><tr><td class="titleColumn"><h1>Schedule<wbr />Definition<span id="LST5F56FAA9_0" data-languageSpecificText="cpp=::|nu=."></span>Add<wbr />Filter Method</h1></td></tr></table><div class="summary">
+   Adds a new filter at the end of the list.
+</div><br /><strong>Namespace:</strong> <a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB</a><br /><strong>Assembly:</strong> RevitAPI (in RevitAPI.dll) Version: 25.0.0.0 (25.0.0.0)<div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDB')" onkeypress="SectionExpandCollapse_CheckKey('IDB', event)" tabindex="0"><img id="IDBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Syntax</span></div><div id="IDBSection" class="collapsibleSection"><div id="IDAB" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAB_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cs','1','4');return false;">C#</a></div><div id="IDAB_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','vb','2','4');return false;">VB</a></div><div id="IDAB_tab3" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cpp','3','4');return false;">C++</a></div><div id="IDAB_tab4" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAB_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAB');return false;" title="Copy">Copy</a></div></div><div id="IDAB_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="keyword">public</span> <span class="keyword">void</span> <span class="identifier">AddFilter</span>(
+	<span class="identifier">ScheduleFilter</span> <span class="parameter">filter</span>
+)</pre></div><div id="IDAB_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">Public</span> <span class="keyword">Sub</span> <span class="identifier">AddFilter</span> ( 
+	<span class="parameter">filter</span> <span class="keyword">As</span> <span class="identifier">ScheduleFilter</span>
+)</pre></div><div id="IDAB_code_Div3" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">public</span>:
+<span class="keyword">void</span> <span class="identifier">AddFilter</span>(
+	<span class="identifier">ScheduleFilter</span>^ <span class="parameter">filter</span>
+)</pre></div><div id="IDAB_code_Div4" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">member</span> <span class="identifier">AddFilter</span> : 
+        <span class="parameter">filter</span> : <span class="identifier">ScheduleFilter</span> <span class="keyword">-&gt;</span> <span class="keyword">unit</span> </pre></div></div></div><h4>Parameters</h4><dl><dt class="has-text-weight-normal"><span class="parameter">filter</span>  <a href="a5dfec9f-1efd-b507-d079-eabcbf5032f8.htm">ScheduleFilter</a></dt><dd>
+   The filter to add.
+</dd></dl></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDCC')" onkeypress="SectionExpandCollapse_CheckKey('IDCC', event)" tabindex="0"><img id="IDCCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Exceptions</span></div><div id="IDCCSection" class="collapsibleSection"><table><tr><th>Exception</th><th>Condition</th></tr><tr><td><a href="2e6e4206-97a8-dd4b-df5d-4269f4bb6088.htm">ArgumentException</a></td><td>
+   The field ID is not the ID of a field in this ScheduleDefinition.
+   -or-
+   The field and filter type cannot be used to filter this ScheduleDefinition.
+   -or-
+   The filter value is not valid for the field and filter type.
+</td></tr><tr><td><a href="631e1424-60f4-929b-4e52-dda9dcd26316.htm">ArgumentNullException</a></td><td>
+   A non-optional argument was null
+</td></tr><tr><td><a href="9e715f03-3884-e539-4dd6-8d7545733adc.htm">InvalidOperationException</a></td><td>
+   This ScheduleDefinition does not support filters.
+   -or-
+   The resulting filter count would be greater than 8.
+</td></tr></table></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDGC')" onkeypress="SectionExpandCollapse_CheckKey('IDGC', event)" tabindex="0"><img id="IDGCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Example</span></div><div id="IDGCSection" class="collapsibleSection"><div id="IDAGC" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAGC_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAGC','cs','1','4');return false;">C#</a></div><div id="IDAGC_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAGC','vb','2','4');return false;">VB</a></div><div id="IDAGC_tab3" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDAGC','cpp','3','4');return false;">C++</a></div><div id="IDAGC_tab4" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDAGC','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAGC_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAGC');return false;" title="Copy">Copy</a></div></div><div id="IDAGC_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="highlight-keyword">public</span> <span class="highlight-keyword">static</span> <span class="highlight-keyword">void</span> AddFilterToSchedule(ViewSchedule schedule, ElementId levelId)
+{
+    <span class="highlight-comment">// Find level field</span>
+    ScheduleDefinition definition = schedule.Definition;
+
+    ScheduleField levelField = FindField(schedule, BuiltInParameter.ROOM_LEVEL_ID);
+
+    <span class="highlight-comment">// Add filter</span>
+    <span class="highlight-keyword">using</span> (Transaction t = <span class="highlight-keyword">new</span> Transaction(schedule.Document, <span class="highlight-literal">"Add filter"</span>))
+    {
+        t.Start();
+
+        <span class="highlight-comment">// If field not present, add it</span>
+        <span class="highlight-keyword">if</span> (levelField == <span class="highlight-keyword">null</span>)
+        {
+            levelField = definition.AddField(ScheduleFieldType.Instance, <span class="highlight-keyword">new</span> ElementId(BuiltInParameter.ROOM_LEVEL_ID));
+        }
+
+        <span class="highlight-comment">// Set field to hidden</span>
+        levelField.IsHidden = <span class="highlight-keyword">true</span>;
+        ScheduleFilter filter = <span class="highlight-keyword">new</span> ScheduleFilter(levelField.FieldId, ScheduleFilterType.Equal, levelId);
+        definition.AddFilter(filter);
+
+        t.Commit();
+    }
+}
+
+<span class="highlight-comment">/// &lt;summary&gt;</span>
+<span class="highlight-comment">/// Finds an existing ScheduleField matching the given parameter</span>
+<span class="highlight-comment">/// &lt;/summary&gt;</span>
+<span class="highlight-comment">/// &lt;param name="schedule"&gt;&lt;/param&gt;</span>
+<span class="highlight-comment">/// &lt;param name="paramEnum"&gt;&lt;/param&gt;</span>
+<span class="highlight-comment">/// &lt;returns&gt;&lt;/returns&gt;</span>
+<span class="highlight-keyword">public</span> <span class="highlight-keyword">static</span> ScheduleField FindField(ViewSchedule schedule, BuiltInParameter paramEnum)
+{
+    ScheduleDefinition definition = schedule.Definition;
+    ScheduleField foundField = <span class="highlight-keyword">null</span>;
+    ElementId paramId = <span class="highlight-keyword">new</span> ElementId(paramEnum);
+
+    <span class="highlight-keyword">foreach</span> (ScheduleFieldId fieldId <span class="highlight-keyword">in</span> definition.GetFieldOrder())
+    {
+        foundField = definition.GetField(fieldId);
+        <span class="highlight-keyword">if</span> (foundField.ParameterId == paramId)
+        {
+            <span class="highlight-keyword">return</span> foundField;
+        }
+    }
+
+    <span class="highlight-keyword">return</span> <span class="highlight-keyword">null</span>;
+}</pre></div><div id="IDAGC_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="highlight-keyword">Public</span> <span class="highlight-keyword">Shared</span> <span class="highlight-keyword">Sub</span> AddFilterToSchedule(schedule <span class="highlight-keyword">As</span> ViewSchedule, levelId <span class="highlight-keyword">As</span> ElementId)
+    <span class="highlight-comment">' Find level field</span>
+    <span class="highlight-keyword">Dim</span> definition <span class="highlight-keyword">As</span> ScheduleDefinition = schedule.Definition
+
+    <span class="highlight-keyword">Dim</span> levelField <span class="highlight-keyword">As</span> ScheduleField = FindField(schedule, BuiltInParameter.ROOM_LEVEL_ID)
+
+    <span class="highlight-comment">' Add filter</span>
+    <span class="highlight-keyword">Using</span> t <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> Transaction(schedule.Document, <span class="highlight-literal">"Add filter"</span>)
+        t.Start()
+
+        <span class="highlight-comment">' If field not present, add it</span>
+        <span class="highlight-keyword">If</span> levelField <span class="highlight-keyword">Is</span> <span class="highlight-keyword">Nothing</span> <span class="highlight-keyword">Then</span>
+            levelField = definition.AddField(ScheduleFieldType.Instance, <span class="highlight-keyword">New</span> ElementId(BuiltInParameter.ROOM_LEVEL_ID))
+        <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+
+        <span class="highlight-comment">' Set field to hidden</span>
+        levelField.IsHidden = <span class="highlight-keyword">True</span>
+        <span class="highlight-keyword">Dim</span> filter <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> ScheduleFilter(levelField.FieldId, ScheduleFilterType.Equal, levelId)
+        definition.AddFilter(filter)
+
+        t.Commit()
+    <span class="highlight-keyword">End</span> <span class="highlight-keyword">Using</span>
+<span class="highlight-keyword">End</span> <span class="highlight-keyword">Sub</span>
+
+<span class="highlight-comment">' &lt;summary&gt;</span>
+<span class="highlight-comment">' Finds an existing ScheduleField matching the given parameter</span>
+<span class="highlight-comment">' &lt;/summary&gt;</span>
+<span class="highlight-comment">' &lt;param name="schedule"&gt;&lt;/param&gt;</span>
+<span class="highlight-comment">' &lt;param name="paramEnum"&gt;&lt;/param&gt;</span>
+<span class="highlight-comment">' &lt;returns&gt;&lt;/returns&gt;</span>
+<span class="highlight-keyword">Public</span> <span class="highlight-keyword">Shared</span> <span class="highlight-keyword">Function</span> FindField(schedule <span class="highlight-keyword">As</span> ViewSchedule, paramEnum <span class="highlight-keyword">As</span> BuiltInParameter) <span class="highlight-keyword">As</span> ScheduleField
+    <span class="highlight-keyword">Dim</span> definition <span class="highlight-keyword">As</span> ScheduleDefinition = schedule.Definition
+    <span class="highlight-keyword">Dim</span> foundField <span class="highlight-keyword">As</span> ScheduleField = <span class="highlight-keyword">Nothing</span>
+    <span class="highlight-keyword">Dim</span> paramId <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> ElementId(paramEnum)
+
+    <span class="highlight-keyword">For</span> <span class="highlight-keyword">Each</span> fieldId <span class="highlight-keyword">As</span> ScheduleFieldId <span class="highlight-keyword">In</span> definition.GetFieldOrder()
+        foundField = definition.GetField(fieldId)
+        <span class="highlight-keyword">If</span> foundField.ParameterId = paramId <span class="highlight-keyword">Then</span>
+            <span class="highlight-keyword">Return</span> foundField
+        <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+    <span class="highlight-keyword">Next</span>
+
+    <span class="highlight-keyword">Return</span> <span class="highlight-keyword">Nothing</span>
+<span class="highlight-keyword">End</span> <span class="highlight-keyword">Function</span></pre></div><div id="IDAGC_code_Div3" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div><div id="IDAGC_code_Div4" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div></div></div></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('seeAlso')" onkeypress="SectionExpandCollapse_CheckKey('seeAlso', event)" tabindex="0"><img id="seeAlsoToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="seeAlsoSection" class="collapsibleSection"><h4>Reference</h4><div><a href="420696e3-f3ec-1a1d-1205-36a8119d81e5.htm">ScheduleDefinition Class</a></div><div><a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB Namespace</a></div></div></div></div><div id="PageFooter" class="pageFooter"><div class="feedbackLink">Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:revitapifeedback%40autodesk.com?Subject=Revit%202025%20API">Autodesk</a></div>
+        <script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        HT_mailLink.href += ": " + document.title + "\u0026body=" + encodeURIComponent("Your feedback is used to improve the documentation and the product. Your e-mail address will not be used for any other purpose and is disposed of after the issue you report is resolved. While working to resolve the issue that you report, you may be contacted via e-mail to get further details or clarification on the feedback you sent. After the issue you report has been addressed, you may receive an e-mail to let you know that your feedback has been addressed.");
+        </script></div></body></html>

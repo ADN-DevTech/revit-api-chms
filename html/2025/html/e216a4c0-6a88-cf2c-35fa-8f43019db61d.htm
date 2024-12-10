@@ -1,0 +1,82 @@
+﻿<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="Microsoft.Help.SelfBranded" content="true" /><meta name="Language" content="en-us" /><meta name="Microsoft.Help.Locale" content="en-us" /><meta name="Microsoft.Help.TopicLocale" content="en-us" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" type="text/css" href="../styles/branding.css" /><link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" /><script type="text/javascript" src="../scripts/branding.js"></script><title>DrawContext.FlushBuffer Method</title><meta name="Title" content="FlushBuffer Method" /><meta name="Microsoft.Help.Id" content="M:Autodesk.Revit.DB.DirectContext3D.DrawContext.FlushBuffer(Autodesk.Revit.DB.DirectContext3D.VertexBuffer,System.Int32,Autodesk.Revit.DB.DirectContext3D.IndexBuffer,System.Int32,Autodesk.Revit.DB.DirectContext3D.VertexFormat,Autodesk.Revit.DB.DirectContext3D.EffectInstance,Autodesk.Revit.DB.DirectContext3D.PrimitiveType,System.Int32,System.Int32)" /><meta name="Microsoft.Help.ContentType" content="Reference" /><meta name="System.Keywords" content="DrawContext.FlushBuffer method" /><meta name="System.Keywords" content="FlushBuffer method" /><meta name="Microsoft.Help.F1" content="Autodesk.Revit.DB.DirectContext3D.DrawContext.FlushBuffer" /><meta name="Microsoft.Help.F1" content="DrawContext.FlushBuffer" /><meta name="Microsoft.Help.F1" content="FlushBuffer" /><meta name="container" content="Autodesk.Revit.DB.DirectContext3D" /><meta name="file" content="e216a4c0-6a88-cf2c-35fa-8f43019db61d" /><meta name="guid" content="e216a4c0-6a88-cf2c-35fa-8f43019db61d" /><meta name="Description" content="Submits geometry for rendering." /><link rel="stylesheet" type="text/css" href="../styles/branding-Help1.css" /></head><body onload="SetDefaultLanguage('cs');"><input type="hidden" id="userDataCache" class="userDataStyle" /><div id="PageHeader" class="pageHeader">Revit 2025 API</div><div class="pageBody"><div id="TopicContent" class="topicContent"><table class="titleTable"><tr><td class="titleColumn"><h1>Draw<wbr />Context<span id="LST9D89FDDC_0" data-languageSpecificText="cpp=::|nu=."></span>Flush<wbr />Buffer Method</h1></td></tr></table><div class="summary">
+   Submits geometry for rendering.
+</div><br /><strong>Namespace:</strong> <a href="f4ba10f0-55ea-5344-173b-688405391794.htm">Autodesk.Revit.DB.DirectContext3D</a><br /><strong>Assembly:</strong> RevitAPI (in RevitAPI.dll) Version: 25.0.0.0 (25.0.0.0)<div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDB')" onkeypress="SectionExpandCollapse_CheckKey('IDB', event)" tabindex="0"><img id="IDBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Syntax</span></div><div id="IDBSection" class="collapsibleSection"><div id="IDAB" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAB_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cs','1','4');return false;">C#</a></div><div id="IDAB_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','vb','2','4');return false;">VB</a></div><div id="IDAB_tab3" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cpp','3','4');return false;">C++</a></div><div id="IDAB_tab4" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAB_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAB');return false;" title="Copy">Copy</a></div></div><div id="IDAB_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="identifier">FlushBuffer</span>(
+	<span class="identifier">VertexBuffer</span> <span class="parameter">vertexBuffer</span>,
+	<span class="identifier">int</span> <span class="parameter">vertexCount</span>,
+	<span class="identifier">IndexBuffer</span> <span class="parameter">indexBuffer</span>,
+	<span class="identifier">int</span> <span class="parameter">indexCount</span>,
+	<span class="identifier">VertexFormat</span> <span class="parameter">vertexFormat</span>,
+	<span class="identifier">EffectInstance</span> <span class="parameter">effectInstance</span>,
+	<span class="identifier">PrimitiveType</span> <span class="parameter">primitiveType</span>,
+	<span class="identifier">int</span> <span class="parameter">start</span>,
+	<span class="identifier">int</span> <span class="parameter">primitiveCount</span>
+)</pre></div><div id="IDAB_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">Public</span> <span class="keyword">Shared</span> <span class="keyword">Sub</span> <span class="identifier">FlushBuffer</span> ( 
+	<span class="parameter">vertexBuffer</span> <span class="keyword">As</span> <span class="identifier">VertexBuffer</span>,
+	<span class="parameter">vertexCount</span> <span class="keyword">As</span> <span class="identifier">Integer</span>,
+	<span class="parameter">indexBuffer</span> <span class="keyword">As</span> <span class="identifier">IndexBuffer</span>,
+	<span class="parameter">indexCount</span> <span class="keyword">As</span> <span class="identifier">Integer</span>,
+	<span class="parameter">vertexFormat</span> <span class="keyword">As</span> <span class="identifier">VertexFormat</span>,
+	<span class="parameter">effectInstance</span> <span class="keyword">As</span> <span class="identifier">EffectInstance</span>,
+	<span class="parameter">primitiveType</span> <span class="keyword">As</span> <span class="identifier">PrimitiveType</span>,
+	<span class="parameter">start</span> <span class="keyword">As</span> <span class="identifier">Integer</span>,
+	<span class="parameter">primitiveCount</span> <span class="keyword">As</span> <span class="identifier">Integer</span>
+)</pre></div><div id="IDAB_code_Div3" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">public</span>:
+<span class="keyword">static</span> <span class="keyword">void</span> <span class="identifier">FlushBuffer</span>(
+	<span class="identifier">VertexBuffer</span>^ <span class="parameter">vertexBuffer</span>, 
+	<span class="identifier">int</span> <span class="parameter">vertexCount</span>, 
+	<span class="identifier">IndexBuffer</span>^ <span class="parameter">indexBuffer</span>, 
+	<span class="identifier">int</span> <span class="parameter">indexCount</span>, 
+	<span class="identifier">VertexFormat</span>^ <span class="parameter">vertexFormat</span>, 
+	<span class="identifier">EffectInstance</span>^ <span class="parameter">effectInstance</span>, 
+	<span class="identifier">PrimitiveType</span> <span class="parameter">primitiveType</span>, 
+	<span class="identifier">int</span> <span class="parameter">start</span>, 
+	<span class="identifier">int</span> <span class="parameter">primitiveCount</span>
+)</pre></div><div id="IDAB_code_Div4" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">static</span> <span class="keyword">member</span> <span class="identifier">FlushBuffer</span> : 
+        <span class="parameter">vertexBuffer</span> : <span class="identifier">VertexBuffer</span> * 
+        <span class="parameter">vertexCount</span> : <span class="identifier">int</span> * 
+        <span class="parameter">indexBuffer</span> : <span class="identifier">IndexBuffer</span> * 
+        <span class="parameter">indexCount</span> : <span class="identifier">int</span> * 
+        <span class="parameter">vertexFormat</span> : <span class="identifier">VertexFormat</span> * 
+        <span class="parameter">effectInstance</span> : <span class="identifier">EffectInstance</span> * 
+        <span class="parameter">primitiveType</span> : <span class="identifier">PrimitiveType</span> * 
+        <span class="parameter">start</span> : <span class="identifier">int</span> * 
+        <span class="parameter">primitiveCount</span> : <span class="identifier">int</span> <span class="keyword">-&gt;</span> <span class="keyword">unit</span> </pre></div></div></div><h4>Parameters</h4><dl><dt class="has-text-weight-normal"><span class="parameter">vertexBuffer</span>  <a href="329e5617-ce46-a993-1131-85c64f0842f2.htm">VertexBuffer</a></dt><dd>
+   The vertex buffer that contains vertex data.
+</dd><dt class="has-text-weight-normal"><span class="parameter">vertexCount</span>  <a href="https://learn.microsoft.com/dotnet/api/system.int32" target="_blank" rel="noopener noreferrer">Int32</a></dt><dd>
+   The number of vertices in the vertex buffer.
+</dd><dt class="has-text-weight-normal"><span class="parameter">indexBuffer</span>  <a href="186f6b15-38c7-cee7-6163-396cfdea43ee.htm">IndexBuffer</a></dt><dd>
+   The index buffer that contains indices into the vertex buffer.
+</dd><dt class="has-text-weight-normal"><span class="parameter">indexCount</span>  <a href="https://learn.microsoft.com/dotnet/api/system.int32" target="_blank" rel="noopener noreferrer">Int32</a></dt><dd>
+   The number of indices in the index buffer.
+</dd><dt class="has-text-weight-normal"><span class="parameter">vertexFormat</span>  <a href="a946fa2b-bb1f-202c-38dc-8ae0307bedac.htm">VertexFormat</a></dt><dd>
+   The format of the vertices in the vertex buffer.
+</dd><dt class="has-text-weight-normal"><span class="parameter">effectInstance</span>  <a href="45b7ef37-46b6-6cf4-2f42-c6f4055a170c.htm">EffectInstance</a></dt><dd>
+   The effect instance to be used for drawing this piece of geometry.
+</dd><dt class="has-text-weight-normal"><span class="parameter">primitiveType</span>  <a href="f0b47a17-85be-d631-10c1-76358114f7dc.htm">PrimitiveType</a></dt><dd>
+   The type of geometry primitive used in the index buffer.
+</dd><dt class="has-text-weight-normal"><span class="parameter">start</span>  <a href="https://learn.microsoft.com/dotnet/api/system.int32" target="_blank" rel="noopener noreferrer">Int32</a></dt><dd>
+   The first index to use for drawing.
+</dd><dt class="has-text-weight-normal"><span class="parameter">primitiveCount</span>  <a href="https://learn.microsoft.com/dotnet/api/system.int32" target="_blank" rel="noopener noreferrer">Int32</a></dt><dd>
+   The number of primitives to draw.
+</dd></dl></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDKC')" onkeypress="SectionExpandCollapse_CheckKey('IDKC', event)" tabindex="0"><img id="IDKCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Exceptions</span></div><div id="IDKCSection" class="collapsibleSection"><table><tr><th>Exception</th><th>Condition</th></tr><tr><td><a href="2e6e4206-97a8-dd4b-df5d-4269f4bb6088.htm">ArgumentException</a></td><td>
+   A change in the graphics state has made the vertex buffer vertexBuffer invalid for rendering.
+   -or-
+   A change in the graphics state has made the index buffer indexBuffer invalid for rendering.
+   -or-
+   A change in the graphics state has made the vertex format vertexFormat invalid for rendering.
+   -or-
+   A change in the graphics state has made the effect instance effectInstance invalid for rendering.
+   -or-
+   The vertex format vertexFormat and the effect instance effectInstance do not match.
+</td></tr><tr><td><a href="631e1424-60f4-929b-4e52-dda9dcd26316.htm">ArgumentNullException</a></td><td>
+   A non-optional argument was null
+</td></tr><tr><td><a href="60f148c9-ece0-a6bb-4e12-bb4a9c8c8a24.htm">ArgumentOutOfRangeException</a></td><td>
+   A value passed for an enumeration argument is not a member of that enumeration
+</td></tr><tr><td><a href="9e715f03-3884-e539-4dd6-8d7545733adc.htm">InvalidOperationException</a></td><td>
+   This DrawContext is not available because Revit is not currently rendering. In general, this DrawContext must be used in the scope of the RenderScene() callback of IDirectContext3DServer.
+</td></tr></table></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('seeAlso')" onkeypress="SectionExpandCollapse_CheckKey('seeAlso', event)" tabindex="0"><img id="seeAlsoToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="seeAlsoSection" class="collapsibleSection"><h4>Reference</h4><div><a href="b9244325-08c8-8bbd-a9f3-5d91d638d85d.htm">DrawContext Class</a></div><div><a href="f4ba10f0-55ea-5344-173b-688405391794.htm">Autodesk.Revit.DB.DirectContext3D Namespace</a></div></div></div></div><div id="PageFooter" class="pageFooter"><div class="feedbackLink">Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:revitapifeedback%40autodesk.com?Subject=Revit%202025%20API">Autodesk</a></div>
+        <script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        HT_mailLink.href += ": " + document.title + "\u0026body=" + encodeURIComponent("Your feedback is used to improve the documentation and the product. Your e-mail address will not be used for any other purpose and is disposed of after the issue you report is resolved. While working to resolve the issue that you report, you may be contacted via e-mail to get further details or clarification on the feedback you sent. After the issue you report has been addressed, you may receive an e-mail to let you know that your feedback has been addressed.");
+        </script></div></body></html>

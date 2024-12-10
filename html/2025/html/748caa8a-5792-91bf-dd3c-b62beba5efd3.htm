@@ -1,0 +1,111 @@
+﻿<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="Microsoft.Help.SelfBranded" content="true" /><meta name="Language" content="en-us" /><meta name="Microsoft.Help.Locale" content="en-us" /><meta name="Microsoft.Help.TopicLocale" content="en-us" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" type="text/css" href="../styles/branding.css" /><link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" /><script type="text/javascript" src="../scripts/branding.js"></script><title>Wire.Create Method</title><meta name="Title" content="Create Method" /><meta name="Microsoft.Help.Id" content="M:Autodesk.Revit.DB.Electrical.Wire.Create(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.ElementId,Autodesk.Revit.DB.ElementId,Autodesk.Revit.DB.Electrical.WiringType,System.Collections.Generic.IList{Autodesk.Revit.DB.XYZ},Autodesk.Revit.DB.Connector,Autodesk.Revit.DB.Connector)" /><meta name="Microsoft.Help.ContentType" content="Reference" /><meta name="System.Keywords" content="Wire.Create method" /><meta name="System.Keywords" content="Create method" /><meta name="Microsoft.Help.F1" content="Autodesk.Revit.DB.Electrical.Wire.Create" /><meta name="Microsoft.Help.F1" content="Wire.Create" /><meta name="Microsoft.Help.F1" content="Create" /><meta name="container" content="Autodesk.Revit.DB.Electrical" /><meta name="file" content="748caa8a-5792-91bf-dd3c-b62beba5efd3" /><meta name="guid" content="748caa8a-5792-91bf-dd3c-b62beba5efd3" /><meta name="Microsoft.Help.Category" content="CSharp" /><meta name="Microsoft.Help.Category" content="VB" /><meta name="Description" content="Creates a new wire." /><link type="text/css" rel="stylesheet" href="../styles/highlight.css" /><script type="text/javascript" src="../scripts/highlight.js"> </script><link rel="stylesheet" type="text/css" href="../styles/branding-Help1.css" /></head><body onload="SetDefaultLanguage('cs');"><input type="hidden" id="userDataCache" class="userDataStyle" /><div id="PageHeader" class="pageHeader">Revit 2025 API</div><div class="pageBody"><div id="TopicContent" class="topicContent"><table class="titleTable"><tr><td class="titleColumn"><h1>Wire<span id="LSTEEA2D18B_0" data-languageSpecificText="cpp=::|nu=."></span>Create Method</h1></td></tr></table><div class="summary">
+   Creates a new wire.
+</div><br /><strong>Namespace:</strong> <a href="212a1314-7843-2c6c-3322-363127e4059f.htm">Autodesk.Revit.DB.Electrical</a><br /><strong>Assembly:</strong> RevitAPI (in RevitAPI.dll) Version: 25.0.0.0 (25.0.0.0)<div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDB')" onkeypress="SectionExpandCollapse_CheckKey('IDB', event)" tabindex="0"><img id="IDBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Syntax</span></div><div id="IDBSection" class="collapsibleSection"><div id="IDAB" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAB_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cs','1','4');return false;">C#</a></div><div id="IDAB_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','vb','2','4');return false;">VB</a></div><div id="IDAB_tab3" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cpp','3','4');return false;">C++</a></div><div id="IDAB_tab4" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAB_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAB');return false;" title="Copy">Copy</a></div></div><div id="IDAB_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="keyword">public</span> <span class="keyword">static</span> <span class="identifier">Wire</span> <span class="identifier">Create</span>(
+	<span class="identifier">Document</span> <span class="parameter">document</span>,
+	<span class="identifier">ElementId</span> <span class="parameter">wireTypeId</span>,
+	<span class="identifier">ElementId</span> <span class="parameter">viewId</span>,
+	<span class="identifier">WiringType</span> <span class="parameter">wiringType</span>,
+	<span class="identifier">IList</span>&lt;<span class="identifier">XYZ</span>&gt; <span class="parameter">vertexPoints</span>,
+	<span class="identifier">Connector</span> <span class="parameter">startConnectorTo</span>,
+	<span class="identifier">Connector</span> <span class="parameter">endConnectorTo</span>
+)</pre></div><div id="IDAB_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">Public</span> <span class="keyword">Shared</span> <span class="keyword">Function</span> <span class="identifier">Create</span> ( 
+	<span class="parameter">document</span> <span class="keyword">As</span> <span class="identifier">Document</span>,
+	<span class="parameter">wireTypeId</span> <span class="keyword">As</span> <span class="identifier">ElementId</span>,
+	<span class="parameter">viewId</span> <span class="keyword">As</span> <span class="identifier">ElementId</span>,
+	<span class="parameter">wiringType</span> <span class="keyword">As</span> <span class="identifier">WiringType</span>,
+	<span class="parameter">vertexPoints</span> <span class="keyword">As</span> <span class="identifier">IList</span>(<span class="keyword">Of</span> <span class="identifier">XYZ</span>),
+	<span class="parameter">startConnectorTo</span> <span class="keyword">As</span> <span class="identifier">Connector</span>,
+	<span class="parameter">endConnectorTo</span> <span class="keyword">As</span> <span class="identifier">Connector</span>
+) <span class="keyword">As</span> <span class="identifier">Wire</span></pre></div><div id="IDAB_code_Div3" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">public</span>:
+<span class="keyword">static</span> <span class="identifier">Wire</span>^ <span class="identifier">Create</span>(
+	<span class="identifier">Document</span>^ <span class="parameter">document</span>, 
+	<span class="identifier">ElementId</span>^ <span class="parameter">wireTypeId</span>, 
+	<span class="identifier">ElementId</span>^ <span class="parameter">viewId</span>, 
+	<span class="identifier">WiringType</span> <span class="parameter">wiringType</span>, 
+	<span class="identifier">IList</span>&lt;<span class="identifier">XYZ</span>^&gt;^ <span class="parameter">vertexPoints</span>, 
+	<span class="identifier">Connector</span>^ <span class="parameter">startConnectorTo</span>, 
+	<span class="identifier">Connector</span>^ <span class="parameter">endConnectorTo</span>
+)</pre></div><div id="IDAB_code_Div4" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">static</span> <span class="keyword">member</span> <span class="identifier">Create</span> : 
+        <span class="parameter">document</span> : <span class="identifier">Document</span> * 
+        <span class="parameter">wireTypeId</span> : <span class="identifier">ElementId</span> * 
+        <span class="parameter">viewId</span> : <span class="identifier">ElementId</span> * 
+        <span class="parameter">wiringType</span> : <span class="identifier">WiringType</span> * 
+        <span class="parameter">vertexPoints</span> : <span class="identifier">IList</span>&lt;<span class="identifier">XYZ</span>&gt; * 
+        <span class="parameter">startConnectorTo</span> : <span class="identifier">Connector</span> * 
+        <span class="parameter">endConnectorTo</span> : <span class="identifier">Connector</span> <span class="keyword">-&gt;</span> <span class="identifier">Wire</span> </pre></div></div></div><h4>Parameters</h4><dl><dt class="has-text-weight-normal"><span class="parameter">document</span>  <a href="db03274b-a107-aa32-9034-f3e0df4bb1ec.htm">Document</a></dt><dd>
+   The document.
+</dd><dt class="has-text-weight-normal"><span class="parameter">wireTypeId</span>  <a href="44f3f7b1-3229-3404-93c9-dc5e70337dd6.htm">ElementId</a></dt><dd>
+   The id of the wire type of the newly created wire.
+</dd><dt class="has-text-weight-normal"><span class="parameter">viewId</span>  <a href="44f3f7b1-3229-3404-93c9-dc5e70337dd6.htm">ElementId</a></dt><dd>
+   The view in which the wire is to be visible. This must be the id of a floor plan or reflected ceiling plan view.
+</dd><dt class="has-text-weight-normal"><span class="parameter">wiringType</span>  <a href="fb484864-f9d0-7335-1f91-d7ac587f15fb.htm">WiringType</a></dt><dd>
+   Specifiies the wiring type for the newly created wire. The shape of the wire is determined by this value and the total number of points supplied via the vertexPoints and endpoint connectors. If the wiring type is WiringType.Arc:
+   <ul><li>If there are 2 total points supplied, the wire is a straight-line wire.</li><li>If there are 3 total points supplied, the wire is a circular arc wire.</li><li>If there are 4 or more points, the wire is a spline wire.</li></ul>
+   If the wiring type is WiringType.Chamfer, a polyline wire will be created connecting all the points.
+</dd><dt class="has-text-weight-normal"><span class="parameter">vertexPoints</span>  <a href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1" target="_blank" rel="noopener noreferrer">IList</a><span id="LSTEEA2D18B_1" data-languageSpecificText="cpp=&lt;|cs=&lt;|fs=&lt;|vb=(Of |nu=("></span><a href="c2fd995c-95c0-58fb-f5de-f3246cbc5600.htm">XYZ</a><span id="LSTEEA2D18B_2" data-languageSpecificText="cpp=&gt;|cs=&gt;|fs=&gt;|vb=)|nu=)"></span></dt><dd>
+   The vertex point of the wire.
+   If the startConnectorTo is <span class="keyword"><span id="LSTEEA2D18B_3" data-languageSpecificText="cpp=nullptr|vb=Nothing|nu=null"></span></span>, the first vertex of the vertexPoints will be the start point, otherwise, the start connector origin will be the start point.
+   If the endConnectorTo is <span class="keyword"><span id="LSTEEA2D18B_4" data-languageSpecificText="cpp=nullptr|vb=Nothing|nu=null"></span></span>, the last vertex of the vertexPoints will be the end point, otherwise, the end connector origin will be the end point.
+</dd><dt class="has-text-weight-normal"><span class="parameter">startConnectorTo</span>  <a href="11e07082-b3f2-26a1-de79-16535f44716c.htm">Connector</a></dt><dd>
+   The connector to which the wire start point connects. If <span class="keyword"><span id="LSTEEA2D18B_5" data-languageSpecificText="cpp=nullptr|vb=Nothing|nu=null"></span></span>, the start point connects to no existing connector. If set with a connector, the connector's origin will be added to the wire's vertices as the start point.
+</dd><dt class="has-text-weight-normal"><span class="parameter">endConnectorTo</span>  <a href="11e07082-b3f2-26a1-de79-16535f44716c.htm">Connector</a></dt><dd>
+   The connector to which the wire end point connects. If <span class="keyword"><span id="LSTEEA2D18B_6" data-languageSpecificText="cpp=nullptr|vb=Nothing|nu=null"></span></span>, the end point connects to no existing connector. If set with a connector, the connector's origin will be added to the wire's vertices as the end point.
+</dd></dl><h4>Return Value</h4><a href="c2acf13b-0d8b-8415-9682-ae64eb5e5895.htm">Wire</a><br />
+   The wire created.
+</div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDJC')" onkeypress="SectionExpandCollapse_CheckKey('IDJC', event)" tabindex="0"><img id="IDJCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Exceptions</span></div><div id="IDJCSection" class="collapsibleSection"><table><tr><th>Exception</th><th>Condition</th></tr><tr><td><a href="2e6e4206-97a8-dd4b-df5d-4269f4bb6088.htm">ArgumentException</a></td><td>
+   wireTypeId is not a valid WireType id.
+   -or-
+   viewId does not represent a view valid for a Wire element. Either a floor plan or reflected ceiling plan is expected.
+   -or-
+   vertexPoints is not valid, because one or more points are coincident by comparing the X and Y of the points, or there are not at least two points including the connectors.
+   -or-
+   startConnectorTo cannot be connected to a wire, as it is not an electrical connector.
+   -or-
+   endConnectorTo cannot be connected to a wire, as it is not an electrical connector.
+</td></tr><tr><td><a href="631e1424-60f4-929b-4e52-dda9dcd26316.htm">ArgumentNullException</a></td><td>
+   A non-optional argument was null
+</td></tr><tr><td><a href="60f148c9-ece0-a6bb-4e12-bb4a9c8c8a24.htm">ArgumentOutOfRangeException</a></td><td>
+   A value passed for an enumeration argument is not a member of that enumeration
+</td></tr></table></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDNC')" onkeypress="SectionExpandCollapse_CheckKey('IDNC', event)" tabindex="0"><img id="IDNCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Example</span></div><div id="IDNCSection" class="collapsibleSection"><div id="IDANC" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDANC_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDANC','cs','1','4');return false;">C#</a></div><div id="IDANC_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDANC','vb','2','4');return false;">VB</a></div><div id="IDANC_tab3" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDANC','cpp','3','4');return false;">C++</a></div><div id="IDANC_tab4" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDANC','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDANC_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDANC');return false;" title="Copy">Copy</a></div></div><div id="IDANC_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="highlight-comment">// Create an unconnected straight line wire between two points</span>
+<span class="highlight-keyword">public</span> Wire CreateWire(Document document)
+{
+    Wire wire = <span class="highlight-keyword">null</span>;
+
+    FilteredElementCollector collector = <span class="highlight-keyword">new</span> FilteredElementCollector(document);
+    IList&lt;Element&gt; wireTypes = collector.OfCategory(BuiltInCategory.OST_Wire).WhereElementIsElementType().ToElements();
+    WireType wireType = wireTypes.First() <span class="highlight-keyword">as</span> WireType;
+
+    <span class="highlight-keyword">if</span> (wireType != <span class="highlight-keyword">null</span>)
+    {
+        IList&lt;XYZ&gt; wireVertices = <span class="highlight-keyword">new</span> List&lt;XYZ&gt;();
+        wireVertices.Add(<span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">0</span>, <span class="highlight-number">0</span>, <span class="highlight-number">0</span>));
+        wireVertices.Add(<span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">2</span>, <span class="highlight-number">0</span>, <span class="highlight-number">0</span>));
+
+        wire = Wire.Create(document, wireType.Id, document.ActiveView.Id, WiringType.Arc, wireVertices, <span class="highlight-keyword">null</span>, <span class="highlight-keyword">null</span>);
+    }
+
+    <span class="highlight-keyword">return</span> wire;
+}</pre></div><div id="IDANC_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve">  <span class="highlight-comment">' Create an unconnected straight line wire between two points</span>
+  <span class="highlight-keyword">Public</span> <span class="highlight-keyword">Function</span> CreateWire(document <span class="highlight-keyword">As</span> Document) <span class="highlight-keyword">As</span> Wire
+   <span class="highlight-keyword">Dim</span> wire__1 <span class="highlight-keyword">As</span> Wire = <span class="highlight-keyword">Nothing</span>
+
+   <span class="highlight-keyword">Dim</span> collector <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> FilteredElementCollector(document)
+   <span class="highlight-keyword">Dim</span> wireTypes <span class="highlight-keyword">As</span> IList(<span class="highlight-keyword">Of</span> Element) = collector.OfCategory(BuiltInCategory.OST_Wire).WhereElementIsElementType().ToElements()
+   <span class="highlight-keyword">Dim</span> wireType <span class="highlight-keyword">As</span> WireType = <span class="highlight-keyword">TryCast</span>(wireTypes.First(), WireType)
+
+   <span class="highlight-keyword">If</span> wireType <span class="highlight-keyword">IsNot</span> <span class="highlight-keyword">Nothing</span> <span class="highlight-keyword">Then</span>
+      <span class="highlight-keyword">Dim</span> wireVertices <span class="highlight-keyword">As</span> IList(<span class="highlight-keyword">Of</span> XYZ) = <span class="highlight-keyword">New</span> List(<span class="highlight-keyword">Of</span> XYZ)()
+      wireVertices.Add(<span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">0</span>, <span class="highlight-number">0</span>, <span class="highlight-number">0</span>))
+      wireVertices.Add(<span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">2</span>, <span class="highlight-number">0</span>, <span class="highlight-number">0</span>))
+
+      wire__1 = Wire.Create(document, wireType.Id, document.ActiveView.Id, WiringType.Arc, wireVertices, <span class="highlight-keyword">Nothing</span>, _
+         <span class="highlight-keyword">Nothing</span>)
+   <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+
+   <span class="highlight-keyword">Return</span> wire__1
+<span class="highlight-keyword">End</span> <span class="highlight-keyword">Function</span></pre></div><div id="IDANC_code_Div3" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div><div id="IDANC_code_Div4" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div></div></div></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('seeAlso')" onkeypress="SectionExpandCollapse_CheckKey('seeAlso', event)" tabindex="0"><img id="seeAlsoToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="seeAlsoSection" class="collapsibleSection"><h4>Reference</h4><div><a href="c2acf13b-0d8b-8415-9682-ae64eb5e5895.htm">Wire Class</a></div><div><a href="212a1314-7843-2c6c-3322-363127e4059f.htm">Autodesk.Revit.DB.Electrical Namespace</a></div></div></div></div><div id="PageFooter" class="pageFooter"><div class="feedbackLink">Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:revitapifeedback%40autodesk.com?Subject=Revit%202025%20API">Autodesk</a></div>
+        <script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        HT_mailLink.href += ": " + document.title + "\u0026body=" + encodeURIComponent("Your feedback is used to improve the documentation and the product. Your e-mail address will not be used for any other purpose and is disposed of after the issue you report is resolved. While working to resolve the issue that you report, you may be contacted via e-mail to get further details or clarification on the feedback you sent. After the issue you report has been addressed, you may receive an e-mail to let you know that your feedback has been addressed.");
+        </script></div></body></html>

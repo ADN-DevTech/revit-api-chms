@@ -1,0 +1,51 @@
+﻿<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="Microsoft.Help.SelfBranded" content="true" /><meta name="Language" content="en-us" /><meta name="Microsoft.Help.Locale" content="en-us" /><meta name="Microsoft.Help.TopicLocale" content="en-us" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" type="text/css" href="../styles/branding.css" /><link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" /><script type="text/javascript" src="../scripts/branding.js"></script><title>ExternalServiceRegistry.ExecuteService(Guid, IExternalData) Method</title><meta name="Title" content="ExecuteService(Guid, IExternalData) Method" /><meta name="Microsoft.Help.Id" content="M:Autodesk.Revit.DB.ExternalService.ExternalServiceRegistry.ExecuteService(System.Guid,Autodesk.Revit.DB.ExternalService.IExternalData)" /><meta name="Microsoft.Help.ContentType" content="Reference" /><meta name="container" content="Autodesk.Revit.DB.ExternalService" /><meta name="file" content="89cfbb29-5f7c-bd05-e216-0befff791ae5" /><meta name="guid" content="89cfbb29-5f7c-bd05-e216-0befff791ae5" /><meta name="Description" content="Execute a service independently of any document." /><link rel="stylesheet" type="text/css" href="../styles/branding-Help1.css" /></head><body onload="SetDefaultLanguage('cs');"><input type="hidden" id="userDataCache" class="userDataStyle" /><div id="PageHeader" class="pageHeader">Revit 2025 API</div><div class="pageBody"><div id="TopicContent" class="topicContent"><table class="titleTable"><tr><td class="titleColumn"><h1>External<wbr />Service<wbr />Registry<span id="LST39E1F517_0" data-languageSpecificText="cpp=::|nu=."></span>Execute<wbr />Service(Guid, IExternal<wbr />Data) Method</h1></td></tr></table><div class="summary">
+   Execute a service independently of any document.
+</div><br /><strong>Namespace:</strong> <a href="a88f2d1d-c02f-a901-9543-44e4b5dd5fc9.htm">Autodesk.Revit.DB.ExternalService</a><br /><strong>Assembly:</strong> RevitAPI (in RevitAPI.dll) Version: 25.0.0.0 (25.0.0.0)<div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDB')" onkeypress="SectionExpandCollapse_CheckKey('IDB', event)" tabindex="0"><img id="IDBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Syntax</span></div><div id="IDBSection" class="collapsibleSection"><div id="IDAB" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAB_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cs','1','4');return false;">C#</a></div><div id="IDAB_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','vb','2','4');return false;">VB</a></div><div id="IDAB_tab3" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cpp','3','4');return false;">C++</a></div><div id="IDAB_tab4" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAB_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAB');return false;" title="Copy">Copy</a></div></div><div id="IDAB_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="keyword">public</span> <span class="keyword">static</span> <span class="identifier">ExternalServiceResult</span> <span class="identifier">ExecuteService</span>(
+	<span class="identifier">Guid</span> <span class="parameter">executionKey</span>,
+	<span class="identifier">IExternalData</span> <span class="parameter">data</span>
+)</pre></div><div id="IDAB_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">Public</span> <span class="keyword">Shared</span> <span class="keyword">Function</span> <span class="identifier">ExecuteService</span> ( 
+	<span class="parameter">executionKey</span> <span class="keyword">As</span> <span class="identifier">Guid</span>,
+	<span class="parameter">data</span> <span class="keyword">As</span> <span class="identifier">IExternalData</span>
+) <span class="keyword">As</span> <span class="identifier">ExternalServiceResult</span></pre></div><div id="IDAB_code_Div3" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">public</span>:
+<span class="keyword">static</span> <span class="identifier">ExternalServiceResult</span> <span class="identifier">ExecuteService</span>(
+	<span class="identifier">Guid</span> <span class="parameter">executionKey</span>, 
+	<span class="identifier">IExternalData</span>^ <span class="parameter">data</span>
+)</pre></div><div id="IDAB_code_Div4" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">static</span> <span class="keyword">member</span> <span class="identifier">ExecuteService</span> : 
+        <span class="parameter">executionKey</span> : <span class="identifier">Guid</span> * 
+        <span class="parameter">data</span> : <span class="identifier">IExternalData</span> <span class="keyword">-&gt;</span> <span class="identifier">ExternalServiceResult</span> </pre></div></div></div><h4>Parameters</h4><dl><dt class="has-text-weight-normal"><span class="parameter">executionKey</span>  <a href="https://learn.microsoft.com/dotnet/api/system.guid" target="_blank" rel="noopener noreferrer">Guid</a></dt><dd>
+   Access key of the service to be executed.
+   The key is not the same as the service's Id. It is the value
+   that was returned to the caller who registered the service.
+</dd><dt class="has-text-weight-normal"><span class="parameter">data</span>  <a href="d4f0854f-3b67-c60e-1696-8cffbaba065a.htm">IExternalData</a></dt><dd>
+   The associated data. The type is defined by the service.
+</dd></dl><h4>Return Value</h4><a href="63c83d88-92c7-5283-8b39-efb0baeedcd8.htm">ExternalServiceResult</a><br />
+   The result of executing the external service.
+</div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDFC')" onkeypress="SectionExpandCollapse_CheckKey('IDFC', event)" tabindex="0"><img id="IDFCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Exceptions</span></div><div id="IDFCSection" class="collapsibleSection"><table><tr><th>Exception</th><th>Condition</th></tr><tr><td><a href="2e6e4206-97a8-dd4b-df5d-4269f4bb6088.htm">ArgumentException</a></td><td>
+   The execution key is either invalid or of a service that is not registered.
+   To execute a service, the key returned by RegisterService method must be used.
+   -or-
+   The execution key is of a service that is already being executed.
+</td></tr><tr><td><a href="631e1424-60f4-929b-4e52-dda9dcd26316.htm">ArgumentNullException</a></td><td>
+   A non-optional argument was null
+</td></tr></table></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDBC')" onkeypress="SectionExpandCollapse_CheckKey('IDBC', event)" tabindex="0"><img id="IDBCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Remarks</span></div><div id="IDBCSection" class="collapsibleSection"><p>
+   Execution of a service should be invoked only by the application
+   that registered the service. The execution will use the currently
+   active server (or servers in the case of a multi-server service).
+   </p><p>
+   This method does not take a document as one of its arguments
+   and therefore it is not intended for executions of recordable
+   services that may modify documents. If the service (recordable)
+   or its server(s) is expected to modify documents, the other ExecuteService
+   method -- the one that takes a document as one of its arguments -- is
+   supposed to be used.
+   </p><p>
+   Non-recordable services are free to modify documents during this
+   ExecuteService call, because activities of non-recordable services
+   are not recorded; the changes those services made are assumed to be
+   independent of the presence of the service and/or its servers.
+   </p></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('seeAlso')" onkeypress="SectionExpandCollapse_CheckKey('seeAlso', event)" tabindex="0"><img id="seeAlsoToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="seeAlsoSection" class="collapsibleSection"><h4>Reference</h4><div><a href="fa14442f-3d47-2c21-467c-6d19e4cc0d9e.htm">ExternalServiceRegistry Class</a></div><div><a href="441ae935-fa59-aa1e-23ba-57e334974c7f.htm">ExecuteService Overload</a></div><div><a href="a88f2d1d-c02f-a901-9543-44e4b5dd5fc9.htm">Autodesk.Revit.DB.ExternalService Namespace</a></div></div></div></div><div id="PageFooter" class="pageFooter"><div class="feedbackLink">Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:revitapifeedback%40autodesk.com?Subject=Revit%202025%20API">Autodesk</a></div>
+        <script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        HT_mailLink.href += ": " + document.title + "\u0026body=" + encodeURIComponent("Your feedback is used to improve the documentation and the product. Your e-mail address will not be used for any other purpose and is disposed of after the issue you report is resolved. While working to resolve the issue that you report, you may be contacted via e-mail to get further details or clarification on the feedback you sent. After the issue you report has been addressed, you may receive an e-mail to let you know that your feedback has been addressed.");
+        </script></div></body></html>

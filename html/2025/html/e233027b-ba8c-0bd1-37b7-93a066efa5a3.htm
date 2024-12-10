@@ -1,0 +1,93 @@
+﻿<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="Microsoft.Help.SelfBranded" content="true" /><meta name="Language" content="en-us" /><meta name="Microsoft.Help.Locale" content="en-us" /><meta name="Microsoft.Help.TopicLocale" content="en-us" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" type="text/css" href="../styles/branding.css" /><link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" /><script type="text/javascript" src="../scripts/branding.js"></script><title>UIControlledApplication.Idling Event</title><meta name="Title" content="Idling Event" /><meta name="Microsoft.Help.Id" content="E:Autodesk.Revit.UI.UIControlledApplication.Idling" /><meta name="Microsoft.Help.ContentType" content="Reference" /><meta name="System.Keywords" content="UIControlledApplication.Idling event" /><meta name="System.Keywords" content="Idling event" /><meta name="Microsoft.Help.F1" content="Autodesk.Revit.UI.UIControlledApplication.Idling" /><meta name="Microsoft.Help.F1" content="UIControlledApplication.Idling" /><meta name="Microsoft.Help.F1" content="Idling" /><meta name="container" content="Autodesk.Revit.UI" /><meta name="file" content="e233027b-ba8c-0bd1-37b7-93a066efa5a3" /><meta name="guid" content="e233027b-ba8c-0bd1-37b7-93a066efa5a3" /><meta name="Microsoft.Help.Category" content="CSharp" /><meta name="Microsoft.Help.Category" content="VB" /><meta name="Description" content="Subscribe to the Idling event to be notified when Revit is not in an active tool or transaction." /><link type="text/css" rel="stylesheet" href="../styles/highlight.css" /><script type="text/javascript" src="../scripts/highlight.js"> </script><link rel="stylesheet" type="text/css" href="../styles/branding-Help1.css" /></head><body onload="SetDefaultLanguage('cs');"><input type="hidden" id="userDataCache" class="userDataStyle" /><div id="PageHeader" class="pageHeader">Revit 2025 API</div><div class="pageBody"><div id="TopicContent" class="topicContent"><table class="titleTable"><tr><td class="titleColumn"><h1>UIControlled<wbr />Application<span id="LSTE549670E_0" data-languageSpecificText="cpp=::|nu=."></span>Idling Event</h1></td></tr></table><div class="summary">
+   Subscribe to the Idling event to be notified when Revit is not in an active tool or transaction.
+</div><br /><strong>Namespace:</strong> <a href="e86fd90a-8957-02a6-da7f-ced248966e3e.htm">Autodesk.Revit.UI</a><br /><strong>Assembly:</strong> RevitAPIUI (in RevitAPIUI.dll) Version: 25.0.0.0 (25.0.0.0)<div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDB')" onkeypress="SectionExpandCollapse_CheckKey('IDB', event)" tabindex="0"><img id="IDBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Syntax</span></div><div id="IDBSection" class="collapsibleSection"><div id="IDAB" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAB_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cs','1','4');return false;">C#</a></div><div id="IDAB_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','vb','2','4');return false;">VB</a></div><div id="IDAB_tab3" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cpp','3','4');return false;">C++</a></div><div id="IDAB_tab4" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAB_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAB');return false;" title="Copy">Copy</a></div></div><div id="IDAB_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="keyword">public</span> event <span class="identifier">EventHandler</span>&lt;<span class="identifier">IdlingEventArgs</span>&gt; <span class="identifier">Idling</span></pre></div><div id="IDAB_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">Public</span> Event <span class="identifier">Idling</span> <span class="keyword">As</span> <span class="identifier">EventHandler</span>(<span class="keyword">Of</span> <span class="identifier">IdlingEventArgs</span>)</pre></div><div id="IDAB_code_Div3" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">public</span>:
+ <span class="keyword">event</span> <span class="identifier">EventHandler</span>&lt;<span class="identifier">IdlingEventArgs</span>^&gt;^ <span class="identifier">Idling</span> {
+	<span class="keyword">void</span> <span class="keyword">add</span> (<span class="identifier">EventHandler</span>&lt;<span class="identifier">IdlingEventArgs</span>^&gt;^ <span class="parameter">value</span>);
+	<span class="keyword">void</span> <span class="keyword">remove</span> (<span class="identifier">EventHandler</span>&lt;<span class="identifier">IdlingEventArgs</span>^&gt;^ <span class="parameter">value</span>);
+}</pre></div><div id="IDAB_code_Div4" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">member</span> <span class="identifier">Idling</span> : <span class="identifier">IEvent</span>&lt;<span class="identifier">EventHandler</span>&lt;<span class="identifier">IdlingEventArgs</span>&gt;,
+    <span class="identifier">IdlingEventArgs</span>&gt;</pre></div></div></div><h4>Value</h4><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" target="_blank" rel="noopener noreferrer">EventHandler</a><span id="LSTE549670E_1" data-languageSpecificText="cpp=&lt;|cs=&lt;|fs=&lt;|vb=(Of |nu=("></span><a href="92e2300b-b4b1-af35-221a-cfbeb22c8705.htm">IdlingEventArgs</a><span id="LSTE549670E_2" data-languageSpecificText="cpp=&gt;|cs=&gt;|fs=&gt;|vb=)|nu=)"></span></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDBC')" onkeypress="SectionExpandCollapse_CheckKey('IDBC', event)" tabindex="0"><img id="IDBCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Remarks</span></div><div id="IDBCSection" class="collapsibleSection"><p>This event is raised when it is safe for the API application to access the active
+   document between user interactions. The event is raised only when the Revit UI is
+   in a state where the user could successfully click on an API command button.</p><p>
+   Handlers of this event are permitted to make modifications to any document (including the active document),
+   except for documents that are currently in read-only mode.
+   </p><p>In order to change a document, you must begin a new transaction for that document.
+   This transaction will appear in the Revit undo stack and may be undone by the Revit user.</p><p>This event is invoked between user actions in the Revit UI. If the handler for
+   this event requires a significant amount of processing time, users will perceive a slowdown
+   in the responsiveness of Revit. If the execution for updates can be safely split across
+   multiple calls to this event, the user perception of Revit responsiveness will be improved. </p><p> There are two ways to use this event.  In the default mode, a single raise of the event
+   will be made each time Revit begins an idle session.  Note that when the user is active in the Revit
+   user interface, idle sessions begin whenever the mouse stops moving for a moment or when a
+   command completes.  However, if the user is not active in the user interface at all, Revit may not invoke
+   additional idling sessions for quite some time; this means that your application may not be able to take advantage
+   of time when the user leaves the machine completely for a period of time.  </p><p> In the non-default mode, your application forces Revit to keep the idling session open and to make
+   repeated calls to your event subscriber.  In this mode even if the user is totally inactive the Revit
+   session will continue to make Idling calls to your application.  However, this can result in performance
+   degradation for the system on which Revit is running because the CPU remains fully engaged in serving Idling
+   events during the Revit application's downtime.</p><p> You can indicate the preference for the non-default Idling frequency by calling
+   <a href="6ead2453-9221-9044-0d93-84cc7db00b0d.htm">SetRaiseWithoutDelay<span id="LSTE549670E_3" data-languageSpecificText="cs=()|vb=|cpp=()|nu=()|fs=()"></span></a>
+   each time the Idling event callback is made.  Revit will revert to the default Idling frequency
+   if this method is not called every time in your callback.</p><p>Event is not cancellable. </p></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDDC')" onkeypress="SectionExpandCollapse_CheckKey('IDDC', event)" tabindex="0"><img id="IDDCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Example</span></div><div id="IDDCSection" class="collapsibleSection"><div id="IDADC" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDADC_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDADC','cs','1','4');return false;">C#</a></div><div id="IDADC_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDADC','vb','2','4');return false;">VB</a></div><div id="IDADC_tab3" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDADC','cpp','3','4');return false;">C++</a></div><div id="IDADC_tab4" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDADC','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDADC_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDADC');return false;" title="Copy">Copy</a></div></div><div id="IDADC_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="highlight-comment">// Create a text note and update it once per second while Revit is idle</span>
+TextNote textNote = <span class="highlight-keyword">null</span>;
+String oldDateTime = <span class="highlight-keyword">null</span>;
+<span class="highlight-keyword">public</span> Result Execute(ExternalCommandData commandData, <span class="highlight-keyword">ref</span> <span class="highlight-keyword">string</span> message, ElementSet elements)
+{
+    UIApplication uiApp = <span class="highlight-keyword">new</span> UIApplication(commandData.Application.Application);
+    Document doc = commandData.Application.ActiveUIDocument.Document;
+    <span class="highlight-keyword">using</span> (Transaction t = <span class="highlight-keyword">new</span> Transaction(doc, <span class="highlight-literal">"Text Note Creation"</span>))
+    {
+       t.Start();
+       oldDateTime = DateTime.Now.ToString();
+       ElementId defaultTextTypeId = doc.GetDefaultElementTypeId(ElementTypeGroup.TextNoteType);
+       textNote = TextNote.Create(doc, doc.ActiveView.Id, XYZ.Zero, oldDateTime, defaultTextTypeId);
+       t.Commit();
+    }
+    uiApp.Idling += <span class="highlight-keyword">new</span> EventHandler&lt;IdlingEventArgs&gt;(idleUpdate);
+    <span class="highlight-keyword">return</span> Result.Succeeded;
+}
+<span class="highlight-keyword">public</span> <span class="highlight-keyword">void</span> idleUpdate(<span class="highlight-keyword">object</span> sender, IdlingEventArgs e)
+{
+    UIApplication uiApp = sender <span class="highlight-keyword">as</span> UIApplication;
+    Document doc = uiApp.ActiveUIDocument.Document;
+    <span class="highlight-keyword">if</span> (oldDateTime != DateTime.Now.ToString())
+    {
+        <span class="highlight-keyword">using</span> (Transaction transaction = <span class="highlight-keyword">new</span> Transaction(doc, <span class="highlight-literal">"Text Note Update"</span>))
+        {
+           transaction.Start();
+           textNote.Text = DateTime.Now.ToString();
+           transaction.Commit();
+        }
+        oldDateTime = DateTime.Now.ToString();
+    }
+}</pre></div><div id="IDADC_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="highlight-comment">' Create a text note and update it once per second while Revit is idle</span>
+<span class="highlight-keyword">Private</span> textNote <span class="highlight-keyword">As</span> TextNote = <span class="highlight-keyword">Nothing</span>
+<span class="highlight-keyword">Private</span> oldDateTime <span class="highlight-keyword">As</span> [<span class="highlight-keyword">String</span>] = <span class="highlight-keyword">Nothing</span>
+<span class="highlight-keyword">Public</span> <span class="highlight-keyword">Function</span> Execute(commandData <span class="highlight-keyword">As</span> ExternalCommandData, <span class="highlight-keyword">ByRef</span> message <span class="highlight-keyword">As</span> <span class="highlight-keyword">String</span>, elements <span class="highlight-keyword">As</span> ElementSet) <span class="highlight-keyword">As</span> Autodesk.Revit.UI.Result <span class="highlight-keyword">Implements</span> IExternalCommand.Execute
+    <span class="highlight-keyword">Dim</span> uiApp <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> UIApplication(commandData.Application.Application)
+    <span class="highlight-keyword">Dim</span> doc <span class="highlight-keyword">As</span> Document = commandData.Application.ActiveUIDocument.Document
+    <span class="highlight-keyword">Using</span> t <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> Transaction(doc, <span class="highlight-literal">"Text Note Creation"</span>)
+        t.Start()
+        oldDateTime = DateTime.Now.ToString()
+        <span class="highlight-keyword">Dim</span> defaultTextTypeId <span class="highlight-keyword">As</span> ElementId = doc.GetDefaultElementTypeId(ElementTypeGroup.TextNoteType)
+        textNote = textNote.Create(doc, doc.ActiveView.Id, XYZ.Zero, oldDateTime, defaultTextTypeId)
+        t.Commit()
+    <span class="highlight-keyword">End</span> <span class="highlight-keyword">Using</span>
+    <span class="highlight-keyword">AddHandler</span> uiApp.Idling, <span class="highlight-keyword">AddressOf</span> idleUpdate
+    <span class="highlight-keyword">Return</span> Result.Succeeded
+<span class="highlight-keyword">End</span> <span class="highlight-keyword">Function</span>
+<span class="highlight-keyword">Public</span> <span class="highlight-keyword">Sub</span> idleUpdate(sender <span class="highlight-keyword">As</span> <span class="highlight-keyword">Object</span>, e <span class="highlight-keyword">As</span> IdlingEventArgs)
+    <span class="highlight-keyword">Dim</span> uiApp <span class="highlight-keyword">As</span> UIApplication = <span class="highlight-keyword">TryCast</span>(sender, UIApplication)
+    <span class="highlight-keyword">Dim</span> doc <span class="highlight-keyword">As</span> Document = uiApp.ActiveUIDocument.Document
+    <span class="highlight-keyword">If</span> oldDateTime &lt;&gt; DateTime.Now.ToString() <span class="highlight-keyword">Then</span>
+        <span class="highlight-keyword">Using</span> transaction <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> Transaction(doc, <span class="highlight-literal">"Text Note Update"</span>)
+            transaction.Start()
+            textNote.Text = DateTime.Now.ToString()
+            transaction.Commit()
+        <span class="highlight-keyword">End</span> <span class="highlight-keyword">Using</span>
+        oldDateTime = DateTime.Now.ToString()
+    <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+<span class="highlight-keyword">End</span> <span class="highlight-keyword">Sub</span></pre></div><div id="IDADC_code_Div3" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div><div id="IDADC_code_Div4" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div></div></div></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('seeAlso')" onkeypress="SectionExpandCollapse_CheckKey('seeAlso', event)" tabindex="0"><img id="seeAlsoToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="seeAlsoSection" class="collapsibleSection"><h4>Reference</h4><div><a href="4638c568-a118-1d57-ceed-a57595202644.htm">UIControlledApplication Class</a></div><div><a href="e86fd90a-8957-02a6-da7f-ced248966e3e.htm">Autodesk.Revit.UI Namespace</a></div></div></div></div><div id="PageFooter" class="pageFooter"><div class="feedbackLink">Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:revitapifeedback%40autodesk.com?Subject=Revit%202025%20API">Autodesk</a></div>
+        <script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        HT_mailLink.href += ": " + document.title + "\u0026body=" + encodeURIComponent("Your feedback is used to improve the documentation and the product. Your e-mail address will not be used for any other purpose and is disposed of after the issue you report is resolved. While working to resolve the issue that you report, you may be contacted via e-mail to get further details or clarification on the feedback you sent. After the issue you report has been addressed, you may receive an e-mail to let you know that your feedback has been addressed.");
+        </script></div></body></html>

@@ -1,0 +1,77 @@
+﻿<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="Microsoft.Help.SelfBranded" content="true" /><meta name="Language" content="en-us" /><meta name="Microsoft.Help.Locale" content="en-us" /><meta name="Microsoft.Help.TopicLocale" content="en-us" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" type="text/css" href="../styles/branding.css" /><link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" /><script type="text/javascript" src="../scripts/branding.js"></script><title>Curve.CreateOffset Method</title><meta name="Title" content="CreateOffset Method" /><meta name="Microsoft.Help.Id" content="M:Autodesk.Revit.DB.Curve.CreateOffset(System.Double,Autodesk.Revit.DB.XYZ)" /><meta name="Microsoft.Help.ContentType" content="Reference" /><meta name="System.Keywords" content="Curve.CreateOffset method" /><meta name="System.Keywords" content="CreateOffset method" /><meta name="Microsoft.Help.F1" content="Autodesk.Revit.DB.Curve.CreateOffset" /><meta name="Microsoft.Help.F1" content="Curve.CreateOffset" /><meta name="Microsoft.Help.F1" content="CreateOffset" /><meta name="container" content="Autodesk.Revit.DB" /><meta name="file" content="450217f3-c0b5-42af-3a05-376ae383d28a" /><meta name="guid" content="450217f3-c0b5-42af-3a05-376ae383d28a" /><meta name="Description" content="Creates a new curve that is an offset of the existing curve." /><link rel="stylesheet" type="text/css" href="../styles/branding-Help1.css" /></head><body onload="SetDefaultLanguage('cs');"><input type="hidden" id="userDataCache" class="userDataStyle" /><div id="PageHeader" class="pageHeader">Revit 2025 API</div><div class="pageBody"><div id="TopicContent" class="topicContent"><table class="titleTable"><tr><td class="titleColumn"><h1>Curve<span id="LST2E93657C_0" data-languageSpecificText="cpp=::|nu=."></span>Create<wbr />Offset Method</h1></td></tr></table><div class="summary">
+   Creates a new curve that is an offset of the existing curve.
+</div><br /><strong>Namespace:</strong> <a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB</a><br /><strong>Assembly:</strong> RevitAPI (in RevitAPI.dll) Version: 25.0.0.0 (25.0.0.0)<div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDB')" onkeypress="SectionExpandCollapse_CheckKey('IDB', event)" tabindex="0"><img id="IDBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Syntax</span></div><div id="IDBSection" class="collapsibleSection"><div id="IDAB" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAB_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cs','1','4');return false;">C#</a></div><div id="IDAB_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','vb','2','4');return false;">VB</a></div><div id="IDAB_tab3" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cpp','3','4');return false;">C++</a></div><div id="IDAB_tab4" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAB_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAB');return false;" title="Copy">Copy</a></div></div><div id="IDAB_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="keyword">public</span> <span class="identifier">Curve</span> <span class="identifier">CreateOffset</span>(
+	<span class="identifier">double</span> <span class="parameter">offsetDist</span>,
+	<span class="identifier">XYZ</span> <span class="parameter">referenceVector</span>
+)</pre></div><div id="IDAB_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">Public</span> <span class="keyword">Function</span> <span class="identifier">CreateOffset</span> ( 
+	<span class="parameter">offsetDist</span> <span class="keyword">As</span> <span class="identifier">Double</span>,
+	<span class="parameter">referenceVector</span> <span class="keyword">As</span> <span class="identifier">XYZ</span>
+) <span class="keyword">As</span> <span class="identifier">Curve</span></pre></div><div id="IDAB_code_Div3" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">public</span>:
+<span class="identifier">Curve</span>^ <span class="identifier">CreateOffset</span>(
+	<span class="identifier">double</span> <span class="parameter">offsetDist</span>, 
+	<span class="identifier">XYZ</span>^ <span class="parameter">referenceVector</span>
+)</pre></div><div id="IDAB_code_Div4" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">member</span> <span class="identifier">CreateOffset</span> : 
+        <span class="parameter">offsetDist</span> : <span class="identifier">float</span> * 
+        <span class="parameter">referenceVector</span> : <span class="identifier">XYZ</span> <span class="keyword">-&gt;</span> <span class="identifier">Curve</span> </pre></div></div></div><h4>Parameters</h4><dl><dt class="has-text-weight-normal"><span class="parameter">offsetDist</span>  <a href="https://learn.microsoft.com/dotnet/api/system.double" target="_blank" rel="noopener noreferrer">Double</a></dt><dd>
+   The signed distance that controls the offset.
+</dd><dt class="has-text-weight-normal"><span class="parameter">referenceVector</span>  <a href="c2fd995c-95c0-58fb-f5de-f3246cbc5600.htm">XYZ</a></dt><dd>
+   A reference vector to define the offset direction.
+</dd></dl><h4>Return Value</h4><a href="400cc9b6-9ff7-de85-6fd8-c20002209d25.htm">Curve</a><br />
+  The new curve.
+</div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDEC')" onkeypress="SectionExpandCollapse_CheckKey('IDEC', event)" tabindex="0"><img id="IDECToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Exceptions</span></div><div id="IDECSection" class="collapsibleSection"><table><tr><th>Exception</th><th>Condition</th></tr><tr><td><a href="9e715f03-3884-e539-4dd6-8d7545733adc.htm">InvalidOperationException</a></td><td>
+Cannot create the offset of the curve.
+</td></tr></table></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDBC')" onkeypress="SectionExpandCollapse_CheckKey('IDBC', event)" tabindex="0"><img id="IDBCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Remarks</span></div><div id="IDBCSection" class="collapsibleSection">
+The offset curve is obtained by moving the points of the given curve by a certain distance (not necessarily the input distance)
+to the right relative to the reference vector. If the distance is negative, then the offset will be actually on the left side.
+The precise role played by the reference vector depends on the curve type in an inconsistent way, 
+as specified in detail below. We plan to update this function to have a more consistent and understandable behavior.
+<p> For Line, HermiteSpline, NurbSpline and Cylindrical Helix, the right direction
+       is along the cross product of the tangent at that point and the reference vector. 
+       In other words, the "right" side of the curve at a given point on the curve is defined with the reference vector
+       being thought of as the upward direction and curve tangent being thought of as the forward direction,
+       as if you are walking along the curve with your body aligned to the reference vector. </p><p> For Arc and Ellipse, the right direction is defined relative to the axis of the arc or ellipse
+       in conjunction with the reference vector. If the dot product of the reference vector with the axis is positive,
+       then the right direction is along the cross product of the curve tangent the axis. 
+       If the dot product is negetive, then it is in the other way.
+       If the dot product is zero, then it is an input error. </p>
+
+   More details of the behavior depending on the type of curve:
+   <ul><li>Line:
+   For a Line, a vecPerp is computed as the cross product of the line direction and the reference vector.
+   The offset is obtained by moving the line by the given distance along the direction of the vecPerp.
+   Note:  vecPerp can be zero vector if the reference vector is parallel to the line direction.
+         In that case, the offset is simply a copy of the given line. No error is reported.
+   </li><li>Arc:
+   For an Arc, the offset is done in the plane of the arc. 
+   The resulting offset is another arc in the same plane as the given arc and with the same center. 
+   The radius is increased or decreased by the offset distance depending on the offset is to the right or left.
+   The reference vector is used to determine if the offset is to be done to the right or left of the arc, 
+   based on the dot product of the reference vector with the axis (normal vector) of the arc.
+   If the dot product is positive then the offset is to the right relative to the axis of the arc; if not, it is to the left. 
+   If the dot product is zero, that is, reference vector is perpendicular to the axis, the function will return NULL and report an error.
+   </li><li>Ellipse:
+   An Ellipse is also a planar curve like the Arc. The offset is done in the plane of the ellipse. 
+   Note that the offset of an ellipse is not an ellipse in general. It will be approximated by a Hermite spline curve.
+   The offset curve is obtained by offsetting the points of the ellipse, by the given offset distance, to the
+   right or left relative to the axis (normal vector) of the ellipse.
+   The reference vector is used to determine if the offset is to be done to the right or left of the ellipse, 
+   based on the dot product of the reference vector with the axis of the ellipse.
+   If the dot product is positive then the offset is to the right relative to the axis of the ellipse; if not, it is to the left. 
+   If the dot product is zero, that is, reference vector is perpendicular to the axis, the function will return NULL and report an error.
+   </li><li>HermiteSpline, NurbSpline and Cylindrical Helix:
+   A Hermite or Nurbs spline curve can be planar or non-planar; a cylindrical helix is non-planar. 
+   For these three types of curves, the offset is computed in a general way as follows:
+   Let P be a point on the given curve and let T be the unit tangent vector at P, assuming that the derivative 
+   of the curve at P is not zero. The offset vector at P is the cross product of T and the reference vector.
+   Then the offset point Q corresponding to P is computed as:
+      Q = P + (offset distance) * (offset vector at P).
+   The offset depends on the magnitude as well as the direction of the reference vector.
+   If the magnitude of the reference vector is not one, then the actual distance moved will not be the given offset distance.
+   NOTE: If the curve is a planar Hermite or Nurbs spline curve, the offset curve may not lie on the same plane – 
+   unlike the case of arc and ellipse. 
+   </li></ul></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('seeAlso')" onkeypress="SectionExpandCollapse_CheckKey('seeAlso', event)" tabindex="0"><img id="seeAlsoToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="seeAlsoSection" class="collapsibleSection"><h4>Reference</h4><div><a href="400cc9b6-9ff7-de85-6fd8-c20002209d25.htm">Curve Class</a></div><div><a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB Namespace</a></div></div></div></div><div id="PageFooter" class="pageFooter"><div class="feedbackLink">Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:revitapifeedback%40autodesk.com?Subject=Revit%202025%20API">Autodesk</a></div>
+        <script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        HT_mailLink.href += ": " + document.title + "\u0026body=" + encodeURIComponent("Your feedback is used to improve the documentation and the product. Your e-mail address will not be used for any other purpose and is disposed of after the issue you report is resolved. While working to resolve the issue that you report, you may be contacted via e-mail to get further details or clarification on the feedback you sent. After the issue you report has been addressed, you may receive an e-mail to let you know that your feedback has been addressed.");
+        </script></div></body></html>

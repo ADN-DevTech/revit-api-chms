@@ -1,0 +1,207 @@
+﻿<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="Microsoft.Help.SelfBranded" content="true" /><meta name="Language" content="en-us" /><meta name="Microsoft.Help.Locale" content="en-us" /><meta name="Microsoft.Help.TopicLocale" content="en-us" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" type="text/css" href="../styles/branding.css" /><link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" /><script type="text/javascript" src="../scripts/branding.js"></script><title>ReferenceIntersector Class</title><meta name="Title" content="ReferenceIntersector Class" /><meta name="Microsoft.Help.Id" content="T:Autodesk.Revit.DB.ReferenceIntersector" /><meta name="Microsoft.Help.ContentType" content="Reference" /><meta name="System.Keywords" content="Autodesk.Revit.DB.ReferenceIntersector class" /><meta name="System.Keywords" content="ReferenceIntersector class" /><meta name="Microsoft.Help.F1" content="Autodesk.Revit.DB.ReferenceIntersector" /><meta name="Microsoft.Help.F1" content="ReferenceIntersector" /><meta name="container" content="Autodesk.Revit.DB" /><meta name="file" content="36f82b40-1065-2305-e260-18fc618e756f" /><meta name="guid" content="36f82b40-1065-2305-e260-18fc618e756f" /><meta name="Microsoft.Help.Category" content="CSharp" /><meta name="Microsoft.Help.Category" content="VB" /><meta name="Description" content="A class used to find and return elements that intersect a ray created from an origin point and direction." /><link type="text/css" rel="stylesheet" href="../styles/highlight.css" /><script type="text/javascript" src="../scripts/highlight.js"> </script><link rel="stylesheet" type="text/css" href="../styles/branding-Help1.css" /></head><body onload="SetDefaultLanguage('cs');"><input type="hidden" id="userDataCache" class="userDataStyle" /><div id="PageHeader" class="pageHeader">Revit 2025 API</div><div class="pageBody"><div id="TopicContent" class="topicContent"><table class="titleTable"><tr><td class="titleColumn"><h1>Reference<wbr />Intersector Class</h1></td></tr></table><div class="summary">
+   A class used to find and return elements that intersect a ray created from an origin point and direction.
+</div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDDA')" onkeypress="SectionExpandCollapse_CheckKey('IDDA', event)" tabindex="0"><img id="IDDAToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Inheritance Hierarchy</span></div><div id="IDDASection" class="collapsibleSection"><a href="https://learn.microsoft.com/dotnet/api/system.object" target="_blank" rel="noopener noreferrer">System<span id="LST54472778_0" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>Object</a><br />  <span class="selflink">Autodesk.Revit.DB<span id="LST54472778_1" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>ReferenceIntersector</span><br /></div><br /><strong>Namespace:</strong> <a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB</a><br /><strong>Assembly:</strong> RevitAPI (in RevitAPI.dll) Version: 25.0.0.0 (25.0.0.0)<div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDB')" onkeypress="SectionExpandCollapse_CheckKey('IDB', event)" tabindex="0"><img id="IDBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Syntax</span></div><div id="IDBSection" class="collapsibleSection"><div id="IDAB" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAB_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cs','1','4');return false;">C#</a></div><div id="IDAB_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','vb','2','4');return false;">VB</a></div><div id="IDAB_tab3" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cpp','3','4');return false;">C++</a></div><div id="IDAB_tab4" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAB_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAB');return false;" title="Copy">Copy</a></div></div><div id="IDAB_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="keyword">public</span> <span class="keyword">class</span> <span class="identifier">ReferenceIntersector</span> : <span class="identifier">IDisposable</span></pre></div><div id="IDAB_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">Public</span> <span class="keyword">Class</span> <span class="identifier">ReferenceIntersector</span>
+	<span class="keyword">Implements</span> <span class="identifier">IDisposable</span></pre></div><div id="IDAB_code_Div3" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">public</span> <span class="keyword">ref class</span> <span class="identifier">ReferenceIntersector</span> : <span class="identifier">IDisposable</span></pre></div><div id="IDAB_code_Div4" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">type</span> <span class="identifier">ReferenceIntersector</span> = 
+    <span class="keyword">class</span>
+        <span class="keyword">interface</span> <span class="identifier">IDisposable</span>
+    <span class="keyword">end</span></pre></div></div></div></div><p>The <span class="selflink">ReferenceIntersector</span> type exposes the following members.</p><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDAAFA')" onkeypress="SectionExpandCollapse_CheckKey('IDAAFA', event)" tabindex="0"><img id="IDAAFAToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Constructors</span></div><div id="IDAAFASection" class="collapsibleSection"><table id="ConstructorList" class="members"><tr><th class="iconColumn"> </th><th>Name</th><th>Description</th></tr><tr><td><img src="../icons/pubMethod.gif" alt="Public method" title="Public method" /></td><td><a href="ba15191c-61f4-bf9e-72d7-d0f4976fd3f3.htm">ReferenceIntersector(View3D)</a></td><td>
+   Constructs a ReferenceIntersector which is set to return intersections from all elements and representing all reference target types.
+</td></tr><tr><td><img src="../icons/pubMethod.gif" alt="Public method" title="Public method" /></td><td><a href="929ca688-af0f-6e6a-d812-44017c8955e7.htm">ReferenceIntersector(ElementFilter, FindReferenceTarget, View3D)</a></td><td>
+   Constructs a ReferenceIntersector which is set to return intersections from any element which passes an input filter.
+</td></tr><tr><td><img src="../icons/pubMethod.gif" alt="Public method" title="Public method" /></td><td><a href="80392f86-eab8-7485-6e5a-28d4e40f7528.htm">ReferenceIntersector(ElementId, FindReferenceTarget, View3D)</a></td><td>
+   Constructs a ReferenceIntersector which is set to return intersections from a single target element only.
+</td></tr><tr><td><img src="../icons/pubMethod.gif" alt="Public method" title="Public method" /></td><td><a href="4b624cc1-fc7f-62dd-3593-22861c991afd.htm">ReferenceIntersector(ICollection<span id="LST54472778_2" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>ElementId<span id="LST54472778_3" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>, FindReferenceTarget, View3D)</a></td><td>
+   Constructs a ReferenceIntersector which is set to return intersections from any of a set of target elements.
+</td></tr></table><a href="#PageHeader">Top</a></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDMFA')" onkeypress="SectionExpandCollapse_CheckKey('IDMFA', event)" tabindex="0"><img id="IDMFAToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Properties</span></div><div id="IDMFASection" class="collapsibleSection"><table id="PropertyList" class="members"><tr><th class="iconColumn"> </th><th>Name</th><th>Description</th></tr><tr><td><img src="../icons/pubProperty.gif" alt="Public property" title="Public property" /></td><td><a href="027d8736-697e-ebe8-37d9-901f96713540.htm">FindReferencesInRevitLinks</a></td><td>
+   Determines if references inside Revit Links should be found.
+</td></tr><tr><td><img src="../icons/pubProperty.gif" alt="Public property" title="Public property" /></td><td><a href="4c356722-e215-f7a3-1e4a-728e09229955.htm">IsValidObject</a></td><td>
+   Specifies whether the .NET object represents a valid Revit entity.
+</td></tr><tr><td><img src="../icons/pubProperty.gif" alt="Public property" title="Public property" /></td><td><a href="c7a99118-5365-2baf-2494-1879cb06038e.htm">TargetType</a></td><td>
+   The type of reference to find.
+</td></tr><tr><td><img src="../icons/pubProperty.gif" alt="Public property" title="Public property" /></td><td><a href="502978f2-9efb-02a9-ab6e-f54eafbe6c10.htm">ViewId</a></td><td>
+   The id of the 3D view used for evaluation.
+</td></tr></table><a href="#PageHeader">Top</a></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDBFA')" onkeypress="SectionExpandCollapse_CheckKey('IDBFA', event)" tabindex="0"><img id="IDBFAToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Methods</span></div><div id="IDBFASection" class="collapsibleSection"><table id="MethodList" class="members"><tr><th class="iconColumn"> </th><th>Name</th><th>Description</th></tr><tr><td><img src="../icons/pubMethod.gif" alt="Public method" title="Public method" /></td><td><a href="4bad58d0-1ed4-176b-81cc-3a0181744ebe.htm">Dispose</a></td><td>Releases all resources used by the <span class="selflink">ReferenceIntersector</span></td></tr><tr><td><img src="../icons/pubMethod.gif" alt="Public method" title="Public method" /></td><td><a href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)" target="_blank" rel="noopener noreferrer">Equals</a></td><td>Determines whether the specified object is equal to the current object.<br />(Inherited from <a href="https://learn.microsoft.com/dotnet/api/system.object" target="_blank" rel="noopener noreferrer">Object</a>)</td></tr><tr><td><img src="../icons/pubMethod.gif" alt="Public method" title="Public method" /></td><td><a href="6abd0586-5d7e-68c6-2e64-46199f457499.htm">Find</a></td><td>
+   Projects a ray from the origin along the given direction, and returns all references from intersected elements which match the ReferenceIntersector's criteria.
+</td></tr><tr><td><img src="../icons/pubMethod.gif" alt="Public method" title="Public method" /></td><td><a href="866e1f2b-c79a-4d9f-1db1-9e386dd42941.htm">FindNearest</a></td><td>
+   Projects a ray from the origin along the given direction, and returns the nearest reference from intersected elements which match the ReferenceIntersector's criteria.
+</td></tr><tr><td><img src="../icons/pubMethod.gif" alt="Public method" title="Public method" /></td><td><a href="614c9ce9-9918-b551-a4f1-552030cdb0c9.htm">GetFilter</a></td><td>
+   Gets the ElementFilter used in intersection testing.
+</td></tr><tr><td><img src="../icons/pubMethod.gif" alt="Public method" title="Public method" /></td><td><a href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode#system-object-gethashcode" target="_blank" rel="noopener noreferrer">GetHashCode</a></td><td>Serves as the default hash function.<br />(Inherited from <a href="https://learn.microsoft.com/dotnet/api/system.object" target="_blank" rel="noopener noreferrer">Object</a>)</td></tr><tr><td><img src="../icons/pubMethod.gif" alt="Public method" title="Public method" /></td><td><a href="ec2affbb-5386-cdc6-b89c-e3605dbe7f64.htm">GetTargetElementIds</a></td><td>
+   Gets the set of ElementIds to test from in intersection testing.
+</td></tr><tr><td><img src="../icons/pubMethod.gif" alt="Public method" title="Public method" /></td><td><a href="https://learn.microsoft.com/dotnet/api/system.object.gettype#system-object-gettype" target="_blank" rel="noopener noreferrer">GetType</a></td><td>Gets the <a href="https://learn.microsoft.com/dotnet/api/system.type" target="_blank" rel="noopener noreferrer">Type</a> of the current instance.<br />(Inherited from <a href="https://learn.microsoft.com/dotnet/api/system.object" target="_blank" rel="noopener noreferrer">Object</a>)</td></tr><tr><td><img src="../icons/pubMethod.gif" alt="Public method" title="Public method" /></td><td><a href="e94fc91b-34fb-f12b-ecd7-d9c30de9a7dd.htm">SetFilter</a></td><td>
+   Sets the ElementFilter used in intersection testing.
+</td></tr><tr><td><img src="../icons/pubMethod.gif" alt="Public method" title="Public method" /></td><td><a href="600d7702-878d-26ed-e3db-d70b05bb3c6c.htm">SetTargetElementIds</a></td><td>
+   Sets the set of ElementIds to test from in intersection testing.
+</td></tr><tr><td><img src="../icons/pubMethod.gif" alt="Public method" title="Public method" /></td><td><a href="https://learn.microsoft.com/dotnet/api/system.object.tostring#system-object-tostring" target="_blank" rel="noopener noreferrer">ToString</a></td><td>Returns a string that represents the current object.<br />(Inherited from <a href="https://learn.microsoft.com/dotnet/api/system.object" target="_blank" rel="noopener noreferrer">Object</a>)</td></tr></table><a href="#PageHeader">Top</a></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDBC')" onkeypress="SectionExpandCollapse_CheckKey('IDBC', event)" tabindex="0"><img id="IDBCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Remarks</span></div><div id="IDBCSection" class="collapsibleSection"><p>An instance of this class can be constructed to return any 3D geometric element that intersects the
+   ray created by the origin and direction, or to return a subset of elements based on filtering and flags.
+   The caller can opt to filter the results using an ElementFilter, or by applying a specific list of
+   acceptable elements.  The caller can also specify the type of object to be returned, which might be
+   whole elements, geometry objects, or a combination.  In all cases the caller is required to supply
+   a 3D view for evaluation; the view and visibility settings on the input view will determine if a
+   particular element is returned (for example, hidden elements will never be returned by this tool, nor
+   will elements whose geometry is outside the section box of the view).</p><p>The class is configured so that a single instance can be constructed and used for multiple evaluations of
+   different rays.  The results of the evaluation are not preserved between invocations on the same ReferenceIntersector. </p><p>The class also offers an option to return element results encountered in Revit Links.  When the
+   <a href="027d8736-697e-ebe8-37d9-901f96713540.htm">FindReferencesInRevitLinks</a> flag
+   is set, the results may include elements in the host document and in any RevitLinkInstance encountered, depending
+   on the other flags set.  See the remarks for <a href="027d8736-697e-ebe8-37d9-901f96713540.htm">FindReferencesInRevitLinks</a> for details on how the
+   flags affect the results obtained from links. </p></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDDC')" onkeypress="SectionExpandCollapse_CheckKey('IDDC', event)" tabindex="0"><img id="IDDCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Example</span></div><div id="IDDCSection" class="collapsibleSection"><div id="IDADC" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDADC_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDADC','cs','1','4');return false;">C#</a></div><div id="IDADC_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDADC','vb','2','4');return false;">VB</a></div><div id="IDADC_tab3" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDADC','cpp','3','4');return false;">C++</a></div><div id="IDADC_tab4" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDADC','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDADC_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDADC');return false;" title="Copy">Copy</a></div></div><div id="IDADC_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="highlight-keyword">public</span> <span class="highlight-keyword">class</span> RayProjection : IExternalCommand
+{
+    <span class="highlight-keyword">public</span> Result Execute(ExternalCommandData revit, <span class="highlight-keyword">ref</span> <span class="highlight-keyword">string</span> message, ElementSet elements)
+    {
+        Document doc = revit.Application.ActiveUIDocument.Document;
+
+        ICollection&lt;ElementId&gt; selectedIds = revit.Application.ActiveUIDocument.Selection.GetElementIds();
+
+        <span class="highlight-comment">// If skylight is selected, process it.</span>
+        FamilyInstance skylight = <span class="highlight-keyword">null</span>;
+        <span class="highlight-keyword">if</span> (selectedIds.Count == <span class="highlight-number">1</span>)
+        {
+            <span class="highlight-keyword">foreach</span> (ElementId id <span class="highlight-keyword">in</span> selectedIds)
+            {
+                Element e = doc.GetElement(id);
+                <span class="highlight-keyword">if</span> (e <span class="highlight-keyword">is</span> FamilyInstance)
+                {
+                    FamilyInstance instance = e <span class="highlight-keyword">as</span> FamilyInstance;
+                    <span class="highlight-keyword">bool</span> isWindow = (instance.Category.BuiltInCategory == BuiltInCategory.OST_Windows);
+                    <span class="highlight-keyword">bool</span> isHostedByRoof = (instance.Host.Category.BuiltInCategory == BuiltInCategory.OST_Roofs);
+
+                    <span class="highlight-keyword">if</span> (isWindow &amp;&amp; isHostedByRoof)
+                    {
+                        skylight = instance;
+                    }
+                }
+            }
+        }
+
+        <span class="highlight-keyword">if</span> (skylight == <span class="highlight-keyword">null</span>)
+        {
+            message = <span class="highlight-literal">"Please select one skylight."</span>;
+            <span class="highlight-keyword">return</span> Result.Cancelled;
+        }
+
+        <span class="highlight-comment">// Calculate the height</span>
+        Line line = CalculateLineAboveFloor(doc, skylight);
+
+        <span class="highlight-comment">// Create a model curve to show the distance</span>
+        Plane plane = Plane.CreateByNormalAndOrigin(<span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">1</span>, <span class="highlight-number">0</span>, <span class="highlight-number">0</span>), line.GetEndPoint(<span class="highlight-number">0</span>));
+        SketchPlane sketchPlane = SketchPlane.Create(doc, plane);
+
+        ModelCurve curve = doc.Create.NewModelCurve(line, sketchPlane);
+
+        <span class="highlight-comment">// Show a message with the length value</span>
+        TaskDialog.Show(<span class="highlight-literal">"Distance"</span>, <span class="highlight-literal">"Distance to floor: "</span> + String.Format(<span class="highlight-literal">"{0:f2}"</span>, line.Length));
+
+        <span class="highlight-keyword">return</span> Result.Succeeded;
+    }
+
+    <span class="highlight-comment">/// &lt;summary&gt;</span>
+    <span class="highlight-comment">/// Determines the line segment that connects the skylight to the nearest floor.</span>
+    <span class="highlight-comment">/// &lt;/summary&gt;</span>
+    <span class="highlight-comment">/// &lt;returns&gt;The line segment.&lt;/returns&gt;</span>
+    <span class="highlight-keyword">private</span> Line CalculateLineAboveFloor(Document doc, FamilyInstance skylight)
+    {
+        <span class="highlight-comment">// Find a 3D view to use for the ReferenceIntersector constructor</span>
+        FilteredElementCollector collector = <span class="highlight-keyword">new</span> FilteredElementCollector(doc);
+        Func&lt;View3D, <span class="highlight-keyword">bool</span>&gt; isNotTemplate = v3 =&gt; !(v3.IsTemplate);
+        View3D view3D = collector.OfClass(<span class="highlight-keyword">typeof</span>(View3D)).Cast&lt;View3D&gt;().First&lt;View3D&gt;(isNotTemplate);
+
+        <span class="highlight-comment">// Use the center of the skylight bounding box as the start point.</span>
+        BoundingBoxXYZ box = skylight.get_BoundingBox(view3D);
+        XYZ center = box.Min.Add(box.Max).Multiply(<span class="highlight-number">0.5</span>);
+
+        <span class="highlight-comment">// Project in the negative Z direction down to the floor.</span>
+        XYZ rayDirection = <span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">0</span>, <span class="highlight-number">0</span>, <span class="highlight-number">-1</span>);
+
+        ElementClassFilter filter = <span class="highlight-keyword">new</span> ElementClassFilter(<span class="highlight-keyword">typeof</span>(Floor));
+
+        ReferenceIntersector refIntersector = <span class="highlight-keyword">new</span> ReferenceIntersector(filter, FindReferenceTarget.Face, view3D);
+        ReferenceWithContext referenceWithContext = refIntersector.FindNearest(center, rayDirection);
+
+        Reference reference = referenceWithContext.GetReference();
+        XYZ intersection = reference.GlobalPoint;
+
+        <span class="highlight-comment">// Create line segment from the start point and intersection point.</span>
+        Line result = Line.CreateBound(center, intersection);
+        <span class="highlight-keyword">return</span> result;
+    }
+}</pre></div><div id="IDADC_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve">&lt;Autodesk.Revit.Attributes.Journaling(Autodesk.Revit.Attributes.JournalingMode.NoCommandData)&gt; _
+&lt;Autodesk.Revit.Attributes.Transaction(Autodesk.Revit.Attributes.TransactionMode.Manual)&gt; _
+<span class="highlight-keyword">Public</span> <span class="highlight-keyword">Class</span> RayProjection
+   <span class="highlight-keyword">Implements</span> IExternalCommand
+   <span class="highlight-keyword">Public</span> <span class="highlight-keyword">Function</span> Execute(revit <span class="highlight-keyword">As</span> ExternalCommandData, <span class="highlight-keyword">ByRef</span> message <span class="highlight-keyword">As</span> <span class="highlight-keyword">String</span>, elements <span class="highlight-keyword">As</span> ElementSet) <span class="highlight-keyword">As</span> Autodesk.Revit.UI.Result <span class="highlight-keyword">Implements</span> IExternalCommand.Execute
+      <span class="highlight-keyword">Dim</span> doc <span class="highlight-keyword">As</span> Document = revit.Application.ActiveUIDocument.Document
+
+      <span class="highlight-keyword">Dim</span> selectedIds <span class="highlight-keyword">As</span> ICollection(<span class="highlight-keyword">Of</span> ElementId) = revit.Application.ActiveUIDocument.Selection.GetElementIds()
+
+      <span class="highlight-comment">' If skylight is selected, process it.</span>
+      <span class="highlight-keyword">Dim</span> skylight <span class="highlight-keyword">As</span> FamilyInstance = <span class="highlight-keyword">Nothing</span>
+      <span class="highlight-keyword">If</span> selectedIds.Count = <span class="highlight-number">1</span> <span class="highlight-keyword">Then</span>
+         <span class="highlight-keyword">For</span> <span class="highlight-keyword">Each</span> id <span class="highlight-keyword">As</span> ElementId <span class="highlight-keyword">In</span> selectedIds
+            <span class="highlight-keyword">Dim</span> e <span class="highlight-keyword">As</span> Element = doc.GetElement(id)
+            <span class="highlight-keyword">If</span> <span class="highlight-keyword">TypeOf</span> e <span class="highlight-keyword">Is</span> FamilyInstance <span class="highlight-keyword">Then</span>
+               <span class="highlight-keyword">Dim</span> instance <span class="highlight-keyword">As</span> FamilyInstance = <span class="highlight-keyword">TryCast</span>(e, FamilyInstance)
+               <span class="highlight-keyword">Dim</span> isWindow <span class="highlight-keyword">As</span> <span class="highlight-keyword">Boolean</span> = instance.Category.BuiltInCategory = BuiltInCategory.OST_Windows
+               <span class="highlight-keyword">Dim</span> isHostedByRoof <span class="highlight-keyword">As</span> <span class="highlight-keyword">Boolean</span> = instance.Host.Category.BuiltInCategory = BuiltInCategory.OST_Roofs
+
+               <span class="highlight-keyword">If</span> isWindow <span class="highlight-keyword">AndAlso</span> isHostedByRoof <span class="highlight-keyword">Then</span>
+                  skylight = instance
+               <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+            <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+         <span class="highlight-keyword">Next</span>
+      <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+
+      <span class="highlight-keyword">If</span> skylight <span class="highlight-keyword">Is</span> <span class="highlight-keyword">Nothing</span> <span class="highlight-keyword">Then</span>
+         message = <span class="highlight-literal">"Please select one skylight."</span>
+         <span class="highlight-keyword">Return</span> Result.Cancelled
+      <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+
+      <span class="highlight-comment">' Calculate the height</span>
+      <span class="highlight-keyword">Dim</span> line <span class="highlight-keyword">As</span> Line = CalculateLineAboveFloor(doc, skylight)
+
+      <span class="highlight-comment">' Create a model curve to show the distance</span>
+      <span class="highlight-keyword">Dim</span> plane <span class="highlight-keyword">As</span> Plane = plane.CreateByNormalAndOrigin(<span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">1</span>, <span class="highlight-number">0</span>, <span class="highlight-number">0</span>), line.GetEndPoint(<span class="highlight-number">0</span>))
+      <span class="highlight-keyword">Dim</span> sketchPlane__1 <span class="highlight-keyword">As</span> SketchPlane = SketchPlane.Create(doc, plane)
+
+      <span class="highlight-keyword">Dim</span> curve <span class="highlight-keyword">As</span> ModelCurve = doc.Create.NewModelCurve(line, sketchPlane__1)
+
+      <span class="highlight-comment">' Show a message with the length value</span>
+      TaskDialog.Show(<span class="highlight-literal">"Distance"</span>, <span class="highlight-literal">"Distance to floor: "</span> &amp; [<span class="highlight-keyword">String</span>].Format(<span class="highlight-literal">"{0:f2}"</span>, line.Length))
+
+      <span class="highlight-keyword">Return</span> Result.Succeeded
+   <span class="highlight-keyword">End</span> <span class="highlight-keyword">Function</span>
+
+   <span class="highlight-comment">' &lt;summary&gt;</span>
+   <span class="highlight-comment">' Determines the line segment that connects the skylight to the nearest floor.</span>
+   <span class="highlight-comment">' &lt;/summary&gt;</span>
+   <span class="highlight-comment">' &lt;returns&gt;The line segment.&lt;/returns&gt;</span>
+   <span class="highlight-keyword">Private</span> <span class="highlight-keyword">Function</span> CalculateLineAboveFloor(doc <span class="highlight-keyword">As</span> Document, skylight <span class="highlight-keyword">As</span> FamilyInstance) <span class="highlight-keyword">As</span> Line
+      <span class="highlight-comment">' Find a 3D view to use for the ReferenceIntersector constructor</span>
+      <span class="highlight-keyword">Dim</span> collector <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> FilteredElementCollector(doc)
+      <span class="highlight-keyword">Dim</span> isNotTemplate <span class="highlight-keyword">As</span> Func(<span class="highlight-keyword">Of</span> View3D, <span class="highlight-keyword">Boolean</span>) = <span class="highlight-keyword">Function</span>(v3) <span class="highlight-keyword">Not</span> (v3.IsTemplate)
+      <span class="highlight-keyword">Dim</span> view3D <span class="highlight-keyword">As</span> View3D = collector.OfClass(<span class="highlight-keyword">GetType</span>(View3D)).Cast(<span class="highlight-keyword">Of</span> View3D)().First(isNotTemplate)
+
+      <span class="highlight-comment">' Use the center of the skylight bounding box as the start point.</span>
+      <span class="highlight-keyword">Dim</span> box <span class="highlight-keyword">As</span> BoundingBoxXYZ = skylight.BoundingBox(view3D)
+      <span class="highlight-keyword">Dim</span> center <span class="highlight-keyword">As</span> XYZ = box.Min.Add(box.Max).Multiply(<span class="highlight-number">0.5</span>)
+
+      <span class="highlight-comment">' Project in the negative Z direction down to the floor.</span>
+      <span class="highlight-keyword">Dim</span> rayDirection <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">0</span>, <span class="highlight-number">0</span>, <span class="highlight-number">-1</span>)
+
+      <span class="highlight-keyword">Dim</span> filter <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> ElementClassFilter(<span class="highlight-keyword">GetType</span>(Floor))
+
+      <span class="highlight-keyword">Dim</span> refIntersector <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> ReferenceIntersector(filter, FindReferenceTarget.Face, view3D)
+      <span class="highlight-keyword">Dim</span> referenceWithContext <span class="highlight-keyword">As</span> ReferenceWithContext = refIntersector.FindNearest(center, rayDirection)
+
+      <span class="highlight-keyword">Dim</span> reference <span class="highlight-keyword">As</span> Reference = referenceWithContext.GetReference()
+      <span class="highlight-keyword">Dim</span> intersection <span class="highlight-keyword">As</span> XYZ = reference.GlobalPoint
+
+      <span class="highlight-comment">' Create line segment from the start point and intersection point.</span>
+      <span class="highlight-keyword">Dim</span> result <span class="highlight-keyword">As</span> Line = Line.CreateBound(center, intersection)
+      <span class="highlight-keyword">Return</span> result
+   <span class="highlight-keyword">End</span> <span class="highlight-keyword">Function</span>
+<span class="highlight-keyword">End</span> <span class="highlight-keyword">Class</span></pre></div><div id="IDADC_code_Div3" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div><div id="IDADC_code_Div4" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div></div></div></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('seeAlso')" onkeypress="SectionExpandCollapse_CheckKey('seeAlso', event)" tabindex="0"><img id="seeAlsoToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="seeAlsoSection" class="collapsibleSection"><h4>Reference</h4><div><a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB Namespace</a></div></div></div></div><div id="PageFooter" class="pageFooter"><div class="feedbackLink">Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:revitapifeedback%40autodesk.com?Subject=Revit%202025%20API">Autodesk</a></div>
+        <script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        HT_mailLink.href += ": " + document.title + "\u0026body=" + encodeURIComponent("Your feedback is used to improve the documentation and the product. Your e-mail address will not be used for any other purpose and is disposed of after the issue you report is resolved. While working to resolve the issue that you report, you may be contacted via e-mail to get further details or clarification on the feedback you sent. After the issue you report has been addressed, you may receive an e-mail to let you know that your feedback has been addressed.");
+        </script></div></body></html>

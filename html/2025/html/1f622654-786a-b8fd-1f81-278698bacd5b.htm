@@ -1,0 +1,178 @@
+﻿<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="Microsoft.Help.SelfBranded" content="true" /><meta name="Language" content="en-us" /><meta name="Microsoft.Help.Locale" content="en-us" /><meta name="Microsoft.Help.TopicLocale" content="en-us" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" type="text/css" href="../styles/branding.css" /><link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" /><script type="text/javascript" src="../scripts/branding.js"></script><title>IndependentTag.Create(Document, ElementId, Reference, Boolean, TagMode, TagOrientation, XYZ) Method</title><meta name="Title" content="Create(Document, ElementId, Reference, Boolean, TagMode, TagOrientation, XYZ) Method" /><meta name="Microsoft.Help.Id" content="M:Autodesk.Revit.DB.IndependentTag.Create(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.ElementId,Autodesk.Revit.DB.Reference,System.Boolean,Autodesk.Revit.DB.TagMode,Autodesk.Revit.DB.TagOrientation,Autodesk.Revit.DB.XYZ)" /><meta name="Microsoft.Help.ContentType" content="Reference" /><meta name="container" content="Autodesk.Revit.DB" /><meta name="file" content="1f622654-786a-b8fd-1f81-278698bacd5b" /><meta name="guid" content="1f622654-786a-b8fd-1f81-278698bacd5b" /><meta name="Microsoft.Help.Category" content="CSharp" /><meta name="Microsoft.Help.Category" content="VB" /><meta name="Description" content="Places a tag on an element or subelement." /><link type="text/css" rel="stylesheet" href="../styles/highlight.css" /><script type="text/javascript" src="../scripts/highlight.js"> </script><link rel="stylesheet" type="text/css" href="../styles/branding-Help1.css" /></head><body onload="SetDefaultLanguage('cs');"><input type="hidden" id="userDataCache" class="userDataStyle" /><div id="PageHeader" class="pageHeader">Revit 2025 API</div><div class="pageBody"><div id="TopicContent" class="topicContent"><table class="titleTable"><tr><td class="titleColumn"><h1>Independent<wbr />Tag<span id="LST7004FF21_0" data-languageSpecificText="cpp=::|nu=."></span>Create(Document, Element<wbr />Id, Reference, Boolean, Tag<wbr />Mode, Tag<wbr />Orientation, XYZ) Method</h1></td></tr></table><div class="summary">
+   Places a tag on an element or subelement.
+</div><br /><strong>Namespace:</strong> <a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB</a><br /><strong>Assembly:</strong> RevitAPI (in RevitAPI.dll) Version: 25.0.0.0 (25.0.0.0)<div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDB')" onkeypress="SectionExpandCollapse_CheckKey('IDB', event)" tabindex="0"><img id="IDBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Syntax</span></div><div id="IDBSection" class="collapsibleSection"><div id="IDAB" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAB_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cs','1','4');return false;">C#</a></div><div id="IDAB_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','vb','2','4');return false;">VB</a></div><div id="IDAB_tab3" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cpp','3','4');return false;">C++</a></div><div id="IDAB_tab4" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAB_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAB');return false;" title="Copy">Copy</a></div></div><div id="IDAB_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="keyword">public</span> <span class="keyword">static</span> <span class="identifier">IndependentTag</span> <span class="identifier">Create</span>(
+	<span class="identifier">Document</span> <span class="parameter">document</span>,
+	<span class="identifier">ElementId</span> <span class="parameter">ownerDBViewId</span>,
+	<span class="identifier">Reference</span> <span class="parameter">referenceToTag</span>,
+	<span class="identifier">bool</span> <span class="parameter">addLeader</span>,
+	<span class="identifier">TagMode</span> <span class="parameter">tagMode</span>,
+	<span class="identifier">TagOrientation</span> <span class="parameter">tagOrientation</span>,
+	<span class="identifier">XYZ</span> <span class="parameter">pnt</span>
+)</pre></div><div id="IDAB_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">Public</span> <span class="keyword">Shared</span> <span class="keyword">Function</span> <span class="identifier">Create</span> ( 
+	<span class="parameter">document</span> <span class="keyword">As</span> <span class="identifier">Document</span>,
+	<span class="parameter">ownerDBViewId</span> <span class="keyword">As</span> <span class="identifier">ElementId</span>,
+	<span class="parameter">referenceToTag</span> <span class="keyword">As</span> <span class="identifier">Reference</span>,
+	<span class="parameter">addLeader</span> <span class="keyword">As</span> <span class="identifier">Boolean</span>,
+	<span class="parameter">tagMode</span> <span class="keyword">As</span> <span class="identifier">TagMode</span>,
+	<span class="parameter">tagOrientation</span> <span class="keyword">As</span> <span class="identifier">TagOrientation</span>,
+	<span class="parameter">pnt</span> <span class="keyword">As</span> <span class="identifier">XYZ</span>
+) <span class="keyword">As</span> <span class="identifier">IndependentTag</span></pre></div><div id="IDAB_code_Div3" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">public</span>:
+<span class="keyword">static</span> <span class="identifier">IndependentTag</span>^ <span class="identifier">Create</span>(
+	<span class="identifier">Document</span>^ <span class="parameter">document</span>, 
+	<span class="identifier">ElementId</span>^ <span class="parameter">ownerDBViewId</span>, 
+	<span class="identifier">Reference</span>^ <span class="parameter">referenceToTag</span>, 
+	<span class="identifier">bool</span> <span class="parameter">addLeader</span>, 
+	<span class="identifier">TagMode</span> <span class="parameter">tagMode</span>, 
+	<span class="identifier">TagOrientation</span> <span class="parameter">tagOrientation</span>, 
+	<span class="identifier">XYZ</span>^ <span class="parameter">pnt</span>
+)</pre></div><div id="IDAB_code_Div4" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">static</span> <span class="keyword">member</span> <span class="identifier">Create</span> : 
+        <span class="parameter">document</span> : <span class="identifier">Document</span> * 
+        <span class="parameter">ownerDBViewId</span> : <span class="identifier">ElementId</span> * 
+        <span class="parameter">referenceToTag</span> : <span class="identifier">Reference</span> * 
+        <span class="parameter">addLeader</span> : <span class="identifier">bool</span> * 
+        <span class="parameter">tagMode</span> : <span class="identifier">TagMode</span> * 
+        <span class="parameter">tagOrientation</span> : <span class="identifier">TagOrientation</span> * 
+        <span class="parameter">pnt</span> : <span class="identifier">XYZ</span> <span class="keyword">-&gt;</span> <span class="identifier">IndependentTag</span> </pre></div></div></div><h4>Parameters</h4><dl><dt class="has-text-weight-normal"><span class="parameter">document</span>  <a href="db03274b-a107-aa32-9034-f3e0df4bb1ec.htm">Document</a></dt><dd>
+   The document to which the tag will be added.
+</dd><dt class="has-text-weight-normal"><span class="parameter">ownerDBViewId</span>  <a href="44f3f7b1-3229-3404-93c9-dc5e70337dd6.htm">ElementId</a></dt><dd>
+   The view in which the tag will be visible.
+</dd><dt class="has-text-weight-normal"><span class="parameter">referenceToTag</span>  <a href="d28155ae-817b-1f31-9c3f-c9c6a28acc0d.htm">Reference</a></dt><dd>
+   The host reference of the tag. The reference can be to an element or subelement in a local or linked document.
+</dd><dt class="has-text-weight-normal"><span class="parameter">addLeader</span>  <a href="https://learn.microsoft.com/dotnet/api/system.boolean" target="_blank" rel="noopener noreferrer">Boolean</a></dt><dd>
+   When true, the tag will be created with a straight leader with an attached end.
+</dd><dt class="has-text-weight-normal"><span class="parameter">tagMode</span>  <a href="1e087d7f-aa78-b319-afc6-2d9019d3646d.htm">TagMode</a></dt><dd>
+   This argument determines the type of tag that will be created. Tag by category, multi-category tag, and material tag are allowed.
+</dd><dt class="has-text-weight-normal"><span class="parameter">tagOrientation</span>  <a href="0f1faf70-46a4-71a1-63c0-3425dfc691a0.htm">TagOrientation</a></dt><dd>
+   The orientation of the tag's head.
+</dd><dt class="has-text-weight-normal"><span class="parameter">pnt</span>  <a href="c2fd995c-95c0-58fb-f5de-f3246cbc5600.htm">XYZ</a></dt><dd>
+   For tags without leaders, this point is the position of the tag head.
+   For tags with leaders, this point is the end point of the leader, and a leader of default length will be created from this point to the tag head.
+</dd></dl><h4>Return Value</h4><a href="e52073e2-9d98-6fb5-eb43-288cf9ed2e28.htm">IndependentTag</a><br />
+   If successful the new tag is returned.
+</div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDKC')" onkeypress="SectionExpandCollapse_CheckKey('IDKC', event)" tabindex="0"><img id="IDKCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Exceptions</span></div><div id="IDKCSection" class="collapsibleSection"><table><tr><th>Exception</th><th>Condition</th></tr><tr><td><a href="2e6e4206-97a8-dd4b-df5d-4269f4bb6088.htm">ArgumentException</a></td><td>
+   The ElementId ownerDBViewId does not correspond to a View.
+   -or-
+   The ElementId ownerDBViewId is a view template.
+   -or-
+   The ElementId ownerDBViewId is a perspective view.
+   -or-
+   The 3D view ownerDBViewId is not locked.
+   -or-
+   The reference can not be tagged.
+</td></tr><tr><td><a href="631e1424-60f4-929b-4e52-dda9dcd26316.htm">ArgumentNullException</a></td><td>
+   A non-optional argument was null
+</td></tr><tr><td><a href="60f148c9-ece0-a6bb-4e12-bb4a9c8c8a24.htm">ArgumentOutOfRangeException</a></td><td>
+   A value passed for an enumeration argument is not a member of that enumeration
+</td></tr><tr><td><a href="c52bc6d3-6cd9-26f5-4b27-1646c0711a34.htm">InternalException</a></td><td>
+   Tag creation failed.
+</td></tr><tr><td><a href="9e715f03-3884-e539-4dd6-8d7545733adc.htm">InvalidOperationException</a></td><td>
+   There is no loaded tag type that can be used when tagging referenceToTag with tagMode.
+</td></tr><tr><td><a href="53205486-5917-7c33-8e67-e362106ddc97.htm">ModificationForbiddenException</a></td><td>
+   The document is in failure mode: an operation has failed,
+   and Revit requires the user to either cancel the operation
+   or fix the problem (usually by deleting certain elements).
+   -or-
+   The document is being loaded, or is in the midst of another
+   sensitive process.
+</td></tr><tr><td><a href="8f025460-c283-ea99-aa8a-5a36e11528f4.htm">ModificationOutsideTransactionException</a></td><td>
+   The document has no open transaction.
+</td></tr></table></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDBC')" onkeypress="SectionExpandCollapse_CheckKey('IDBC', event)" tabindex="0"><img id="IDBCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Remarks</span></div><div id="IDBCSection" class="collapsibleSection">
+   Single category tags, multi-category tags and material tags can be placed.
+</div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDSC')" onkeypress="SectionExpandCollapse_CheckKey('IDSC', event)" tabindex="0"><img id="IDSCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Example</span></div><div id="IDSCSection" class="collapsibleSection"><div id="IDASC" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDASC_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDASC','cs','1','4');return false;">C#</a></div><div id="IDASC_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDASC','vb','2','4');return false;">VB</a></div><div id="IDASC_tab3" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDASC','cpp','3','4');return false;">C++</a></div><div id="IDASC_tab4" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDASC','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDASC_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDASC');return false;" title="Copy">Copy</a></div></div><div id="IDASC_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="highlight-keyword">private</span> IndependentTag CreateIndependentTag(Autodesk.Revit.DB.Document document, Wall wall)
+{
+    <span class="highlight-comment">// make sure active view is not a 3D view</span>
+    Autodesk.Revit.DB.View view = document.ActiveView;
+
+    <span class="highlight-comment">// define tag mode and tag orientation for new tag</span>
+    TagMode tagMode = TagMode.TM_ADDBY_CATEGORY;
+    TagOrientation tagorn = TagOrientation.Horizontal;
+
+    <span class="highlight-comment">// Add the tag to the middle of the wall</span>
+    LocationCurve wallLoc = wall.Location <span class="highlight-keyword">as</span> LocationCurve;
+    XYZ wallStart = wallLoc.Curve.GetEndPoint(<span class="highlight-number">0</span>);
+    XYZ wallEnd = wallLoc.Curve.GetEndPoint(<span class="highlight-number">1</span>);
+    XYZ wallMid = wallLoc.Curve.Evaluate(<span class="highlight-number">0.5</span>, <span class="highlight-keyword">true</span>);
+    Reference wallRef = <span class="highlight-keyword">new</span> Reference(wall);
+
+    IndependentTag newTag = IndependentTag.Create(document, view.Id,  wallRef, <span class="highlight-keyword">true</span>, tagMode, tagorn, wallMid);
+    <span class="highlight-keyword">if</span> (<span class="highlight-keyword">null</span> == newTag)
+    {
+        <span class="highlight-keyword">throw</span> <span class="highlight-keyword">new</span> Exception(<span class="highlight-literal">"Create IndependentTag Failed."</span>);
+    }
+
+    <span class="highlight-comment">// newTag.TagText is read-only, so we change the Type Mark type parameter to </span>
+    <span class="highlight-comment">// set the tag text.  The label parameter for the tag family determines</span>
+    <span class="highlight-comment">// what type parameter is used for the tag text.</span>
+
+    WallType type = wall.WallType;
+
+    Parameter foundParameter = type.LookupParameter(<span class="highlight-literal">"Type Mark"</span>);
+    <span class="highlight-keyword">bool</span> result = foundParameter.Set(<span class="highlight-literal">"Hello"</span>);
+
+    <span class="highlight-comment">// set leader mode free</span>
+    <span class="highlight-comment">// otherwise leader end point move with elbow point</span>
+
+    newTag.LeaderEndCondition = LeaderEndCondition.Free;
+    XYZ elbowPnt = wallMid + <span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">5.0</span>, <span class="highlight-number">5.0</span>, <span class="highlight-number">0.0</span>);
+    newTag.SetLeaderElbow(wallRef, elbowPnt);
+    XYZ headerPnt = wallMid + <span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">10.0</span>, <span class="highlight-number">10.0</span>, <span class="highlight-number">0.0</span>);
+    newTag.TagHeadPosition = headerPnt;
+
+    <span class="highlight-comment">// change tag orientation to AnyModelDirection</span>
+    newTag.TagOrientation = TagOrientation.AnyModelDirection;
+
+    <span class="highlight-comment">// change tag rotation angle to PI/4</span>
+    newTag.RotationAngle = Math.PI / <span class="highlight-number">4</span>;
+
+    <span class="highlight-keyword">return</span> newTag;
+}</pre></div><div id="IDASC_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="highlight-keyword">Private</span> <span class="highlight-keyword">Function</span> CreateIndependentTag(document <span class="highlight-keyword">As</span> Autodesk.Revit.DB.Document, wall <span class="highlight-keyword">As</span> Wall) <span class="highlight-keyword">As</span> IndependentTag
+      <span class="highlight-comment">' make sure active view is not a 3D view</span>
+      <span class="highlight-keyword">Dim</span> view <span class="highlight-keyword">As</span> Autodesk.Revit.DB.View = document.ActiveView
+
+      <span class="highlight-comment">' define tag mode and tag orientation for new tag</span>
+      <span class="highlight-keyword">Dim</span> tagMode__1 <span class="highlight-keyword">As</span> TagMode = TagMode.TM_ADDBY_CATEGORY
+      <span class="highlight-keyword">Dim</span> tagorn <span class="highlight-keyword">As</span> TagOrientation = TagOrientation.Horizontal
+
+      <span class="highlight-comment">' Add the tag to the middle of the wall</span>
+      <span class="highlight-keyword">Dim</span> wallLoc <span class="highlight-keyword">As</span> LocationCurve = <span class="highlight-keyword">TryCast</span>(wall.Location, LocationCurve)
+      <span class="highlight-keyword">Dim</span> wallStart <span class="highlight-keyword">As</span> XYZ = wallLoc.Curve.GetEndPoint(<span class="highlight-number">0</span>)
+      <span class="highlight-keyword">Dim</span> wallEnd <span class="highlight-keyword">As</span> XYZ = wallLoc.Curve.GetEndPoint(<span class="highlight-number">1</span>)
+      <span class="highlight-keyword">Dim</span> wallMid <span class="highlight-keyword">As</span> XYZ = wallLoc.Curve.Evaluate(<span class="highlight-number">0.5</span>, <span class="highlight-keyword">True</span>)
+   <span class="highlight-keyword">Dim</span> WallRef <span class="highlight-keyword">As</span> Reference = <span class="highlight-keyword">New</span> Reference(wall)
+
+   <span class="highlight-keyword">Dim</span> newTag <span class="highlight-keyword">As</span> IndependentTag = IndependentTag.Create(document, view.Id, wallRef, <span class="highlight-keyword">True</span>, tagMode__1, tagorn, wallMid)
+      <span class="highlight-keyword">If</span> newTag <span class="highlight-keyword">Is</span> <span class="highlight-keyword">Nothing</span> <span class="highlight-keyword">Then</span>
+          <span class="highlight-keyword">Throw</span> <span class="highlight-keyword">New</span> Exception(<span class="highlight-literal">"Create IndependentTag Failed."</span>)
+      <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+
+      <span class="highlight-comment">' newTag.TagText is read-only, so we change the Type Mark type parameter to </span>
+      <span class="highlight-comment">' set the tag text.  The label parameter for the tag family determines</span>
+      <span class="highlight-comment">' what type parameter is used for the tag text.</span>
+
+      <span class="highlight-keyword">Dim</span> type <span class="highlight-keyword">As</span> WallType = wall.WallType
+
+      <span class="highlight-keyword">Dim</span> foundParameter <span class="highlight-keyword">As</span> Parameter = type.LookupParameter(<span class="highlight-literal">"Type Mark"</span>)
+      <span class="highlight-keyword">Dim</span> result <span class="highlight-keyword">As</span> <span class="highlight-keyword">Boolean</span> = foundParameter.[<span class="highlight-keyword">Set</span>](<span class="highlight-literal">"Hello"</span>)
+
+      <span class="highlight-comment">' set leader mode free</span>
+      <span class="highlight-comment">' otherwise leader end point move with elbow point</span>
+
+      newTag.LeaderEndCondition = LeaderEndCondition.Free
+      <span class="highlight-keyword">Dim</span> elbowPnt <span class="highlight-keyword">As</span> XYZ = wallMid + <span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">5.0</span>, <span class="highlight-number">5.0</span>, <span class="highlight-number">0.0</span>)
+      newTag.SetLeaderElbow(WallRef, elbowPnt)
+      <span class="highlight-keyword">Dim</span> headerPnt <span class="highlight-keyword">As</span> XYZ = wallMid + <span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">10.0</span>, <span class="highlight-number">10.0</span>, <span class="highlight-number">0.0</span>)
+      newTag.TagHeadPosition = headerPnt
+
+      <span class="highlight-comment">' change tag orientation to AnyModelDirection</span>
+      newTag.TagOrientation = TagOrientation.AnyModelDirection
+
+      <span class="highlight-comment">' change tag rotation angle to PI/4</span>
+      newTag.RotationAngle = Math.PI / <span class="highlight-number">4</span>
+
+      <span class="highlight-keyword">Return</span> newTag
+  <span class="highlight-keyword">End</span> <span class="highlight-keyword">Function</span></pre></div><div id="IDASC_code_Div3" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div><div id="IDASC_code_Div4" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div></div></div></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('seeAlso')" onkeypress="SectionExpandCollapse_CheckKey('seeAlso', event)" tabindex="0"><img id="seeAlsoToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="seeAlsoSection" class="collapsibleSection"><h4>Reference</h4><div><a href="e52073e2-9d98-6fb5-eb43-288cf9ed2e28.htm">IndependentTag Class</a></div><div><a href="9b5a74a0-f9bd-9892-23e0-9a344f514b02.htm">Create Overload</a></div><div><a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB Namespace</a></div></div></div></div><div id="PageFooter" class="pageFooter"><div class="feedbackLink">Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:revitapifeedback%40autodesk.com?Subject=Revit%202025%20API">Autodesk</a></div>
+        <script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        HT_mailLink.href += ": " + document.title + "\u0026body=" + encodeURIComponent("Your feedback is used to improve the documentation and the product. Your e-mail address will not be used for any other purpose and is disposed of after the issue you report is resolved. While working to resolve the issue that you report, you may be contacted via e-mail to get further details or clarification on the feedback you sent. After the issue you report has been addressed, you may receive an e-mail to let you know that your feedback has been addressed.");
+        </script></div></body></html>

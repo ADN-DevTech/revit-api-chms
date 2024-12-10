@@ -1,0 +1,178 @@
+﻿<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="Microsoft.Help.SelfBranded" content="true" /><meta name="Language" content="en-us" /><meta name="Microsoft.Help.Locale" content="en-us" /><meta name="Microsoft.Help.TopicLocale" content="en-us" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" type="text/css" href="../styles/branding.css" /><link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" /><script type="text/javascript" src="../scripts/branding.js"></script><title>Floor.Create(Document, IList&lt;CurveLoop&gt;, ElementId, ElementId) Method</title><meta name="Title" content="Create(Document, IList&lt;CurveLoop&gt;, ElementId, ElementId) Method" /><meta name="Microsoft.Help.Id" content="M:Autodesk.Revit.DB.Floor.Create(Autodesk.Revit.DB.Document,System.Collections.Generic.IList{Autodesk.Revit.DB.CurveLoop},Autodesk.Revit.DB.ElementId,Autodesk.Revit.DB.ElementId)" /><meta name="Microsoft.Help.ContentType" content="Reference" /><meta name="container" content="Autodesk.Revit.DB" /><meta name="file" content="a9c74a9f-46eb-a1b7-608e-2039f06be579" /><meta name="guid" content="a9c74a9f-46eb-a1b7-608e-2039f06be579" /><meta name="Microsoft.Help.Category" content="CSharp" /><meta name="Microsoft.Help.Category" content="VB" /><meta name="Description" content="Creates a new instance of architectural floor within the project." /><link type="text/css" rel="stylesheet" href="../styles/highlight.css" /><script type="text/javascript" src="../scripts/highlight.js"> </script><link rel="stylesheet" type="text/css" href="../styles/branding-Help1.css" /></head><body onload="SetDefaultLanguage('cs');"><input type="hidden" id="userDataCache" class="userDataStyle" /><div id="PageHeader" class="pageHeader">Revit 2025 API</div><div class="pageBody"><div id="TopicContent" class="topicContent"><table class="titleTable"><tr><td class="titleColumn"><h1>Floor<span id="LST9B762473_0" data-languageSpecificText="cpp=::|nu=."></span>Create(Document, IList<span id="LST9B762473_1" data-languageSpecificText="cpp=&lt;|cs=&lt;|fs=&lt;|vb=(Of |nu=("></span>Curve<wbr />Loop<span id="LST9B762473_2" data-languageSpecificText="cpp=&gt;|cs=&gt;|fs=&gt;|vb=)|nu=)"></span>, Element<wbr />Id, Element<wbr />Id) Method</h1></td></tr></table><div class="summary">
+   Creates a new instance of architectural floor within the project.
+</div><br /><strong>Namespace:</strong> <a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB</a><br /><strong>Assembly:</strong> RevitAPI (in RevitAPI.dll) Version: 25.0.0.0 (25.0.0.0)<div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDB')" onkeypress="SectionExpandCollapse_CheckKey('IDB', event)" tabindex="0"><img id="IDBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Syntax</span></div><div id="IDBSection" class="collapsibleSection"><div id="IDAB" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAB_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cs','1','4');return false;">C#</a></div><div id="IDAB_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','vb','2','4');return false;">VB</a></div><div id="IDAB_tab3" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cpp','3','4');return false;">C++</a></div><div id="IDAB_tab4" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAB_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAB');return false;" title="Copy">Copy</a></div></div><div id="IDAB_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="keyword">public</span> <span class="keyword">static</span> <span class="identifier">Floor</span> <span class="identifier">Create</span>(
+	<span class="identifier">Document</span> <span class="parameter">document</span>,
+	<span class="identifier">IList</span>&lt;<span class="identifier">CurveLoop</span>&gt; <span class="parameter">profile</span>,
+	<span class="identifier">ElementId</span> <span class="parameter">floorTypeId</span>,
+	<span class="identifier">ElementId</span> <span class="parameter">levelId</span>
+)</pre></div><div id="IDAB_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">Public</span> <span class="keyword">Shared</span> <span class="keyword">Function</span> <span class="identifier">Create</span> ( 
+	<span class="parameter">document</span> <span class="keyword">As</span> <span class="identifier">Document</span>,
+	<span class="parameter">profile</span> <span class="keyword">As</span> <span class="identifier">IList</span>(<span class="keyword">Of</span> <span class="identifier">CurveLoop</span>),
+	<span class="parameter">floorTypeId</span> <span class="keyword">As</span> <span class="identifier">ElementId</span>,
+	<span class="parameter">levelId</span> <span class="keyword">As</span> <span class="identifier">ElementId</span>
+) <span class="keyword">As</span> <span class="identifier">Floor</span></pre></div><div id="IDAB_code_Div3" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">public</span>:
+<span class="keyword">static</span> <span class="identifier">Floor</span>^ <span class="identifier">Create</span>(
+	<span class="identifier">Document</span>^ <span class="parameter">document</span>, 
+	<span class="identifier">IList</span>&lt;<span class="identifier">CurveLoop</span>^&gt;^ <span class="parameter">profile</span>, 
+	<span class="identifier">ElementId</span>^ <span class="parameter">floorTypeId</span>, 
+	<span class="identifier">ElementId</span>^ <span class="parameter">levelId</span>
+)</pre></div><div id="IDAB_code_Div4" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">static</span> <span class="keyword">member</span> <span class="identifier">Create</span> : 
+        <span class="parameter">document</span> : <span class="identifier">Document</span> * 
+        <span class="parameter">profile</span> : <span class="identifier">IList</span>&lt;<span class="identifier">CurveLoop</span>&gt; * 
+        <span class="parameter">floorTypeId</span> : <span class="identifier">ElementId</span> * 
+        <span class="parameter">levelId</span> : <span class="identifier">ElementId</span> <span class="keyword">-&gt;</span> <span class="identifier">Floor</span> </pre></div></div></div><h4>Parameters</h4><dl><dt class="has-text-weight-normal"><span class="parameter">document</span>  <a href="db03274b-a107-aa32-9034-f3e0df4bb1ec.htm">Document</a></dt><dd>
+   The document in which the new floor is created.
+</dd><dt class="has-text-weight-normal"><span class="parameter">profile</span>  <a href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1" target="_blank" rel="noopener noreferrer">IList</a><span id="LST9B762473_3" data-languageSpecificText="cpp=&lt;|cs=&lt;|fs=&lt;|vb=(Of |nu=("></span><a href="84824924-cb89-9e20-de6e-3461f429dfd6.htm">CurveLoop</a><span id="LST9B762473_4" data-languageSpecificText="cpp=&gt;|cs=&gt;|fs=&gt;|vb=)|nu=)"></span></dt><dd>
+   An array of planar curve loops that represent the profile of the floor.
+</dd><dt class="has-text-weight-normal"><span class="parameter">floorTypeId</span>  <a href="44f3f7b1-3229-3404-93c9-dc5e70337dd6.htm">ElementId</a></dt><dd>
+   Id of the floor type to be used by the new Floor.
+</dd><dt class="has-text-weight-normal"><span class="parameter">levelId</span>  <a href="44f3f7b1-3229-3404-93c9-dc5e70337dd6.htm">ElementId</a></dt><dd>
+   Id of the level on which the floor is to be placed.
+</dd></dl><h4>Return Value</h4><a href="96cc6685-003d-ff90-1c5b-c25a4830f0f7.htm">Floor</a><br />
+   If successful a new floor object within the project.
+</div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDHC')" onkeypress="SectionExpandCollapse_CheckKey('IDHC', event)" tabindex="0"><img id="IDHCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Exceptions</span></div><div id="IDHCSection" class="collapsibleSection"><table><tr><th>Exception</th><th>Condition</th></tr><tr><td><a href="2e6e4206-97a8-dd4b-df5d-4269f4bb6088.htm">ArgumentException</a></td><td>
+   The ElementId levelId is not a Level.
+   -or-
+   The floorTypeId does not correspond to a FloorType.
+   -or-
+   The input curve loops cannot compose a valid boundary, that means:
+   the "curveLoops" collection is empty;
+   or some curve loops intersect with each other;
+   or each curve loop is not closed individually;
+   or each curve loop is not planar;
+   or each curve loop is not in a plane parallel to the horizontal(XY) plane;
+   or input curves contain at least one helical curve.
+   -or-
+   Input curves build invalid sketch.
+   -or-
+   Failed to create curve elements.
+</td></tr><tr><td><a href="631e1424-60f4-929b-4e52-dda9dcd26316.htm">ArgumentNullException</a></td><td>
+   A non-optional argument was null
+</td></tr><tr><td><a href="9e715f03-3884-e539-4dd6-8d7545733adc.htm">InvalidOperationException</a></td><td>
+   Cannot generate a sketch.
+   -or-
+   Failed to create new element.
+</td></tr><tr><td><a href="53205486-5917-7c33-8e67-e362106ddc97.htm">ModificationForbiddenException</a></td><td>
+   The document is in failure mode: an operation has failed,
+   and Revit requires the user to either cancel the operation
+   or fix the problem (usually by deleting certain elements).
+   -or-
+   The document is being loaded, or is in the midst of another
+   sensitive process.
+</td></tr><tr><td><a href="8f025460-c283-ea99-aa8a-5a36e11528f4.htm">ModificationOutsideTransactionException</a></td><td>
+   The document has no open transaction.
+</td></tr></table></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDBC')" onkeypress="SectionExpandCollapse_CheckKey('IDBC', event)" tabindex="0"><img id="IDBCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Remarks</span></div><div id="IDBCSection" class="collapsibleSection">
+   To validate curve loop profile use <a href="82d6e0c5-f102-ce90-9521-3c2e74fbd495.htm">BoundaryValidation</a>.
+   To get default floor type use <a href="3eebff6a-ccfa-d4ab-fcf8-239d4d2ec8de.htm">GetDefaultFloorType(Document, Boolean)</a>.
+</div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDNC')" onkeypress="SectionExpandCollapse_CheckKey('IDNC', event)" tabindex="0"><img id="IDNCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Example</span></div><div id="IDNCSection" class="collapsibleSection"><div id="IDANC" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDANC_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDANC','cs','1','4');return false;">C#</a></div><div id="IDANC_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDANC','vb','2','4');return false;">VB</a></div><div id="IDANC_tab3" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDANC','cpp','3','4');return false;">C++</a></div><div id="IDANC_tab4" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDANC','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDANC_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDANC');return false;" title="Copy">Copy</a></div></div><div id="IDANC_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="highlight-comment">/// The example below shows how to use Floor.Create method to create a new structural floor (slab) on one level </span>
+<span class="highlight-comment">/// using a geometry profile and a floor type. </span>
+<span class="highlight-comment">/// In this sample, the geometry profile is a CurveLoop of lines, you can also use arcs, ellipses and splines.</span>
+Floor CreateFloor(Document document, Level level)
+{
+   <span class="highlight-comment">// Get a floor type for floor creation</span>
+   ElementId floorTypeId = Floor.GetDefaultFloorType(document, <span class="highlight-keyword">false</span>);
+
+   <span class="highlight-comment">// Build a floor profile for the floor creation</span>
+   XYZ first = <span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">0</span>, <span class="highlight-number">0</span>, <span class="highlight-number">0</span>);
+   XYZ second = <span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">20</span>, <span class="highlight-number">0</span>, <span class="highlight-number">0</span>);
+   XYZ third = <span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">20</span>, <span class="highlight-number">15</span>, <span class="highlight-number">0</span>);
+   XYZ fourth = <span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">0</span>, <span class="highlight-number">15</span>, <span class="highlight-number">0</span>);
+   CurveLoop profile = <span class="highlight-keyword">new</span> CurveLoop();
+   profile.Append(Line.CreateBound(first, second));
+   profile.Append(Line.CreateBound(second, third));
+   profile.Append(Line.CreateBound(third, fourth));
+   profile.Append(Line.CreateBound(fourth, first));
+
+   <span class="highlight-keyword">return</span> Floor.Create(document, <span class="highlight-keyword">new</span> List&lt;CurveLoop&gt; { profile }, floorTypeId, level.Id);
+}</pre></div><div id="IDANC_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="highlight-keyword">Private</span> <span class="highlight-keyword">Function</span> CreateFloor(application <span class="highlight-keyword">As</span> UIApplication, level <span class="highlight-keyword">As</span> Level) <span class="highlight-keyword">As</span> Floor
+   <span class="highlight-comment">' Get the Revit document</span>
+   <span class="highlight-keyword">Dim</span> document <span class="highlight-keyword">As</span> Autodesk.Revit.DB.Document = application.ActiveUIDocument.Document
+
+   <span class="highlight-comment">' Get the application creation object</span>
+   <span class="highlight-keyword">Dim</span> appCreation <span class="highlight-keyword">As</span> Autodesk.Revit.Creation.Application = application.Application.Create
+
+   <span class="highlight-comment">' Get a floor type for floor creation</span>
+   <span class="highlight-keyword">Dim</span> collector <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> FilteredElementCollector(document)
+   collector.OfClass(<span class="highlight-keyword">GetType</span>(FloorType))
+   <span class="highlight-keyword">Dim</span> floorType <span class="highlight-keyword">As</span> FloorType = <span class="highlight-keyword">TryCast</span>(collector.FirstElement(), FloorType)
+
+   <span class="highlight-comment">' Build a floor profile for the floor creation</span>
+   <span class="highlight-keyword">Dim</span> first <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">0</span>, <span class="highlight-number">0</span>, <span class="highlight-number">0</span>)
+   <span class="highlight-keyword">Dim</span> second <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">20</span>, <span class="highlight-number">0</span>, <span class="highlight-number">0</span>)
+   <span class="highlight-keyword">Dim</span> third <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">20</span>, <span class="highlight-number">15</span>, <span class="highlight-number">0</span>)
+   <span class="highlight-keyword">Dim</span> fourth <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">0</span>, <span class="highlight-number">15</span>, <span class="highlight-number">0</span>)
+   <span class="highlight-keyword">Dim</span> profile <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> CurveLoop()
+   profile.Append(Line.CreateBound(first, second))
+   profile.Append(Line.CreateBound(second, third))
+   profile.Append(Line.CreateBound(third, fourth))
+   profile.Append(Line.CreateBound(fourth, first))
+
+   <span class="highlight-keyword">Return</span> Floor.Create(document, <span class="highlight-keyword">New</span> List(<span class="highlight-keyword">Of</span> CurveLoop)({profile}), floorType.Id, level.Id)
+<span class="highlight-keyword">End</span> <span class="highlight-keyword">Function</span></pre></div><div id="IDANC_code_Div3" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div><div id="IDANC_code_Div4" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div></div></div><div id="IDBNC" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDBNC_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDBNC','cs','1','4');return false;">C#</a></div><div id="IDBNC_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDBNC','vb','2','4');return false;">VB</a></div><div id="IDBNC_tab3" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDBNC','cpp','3','4');return false;">C++</a></div><div id="IDBNC_tab4" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDBNC','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDBNC_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDBNC');return false;" title="Copy">Copy</a></div></div><div id="IDBNC_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="highlight-comment">/// The example below shows how to use Floor.Create method to create a new Floor with specified elevation, on one level </span>
+<span class="highlight-comment">/// using a geometry profile and a floor type. </span>
+<span class="highlight-comment">/// It shows how to adapt your code that used NewFloor and NewSlab methods, which are obsolete since 2022.</span>
+<span class="highlight-comment">/// In this sample, the geometry profile is a CurveLoop of lines, you can also use arcs, ellipses and splines.</span>
+Floor CreateFloorAtElevation(Document document, <span class="highlight-keyword">double</span> elevation)
+{
+   <span class="highlight-comment">// Get a floor type for floor creation</span>
+   <span class="highlight-comment">// You must provide a valid floor type (unlike in now obsolete NewFloor and NewSlab methods).</span>
+   ElementId floorTypeId = Floor.GetDefaultFloorType(document, <span class="highlight-keyword">false</span>);
+
+   <span class="highlight-comment">// Get a level</span>
+   <span class="highlight-comment">// You must provide a valid level (unlike in now obsolete NewFloor and NewSlab methods).</span>
+   <span class="highlight-keyword">double</span> offset;
+   ElementId levelId = Level.GetNearestLevelId(document, elevation, <span class="highlight-keyword">out</span> offset);
+
+   <span class="highlight-comment">// Build a floor profile for the floor creation</span>
+   XYZ first = <span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">0</span>, <span class="highlight-number">0</span>, <span class="highlight-number">0</span>);
+   XYZ second = <span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">20</span>, <span class="highlight-number">0</span>, <span class="highlight-number">0</span>);
+   XYZ third = <span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">20</span>, <span class="highlight-number">15</span>, <span class="highlight-number">0</span>);
+   XYZ fourth = <span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">0</span>, <span class="highlight-number">15</span>, <span class="highlight-number">0</span>);
+   CurveLoop profile = <span class="highlight-keyword">new</span> CurveLoop();
+   profile.Append(Line.CreateBound(first, second));
+   profile.Append(Line.CreateBound(second, third));
+   profile.Append(Line.CreateBound(third, fourth));
+   profile.Append(Line.CreateBound(fourth, first));
+
+   <span class="highlight-comment">// The elevation of the curve loops is not taken into account (unlike in now obsolete NewFloor and NewSlab methods).</span>
+   <span class="highlight-comment">// If the default elevation is not what you want, you need to set it explicitly.</span>
+   <span class="highlight-keyword">var</span> floor = Floor.Create(document, <span class="highlight-keyword">new</span> List&lt;CurveLoop&gt; { profile }, floorTypeId, levelId);
+   Parameter param = floor.get_Parameter(BuiltInParameter.FLOOR_HEIGHTABOVELEVEL_PARAM);
+   param.Set(offset);
+
+   <span class="highlight-keyword">return</span> floor;
+}</pre></div><div id="IDBNC_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="highlight-keyword">Private</span> <span class="highlight-keyword">Function</span> CreateFloorAtElevation(<span class="highlight-keyword">ByVal</span> document <span class="highlight-keyword">As</span> Document, <span class="highlight-keyword">ByVal</span> elevation <span class="highlight-keyword">As</span> <span class="highlight-keyword">Double</span>) <span class="highlight-keyword">As</span> Floor
+   <span class="highlight-comment">' Get a floor type for floor creation</span>
+   <span class="highlight-comment">' You must provide a valid floor type (unlike in now obsolete NewFloor and NewSlab methods).</span>
+   <span class="highlight-keyword">Dim</span> floorTypeId <span class="highlight-keyword">As</span> ElementId = Autodesk.Revit.DB.Floor.GetDefaultFloorType(document, <span class="highlight-keyword">False</span>)
+
+   <span class="highlight-comment">' Get a level</span>
+   <span class="highlight-comment">' You must provide a valid level (unlike in now obsolete NewFloor and NewSlab methods).</span>
+   <span class="highlight-keyword">Dim</span> offset <span class="highlight-keyword">As</span> <span class="highlight-keyword">Double</span>
+   <span class="highlight-keyword">Dim</span> levelId = Level.GetNearestLevelId(document, elevation, offset)
+
+   <span class="highlight-comment">' Build a floor profile for the floor creation</span>
+   <span class="highlight-keyword">Dim</span> first <span class="highlight-keyword">As</span> XYZ = <span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">0</span>, <span class="highlight-number">0</span>, <span class="highlight-number">0</span>)
+   <span class="highlight-keyword">Dim</span> second <span class="highlight-keyword">As</span> XYZ = <span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">20</span>, <span class="highlight-number">0</span>, <span class="highlight-number">0</span>)
+   <span class="highlight-keyword">Dim</span> third <span class="highlight-keyword">As</span> XYZ = <span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">20</span>, <span class="highlight-number">15</span>, <span class="highlight-number">0</span>)
+   <span class="highlight-keyword">Dim</span> fourth <span class="highlight-keyword">As</span> XYZ = <span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">0</span>, <span class="highlight-number">15</span>, <span class="highlight-number">0</span>)
+   <span class="highlight-keyword">Dim</span> profile <span class="highlight-keyword">As</span> CurveLoop = <span class="highlight-keyword">New</span> CurveLoop()
+   profile.Append(Line.CreateBound(first, second))
+   profile.Append(Line.CreateBound(second, third))
+   profile.Append(Line.CreateBound(third, fourth))
+   profile.Append(Line.CreateBound(fourth, first))
+
+   <span class="highlight-comment">' The elevation of the curve loops is not taken into account (unlike in now obsolete NewFloor and NewSlab methods).</span>
+   <span class="highlight-comment">' If the default elevation is not what you want, you need to set it explicitly.</span>
+   <span class="highlight-keyword">Dim</span> floor = Autodesk.Revit.DB.Floor.Create(document, <span class="highlight-keyword">New</span> List(<span class="highlight-keyword">Of</span> CurveLoop) From {
+             profile
+         }, floorTypeId, levelId)
+   <span class="highlight-keyword">Dim</span> param <span class="highlight-keyword">As</span> Parameter = floor.Parameter(BuiltInParameter.FLOOR_HEIGHTABOVELEVEL_PARAM)
+   param.<span class="highlight-keyword">Set</span>(offset)
+   <span class="highlight-keyword">Return</span> floor
+<span class="highlight-keyword">End</span> <span class="highlight-keyword">Function</span></pre></div><div id="IDBNC_code_Div3" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div><div id="IDBNC_code_Div4" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div></div></div></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('seeAlso')" onkeypress="SectionExpandCollapse_CheckKey('seeAlso', event)" tabindex="0"><img id="seeAlsoToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="seeAlsoSection" class="collapsibleSection"><h4>Reference</h4><div><a href="96cc6685-003d-ff90-1c5b-c25a4830f0f7.htm">Floor Class</a></div><div><a href="f60f6833-9511-844f-2411-a7cb5da34bb8.htm">Create Overload</a></div><div><a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB Namespace</a></div></div></div></div><div id="PageFooter" class="pageFooter"><div class="feedbackLink">Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:revitapifeedback%40autodesk.com?Subject=Revit%202025%20API">Autodesk</a></div>
+        <script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        HT_mailLink.href += ": " + document.title + "\u0026body=" + encodeURIComponent("Your feedback is used to improve the documentation and the product. Your e-mail address will not be used for any other purpose and is disposed of after the issue you report is resolved. While working to resolve the issue that you report, you may be contacted via e-mail to get further details or clarification on the feedback you sent. After the issue you report has been addressed, you may receive an e-mail to let you know that your feedback has been addressed.");
+        </script></div></body></html>

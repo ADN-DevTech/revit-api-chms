@@ -1,0 +1,70 @@
+﻿<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="Microsoft.Help.SelfBranded" content="true" /><meta name="Language" content="en-us" /><meta name="Microsoft.Help.Locale" content="en-us" /><meta name="Microsoft.Help.TopicLocale" content="en-us" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" type="text/css" href="../styles/branding.css" /><link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" /><script type="text/javascript" src="../scripts/branding.js"></script><title>WorksharingUtils.CheckoutElements(Document, ISet&lt;ElementId&gt;, TransactWithCentralOptions) Method</title><meta name="Title" content="CheckoutElements(Document, ISet&lt;ElementId&gt;, TransactWithCentralOptions) Method" /><meta name="Microsoft.Help.Id" content="M:Autodesk.Revit.DB.WorksharingUtils.CheckoutElements(Autodesk.Revit.DB.Document,System.Collections.Generic.ISet{Autodesk.Revit.DB.ElementId},Autodesk.Revit.DB.TransactWithCentralOptions)" /><meta name="Microsoft.Help.ContentType" content="Reference" /><meta name="container" content="Autodesk.Revit.DB" /><meta name="file" content="50d213af-17cb-b92a-6251-ce9a79e5ce5b" /><meta name="guid" content="50d213af-17cb-b92a-6251-ce9a79e5ce5b" /><meta name="Description" content="Obtains ownership for the current user of as many specified elements as possible." /><link rel="stylesheet" type="text/css" href="../styles/branding-Help1.css" /></head><body onload="SetDefaultLanguage('cs');"><input type="hidden" id="userDataCache" class="userDataStyle" /><div id="PageHeader" class="pageHeader">Revit 2025 API</div><div class="pageBody"><div id="TopicContent" class="topicContent"><table class="titleTable"><tr><td class="titleColumn"><h1>Worksharing<wbr />Utils<span id="LSTB999DA7F_0" data-languageSpecificText="cpp=::|nu=."></span>Checkout<wbr />Elements(Document, ISet<span id="LSTB999DA7F_1" data-languageSpecificText="cpp=&lt;|cs=&lt;|fs=&lt;|vb=(Of |nu=("></span>Element<wbr />Id<span id="LSTB999DA7F_2" data-languageSpecificText="cpp=&gt;|cs=&gt;|fs=&gt;|vb=)|nu=)"></span>, Transact<wbr />With<wbr />Central<wbr />Options) Method</h1></td></tr></table><div class="summary">
+   Obtains ownership for the current user of as many specified elements as possible.
+</div><br /><strong>Namespace:</strong> <a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB</a><br /><strong>Assembly:</strong> RevitAPI (in RevitAPI.dll) Version: 25.0.0.0 (25.0.0.0)<div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDB')" onkeypress="SectionExpandCollapse_CheckKey('IDB', event)" tabindex="0"><img id="IDBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Syntax</span></div><div id="IDBSection" class="collapsibleSection"><div id="IDAB" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAB_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cs','1','4');return false;">C#</a></div><div id="IDAB_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','vb','2','4');return false;">VB</a></div><div id="IDAB_tab3" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cpp','3','4');return false;">C++</a></div><div id="IDAB_tab4" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAB_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAB');return false;" title="Copy">Copy</a></div></div><div id="IDAB_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="keyword">public</span> <span class="keyword">static</span> <span class="identifier">ISet</span>&lt;<span class="identifier">ElementId</span>&gt; <span class="identifier">CheckoutElements</span>(
+	<span class="identifier">Document</span> <span class="parameter">document</span>,
+	<span class="identifier">ISet</span>&lt;<span class="identifier">ElementId</span>&gt; <span class="parameter">elementsToCheckout</span>,
+	<span class="identifier">TransactWithCentralOptions</span> <span class="parameter">options</span>
+)</pre></div><div id="IDAB_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">Public</span> <span class="keyword">Shared</span> <span class="keyword">Function</span> <span class="identifier">CheckoutElements</span> ( 
+	<span class="parameter">document</span> <span class="keyword">As</span> <span class="identifier">Document</span>,
+	<span class="parameter">elementsToCheckout</span> <span class="keyword">As</span> <span class="identifier">ISet</span>(<span class="keyword">Of</span> <span class="identifier">ElementId</span>),
+	<span class="parameter">options</span> <span class="keyword">As</span> <span class="identifier">TransactWithCentralOptions</span>
+) <span class="keyword">As</span> <span class="identifier">ISet</span>(<span class="keyword">Of</span> <span class="identifier">ElementId</span>)</pre></div><div id="IDAB_code_Div3" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">public</span>:
+<span class="keyword">static</span> <span class="identifier">ISet</span>&lt;<span class="identifier">ElementId</span>^&gt;^ <span class="identifier">CheckoutElements</span>(
+	<span class="identifier">Document</span>^ <span class="parameter">document</span>, 
+	<span class="identifier">ISet</span>&lt;<span class="identifier">ElementId</span>^&gt;^ <span class="parameter">elementsToCheckout</span>, 
+	<span class="identifier">TransactWithCentralOptions</span>^ <span class="parameter">options</span>
+)</pre></div><div id="IDAB_code_Div4" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">static</span> <span class="keyword">member</span> <span class="identifier">CheckoutElements</span> : 
+        <span class="parameter">document</span> : <span class="identifier">Document</span> * 
+        <span class="parameter">elementsToCheckout</span> : <span class="identifier">ISet</span>&lt;<span class="identifier">ElementId</span>&gt; * 
+        <span class="parameter">options</span> : <span class="identifier">TransactWithCentralOptions</span> <span class="keyword">-&gt;</span> <span class="identifier">ISet</span>&lt;<span class="identifier">ElementId</span>&gt; </pre></div></div></div><h4>Parameters</h4><dl><dt class="has-text-weight-normal"><span class="parameter">document</span>  <a href="db03274b-a107-aa32-9034-f3e0df4bb1ec.htm">Document</a></dt><dd>
+   The document containing the elements.
+</dd><dt class="has-text-weight-normal"><span class="parameter">elementsToCheckout</span>  <a href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iset-1" target="_blank" rel="noopener noreferrer">ISet</a><span id="LSTB999DA7F_3" data-languageSpecificText="cpp=&lt;|cs=&lt;|fs=&lt;|vb=(Of |nu=("></span><a href="44f3f7b1-3229-3404-93c9-dc5e70337dd6.htm">ElementId</a><span id="LSTB999DA7F_4" data-languageSpecificText="cpp=&gt;|cs=&gt;|fs=&gt;|vb=)|nu=)"></span></dt><dd>
+   The ids of the elements to attempt to check out.
+</dd><dt class="has-text-weight-normal"><span class="parameter">options</span>  <a href="f5da22fa-55ee-9196-cafd-5323d8e9ca0a.htm">TransactWithCentralOptions</a></dt><dd>
+   Options to customize access to the central model.
+   <span class="keyword"><span id="LSTB999DA7F_5" data-languageSpecificText="cpp=nullptr|vb=Nothing|nu=null"></span></span> is allowed and means no customization.
+</dd></dl><h4>Return Value</h4><a href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iset-1" target="_blank" rel="noopener noreferrer">ISet</a><span id="LSTB999DA7F_6" data-languageSpecificText="cpp=&lt;|cs=&lt;|fs=&lt;|vb=(Of |nu=("></span><a href="44f3f7b1-3229-3404-93c9-dc5e70337dd6.htm">ElementId</a><span id="LSTB999DA7F_7" data-languageSpecificText="cpp=&gt;|cs=&gt;|fs=&gt;|vb=)|nu=)"></span><br />
+   The ids of all specified elements that are now owned (but possibly out of date),
+   including all that were owned prior to the function call.
+</div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDGC')" onkeypress="SectionExpandCollapse_CheckKey('IDGC', event)" tabindex="0"><img id="IDGCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Exceptions</span></div><div id="IDGCSection" class="collapsibleSection"><table><tr><th>Exception</th><th>Condition</th></tr><tr><td><a href="2e6e4206-97a8-dd4b-df5d-4269f4bb6088.htm">ArgumentException</a></td><td>
+   document is not a workshared document.
+   -or-
+   document is not a primary document, it is a linked document.
+   -or-
+   One or more elements in elementsToCheckout do not exist in the document.
+   -or-
+   Saving is not allowed in the current application mode.
+</td></tr><tr><td><a href="631e1424-60f4-929b-4e52-dda9dcd26316.htm">ArgumentNullException</a></td><td>
+   A non-optional argument was null
+</td></tr><tr><td><a href="20094e4f-8326-8378-e5bc-452341d131c2.htm">CentralFileCommunicationException</a></td><td>
+   Editing permissions for the file-based central model could not be accessed for write,
+   e.g. the network is down, central is missing, or central is read-only.
+</td></tr><tr><td><a href="3e38b7b1-1ee8-c7f0-6cdd-bacf67bf61f4.htm">CentralModelAccessDeniedException</a></td><td>
+   Access to the central model was denied. A possible reason is because the model was under maintenance.
+</td></tr><tr><td><a href="ad511076-c435-23c1-5720-1205c4ed28b9.htm">CentralModelContentionException</a></td><td>
+   Editing permissions for the central model are locked and the last attempt to lock was canceled.
+   -or-
+   The central model is being accessed by another client.
+</td></tr><tr><td><a href="0e2ac15f-ca64-42c3-b3ef-e6f7ca1cb59a.htm">CentralModelException</a></td><td>
+   An error has occurred while checking out worksets or elements.
+   -or-
+   The central model is overwritten by other user.
+   -or-
+   The central model is missing.
+   -or-
+   An internal error happened on the central model, please contact the server administrator.
+</td></tr><tr><td><a href="9b54c5a2-22f3-ac30-3efd-7ef80adff6ea.htm">CentralModelVersionArchivedException</a></td><td>
+   Last central version merged into the local model has been archived in the central model.
+   This exception could only be thrown from cloud models.
+</td></tr><tr><td><a href="a0003d89-0113-6623-65da-0db5c568bfb6.htm">RevitServerCommunicationException</a></td><td>
+   The server-based central model could not be accessed
+   because of a network communication error.
+</td></tr><tr><td><a href="6dcd093c-d643-07cd-535f-36ffa9d2db52.htm">RevitServerInternalException</a></td><td>
+   An internal error happened on the server, please contact the server administrator.
+</td></tr></table></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDBC')" onkeypress="SectionExpandCollapse_CheckKey('IDBC', event)" tabindex="0"><img id="IDBCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Remarks</span></div><div id="IDBCSection" class="collapsibleSection"><p> For best performance, checkout all elements in one big call, rather than many small calls. </p><p> Revit may check out additional elements that are needed to check out the elements you requested.
+   For example, if you request an element that is in a group, Revit will check out the entire group. </p></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('seeAlso')" onkeypress="SectionExpandCollapse_CheckKey('seeAlso', event)" tabindex="0"><img id="seeAlsoToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="seeAlsoSection" class="collapsibleSection"><h4>Reference</h4><div><a href="ae7857a0-4e9b-f9c1-84c7-8b250af68068.htm">WorksharingUtils Class</a></div><div><a href="88a1ae9d-dd75-c0a7-539c-bfc2083fa435.htm">CheckoutElements Overload</a></div><div><a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB Namespace</a></div></div></div></div><div id="PageFooter" class="pageFooter"><div class="feedbackLink">Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:revitapifeedback%40autodesk.com?Subject=Revit%202025%20API">Autodesk</a></div>
+        <script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        HT_mailLink.href += ": " + document.title + "\u0026body=" + encodeURIComponent("Your feedback is used to improve the documentation and the product. Your e-mail address will not be used for any other purpose and is disposed of after the issue you report is resolved. While working to resolve the issue that you report, you may be contacted via e-mail to get further details or clarification on the feedback you sent. After the issue you report has been addressed, you may receive an e-mail to let you know that your feedback has been addressed.");
+        </script></div></body></html>

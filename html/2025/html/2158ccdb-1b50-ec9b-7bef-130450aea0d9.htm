@@ -1,0 +1,58 @@
+﻿<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="Microsoft.Help.SelfBranded" content="true" /><meta name="Language" content="en-us" /><meta name="Microsoft.Help.Locale" content="en-us" /><meta name="Microsoft.Help.TopicLocale" content="en-us" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" type="text/css" href="../styles/branding.css" /><link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" /><script type="text/javascript" src="../scripts/branding.js"></script><title>RebarBendingDetail.Create Method</title><meta name="Title" content="Create Method" /><meta name="Microsoft.Help.Id" content="M:Autodesk.Revit.DB.Structure.RebarBendingDetail.Create(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.ElementId,Autodesk.Revit.DB.ElementId,System.Int32,Autodesk.Revit.DB.Structure.RebarBendingDetailType,Autodesk.Revit.DB.XYZ,System.Double)" /><meta name="Microsoft.Help.ContentType" content="Reference" /><meta name="System.Keywords" content="RebarBendingDetail.Create method" /><meta name="System.Keywords" content="Create method" /><meta name="Microsoft.Help.F1" content="Autodesk.Revit.DB.Structure.RebarBendingDetail.Create" /><meta name="Microsoft.Help.F1" content="RebarBendingDetail.Create" /><meta name="Microsoft.Help.F1" content="Create" /><meta name="container" content="Autodesk.Revit.DB.Structure" /><meta name="file" content="2158ccdb-1b50-ec9b-7bef-130450aea0d9" /><meta name="guid" content="2158ccdb-1b50-ec9b-7bef-130450aea0d9" /><meta name="Description" content="Creates a new instance of a bending detail." /><link rel="stylesheet" type="text/css" href="../styles/branding-Help1.css" /></head><body onload="SetDefaultLanguage('cs');"><input type="hidden" id="userDataCache" class="userDataStyle" /><div id="PageHeader" class="pageHeader">Revit 2025 API</div><div class="pageBody"><div id="TopicContent" class="topicContent"><table class="titleTable"><tr><td class="titleColumn"><h1>Rebar<wbr />Bending<wbr />Detail<span id="LST3DECDAB7_0" data-languageSpecificText="cpp=::|nu=."></span>Create Method</h1></td></tr></table><div class="summary">
+   Creates a new instance of a bending detail.
+</div><br /><strong>Namespace:</strong> <a href="d586b341-f687-9d90-e96d-255806b7d4fc.htm">Autodesk.Revit.DB.Structure</a><br /><strong>Assembly:</strong> RevitAPI (in RevitAPI.dll) Version: 25.0.0.0 (25.0.0.0)<div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDB')" onkeypress="SectionExpandCollapse_CheckKey('IDB', event)" tabindex="0"><img id="IDBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Syntax</span></div><div id="IDBSection" class="collapsibleSection"><div id="IDAB" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAB_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cs','1','4');return false;">C#</a></div><div id="IDAB_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','vb','2','4');return false;">VB</a></div><div id="IDAB_tab3" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cpp','3','4');return false;">C++</a></div><div id="IDAB_tab4" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAB_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAB');return false;" title="Copy">Copy</a></div></div><div id="IDAB_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="keyword">public</span> <span class="keyword">static</span> <span class="identifier">Element</span> <span class="identifier">Create</span>(
+	<span class="identifier">Document</span> <span class="parameter">document</span>,
+	<span class="identifier">ElementId</span> <span class="parameter">viewId</span>,
+	<span class="identifier">ElementId</span> <span class="parameter">reinforcementElementId</span>,
+	<span class="identifier">int</span> <span class="parameter">reinforcementElementSubelementKey</span>,
+	<span class="identifier">RebarBendingDetailType</span> <span class="parameter">bendingDetailType</span>,
+	<span class="identifier">XYZ</span> <span class="parameter">position</span>,
+	<span class="identifier">double</span> <span class="parameter">rotation</span>
+)</pre></div><div id="IDAB_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">Public</span> <span class="keyword">Shared</span> <span class="keyword">Function</span> <span class="identifier">Create</span> ( 
+	<span class="parameter">document</span> <span class="keyword">As</span> <span class="identifier">Document</span>,
+	<span class="parameter">viewId</span> <span class="keyword">As</span> <span class="identifier">ElementId</span>,
+	<span class="parameter">reinforcementElementId</span> <span class="keyword">As</span> <span class="identifier">ElementId</span>,
+	<span class="parameter">reinforcementElementSubelementKey</span> <span class="keyword">As</span> <span class="identifier">Integer</span>,
+	<span class="parameter">bendingDetailType</span> <span class="keyword">As</span> <span class="identifier">RebarBendingDetailType</span>,
+	<span class="parameter">position</span> <span class="keyword">As</span> <span class="identifier">XYZ</span>,
+	<span class="parameter">rotation</span> <span class="keyword">As</span> <span class="identifier">Double</span>
+) <span class="keyword">As</span> <span class="identifier">Element</span></pre></div><div id="IDAB_code_Div3" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">public</span>:
+<span class="keyword">static</span> <span class="identifier">Element</span>^ <span class="identifier">Create</span>(
+	<span class="identifier">Document</span>^ <span class="parameter">document</span>, 
+	<span class="identifier">ElementId</span>^ <span class="parameter">viewId</span>, 
+	<span class="identifier">ElementId</span>^ <span class="parameter">reinforcementElementId</span>, 
+	<span class="identifier">int</span> <span class="parameter">reinforcementElementSubelementKey</span>, 
+	<span class="identifier">RebarBendingDetailType</span>^ <span class="parameter">bendingDetailType</span>, 
+	<span class="identifier">XYZ</span>^ <span class="parameter">position</span>, 
+	<span class="identifier">double</span> <span class="parameter">rotation</span>
+)</pre></div><div id="IDAB_code_Div4" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">static</span> <span class="keyword">member</span> <span class="identifier">Create</span> : 
+        <span class="parameter">document</span> : <span class="identifier">Document</span> * 
+        <span class="parameter">viewId</span> : <span class="identifier">ElementId</span> * 
+        <span class="parameter">reinforcementElementId</span> : <span class="identifier">ElementId</span> * 
+        <span class="parameter">reinforcementElementSubelementKey</span> : <span class="identifier">int</span> * 
+        <span class="parameter">bendingDetailType</span> : <span class="identifier">RebarBendingDetailType</span> * 
+        <span class="parameter">position</span> : <span class="identifier">XYZ</span> * 
+        <span class="parameter">rotation</span> : <span class="identifier">float</span> <span class="keyword">-&gt;</span> <span class="identifier">Element</span> </pre></div></div></div><h4>Parameters</h4><dl><dt class="has-text-weight-normal"><span class="parameter">document</span>  <a href="db03274b-a107-aa32-9034-f3e0df4bb1ec.htm">Document</a></dt><dd>
+   Document to which the new element should be added.
+</dd><dt class="has-text-weight-normal"><span class="parameter">viewId</span>  <a href="44f3f7b1-3229-3404-93c9-dc5e70337dd6.htm">ElementId</a></dt><dd>
+   The id of the view in which the new element should be added.
+</dd><dt class="has-text-weight-normal"><span class="parameter">reinforcementElementId</span>  <a href="44f3f7b1-3229-3404-93c9-dc5e70337dd6.htm">ElementId</a></dt><dd>
+   The reinforcement element Id that this object will represent.
+</dd><dt class="has-text-weight-normal"><span class="parameter">reinforcementElementSubelementKey</span>  <a href="https://learn.microsoft.com/dotnet/api/system.int32" target="_blank" rel="noopener noreferrer">Int32</a></dt><dd>
+   The index of the sub-element from the reinforcement element that this object will represent.
+</dd><dt class="has-text-weight-normal"><span class="parameter">bendingDetailType</span>  <a href="9e6af0fc-1c7a-47e2-d6fd-460a36d6bc89.htm">RebarBendingDetailType</a></dt><dd>
+   The bending details type used with the resulting object.
+</dd><dt class="has-text-weight-normal"><span class="parameter">position</span>  <a href="c2fd995c-95c0-58fb-f5de-f3246cbc5600.htm">XYZ</a></dt><dd>
+   The initial position in the view where this object will be created.
+</dd><dt class="has-text-weight-normal"><span class="parameter">rotation</span>  <a href="https://learn.microsoft.com/dotnet/api/system.double" target="_blank" rel="noopener noreferrer">Double</a></dt><dd>
+   The initial rotation in the view for this element.
+</dd></dl><h4>Return Value</h4><a href="eb16114f-69ea-f4de-0d0d-f7388b105a16.htm">Element</a><br />
+   Returns an instance of a bending detail.
+</div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDJC')" onkeypress="SectionExpandCollapse_CheckKey('IDJC', event)" tabindex="0"><img id="IDJCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Exceptions</span></div><div id="IDJCSection" class="collapsibleSection"><table><tr><th>Exception</th><th>Condition</th></tr><tr><td><a href="631e1424-60f4-929b-4e52-dda9dcd26316.htm">ArgumentNullException</a></td><td>
+   A non-optional argument was null
+</td></tr></table></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('seeAlso')" onkeypress="SectionExpandCollapse_CheckKey('seeAlso', event)" tabindex="0"><img id="seeAlsoToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="seeAlsoSection" class="collapsibleSection"><h4>Reference</h4><div><a href="a9e46b4b-7e43-4ed6-b556-b6fcd23e7d05.htm">RebarBendingDetail Class</a></div><div><a href="d586b341-f687-9d90-e96d-255806b7d4fc.htm">Autodesk.Revit.DB.Structure Namespace</a></div></div></div></div><div id="PageFooter" class="pageFooter"><div class="feedbackLink">Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:revitapifeedback%40autodesk.com?Subject=Revit%202025%20API">Autodesk</a></div>
+        <script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        HT_mailLink.href += ": " + document.title + "\u0026body=" + encodeURIComponent("Your feedback is used to improve the documentation and the product. Your e-mail address will not be used for any other purpose and is disposed of after the issue you report is resolved. While working to resolve the issue that you report, you may be contacted via e-mail to get further details or clarification on the feedback you sent. After the issue you report has been addressed, you may receive an e-mail to let you know that your feedback has been addressed.");
+        </script></div></body></html>

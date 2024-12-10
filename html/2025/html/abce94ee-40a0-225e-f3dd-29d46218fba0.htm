@@ -1,0 +1,132 @@
+﻿<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="Microsoft.Help.SelfBranded" content="true" /><meta name="Language" content="en-us" /><meta name="Microsoft.Help.Locale" content="en-us" /><meta name="Microsoft.Help.TopicLocale" content="en-us" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" type="text/css" href="../styles/branding.css" /><link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" /><script type="text/javascript" src="../scripts/branding.js"></script><title>FillPatternElement.Create Method</title><meta name="Title" content="Create Method" /><meta name="Microsoft.Help.Id" content="M:Autodesk.Revit.DB.FillPatternElement.Create(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.FillPattern)" /><meta name="Microsoft.Help.ContentType" content="Reference" /><meta name="System.Keywords" content="FillPatternElement.Create method" /><meta name="System.Keywords" content="Create method" /><meta name="Microsoft.Help.F1" content="Autodesk.Revit.DB.FillPatternElement.Create" /><meta name="Microsoft.Help.F1" content="FillPatternElement.Create" /><meta name="Microsoft.Help.F1" content="Create" /><meta name="container" content="Autodesk.Revit.DB" /><meta name="file" content="abce94ee-40a0-225e-f3dd-29d46218fba0" /><meta name="guid" content="abce94ee-40a0-225e-f3dd-29d46218fba0" /><meta name="Microsoft.Help.Category" content="CSharp" /><meta name="Microsoft.Help.Category" content="VB" /><meta name="Description" content="Creates a new FillPatternElement." /><link type="text/css" rel="stylesheet" href="../styles/highlight.css" /><script type="text/javascript" src="../scripts/highlight.js"> </script><link rel="stylesheet" type="text/css" href="../styles/branding-Help1.css" /></head><body onload="SetDefaultLanguage('cs');"><input type="hidden" id="userDataCache" class="userDataStyle" /><div id="PageHeader" class="pageHeader">Revit 2025 API</div><div class="pageBody"><div id="TopicContent" class="topicContent"><table class="titleTable"><tr><td class="titleColumn"><h1>Fill<wbr />Pattern<wbr />Element<span id="LST4F1C9CE8_0" data-languageSpecificText="cpp=::|nu=."></span>Create Method</h1></td></tr></table><div class="summary">
+   Creates a new FillPatternElement.
+</div><br /><strong>Namespace:</strong> <a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB</a><br /><strong>Assembly:</strong> RevitAPI (in RevitAPI.dll) Version: 25.0.0.0 (25.0.0.0)<div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDB')" onkeypress="SectionExpandCollapse_CheckKey('IDB', event)" tabindex="0"><img id="IDBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Syntax</span></div><div id="IDBSection" class="collapsibleSection"><div id="IDAB" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAB_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cs','1','4');return false;">C#</a></div><div id="IDAB_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','vb','2','4');return false;">VB</a></div><div id="IDAB_tab3" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cpp','3','4');return false;">C++</a></div><div id="IDAB_tab4" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAB_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAB');return false;" title="Copy">Copy</a></div></div><div id="IDAB_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="keyword">public</span> <span class="keyword">static</span> <span class="identifier">FillPatternElement</span> <span class="identifier">Create</span>(
+	<span class="identifier">Document</span> <span class="parameter">document</span>,
+	<span class="identifier">FillPattern</span> <span class="parameter">fillPattern</span>
+)</pre></div><div id="IDAB_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">Public</span> <span class="keyword">Shared</span> <span class="keyword">Function</span> <span class="identifier">Create</span> ( 
+	<span class="parameter">document</span> <span class="keyword">As</span> <span class="identifier">Document</span>,
+	<span class="parameter">fillPattern</span> <span class="keyword">As</span> <span class="identifier">FillPattern</span>
+) <span class="keyword">As</span> <span class="identifier">FillPatternElement</span></pre></div><div id="IDAB_code_Div3" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">public</span>:
+<span class="keyword">static</span> <span class="identifier">FillPatternElement</span>^ <span class="identifier">Create</span>(
+	<span class="identifier">Document</span>^ <span class="parameter">document</span>, 
+	<span class="identifier">FillPattern</span>^ <span class="parameter">fillPattern</span>
+)</pre></div><div id="IDAB_code_Div4" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">static</span> <span class="keyword">member</span> <span class="identifier">Create</span> : 
+        <span class="parameter">document</span> : <span class="identifier">Document</span> * 
+        <span class="parameter">fillPattern</span> : <span class="identifier">FillPattern</span> <span class="keyword">-&gt;</span> <span class="identifier">FillPatternElement</span> </pre></div></div></div><h4>Parameters</h4><dl><dt class="has-text-weight-normal"><span class="parameter">document</span>  <a href="db03274b-a107-aa32-9034-f3e0df4bb1ec.htm">Document</a></dt><dd>
+   The document in which to create the FillPatternElement.
+</dd><dt class="has-text-weight-normal"><span class="parameter">fillPattern</span>  <a href="cc546ee9-ba80-c13d-4b74-8c0e2517bc28.htm">FillPattern</a></dt><dd>
+   The FillPattern associated to the newly created FillPatternElement.
+</dd></dl><h4>Return Value</h4><a href="64ecefd0-f5c4-5cd9-53bd-10a64739257e.htm">FillPatternElement</a><br />
+   The newly created FillPatternElement.
+</div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDEC')" onkeypress="SectionExpandCollapse_CheckKey('IDEC', event)" tabindex="0"><img id="IDECToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Exceptions</span></div><div id="IDECSection" class="collapsibleSection"><table><tr><th>Exception</th><th>Condition</th></tr><tr><td><a href="2e6e4206-97a8-dd4b-df5d-4269f4bb6088.htm">ArgumentException</a></td><td>
+   fillPattern does not have a valid Target.
+   -or-
+   fillPattern does not have a valid Name.
+   -or-
+   fillPattern is a solid fill pattern.
+   -or-
+   fillPattern contains FillGrids with a zero Offset.
+   -or-
+   The name of the fillPattern already exists.
+</td></tr><tr><td><a href="631e1424-60f4-929b-4e52-dda9dcd26316.htm">ArgumentNullException</a></td><td>
+   A non-optional argument was null
+</td></tr></table></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDHC')" onkeypress="SectionExpandCollapse_CheckKey('IDHC', event)" tabindex="0"><img id="IDHCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Example</span></div><div id="IDHCSection" class="collapsibleSection"><div id="IDAHC" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAHC_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAHC','cs','1','4');return false;">C#</a></div><div id="IDAHC_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAHC','vb','2','4');return false;">VB</a></div><div id="IDAHC_tab3" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDAHC','cpp','3','4');return false;">C++</a></div><div id="IDAHC_tab4" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDAHC','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAHC_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAHC');return false;" title="Copy">Copy</a></div></div><div id="IDAHC_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="highlight-comment">// Create a complex fill pattern</span>
+<span class="highlight-keyword">public</span> <span class="highlight-keyword">void</span> CreateComplexFillPattern(Document doc)
+{
+    <span class="highlight-comment">// Create the fill pattern</span>
+    FillPattern fillPattern = <span class="highlight-keyword">new</span> FillPattern(<span class="highlight-literal">"API-created"</span>, FillPatternTarget.Model,
+                                              FillPatternHostOrientation.ToHost);
+
+    <span class="highlight-comment">// Add grids</span>
+    List&lt;FillGrid&gt; grids = <span class="highlight-keyword">new</span> List&lt;FillGrid&gt;();
+
+    <span class="highlight-comment">//Horizontal lines.  </span>
+    <span class="highlight-comment">// The arguments: origin, offset (vertical distance between lines), </span>
+    <span class="highlight-comment">// angle, shift (delta between location of start point per line)</span>
+    <span class="highlight-comment">// The last two arguments are the segments: e.g. 1.0 units on, </span>
+    <span class="highlight-comment">// 0.1 units off (units are Revit units (ft))</span>
+    grids.Add(CreateGrid(<span class="highlight-keyword">new</span> UV(<span class="highlight-number">0</span>, <span class="highlight-number">0.1</span>), <span class="highlight-number">0.5</span>, <span class="highlight-number">0</span>, <span class="highlight-number">0.55</span>, <span class="highlight-number">1.0</span>, <span class="highlight-number">0.1</span>));
+    grids.Add(CreateGrid(<span class="highlight-keyword">new</span> UV(<span class="highlight-number">0</span>, <span class="highlight-number">0.5</span>), <span class="highlight-number">0.5</span>, <span class="highlight-number">0</span>, <span class="highlight-number">0.55</span>, <span class="highlight-number">1.0</span>, <span class="highlight-number">0.1</span>));
+
+    <span class="highlight-comment">// Vertical lines.  </span>
+    grids.Add(CreateGrid(<span class="highlight-keyword">new</span> UV(<span class="highlight-number">0</span>, <span class="highlight-number">0.1</span>), <span class="highlight-number">0.55</span>, Math.PI / <span class="highlight-number">2</span>, <span class="highlight-number">0.5</span>, <span class="highlight-number">0.4</span>, <span class="highlight-number">0.6</span>));
+    grids.Add(CreateGrid(<span class="highlight-keyword">new</span> UV(<span class="highlight-number">1.0</span>, <span class="highlight-number">0.1</span>), <span class="highlight-number">0.55</span>, Math.PI / <span class="highlight-number">2</span>, <span class="highlight-number">0.5</span>, <span class="highlight-number">0.4</span>, <span class="highlight-number">0.6</span>));
+
+    fillPattern.SetFillGrids(grids);
+
+    <span class="highlight-comment">// Create the fill pattern element. Now document is modified; transaction is needed</span>
+    <span class="highlight-keyword">using</span> (Transaction t = <span class="highlight-keyword">new</span> Transaction(doc, <span class="highlight-literal">"Create fill pattern"</span>))
+    {
+       t.Start();
+       FillPatternElement patternElement = FillPatternElement.Create(doc, fillPattern);
+       t.Commit();
+    }
+}
+
+<span class="highlight-comment">// Creates and returns a new fill grid</span>
+<span class="highlight-keyword">private</span> FillGrid CreateGrid(UV origin, <span class="highlight-keyword">double</span> offset, <span class="highlight-keyword">double</span> angle,
+                            <span class="highlight-keyword">double</span> shift, <span class="highlight-keyword">params</span> <span class="highlight-keyword">double</span>[] segments)
+{
+    FillGrid fillGrid = <span class="highlight-keyword">new</span> FillGrid();
+    fillGrid.Origin = origin;
+    fillGrid.Offset = offset;
+    fillGrid.Angle = angle;
+    fillGrid.Shift = shift;
+    List&lt;<span class="highlight-keyword">double</span>&gt; segmentsList = <span class="highlight-keyword">new</span> List&lt;<span class="highlight-keyword">double</span>&gt;();
+    <span class="highlight-keyword">foreach</span> (<span class="highlight-keyword">double</span> d <span class="highlight-keyword">in</span> segments)
+    {
+        segmentsList.Add(d);
+    }
+    fillGrid.SetSegments(segmentsList);
+
+    <span class="highlight-keyword">return</span> fillGrid;
+}</pre></div><div id="IDAHC_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="highlight-comment">' Create a complex fill pattern</span>
+<span class="highlight-keyword">Public</span> <span class="highlight-keyword">Sub</span> CreateComplexFillPattern(doc <span class="highlight-keyword">As</span> Document)
+    <span class="highlight-comment">' Create the fill pattern</span>
+    <span class="highlight-keyword">Dim</span> fillPattern <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> FillPattern(<span class="highlight-literal">"API-created"</span>, FillPatternTarget.Model, FillPatternHostOrientation.ToHost)
+
+    <span class="highlight-comment">' Add grids</span>
+    <span class="highlight-keyword">Dim</span> grids <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> List(<span class="highlight-keyword">Of</span> FillGrid)()
+
+    <span class="highlight-comment">'Horizontal lines.  </span>
+    <span class="highlight-comment">' The arguments: origin, offset (vertical distance between lines), </span>
+    <span class="highlight-comment">' angle, shift (delta between location of start point per line)</span>
+    <span class="highlight-comment">' The last two arguments are the segments: e.g. 1.0 units on, </span>
+    <span class="highlight-comment">' 0.1 units off (units are Revit units (ft))</span>
+    grids.Add(CreateGrid(<span class="highlight-keyword">New</span> UV(<span class="highlight-number">0</span>, <span class="highlight-number">0.1</span>), <span class="highlight-number">0.5</span>, <span class="highlight-number">0</span>, <span class="highlight-number">0.55</span>, <span class="highlight-number">1.0</span>, <span class="highlight-number">0.1</span>))
+    grids.Add(CreateGrid(<span class="highlight-keyword">New</span> UV(<span class="highlight-number">0</span>, <span class="highlight-number">0.5</span>), <span class="highlight-number">0.5</span>, <span class="highlight-number">0</span>, <span class="highlight-number">0.55</span>, <span class="highlight-number">1.0</span>, <span class="highlight-number">0.1</span>))
+
+    <span class="highlight-comment">' Vertical lines.  </span>
+    grids.Add(CreateGrid(<span class="highlight-keyword">New</span> UV(<span class="highlight-number">0</span>, <span class="highlight-number">0.1</span>), <span class="highlight-number">0.55</span>, Math.PI / <span class="highlight-number">2</span>, <span class="highlight-number">0.5</span>, <span class="highlight-number">0.4</span>, <span class="highlight-number">0.6</span>))
+    grids.Add(CreateGrid(<span class="highlight-keyword">New</span> UV(<span class="highlight-number">1.0</span>, <span class="highlight-number">0.1</span>), <span class="highlight-number">0.55</span>, Math.PI / <span class="highlight-number">2</span>, <span class="highlight-number">0.5</span>, <span class="highlight-number">0.4</span>, <span class="highlight-number">0.6</span>))
+
+    fillPattern.SetFillGrids(grids)
+
+    <span class="highlight-comment">' Create the fill pattern element. Now document is modified; transaction is needed</span>
+    <span class="highlight-keyword">Using</span> t <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> Transaction(doc, <span class="highlight-literal">"Create fill pattern"</span>)
+        t.Start()
+        <span class="highlight-keyword">Dim</span> patternElement <span class="highlight-keyword">As</span> FillPatternElement = FillPatternElement.Create(doc, fillPattern)
+        t.Commit()
+    <span class="highlight-keyword">End</span> <span class="highlight-keyword">Using</span>
+<span class="highlight-keyword">End</span> <span class="highlight-keyword">Sub</span>
+
+<span class="highlight-comment">' Creates and returns a new fill grid</span>
+<span class="highlight-keyword">Private</span> <span class="highlight-keyword">Function</span> CreateGrid(origin <span class="highlight-keyword">As</span> UV, offset <span class="highlight-keyword">As</span> <span class="highlight-keyword">Double</span>, angle <span class="highlight-keyword">As</span> <span class="highlight-keyword">Double</span>, shift <span class="highlight-keyword">As</span> <span class="highlight-keyword">Double</span>, <span class="highlight-keyword">ParamArray</span> segments <span class="highlight-keyword">As</span> <span class="highlight-keyword">Double</span>()) <span class="highlight-keyword">As</span> FillGrid
+    <span class="highlight-keyword">Dim</span> fillGrid <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> FillGrid()
+    fillGrid.Origin = origin
+    fillGrid.Offset = offset
+    fillGrid.Angle = angle
+    fillGrid.Shift = shift
+    <span class="highlight-keyword">Dim</span> segmentsList <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> List(<span class="highlight-keyword">Of</span> <span class="highlight-keyword">Double</span>)()
+    <span class="highlight-keyword">For</span> <span class="highlight-keyword">Each</span> d <span class="highlight-keyword">As</span> <span class="highlight-keyword">Double</span> <span class="highlight-keyword">In</span> segments
+        segmentsList.Add(d)
+    <span class="highlight-keyword">Next</span>
+    fillGrid.SetSegments(segmentsList)
+
+    <span class="highlight-keyword">Return</span> fillGrid
+<span class="highlight-keyword">End</span> <span class="highlight-keyword">Function</span></pre></div><div id="IDAHC_code_Div3" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div><div id="IDAHC_code_Div4" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div></div></div></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('seeAlso')" onkeypress="SectionExpandCollapse_CheckKey('seeAlso', event)" tabindex="0"><img id="seeAlsoToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="seeAlsoSection" class="collapsibleSection"><h4>Reference</h4><div><a href="64ecefd0-f5c4-5cd9-53bd-10a64739257e.htm">FillPatternElement Class</a></div><div><a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB Namespace</a></div></div></div></div><div id="PageFooter" class="pageFooter"><div class="feedbackLink">Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:revitapifeedback%40autodesk.com?Subject=Revit%202025%20API">Autodesk</a></div>
+        <script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        HT_mailLink.href += ": " + document.title + "\u0026body=" + encodeURIComponent("Your feedback is used to improve the documentation and the product. Your e-mail address will not be used for any other purpose and is disposed of after the issue you report is resolved. While working to resolve the issue that you report, you may be contacted via e-mail to get further details or clarification on the feedback you sent. After the issue you report has been addressed, you may receive an e-mail to let you know that your feedback has been addressed.");
+        </script></div></body></html>

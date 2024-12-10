@@ -1,0 +1,123 @@
+﻿<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="Microsoft.Help.SelfBranded" content="true" /><meta name="Language" content="en-us" /><meta name="Microsoft.Help.Locale" content="en-us" /><meta name="Microsoft.Help.TopicLocale" content="en-us" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" type="text/css" href="../styles/branding.css" /><link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" /><script type="text/javascript" src="../scripts/branding.js"></script><title>IExportContext.Start Method</title><meta name="Title" content="Start Method" /><meta name="Microsoft.Help.Id" content="M:Autodesk.Revit.DB.IExportContext.Start" /><meta name="Microsoft.Help.ContentType" content="Reference" /><meta name="System.Keywords" content="IExportContext.Start method" /><meta name="System.Keywords" content="Start method" /><meta name="Microsoft.Help.F1" content="Autodesk.Revit.DB.IExportContext.Start" /><meta name="Microsoft.Help.F1" content="IExportContext.Start" /><meta name="Microsoft.Help.F1" content="Start" /><meta name="container" content="Autodesk.Revit.DB" /><meta name="file" content="2d93c3c6-c826-cd70-dc0a-b94f66324c35" /><meta name="guid" content="2d93c3c6-c826-cd70-dc0a-b94f66324c35" /><meta name="Microsoft.Help.Category" content="CSharp" /><meta name="Microsoft.Help.Category" content="VB" /><meta name="Description" content="This method is called at the very start of the export process, still before the first entity of the model was send out." /><link type="text/css" rel="stylesheet" href="../styles/highlight.css" /><script type="text/javascript" src="../scripts/highlight.js"> </script><link rel="stylesheet" type="text/css" href="../styles/branding-Help1.css" /></head><body onload="SetDefaultLanguage('cs');"><input type="hidden" id="userDataCache" class="userDataStyle" /><div id="PageHeader" class="pageHeader">Revit 2025 API</div><div class="pageBody"><div id="TopicContent" class="topicContent"><table class="titleTable"><tr><td class="titleColumn"><h1>IExport<wbr />Context<span id="LSTFB9D5BC4_0" data-languageSpecificText="cpp=::|nu=."></span>Start Method</h1></td></tr></table><div class="summary">
+   This method is called at the very start of the export process,
+   still before the first entity of the model was send out.
+</div><br /><strong>Namespace:</strong> <a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB</a><br /><strong>Assembly:</strong> RevitAPI (in RevitAPI.dll) Version: 25.0.0.0 (25.0.0.0)<div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDB')" onkeypress="SectionExpandCollapse_CheckKey('IDB', event)" tabindex="0"><img id="IDBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Syntax</span></div><div id="IDBSection" class="collapsibleSection"><div id="IDAB" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAB_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cs','1','4');return false;">C#</a></div><div id="IDAB_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','vb','2','4');return false;">VB</a></div><div id="IDAB_tab3" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cpp','3','4');return false;">C++</a></div><div id="IDAB_tab4" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAB_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAB');return false;" title="Copy">Copy</a></div></div><div id="IDAB_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="identifier">bool</span> <span class="identifier">Start</span>()</pre></div><div id="IDAB_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">Function</span> <span class="identifier">Start</span> <span class="keyword">As</span> <span class="identifier">Boolean</span></pre></div><div id="IDAB_code_Div3" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="identifier">bool</span> <span class="identifier">Start</span>()</pre></div><div id="IDAB_code_Div4" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">abstract</span> <span class="identifier">Start</span> : <span class="keyword">unit</span> <span class="keyword">-&gt;</span> <span class="identifier">bool</span> </pre></div></div></div><h4>Return Value</h4><a href="https://learn.microsoft.com/dotnet/api/system.boolean" target="_blank" rel="noopener noreferrer">Boolean</a><br />
+   Return True if you are ready to proceed with processing the export.
+</div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDDC')" onkeypress="SectionExpandCollapse_CheckKey('IDDC', event)" tabindex="0"><img id="IDDCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Example</span></div><div id="IDDCSection" class="collapsibleSection"><div id="IDADC" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDADC_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDADC','cs','1','4');return false;">C#</a></div><div id="IDADC_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDADC','vb','2','4');return false;">VB</a></div><div id="IDADC_tab3" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDADC','cpp','3','4');return false;">C++</a></div><div id="IDADC_tab4" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDADC','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDADC_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDADC');return false;" title="Copy">Copy</a></div></div><div id="IDADC_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="highlight-comment">// A context would typically maintain a variable for the document being exported</span>
+<span class="highlight-keyword">private</span> Document m_document = <span class="highlight-keyword">null</span>;
+
+<span class="highlight-comment">// Some contexts may find it useful to have a flag indicating</span>
+<span class="highlight-comment">// whether or not the process should be canceled (see Is</span>
+<span class="highlight-keyword">private</span> <span class="highlight-keyword">bool</span> m_cancelled = <span class="highlight-keyword">false</span>;
+
+<span class="highlight-comment">// Typically, an export context has to manage a stack of transformation</span>
+<span class="highlight-comment">// for all nested objects, such as instances, lights, links, etc.</span>
+<span class="highlight-keyword">private</span> Stack&lt;Transform&gt; m_TransformationStack = <span class="highlight-keyword">new</span> Stack&lt;Transform&gt;();
+
+<span class="highlight-comment">/// &lt;summary&gt;</span>
+<span class="highlight-comment">/// Assuming that instance variables gets initiated in the context's constructor</span>
+<span class="highlight-comment">/// &lt;/summary&gt;</span>
+<span class="highlight-comment">/// &lt;param name="document"&gt;&lt;/param&gt;</span>
+<span class="highlight-keyword">public</span> MyExportContext(Document document)
+{
+   m_document = document;
+   m_TransformationStack.Push(Transform.Identity);
+}
+
+<span class="highlight-comment">/// &lt;summary&gt;</span>
+<span class="highlight-comment">/// This method is the starting point of the export process.</span>
+<span class="highlight-comment">/// &lt;/summary&gt;</span>
+<span class="highlight-comment">/// &lt;remarks&gt;</span>
+<span class="highlight-comment">/// The method is called only once and is typically used to prepare</span>
+<span class="highlight-comment">/// the context object, e.g. crate or open the output files,</span>
+<span class="highlight-comment">/// or establish a connection to an on-line renderer, etc.</span>
+<span class="highlight-comment">/// &lt;/remarks&gt;</span>
+<span class="highlight-comment">/// &lt;returns&gt;</span>
+<span class="highlight-comment">/// Return true if the export process it good to start.</span>
+<span class="highlight-comment">/// &lt;/returns&gt;</span>
+<span class="highlight-keyword">public</span> <span class="highlight-keyword">bool</span> Start()
+{
+   <span class="highlight-keyword">return</span> <span class="highlight-keyword">true</span>;
+}
+
+<span class="highlight-comment">/// &lt;summary&gt;</span>
+<span class="highlight-comment">/// This method establishes the final point of the export process.</span>
+<span class="highlight-comment">/// &lt;/summary&gt;</span>
+<span class="highlight-comment">/// &lt;remarks&gt;</span>
+<span class="highlight-comment">/// Resources (such as files, pipes, threads, etc.) used by the context</span>
+<span class="highlight-comment">/// should be properly released/closed inside this method.</span>
+<span class="highlight-comment">/// &lt;/remarks&gt;</span>
+<span class="highlight-keyword">public</span> <span class="highlight-keyword">void</span> Finish()
+{
+}
+
+<span class="highlight-comment">/// &lt;summary&gt;</span>
+<span class="highlight-comment">/// This method is invoked many times during the export process.</span>
+<span class="highlight-comment">/// &lt;/summary&gt;</span>
+<span class="highlight-comment">/// &lt;remarks&gt;</span>
+<span class="highlight-comment">/// Depending on internal condition of the context, it can be decided</span>
+<span class="highlight-comment">/// whether the export is to be immediately canceled or not.</span>
+<span class="highlight-comment">/// &lt;/remarks&gt;</span>
+<span class="highlight-keyword">public</span> <span class="highlight-keyword">bool</span> IsCanceled()
+{
+   <span class="highlight-keyword">return</span> m_cancelled;
+}</pre></div><div id="IDADC_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="highlight-comment">' A context would typically maintain a variable for the document being exported</span>
+<span class="highlight-keyword">Private</span> m_document <span class="highlight-keyword">As</span> Document = <span class="highlight-keyword">Nothing</span>
+
+<span class="highlight-comment">' Some contexts may find it useful to have a flag indicating</span>
+<span class="highlight-comment">' whether or not the process should be canceled (see Is</span>
+<span class="highlight-keyword">Private</span> m_cancelled <span class="highlight-keyword">As</span> <span class="highlight-keyword">Boolean</span> = <span class="highlight-keyword">False</span>
+
+<span class="highlight-comment">' Typically, an export context has to manage a stack of transformation</span>
+<span class="highlight-comment">' for all nested objects, such as instances, lights, links, etc.</span>
+<span class="highlight-keyword">Private</span> m_TransformationStack <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> Stack(<span class="highlight-keyword">Of</span> Transform)()
+
+<span class="highlight-comment">' &lt;summary&gt;</span>
+<span class="highlight-comment">' Assuming that instance variables gets initiated in the context's constructor</span>
+<span class="highlight-comment">' &lt;/summary&gt;</span>
+<span class="highlight-comment">' &lt;param name="document"&gt;&lt;/param&gt;</span>
+<span class="highlight-keyword">Public</span> <span class="highlight-keyword">Sub</span> <span class="highlight-keyword">New</span>(document <span class="highlight-keyword">As</span> Document)
+    m_document = document
+    m_TransformationStack.Push(Transform.Identity)
+<span class="highlight-keyword">End</span> <span class="highlight-keyword">Sub</span>
+
+<span class="highlight-comment">' &lt;summary&gt;</span>
+<span class="highlight-comment">' This method is the starting point of the export process.</span>
+<span class="highlight-comment">' &lt;/summary&gt;</span>
+<span class="highlight-comment">' &lt;remarks&gt;</span>
+<span class="highlight-comment">' The method is called only once and is typically used to prepare</span>
+<span class="highlight-comment">' the context object, e.g. crate or open the output files,</span>
+<span class="highlight-comment">' or establish a connection to an on-line renderer, etc.</span>
+<span class="highlight-comment">' &lt;/remarks&gt;</span>
+<span class="highlight-comment">' &lt;returns&gt;</span>
+<span class="highlight-comment">' Return true if the export process it good to start.</span>
+<span class="highlight-comment">' &lt;/returns&gt;</span>
+<span class="highlight-keyword">Public</span> <span class="highlight-keyword">Function</span> Start() <span class="highlight-keyword">As</span> <span class="highlight-keyword">Boolean</span> <span class="highlight-keyword">Implements</span> IExportContext.Start
+    <span class="highlight-keyword">Return</span> <span class="highlight-keyword">True</span>
+<span class="highlight-keyword">End</span> <span class="highlight-keyword">Function</span>
+
+<span class="highlight-comment">' &lt;summary&gt;</span>
+<span class="highlight-comment">' This method establishes the final point of the export process.</span>
+<span class="highlight-comment">' &lt;/summary&gt;</span>
+<span class="highlight-comment">' &lt;remarks&gt;</span>
+<span class="highlight-comment">' Resources (such as files, pipes, threads, etc.) used by the context</span>
+<span class="highlight-comment">' should be properly released/closed inside this method.</span>
+<span class="highlight-comment">' &lt;/remarks&gt;</span>
+<span class="highlight-keyword">Public</span> <span class="highlight-keyword">Sub</span> Finish() <span class="highlight-keyword">Implements</span> IExportContext.Finish
+<span class="highlight-keyword">End</span> <span class="highlight-keyword">Sub</span>
+
+<span class="highlight-comment">' &lt;summary&gt;</span>
+<span class="highlight-comment">' This method is invoked many times during the export process.</span>
+<span class="highlight-comment">' &lt;/summary&gt;</span>
+<span class="highlight-comment">' &lt;remarks&gt;</span>
+<span class="highlight-comment">' Depending on internal condition of the context, it can be decided</span>
+<span class="highlight-comment">' whether the export is to be immediately canceled or not.</span>
+<span class="highlight-comment">' &lt;/remarks&gt;</span>
+<span class="highlight-keyword">Public</span> <span class="highlight-keyword">Function</span> IsCanceled() <span class="highlight-keyword">As</span> <span class="highlight-keyword">Boolean</span> <span class="highlight-keyword">Implements</span> IExportContext.IsCanceled
+    <span class="highlight-keyword">Return</span> m_cancelled
+<span class="highlight-keyword">End</span> <span class="highlight-keyword">Function</span></pre></div><div id="IDADC_code_Div3" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div><div id="IDADC_code_Div4" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div></div></div></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('seeAlso')" onkeypress="SectionExpandCollapse_CheckKey('seeAlso', event)" tabindex="0"><img id="seeAlsoToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="seeAlsoSection" class="collapsibleSection"><h4>Reference</h4><div><a href="7d0dc6df-db0e-6a07-3b42-8dde1bedb3c1.htm">IExportContext Interface</a></div><div><a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB Namespace</a></div></div></div></div><div id="PageFooter" class="pageFooter"><div class="feedbackLink">Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:revitapifeedback%40autodesk.com?Subject=Revit%202025%20API">Autodesk</a></div>
+        <script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        HT_mailLink.href += ": " + document.title + "\u0026body=" + encodeURIComponent("Your feedback is used to improve the documentation and the product. Your e-mail address will not be used for any other purpose and is disposed of after the issue you report is resolved. While working to resolve the issue that you report, you may be contacted via e-mail to get further details or clarification on the feedback you sent. After the issue you report has been addressed, you may receive an e-mail to let you know that your feedback has been addressed.");
+        </script></div></body></html>

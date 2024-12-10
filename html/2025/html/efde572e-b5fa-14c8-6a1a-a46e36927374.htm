@@ -1,0 +1,146 @@
+﻿<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="Microsoft.Help.SelfBranded" content="true" /><meta name="Language" content="en-us" /><meta name="Microsoft.Help.Locale" content="en-us" /><meta name="Microsoft.Help.TopicLocale" content="en-us" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" type="text/css" href="../styles/branding.css" /><link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" /><script type="text/javascript" src="../scripts/branding.js"></script><title>FamilyItemFactory.NewRevolution Method</title><meta name="Title" content="NewRevolution Method" /><meta name="Microsoft.Help.Id" content="M:Autodesk.Revit.Creation.FamilyItemFactory.NewRevolution(System.Boolean,Autodesk.Revit.DB.CurveArrArray,Autodesk.Revit.DB.SketchPlane,Autodesk.Revit.DB.Line,System.Double,System.Double)" /><meta name="Microsoft.Help.ContentType" content="Reference" /><meta name="System.Keywords" content="FamilyItemFactory.NewRevolution method" /><meta name="System.Keywords" content="NewRevolution method" /><meta name="Microsoft.Help.F1" content="Autodesk.Revit.Creation.FamilyItemFactory.NewRevolution" /><meta name="Microsoft.Help.F1" content="FamilyItemFactory.NewRevolution" /><meta name="Microsoft.Help.F1" content="NewRevolution" /><meta name="container" content="Autodesk.Revit.Creation" /><meta name="file" content="efde572e-b5fa-14c8-6a1a-a46e36927374" /><meta name="guid" content="efde572e-b5fa-14c8-6a1a-a46e36927374" /><meta name="Microsoft.Help.Category" content="CSharp" /><meta name="Microsoft.Help.Category" content="VB" /><meta name="Description" content="Add a new Revolution instance into the Autodesk Revit family document." /><link type="text/css" rel="stylesheet" href="../styles/highlight.css" /><script type="text/javascript" src="../scripts/highlight.js"> </script><link rel="stylesheet" type="text/css" href="../styles/branding-Help1.css" /></head><body onload="SetDefaultLanguage('cs');"><input type="hidden" id="userDataCache" class="userDataStyle" /><div id="PageHeader" class="pageHeader">Revit 2025 API</div><div class="pageBody"><div id="TopicContent" class="topicContent"><table class="titleTable"><tr><td class="titleColumn"><h1>Family<wbr />Item<wbr />Factory<span id="LSTE1C063A4_0" data-languageSpecificText="cpp=::|nu=."></span>New<wbr />Revolution Method</h1></td></tr></table><div class="summary">Add a new Revolution instance into the Autodesk Revit family document.</div><br /><strong>Namespace:</strong> <a href="ded320da-058a-4edd-0418-0582389559a7.htm">Autodesk.Revit.Creation</a><br /><strong>Assembly:</strong> RevitAPI (in RevitAPI.dll) Version: 25.0.0.0 (25.0.0.0)<div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDB')" onkeypress="SectionExpandCollapse_CheckKey('IDB', event)" tabindex="0"><img id="IDBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Syntax</span></div><div id="IDBSection" class="collapsibleSection"><div id="IDAB" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAB_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cs','1','4');return false;">C#</a></div><div id="IDAB_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','vb','2','4');return false;">VB</a></div><div id="IDAB_tab3" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cpp','3','4');return false;">C++</a></div><div id="IDAB_tab4" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAB_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAB');return false;" title="Copy">Copy</a></div></div><div id="IDAB_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="keyword">public</span> <span class="identifier">Revolution</span> <span class="identifier">NewRevolution</span>(
+	<span class="identifier">bool</span> <span class="parameter">isSolid</span>,
+	<span class="identifier">CurveArrArray</span> <span class="parameter">profile</span>,
+	<span class="identifier">SketchPlane</span> <span class="parameter">sketchPlane</span>,
+	<span class="identifier">Line</span> <span class="parameter">axis</span>,
+	<span class="identifier">double</span> <span class="parameter">startAngle</span>,
+	<span class="identifier">double</span> <span class="parameter">endAngle</span>
+)</pre></div><div id="IDAB_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">Public</span> <span class="keyword">Function</span> <span class="identifier">NewRevolution</span> ( 
+	<span class="parameter">isSolid</span> <span class="keyword">As</span> <span class="identifier">Boolean</span>,
+	<span class="parameter">profile</span> <span class="keyword">As</span> <span class="identifier">CurveArrArray</span>,
+	<span class="parameter">sketchPlane</span> <span class="keyword">As</span> <span class="identifier">SketchPlane</span>,
+	<span class="parameter">axis</span> <span class="keyword">As</span> <span class="identifier">Line</span>,
+	<span class="parameter">startAngle</span> <span class="keyword">As</span> <span class="identifier">Double</span>,
+	<span class="parameter">endAngle</span> <span class="keyword">As</span> <span class="identifier">Double</span>
+) <span class="keyword">As</span> <span class="identifier">Revolution</span></pre></div><div id="IDAB_code_Div3" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">public</span>:
+<span class="identifier">Revolution</span>^ <span class="identifier">NewRevolution</span>(
+	<span class="identifier">bool</span> <span class="parameter">isSolid</span>, 
+	<span class="identifier">CurveArrArray</span>^ <span class="parameter">profile</span>, 
+	<span class="identifier">SketchPlane</span>^ <span class="parameter">sketchPlane</span>, 
+	<span class="identifier">Line</span>^ <span class="parameter">axis</span>, 
+	<span class="identifier">double</span> <span class="parameter">startAngle</span>, 
+	<span class="identifier">double</span> <span class="parameter">endAngle</span>
+)</pre></div><div id="IDAB_code_Div4" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">member</span> <span class="identifier">NewRevolution</span> : 
+        <span class="parameter">isSolid</span> : <span class="identifier">bool</span> * 
+        <span class="parameter">profile</span> : <span class="identifier">CurveArrArray</span> * 
+        <span class="parameter">sketchPlane</span> : <span class="identifier">SketchPlane</span> * 
+        <span class="parameter">axis</span> : <span class="identifier">Line</span> * 
+        <span class="parameter">startAngle</span> : <span class="identifier">float</span> * 
+        <span class="parameter">endAngle</span> : <span class="identifier">float</span> <span class="keyword">-&gt;</span> <span class="identifier">Revolution</span> </pre></div></div></div><h4>Parameters</h4><dl><dt class="has-text-weight-normal"><span class="parameter">isSolid</span>  <a href="https://learn.microsoft.com/dotnet/api/system.boolean" target="_blank" rel="noopener noreferrer">Boolean</a></dt><dd>Indicates if the Revolution is Solid or Void.</dd><dt class="has-text-weight-normal"><span class="parameter">profile</span>  <a href="c9d071fe-9724-42ed-e280-57381cd44301.htm">CurveArrArray</a></dt><dd>The profile of the newly created revolution. This may contain
+more than one curve loop. Each loop must be a fully closed curve loop and the loops 
+must not intersect. All loops must lie in the same plane.
+The loop can be a unbound circle or ellipse,  but its geometry will be split in two in 
+order to satisfy requirements for sketches used in extrusions.</dd><dt class="has-text-weight-normal"><span class="parameter">sketchPlane</span>  <a href="ba104029-d175-7e75-caef-667a4281f4af.htm">SketchPlane</a></dt><dd>The sketch plane for the revolution.  The direction of revolution
+is determined by the normal for the sketch plane.</dd><dt class="has-text-weight-normal"><span class="parameter">axis</span>  <a href="e7329450-434a-918b-661c-65e15e0585a5.htm">Line</a></dt><dd>The axis of revolution. This axis must lie in the same plane as the curve loops.</dd><dt class="has-text-weight-normal"><span class="parameter">startAngle</span>  <a href="https://learn.microsoft.com/dotnet/api/system.double" target="_blank" rel="noopener noreferrer">Double</a></dt><dd>The start angle of Revolution in radians.</dd><dt class="has-text-weight-normal"><span class="parameter">endAngle</span>  <a href="https://learn.microsoft.com/dotnet/api/system.double" target="_blank" rel="noopener noreferrer">Double</a></dt><dd>The end angle of Revolution in radians.</dd></dl><h4>Return Value</h4><a href="c79a0527-7887-2fdf-3d8a-a7845cbf18a0.htm">Revolution</a><br />If creation was successful the new revolution is returned, 
+otherwise an exception with failure information will be thrown.</div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDJC')" onkeypress="SectionExpandCollapse_CheckKey('IDJC', event)" tabindex="0"><img id="IDJCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Exceptions</span></div><div id="IDJCSection" class="collapsibleSection"><table><tr><th>Exception</th><th>Condition</th></tr><tr><td><a href="2e6e4206-97a8-dd4b-df5d-4269f4bb6088.htm">ArgumentException</a></td><td>
+Thrown when the input argument-profile-is <span class="keyword"><span id="LSTE1C063A4_1" data-languageSpecificText="cpp=nullptr|vb=Nothing|nu=null"></span></span> or empty array.
+</td></tr><tr><td><a href="631e1424-60f4-929b-4e52-dda9dcd26316.htm">ArgumentNullException</a></td><td>
+Thrown when the input argument-sketchPlane-is <span class="keyword"><span id="LSTE1C063A4_2" data-languageSpecificText="cpp=nullptr|vb=Nothing|nu=null"></span></span>.
+</td></tr><tr><td><a href="2e6e4206-97a8-dd4b-df5d-4269f4bb6088.htm">ArgumentException</a></td><td>
+Thrown when the input argument-sketchPlane-is an invalid sketch plane.
+</td></tr><tr><td><a href="631e1424-60f4-929b-4e52-dda9dcd26316.htm">ArgumentNullException</a></td><td>
+Thrown when the input argument-axis-is <span class="keyword"><span id="LSTE1C063A4_3" data-languageSpecificText="cpp=nullptr|vb=Nothing|nu=null"></span></span>.
+</td></tr><tr><td><a href="9e715f03-3884-e539-4dd6-8d7545733adc.htm">InvalidOperationException</a></td><td>
+Thrown when creation is attempted in Conceptual Mass, 2D, or other family where revolutions cannot be created.
+</td></tr><tr><td><a href="9e715f03-3884-e539-4dd6-8d7545733adc.htm">InvalidOperationException</a></td><td>
+Thrown when the creation failed.
+</td></tr></table></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDIC')" onkeypress="SectionExpandCollapse_CheckKey('IDIC', event)" tabindex="0"><img id="IDICToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Remarks</span></div><div id="IDICSection" class="collapsibleSection">This method creates an Revolution in a family document. The Revolution will be 
+rotated the plane of the Revolution profile about the Axis. </div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDPC')" onkeypress="SectionExpandCollapse_CheckKey('IDPC', event)" tabindex="0"><img id="IDPCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Example</span></div><div id="IDPCSection" class="collapsibleSection"><div id="IDAPC" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAPC_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAPC','cs','1','4');return false;">C#</a></div><div id="IDAPC_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAPC','vb','2','4');return false;">VB</a></div><div id="IDAPC_tab3" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDAPC','cpp','3','4');return false;">C++</a></div><div id="IDAPC_tab4" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDAPC','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAPC_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAPC');return false;" title="Copy">Copy</a></div></div><div id="IDAPC_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="highlight-keyword">private</span> Revolution CreateRevolution(Autodesk.Revit.DB.Document document, SketchPlane sketchPlane)
+{
+    Revolution revolution = <span class="highlight-keyword">null</span>;
+
+    <span class="highlight-comment">// make sure we have a family document</span>
+    <span class="highlight-keyword">if</span> (<span class="highlight-keyword">true</span> == document.IsFamilyDocument)
+    {
+        <span class="highlight-comment">// Define a profile for the revolution</span>
+        CurveArrArray curveArrArray = <span class="highlight-keyword">new</span> CurveArrArray();
+        CurveArray curveArray = <span class="highlight-keyword">new</span> CurveArray();
+
+        <span class="highlight-comment">// create a rectangular profile for the revolution</span>
+        XYZ p0 = XYZ.Zero;
+        XYZ p1 = <span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">10</span>, <span class="highlight-number">0</span>, <span class="highlight-number">0</span>);
+        XYZ p2 = <span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">10</span>, <span class="highlight-number">10</span>, <span class="highlight-number">0</span>);
+        XYZ p3 = <span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">0</span>, <span class="highlight-number">10</span>, <span class="highlight-number">0</span>);
+        Line line1 = Line.CreateBound(p0, p1);
+        Line line2 = Line.CreateBound(p1, p2);
+        Line line3 = Line.CreateBound(p2, p3);
+        Line line4 = Line.CreateBound(p3, p0);
+
+        XYZ pp = <span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">1</span>, <span class="highlight-number">-1</span>, <span class="highlight-number">0</span>);
+        Line axis1 = Line.CreateBound(XYZ.Zero, pp);
+        curveArray.Append(line1);
+        curveArray.Append(line2);
+        curveArray.Append(line3);
+        curveArray.Append(line4);
+
+        curveArrArray.Append(curveArray);
+
+        <span class="highlight-comment">// create solid rectangular revolution</span>
+        revolution = document.FamilyCreate.NewRevolution(<span class="highlight-keyword">true</span>, curveArrArray, sketchPlane, axis1, -Math.PI, <span class="highlight-number">0</span>);
+
+        <span class="highlight-keyword">if</span> (<span class="highlight-keyword">null</span> != revolution)
+        {
+            <span class="highlight-comment">// move to proper place</span>
+            XYZ transPoint1 = <span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">0</span>, <span class="highlight-number">32</span>, <span class="highlight-number">0</span>);
+            ElementTransformUtils.MoveElement(document, revolution.Id, transPoint1);
+        }
+        <span class="highlight-keyword">else</span>
+        {
+            <span class="highlight-keyword">throw</span> <span class="highlight-keyword">new</span> Exception(<span class="highlight-literal">"Create a new Revolution failed."</span>);
+        }
+    }
+    <span class="highlight-keyword">else</span>
+    {
+        <span class="highlight-keyword">throw</span> <span class="highlight-keyword">new</span> Exception(<span class="highlight-literal">"Please open a Family document before invoking this command."</span>);
+    }
+
+    <span class="highlight-keyword">return</span> revolution;
+}</pre></div><div id="IDAPC_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="highlight-keyword">Private</span> <span class="highlight-keyword">Function</span> CreateRevolution(document <span class="highlight-keyword">As</span> Autodesk.Revit.DB.Document, sketchPlane <span class="highlight-keyword">As</span> SketchPlane) <span class="highlight-keyword">As</span> Revolution
+    <span class="highlight-keyword">Dim</span> revolution <span class="highlight-keyword">As</span> Revolution = <span class="highlight-keyword">Nothing</span>
+
+    <span class="highlight-comment">' make sure we have a family document</span>
+    <span class="highlight-keyword">If</span> <span class="highlight-keyword">True</span> = document.IsFamilyDocument <span class="highlight-keyword">Then</span>
+        <span class="highlight-comment">' Define a profile for the revolution</span>
+        <span class="highlight-keyword">Dim</span> curveArrArray <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> CurveArrArray()
+        <span class="highlight-keyword">Dim</span> curveArray <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> CurveArray()
+
+        <span class="highlight-comment">' create a rectangular profile for the revolution</span>
+        <span class="highlight-keyword">Dim</span> p0 <span class="highlight-keyword">As</span> XYZ = XYZ.Zero
+        <span class="highlight-keyword">Dim</span> p1 <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">10</span>, <span class="highlight-number">0</span>, <span class="highlight-number">0</span>)
+        <span class="highlight-keyword">Dim</span> p2 <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">10</span>, <span class="highlight-number">10</span>, <span class="highlight-number">0</span>)
+        <span class="highlight-keyword">Dim</span> p3 <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">0</span>, <span class="highlight-number">10</span>, <span class="highlight-number">0</span>)
+        <span class="highlight-keyword">Dim</span> line1 <span class="highlight-keyword">As</span> Line = Line.CreateBound(p0, p1)
+        <span class="highlight-keyword">Dim</span> line2 <span class="highlight-keyword">As</span> Line = Line.CreateBound(p1, p2)
+        <span class="highlight-keyword">Dim</span> line3 <span class="highlight-keyword">As</span> Line = Line.CreateBound(p2, p3)
+        <span class="highlight-keyword">Dim</span> line4 <span class="highlight-keyword">As</span> Line = Line.CreateBound(p3, p0)
+
+        <span class="highlight-keyword">Dim</span> pp <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">1</span>, <span class="highlight-number">-1</span>, <span class="highlight-number">0</span>)
+        <span class="highlight-keyword">Dim</span> axis1 <span class="highlight-keyword">As</span> Line = Line.CreateBound(XYZ.Zero, pp)
+        curveArray.Append(line1)
+        curveArray.Append(line2)
+        curveArray.Append(line3)
+        curveArray.Append(line4)
+
+        curveArrArray.Append(curveArray)
+
+        <span class="highlight-comment">' create solid rectangular revolution</span>
+        revolution = document.FamilyCreate.NewRevolution(<span class="highlight-keyword">True</span>, curveArrArray, sketchPlane, axis1, -Math.PI, <span class="highlight-number">0</span>)
+
+        <span class="highlight-keyword">If</span> revolution <span class="highlight-keyword">IsNot</span> <span class="highlight-keyword">Nothing</span> <span class="highlight-keyword">Then</span>
+            <span class="highlight-comment">' move to proper place</span>
+            <span class="highlight-keyword">Dim</span> transPoint1 <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">0</span>, <span class="highlight-number">32</span>, <span class="highlight-number">0</span>)
+            ElementTransformUtils.MoveElement(document, revolution.Id, transPoint1)
+        <span class="highlight-keyword">Else</span>
+            <span class="highlight-keyword">Throw</span> <span class="highlight-keyword">New</span> Exception(<span class="highlight-literal">"Create a new Revolution failed."</span>)
+        <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+    <span class="highlight-keyword">Else</span>
+        <span class="highlight-keyword">Throw</span> <span class="highlight-keyword">New</span> Exception(<span class="highlight-literal">"Please open a Family document before invoking this command."</span>)
+    <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+
+    <span class="highlight-keyword">Return</span> revolution
+<span class="highlight-keyword">End</span> <span class="highlight-keyword">Function</span></pre></div><div id="IDAPC_code_Div3" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div><div id="IDAPC_code_Div4" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div></div></div></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('seeAlso')" onkeypress="SectionExpandCollapse_CheckKey('seeAlso', event)" tabindex="0"><img id="seeAlsoToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="seeAlsoSection" class="collapsibleSection"><h4>Reference</h4><div><a href="a7622967-1381-c17f-ed04-1ebe40da0440.htm">FamilyItemFactory Class</a></div><div><a href="ded320da-058a-4edd-0418-0582389559a7.htm">Autodesk.Revit.Creation Namespace</a></div></div></div></div><div id="PageFooter" class="pageFooter"><div class="feedbackLink">Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:revitapifeedback%40autodesk.com?Subject=Revit%202025%20API">Autodesk</a></div>
+        <script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        HT_mailLink.href += ": " + document.title + "\u0026body=" + encodeURIComponent("Your feedback is used to improve the documentation and the product. Your e-mail address will not be used for any other purpose and is disposed of after the issue you report is resolved. While working to resolve the issue that you report, you may be contacted via e-mail to get further details or clarification on the feedback you sent. After the issue you report has been addressed, you may receive an e-mail to let you know that your feedback has been addressed.");
+        </script></div></body></html>

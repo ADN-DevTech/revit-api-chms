@@ -1,0 +1,177 @@
+﻿<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="Microsoft.Help.SelfBranded" content="true" /><meta name="Language" content="en-us" /><meta name="Microsoft.Help.Locale" content="en-us" /><meta name="Microsoft.Help.TopicLocale" content="en-us" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" type="text/css" href="../styles/branding.css" /><link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" /><script type="text/javascript" src="../scripts/branding.js"></script><title>GlobalParameter.LabelDimension Method</title><meta name="Title" content="LabelDimension Method" /><meta name="Microsoft.Help.Id" content="M:Autodesk.Revit.DB.GlobalParameter.LabelDimension(Autodesk.Revit.DB.ElementId)" /><meta name="Microsoft.Help.ContentType" content="Reference" /><meta name="System.Keywords" content="GlobalParameter.LabelDimension method" /><meta name="System.Keywords" content="LabelDimension method" /><meta name="Microsoft.Help.F1" content="Autodesk.Revit.DB.GlobalParameter.LabelDimension" /><meta name="Microsoft.Help.F1" content="GlobalParameter.LabelDimension" /><meta name="Microsoft.Help.F1" content="LabelDimension" /><meta name="container" content="Autodesk.Revit.DB" /><meta name="file" content="99bc1f7d-82b8-7dc1-9919-e73834bb565c" /><meta name="guid" content="99bc1f7d-82b8-7dc1-9919-e73834bb565c" /><meta name="Microsoft.Help.Category" content="CSharp" /><meta name="Microsoft.Help.Category" content="VB" /><meta name="Description" content="Labels a dimension with this global parameter." /><link type="text/css" rel="stylesheet" href="../styles/highlight.css" /><script type="text/javascript" src="../scripts/highlight.js"> </script><link rel="stylesheet" type="text/css" href="../styles/branding-Help1.css" /></head><body onload="SetDefaultLanguage('cs');"><input type="hidden" id="userDataCache" class="userDataStyle" /><div id="PageHeader" class="pageHeader">Revit 2025 API</div><div class="pageBody"><div id="TopicContent" class="topicContent"><table class="titleTable"><tr><td class="titleColumn"><h1>Global<wbr />Parameter<span id="LSTB74371F5_0" data-languageSpecificText="cpp=::|nu=."></span>Label<wbr />Dimension Method</h1></td></tr></table><div class="summary">
+   Labels a dimension with this global parameter.
+</div><br /><strong>Namespace:</strong> <a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB</a><br /><strong>Assembly:</strong> RevitAPI (in RevitAPI.dll) Version: 25.0.0.0 (25.0.0.0)<div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDB')" onkeypress="SectionExpandCollapse_CheckKey('IDB', event)" tabindex="0"><img id="IDBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Syntax</span></div><div id="IDBSection" class="collapsibleSection"><div id="IDAB" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAB_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cs','1','4');return false;">C#</a></div><div id="IDAB_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','vb','2','4');return false;">VB</a></div><div id="IDAB_tab3" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cpp','3','4');return false;">C++</a></div><div id="IDAB_tab4" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAB_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAB');return false;" title="Copy">Copy</a></div></div><div id="IDAB_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="keyword">public</span> <span class="keyword">void</span> <span class="identifier">LabelDimension</span>(
+	<span class="identifier">ElementId</span> <span class="parameter">dimensionId</span>
+)</pre></div><div id="IDAB_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">Public</span> <span class="keyword">Sub</span> <span class="identifier">LabelDimension</span> ( 
+	<span class="parameter">dimensionId</span> <span class="keyword">As</span> <span class="identifier">ElementId</span>
+)</pre></div><div id="IDAB_code_Div3" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">public</span>:
+<span class="keyword">void</span> <span class="identifier">LabelDimension</span>(
+	<span class="identifier">ElementId</span>^ <span class="parameter">dimensionId</span>
+)</pre></div><div id="IDAB_code_Div4" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">member</span> <span class="identifier">LabelDimension</span> : 
+        <span class="parameter">dimensionId</span> : <span class="identifier">ElementId</span> <span class="keyword">-&gt;</span> <span class="keyword">unit</span> </pre></div></div></div><h4>Parameters</h4><dl><dt class="has-text-weight-normal"><span class="parameter">dimensionId</span>  <a href="44f3f7b1-3229-3404-93c9-dc5e70337dd6.htm">ElementId</a></dt><dd>
+   Id of a dimension element.
+</dd></dl></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDDC')" onkeypress="SectionExpandCollapse_CheckKey('IDDC', event)" tabindex="0"><img id="IDDCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Exceptions</span></div><div id="IDDCSection" class="collapsibleSection"><table><tr><th>Exception</th><th>Condition</th></tr><tr><td><a href="2e6e4206-97a8-dd4b-df5d-4269f4bb6088.htm">ArgumentException</a></td><td>
+   Given element Id is not of a valid dimension element.
+   -or-
+   Dimension with the Id of dimensionId cannot be labeled by this global parameter.
+   Possible causes include the dimension cannot be labeled at all, or it is a dimension
+   of other than Linear or Angular type, or the Dimension object does not have the
+   appropriate labeling parameter, or the dimension has more than one segment and the parameter
+   is reporting.
+</td></tr><tr><td><a href="631e1424-60f4-929b-4e52-dda9dcd26316.htm">ArgumentNullException</a></td><td>
+   A non-optional argument was null
+</td></tr></table></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDBC')" onkeypress="SectionExpandCollapse_CheckKey('IDBC', event)" tabindex="0"><img id="IDBCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Remarks</span></div><div id="IDBCSection" class="collapsibleSection"><p>When a dimension is labeled by a global parameters, then its value is either
+   controlled by the parameter (non-reporting), or drives the value of the
+   parameter (reporting). It is important to note that a reporting parameter
+   can label at most one dimension object - meaning, a parameter can be driven
+   by one dimension only. If the dimension has several segments and is labeled by a non-reprting parameter,
+   the value of each segment will be driven by this parameter.  Multi-segmented dimensions
+   cannot be labeled by reporting parameters.</p><p>If the dimension is already labeled by another global parameter,
+   labeling it again will automatically detach it from that parameter.</p><p>Presently, not just any kind of dimensions may be labeled by a global parameter.
+   Typically only single <b>Linear</b> and <b>Angular</b> dimensions can be labeled,
+   but there are other restrictions in effect too. Also, for the value of the parameter
+   and dimension labeled by it depend on each other, the data type of the global parameters
+   must be either <b>Length</b> or <b>Angle</b>, since those are the only units a dimension
+   can represent. Refer to the <span class="noLink">[!:CanLabelDimension(Autodesk::Revit::DB::ElementId)]</span>
+   method to find out whether a particular dimension element may be labeled or not.</p></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDGC')" onkeypress="SectionExpandCollapse_CheckKey('IDGC', event)" tabindex="0"><img id="IDGCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Example</span></div><div id="IDGCSection" class="collapsibleSection"><div id="IDAGC" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAGC_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAGC','cs','1','4');return false;">C#</a></div><div id="IDAGC_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAGC','vb','2','4');return false;">VB</a></div><div id="IDAGC_tab3" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDAGC','cpp','3','4');return false;">C++</a></div><div id="IDAGC_tab4" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDAGC','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAGC_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAGC');return false;" title="Copy">Copy</a></div></div><div id="IDAGC_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="highlight-comment">/// &lt;summary&gt;</span>
+<span class="highlight-comment">/// Creates a global parameter and uses it to label the set of given dimension elements </span>
+<span class="highlight-comment">/// &lt;/summary&gt;</span>
+<span class="highlight-comment">/// &lt;param name="document"&gt;Revit project document that contains the dimension.&lt;/param&gt;</span>
+<span class="highlight-comment">/// &lt;param name="gpname"&gt;A name of the global parameter to create.&lt;/param&gt;</span>
+<span class="highlight-comment">/// &lt;param name="value"&gt;Initial value of the global parameter&lt;/param&gt;</span>
+<span class="highlight-comment">/// &lt;param name="dimset"&gt;A collection of dimension elements to drive by a global parameter&lt;/param&gt;</span>
+<span class="highlight-comment">/// &lt;returns&gt;Number of actually labeled dimension&lt;/returns&gt;</span>
+<span class="highlight-keyword">public</span> <span class="highlight-keyword">int</span> DriveSelectedDimensions(Document document, <span class="highlight-keyword">string</span> name, <span class="highlight-keyword">double</span> <span class="highlight-keyword">value</span>, ISet&lt;ElementId&gt; dimset)
+{
+    <span class="highlight-keyword">if</span> (!GlobalParametersManager.AreGlobalParametersAllowed(document))
+        <span class="highlight-keyword">throw</span> <span class="highlight-keyword">new</span> System.InvalidOperationException(<span class="highlight-literal">"Global parameters are not permitted in the given document"</span>);
+
+    <span class="highlight-keyword">if</span> (!GlobalParametersManager.IsUniqueName(document, name))
+        <span class="highlight-keyword">throw</span> <span class="highlight-keyword">new</span> System.ArgumentException(<span class="highlight-literal">"Global parameter with such name already exists in the document"</span>, <span class="highlight-literal">"name"</span>);
+
+    <span class="highlight-keyword">if</span> (<span class="highlight-keyword">value</span> &lt;= <span class="highlight-number">0.0</span>)
+        <span class="highlight-keyword">throw</span> <span class="highlight-keyword">new</span> System.ArgumentException(<span class="highlight-literal">"Value of a global parameter that drives dimension must be a positive number"</span>, <span class="highlight-literal">"value"</span>);
+
+    <span class="highlight-keyword">int</span> nLabeledDims = <span class="highlight-number">0</span>;   <span class="highlight-comment">// number of labeled dimensions (for testing)</span>
+
+    <span class="highlight-comment">// creation of any element must be in a transaction</span>
+    <span class="highlight-keyword">using</span> (Transaction trans = <span class="highlight-keyword">new</span> Transaction(document, <span class="highlight-literal">"Create Global Parameter"</span>))
+    {
+        trans.Start();
+
+        <span class="highlight-comment">// create a GP with the given name and type Length</span>
+        <span class="highlight-comment">// Note: Length (or Angle) is required type of global parameters that are to label a dimension</span>
+        GlobalParameter newgp = GlobalParameter.Create(document, name, SpecTypeId.Length);
+        <span class="highlight-keyword">if</span> (newgp != <span class="highlight-keyword">null</span>)
+        {
+            newgp.SetValue(<span class="highlight-keyword">new</span> DoubleParameterValue(<span class="highlight-keyword">value</span>));
+
+            <span class="highlight-comment">// use the parameter to label the given dimensions</span>
+            <span class="highlight-keyword">foreach</span> (ElementId elemid <span class="highlight-keyword">in</span> dimset)
+            {
+                <span class="highlight-comment">// not just any dimension is allowed to be labeled</span>
+                <span class="highlight-comment">// check first to avoid exceptions</span>
+                <span class="highlight-keyword">if</span> (newgp.CanLabelDimension(elemid))
+                {
+                    newgp.LabelDimension(elemid);
+                    nLabeledDims += <span class="highlight-number">1</span>;
+                }
+            }
+
+            trans.Commit();
+        }
+    }
+
+    <span class="highlight-comment">// for illustration purposes only, we'll test the results of our modifications </span>
+
+    <span class="highlight-comment">// 1.) Check the new parameter can be found</span>
+
+    ElementId gpid = GlobalParametersManager.FindByName(document,name);
+    <span class="highlight-keyword">if</span> (gpid == ElementId.InvalidElementId)
+    {
+        TaskDialog.Show(<span class="highlight-literal">"Error"</span>, <span class="highlight-literal">"Failed to find a newly created global parameter"</span>);
+    }
+
+    GlobalParameter gp = document.GetElement(gpid) <span class="highlight-keyword">as</span> GlobalParameter;
+
+    <span class="highlight-comment">// 2. Check the number of labeled dimension is as expected</span>
+
+    ISet&lt;ElementId&gt; labeledSet = gp.GetLabeledDimensions();
+    <span class="highlight-keyword">if</span> (labeledSet.Count != nLabeledDims)
+    {
+        TaskDialog.Show(<span class="highlight-literal">"Error"</span>, <span class="highlight-literal">"Have not found all the dimension that were labeled."</span>);
+    }
+
+    <span class="highlight-keyword">return</span> labeledSet.Count;
+}</pre></div><div id="IDAGC_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="highlight-comment">' &lt;summary&gt;</span>
+<span class="highlight-comment">' Creates a global parameter and uses it to label the set of given dimension elements </span>
+<span class="highlight-comment">' &lt;/summary&gt;</span>
+<span class="highlight-comment">' &lt;param name="document"&gt;Revit project document that contains the dimension.&lt;/param&gt;</span>
+<span class="highlight-comment">' &lt;param name="gpname"&gt;A name of the global parameter to create.&lt;/param&gt;</span>
+<span class="highlight-comment">' &lt;param name="value"&gt;Initial value of the global parameter&lt;/param&gt;</span>
+<span class="highlight-comment">' &lt;param name="dimset"&gt;A collection of dimension elements to drive by a global parameter&lt;/param&gt;</span>
+<span class="highlight-comment">' &lt;returns&gt;Number of actually labeled dimension&lt;/returns&gt;</span>
+<span class="highlight-keyword">Public</span> <span class="highlight-keyword">Function</span> DriveSelectedDimensions(document <span class="highlight-keyword">As</span> Document, name <span class="highlight-keyword">As</span> <span class="highlight-keyword">String</span>, value <span class="highlight-keyword">As</span> <span class="highlight-keyword">Double</span>, dimset <span class="highlight-keyword">As</span> ISet(<span class="highlight-keyword">Of</span> ElementId)) <span class="highlight-keyword">As</span> <span class="highlight-keyword">Integer</span>
+    <span class="highlight-keyword">If</span> <span class="highlight-keyword">Not</span> GlobalParametersManager.AreGlobalParametersAllowed(document) <span class="highlight-keyword">Then</span>
+        <span class="highlight-keyword">Throw</span> <span class="highlight-keyword">New</span> System.InvalidOperationException(<span class="highlight-literal">"Global parameters are not permitted in the given document"</span>)
+    <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+
+    <span class="highlight-keyword">If</span> <span class="highlight-keyword">Not</span> GlobalParametersManager.IsUniqueName(document, name) <span class="highlight-keyword">Then</span>
+        <span class="highlight-keyword">Throw</span> <span class="highlight-keyword">New</span> System.ArgumentException(<span class="highlight-literal">"Global parameter with such name already exists in the document"</span>, <span class="highlight-literal">"name"</span>)
+    <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+
+    <span class="highlight-keyword">If</span> value &lt;= <span class="highlight-number">0.0</span> <span class="highlight-keyword">Then</span>
+        <span class="highlight-keyword">Throw</span> <span class="highlight-keyword">New</span> System.ArgumentException(<span class="highlight-literal">"Value of a global parameter that drives dimension must be a positive number"</span>, <span class="highlight-literal">"value"</span>)
+    <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+
+    <span class="highlight-keyword">Dim</span> nLabeledDims <span class="highlight-keyword">As</span> <span class="highlight-keyword">Integer</span> = <span class="highlight-number">0</span>
+    <span class="highlight-comment">' number of labeled dimensions (for testing)</span>
+    <span class="highlight-comment">' creation of any element must be in a transaction</span>
+    <span class="highlight-keyword">Using</span> trans <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> Transaction(document, <span class="highlight-literal">"Create Global Parameter"</span>)
+        trans.Start()
+
+    <span class="highlight-comment">' create a GP with the given name and type Length</span>
+    <span class="highlight-comment">' Note: Length (or Angle) is required type of global parameters that are to label a dimension</span>
+    <span class="highlight-keyword">Dim</span> newgp <span class="highlight-keyword">As</span> GlobalParameter = GlobalParameter.Create(document, name, SpecTypeId.Length)
+    <span class="highlight-keyword">If</span> newgp <span class="highlight-keyword">IsNot</span> <span class="highlight-keyword">Nothing</span> <span class="highlight-keyword">Then</span>
+            newgp.SetValue(<span class="highlight-keyword">New</span> DoubleParameterValue(value))
+
+            <span class="highlight-comment">' use the parameter to label the given dimensions</span>
+            <span class="highlight-keyword">For</span> <span class="highlight-keyword">Each</span> elemid <span class="highlight-keyword">As</span> ElementId <span class="highlight-keyword">In</span> dimset
+                <span class="highlight-comment">' not just any dimension is allowed to be labeled</span>
+                <span class="highlight-comment">' check first to avoid exceptions</span>
+                <span class="highlight-keyword">If</span> newgp.CanLabelDimension(elemid) <span class="highlight-keyword">Then</span>
+                    newgp.LabelDimension(elemid)
+                    nLabeledDims += <span class="highlight-number">1</span>
+                <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+            <span class="highlight-keyword">Next</span>
+
+            trans.Commit()
+        <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+    <span class="highlight-keyword">End</span> <span class="highlight-keyword">Using</span>
+
+    <span class="highlight-comment">' for illustration purposes only, we'll test the results of our modifications </span>
+
+    <span class="highlight-comment">' 1.) Check the new parameter can be found</span>
+
+    <span class="highlight-keyword">Dim</span> gpid <span class="highlight-keyword">As</span> ElementId = GlobalParametersManager.FindByName(document, name)
+    <span class="highlight-keyword">If</span> gpid = ElementId.InvalidElementId <span class="highlight-keyword">Then</span>
+        TaskDialog.Show(<span class="highlight-literal">"Error"</span>, <span class="highlight-literal">"Failed to find a newly created global parameter"</span>)
+    <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+
+    <span class="highlight-keyword">Dim</span> gp <span class="highlight-keyword">As</span> GlobalParameter = <span class="highlight-keyword">TryCast</span>(document.GetElement(gpid), GlobalParameter)
+
+    <span class="highlight-comment">' 2. Check the number of labeled dimension is as expected</span>
+
+    <span class="highlight-keyword">Dim</span> labeledSet <span class="highlight-keyword">As</span> ISet(<span class="highlight-keyword">Of</span> ElementId) = gp.GetLabeledDimensions()
+    <span class="highlight-keyword">If</span> labeledSet.Count &lt;&gt; nLabeledDims <span class="highlight-keyword">Then</span>
+        TaskDialog.Show(<span class="highlight-literal">"Error"</span>, <span class="highlight-literal">"Have not found all the dimension that were labeled."</span>)
+    <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+
+    <span class="highlight-keyword">Return</span> labeledSet.Count
+<span class="highlight-keyword">End</span> <span class="highlight-keyword">Function</span></pre></div><div id="IDAGC_code_Div3" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div><div id="IDAGC_code_Div4" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div></div></div></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('seeAlso')" onkeypress="SectionExpandCollapse_CheckKey('seeAlso', event)" tabindex="0"><img id="seeAlsoToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="seeAlsoSection" class="collapsibleSection"><h4>Reference</h4><div><a href="b0e53a4a-84ad-abb4-358d-9797870f101b.htm">GlobalParameter Class</a></div><div><a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB Namespace</a></div></div></div></div><div id="PageFooter" class="pageFooter"><div class="feedbackLink">Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:revitapifeedback%40autodesk.com?Subject=Revit%202025%20API">Autodesk</a></div>
+        <script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        HT_mailLink.href += ": " + document.title + "\u0026body=" + encodeURIComponent("Your feedback is used to improve the documentation and the product. Your e-mail address will not be used for any other purpose and is disposed of after the issue you report is resolved. While working to resolve the issue that you report, you may be contacted via e-mail to get further details or clarification on the feedback you sent. After the issue you report has been addressed, you may receive an e-mail to let you know that your feedback has been addressed.");
+        </script></div></body></html>

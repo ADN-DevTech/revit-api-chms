@@ -1,0 +1,91 @@
+﻿<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="Microsoft.Help.SelfBranded" content="true" /><meta name="Language" content="en-us" /><meta name="Microsoft.Help.Locale" content="en-us" /><meta name="Microsoft.Help.TopicLocale" content="en-us" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" type="text/css" href="../styles/branding.css" /><link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" /><script type="text/javascript" src="../scripts/branding.js"></script><title>SketchEditScope.StartWithNewSketch Method</title><meta name="Title" content="StartWithNewSketch Method" /><meta name="Microsoft.Help.Id" content="M:Autodesk.Revit.DB.SketchEditScope.StartWithNewSketch(Autodesk.Revit.DB.ElementId)" /><meta name="Microsoft.Help.ContentType" content="Reference" /><meta name="System.Keywords" content="SketchEditScope.StartWithNewSketch method" /><meta name="System.Keywords" content="StartWithNewSketch method" /><meta name="Microsoft.Help.F1" content="Autodesk.Revit.DB.SketchEditScope.StartWithNewSketch" /><meta name="Microsoft.Help.F1" content="SketchEditScope.StartWithNewSketch" /><meta name="Microsoft.Help.F1" content="StartWithNewSketch" /><meta name="container" content="Autodesk.Revit.DB" /><meta name="file" content="4150d043-a5bf-60ba-b986-11f1dc01eedf" /><meta name="guid" content="4150d043-a5bf-60ba-b986-11f1dc01eedf" /><meta name="Microsoft.Help.Category" content="CSharp" /><meta name="Description" content="Starts a sketch edit mode for an element which, at this moment, doesn't have a sketch." /><link type="text/css" rel="stylesheet" href="../styles/highlight.css" /><script type="text/javascript" src="../scripts/highlight.js"> </script><link rel="stylesheet" type="text/css" href="../styles/branding-Help1.css" /></head><body onload="SetDefaultLanguage('cs');"><input type="hidden" id="userDataCache" class="userDataStyle" /><div id="PageHeader" class="pageHeader">Revit 2025 API</div><div class="pageBody"><div id="TopicContent" class="topicContent"><table class="titleTable"><tr><td class="titleColumn"><h1>Sketch<wbr />Edit<wbr />Scope<span id="LSTB4897ECB_0" data-languageSpecificText="cpp=::|nu=."></span>Start<wbr />With<wbr />New<wbr />Sketch Method</h1></td></tr></table><div class="summary">
+   Starts a sketch edit mode for an element which, at this moment, doesn't have a sketch.
+</div><br /><strong>Namespace:</strong> <a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB</a><br /><strong>Assembly:</strong> RevitAPI (in RevitAPI.dll) Version: 25.0.0.0 (25.0.0.0)<div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDB')" onkeypress="SectionExpandCollapse_CheckKey('IDB', event)" tabindex="0"><img id="IDBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Syntax</span></div><div id="IDBSection" class="collapsibleSection"><div id="IDAB" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAB_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cs','1','4');return false;">C#</a></div><div id="IDAB_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','vb','2','4');return false;">VB</a></div><div id="IDAB_tab3" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cpp','3','4');return false;">C++</a></div><div id="IDAB_tab4" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAB_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAB');return false;" title="Copy">Copy</a></div></div><div id="IDAB_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="keyword">public</span> <span class="keyword">void</span> <span class="identifier">StartWithNewSketch</span>(
+	<span class="identifier">ElementId</span> <span class="parameter">elementId</span>
+)</pre></div><div id="IDAB_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">Public</span> <span class="keyword">Sub</span> <span class="identifier">StartWithNewSketch</span> ( 
+	<span class="parameter">elementId</span> <span class="keyword">As</span> <span class="identifier">ElementId</span>
+)</pre></div><div id="IDAB_code_Div3" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">public</span>:
+<span class="keyword">void</span> <span class="identifier">StartWithNewSketch</span>(
+	<span class="identifier">ElementId</span>^ <span class="parameter">elementId</span>
+)</pre></div><div id="IDAB_code_Div4" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">member</span> <span class="identifier">StartWithNewSketch</span> : 
+        <span class="parameter">elementId</span> : <span class="identifier">ElementId</span> <span class="keyword">-&gt;</span> <span class="keyword">unit</span> </pre></div></div></div><h4>Parameters</h4><dl><dt class="has-text-weight-normal"><span class="parameter">elementId</span>  <a href="44f3f7b1-3229-3404-93c9-dc5e70337dd6.htm">ElementId</a></dt><dd>
+   The Element without sketch to be edited.
+</dd></dl></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDDC')" onkeypress="SectionExpandCollapse_CheckKey('IDDC', event)" tabindex="0"><img id="IDDCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Exceptions</span></div><div id="IDDCSection" class="collapsibleSection"><table><tr><th>Exception</th><th>Condition</th></tr><tr><td><a href="2e6e4206-97a8-dd4b-df5d-4269f4bb6088.htm">ArgumentException</a></td><td>
+   The ElementId elementId already has a sketch defined.
+   -or-
+   Element does not support sketch editing.
+   -or-
+   Failed to start the sketch edit mode.
+</td></tr><tr><td><a href="631e1424-60f4-929b-4e52-dda9dcd26316.htm">ArgumentNullException</a></td><td>
+   A non-optional argument was null
+</td></tr><tr><td><a href="9e715f03-3884-e539-4dd6-8d7545733adc.htm">InvalidOperationException</a></td><td>
+   This SketchEditScope is not permitted to start at this moment for one of the following possible reasons:
+   The document is in read-only state, or the document is currently modifiable,
+   or there already is another edit mode active in the document.
+   -or-
+   Cannot create sketch.
+</td></tr></table></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDBC')" onkeypress="SectionExpandCollapse_CheckKey('IDBC', event)" tabindex="0"><img id="IDBCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Remarks</span></div><div id="IDBCSection" class="collapsibleSection">
+   Some surface Revit elements (like some Walls or some Analytical Elements) does not have a valid sketch all the time so in order to edit them, we have to create a valid sketch first.
+   The application will need to start a transaction to actually make changes to the element.
+   SketchEditScope can only be started when there is no transaction active, thus it does not
+   work for commands running in automatic transaction mode.
+</div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDHC')" onkeypress="SectionExpandCollapse_CheckKey('IDHC', event)" tabindex="0"><img id="IDHCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Example</span></div><div id="IDHCSection" class="collapsibleSection"><div id="IDAHC" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAHC_tab1" class="codeSnippetContainerTabSingle">C#</div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAHC_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAHC');return false;" title="Copy">Copy</a></div></div><div id="IDAHC_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve">Document document = commandData.Application.ActiveUIDocument.Document;
+
+<span class="highlight-comment">//create analytical panel</span>
+AnalyticalPanel analyticalPanel = CreateAnalyticalPanel.CreateAMPanel(document);
+<span class="highlight-keyword">if</span> (analyticalPanel != <span class="highlight-keyword">null</span>)
+{
+   <span class="highlight-comment">// Start a sketch edit scope</span>
+   SketchEditScope sketchEditScope = <span class="highlight-keyword">new</span> SketchEditScope(document, <span class="highlight-literal">"Replace line with an arc"</span>);
+   sketchEditScope.StartWithNewSketch(analyticalPanel.Id);
+
+   <span class="highlight-keyword">using</span> (Transaction transaction = <span class="highlight-keyword">new</span> Transaction(document, <span class="highlight-literal">"Modify sketch"</span>))
+   {
+      transaction.Start();
+
+      <span class="highlight-comment">//replace a boundary line with an arc</span>
+      Line line = <span class="highlight-keyword">null</span>;
+      Sketch sketch = document.GetElement(analyticalPanel.SketchId) <span class="highlight-keyword">as</span> Sketch;
+      <span class="highlight-keyword">if</span> (sketch != <span class="highlight-keyword">null</span>)
+      {
+         <span class="highlight-keyword">foreach</span> (CurveArray curveArray <span class="highlight-keyword">in</span> sketch.Profile)
+         {
+            <span class="highlight-keyword">foreach</span> (Curve curve <span class="highlight-keyword">in</span> curveArray)
+            {
+               line = curve <span class="highlight-keyword">as</span> Line;
+               <span class="highlight-keyword">if</span> (line != <span class="highlight-keyword">null</span>)
+               {
+                  <span class="highlight-keyword">break</span>;
+               }
+            }
+            <span class="highlight-keyword">if</span> (line != <span class="highlight-keyword">null</span>)
+            {
+               <span class="highlight-keyword">break</span>;
+            }
+         }
+      }
+
+      <span class="highlight-comment">// Create arc</span>
+      XYZ normal = line.Direction.CrossProduct(XYZ.BasisZ).Normalize().Negate();
+      XYZ middle = line.GetEndPoint(<span class="highlight-number">0</span>).Add(line.Direction.Multiply(line.Length / <span class="highlight-number">2</span>));
+      Curve arc = Arc.Create(line.GetEndPoint(<span class="highlight-number">0</span>), line.GetEndPoint(<span class="highlight-number">1</span>), middle.Add(normal.Multiply(<span class="highlight-number">20</span>)));
+
+      <span class="highlight-comment">// Remove element referenced by the found line. </span>
+      document.Delete(line.Reference.ElementId);
+
+      <span class="highlight-comment">// Model curve creation automatically puts the curve into the sketch, if sketch edit scope is running.</span>
+      document.Create.NewModelCurve(arc, sketch.SketchPlane);
+
+      transaction.Commit();
+   }
+
+   sketchEditScope.Commit(<span class="highlight-keyword">new</span> FailurePreproccessor());
+
+}
+
+<span class="highlight-keyword">return</span> Result.Succeeded;</pre></div></div></div></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('seeAlso')" onkeypress="SectionExpandCollapse_CheckKey('seeAlso', event)" tabindex="0"><img id="seeAlsoToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="seeAlsoSection" class="collapsibleSection"><h4>Reference</h4><div><a href="8538b361-08df-9fd2-93bb-1790a09130f7.htm">SketchEditScope Class</a></div><div><a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB Namespace</a></div></div></div></div><div id="PageFooter" class="pageFooter"><div class="feedbackLink">Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:revitapifeedback%40autodesk.com?Subject=Revit%202025%20API">Autodesk</a></div>
+        <script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        HT_mailLink.href += ": " + document.title + "\u0026body=" + encodeURIComponent("Your feedback is used to improve the documentation and the product. Your e-mail address will not be used for any other purpose and is disposed of after the issue you report is resolved. While working to resolve the issue that you report, you may be contacted via e-mail to get further details or clarification on the feedback you sent. After the issue you report has been addressed, you may receive an e-mail to let you know that your feedback has been addressed.");
+        </script></div></body></html>

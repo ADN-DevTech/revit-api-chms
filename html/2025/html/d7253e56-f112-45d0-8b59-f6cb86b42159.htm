@@ -1,0 +1,159 @@
+﻿<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="Microsoft.Help.SelfBranded" content="true" /><meta name="Language" content="en-us" /><meta name="Microsoft.Help.Locale" content="en-us" /><meta name="Microsoft.Help.TopicLocale" content="en-us" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" type="text/css" href="../styles/branding.css" /><link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" /><script type="text/javascript" src="../scripts/branding.js"></script><title>AssemblyInstance.CompareAssemblyInstances Method</title><meta name="Title" content="CompareAssemblyInstances Method" /><meta name="Microsoft.Help.Id" content="M:Autodesk.Revit.DB.AssemblyInstance.CompareAssemblyInstances(Autodesk.Revit.DB.AssemblyInstance,Autodesk.Revit.DB.AssemblyInstance)" /><meta name="Microsoft.Help.ContentType" content="Reference" /><meta name="System.Keywords" content="AssemblyInstance.CompareAssemblyInstances method" /><meta name="System.Keywords" content="CompareAssemblyInstances method" /><meta name="Microsoft.Help.F1" content="Autodesk.Revit.DB.AssemblyInstance.CompareAssemblyInstances" /><meta name="Microsoft.Help.F1" content="AssemblyInstance.CompareAssemblyInstances" /><meta name="Microsoft.Help.F1" content="CompareAssemblyInstances" /><meta name="container" content="Autodesk.Revit.DB" /><meta name="file" content="d7253e56-f112-45d0-8b59-f6cb86b42159" /><meta name="guid" content="d7253e56-f112-45d0-8b59-f6cb86b42159" /><meta name="Microsoft.Help.Category" content="CSharp" /><meta name="Microsoft.Help.Category" content="VB" /><meta name="Description" content="Compares two assembly instances and returns a result with details about the differences" /><link type="text/css" rel="stylesheet" href="../styles/highlight.css" /><script type="text/javascript" src="../scripts/highlight.js"> </script><link rel="stylesheet" type="text/css" href="../styles/branding-Help1.css" /></head><body onload="SetDefaultLanguage('cs');"><input type="hidden" id="userDataCache" class="userDataStyle" /><div id="PageHeader" class="pageHeader">Revit 2025 API</div><div class="pageBody"><div id="TopicContent" class="topicContent"><table class="titleTable"><tr><td class="titleColumn"><h1>Assembly<wbr />Instance<span id="LSTD6C29EAC_0" data-languageSpecificText="cpp=::|nu=."></span>Compare<wbr />Assembly<wbr />Instances Method</h1></td></tr></table><div class="summary">
+   Compares two assembly instances and returns a result with details about the differences
+</div><br /><strong>Namespace:</strong> <a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB</a><br /><strong>Assembly:</strong> RevitAPI (in RevitAPI.dll) Version: 25.0.0.0 (25.0.0.0)<div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDB')" onkeypress="SectionExpandCollapse_CheckKey('IDB', event)" tabindex="0"><img id="IDBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Syntax</span></div><div id="IDBSection" class="collapsibleSection"><div id="IDAB" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAB_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cs','1','4');return false;">C#</a></div><div id="IDAB_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','vb','2','4');return false;">VB</a></div><div id="IDAB_tab3" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cpp','3','4');return false;">C++</a></div><div id="IDAB_tab4" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAB_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAB');return false;" title="Copy">Copy</a></div></div><div id="IDAB_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="keyword">public</span> <span class="keyword">static</span> <span class="identifier">AssemblyDifference</span> <span class="identifier">CompareAssemblyInstances</span>(
+	<span class="identifier">AssemblyInstance</span> <span class="parameter">instance1</span>,
+	<span class="identifier">AssemblyInstance</span> <span class="parameter">instance2</span>
+)</pre></div><div id="IDAB_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">Public</span> <span class="keyword">Shared</span> <span class="keyword">Function</span> <span class="identifier">CompareAssemblyInstances</span> ( 
+	<span class="parameter">instance1</span> <span class="keyword">As</span> <span class="identifier">AssemblyInstance</span>,
+	<span class="parameter">instance2</span> <span class="keyword">As</span> <span class="identifier">AssemblyInstance</span>
+) <span class="keyword">As</span> <span class="identifier">AssemblyDifference</span></pre></div><div id="IDAB_code_Div3" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">public</span>:
+<span class="keyword">static</span> <span class="identifier">AssemblyDifference</span>^ <span class="identifier">CompareAssemblyInstances</span>(
+	<span class="identifier">AssemblyInstance</span>^ <span class="parameter">instance1</span>, 
+	<span class="identifier">AssemblyInstance</span>^ <span class="parameter">instance2</span>
+)</pre></div><div id="IDAB_code_Div4" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">static</span> <span class="keyword">member</span> <span class="identifier">CompareAssemblyInstances</span> : 
+        <span class="parameter">instance1</span> : <span class="identifier">AssemblyInstance</span> * 
+        <span class="parameter">instance2</span> : <span class="identifier">AssemblyInstance</span> <span class="keyword">-&gt;</span> <span class="identifier">AssemblyDifference</span> </pre></div></div></div><h4>Parameters</h4><dl><dt class="has-text-weight-normal"><span class="parameter">instance1</span>  <a href="4e60704c-dfe3-72b6-7892-6440503fa078.htm">AssemblyInstance</a></dt><dd>
+   The first assembly instance to compare
+</dd><dt class="has-text-weight-normal"><span class="parameter">instance2</span>  <a href="4e60704c-dfe3-72b6-7892-6440503fa078.htm">AssemblyInstance</a></dt><dd>
+   the second assembly instance to compare
+</dd></dl><h4>Return Value</h4><a href="51d7603f-be85-5d67-eeb1-7cd7a6d199a8.htm">AssemblyDifference</a><br />
+   An object describing the difference between the two instances
+</div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDFC')" onkeypress="SectionExpandCollapse_CheckKey('IDFC', event)" tabindex="0"><img id="IDFCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Exceptions</span></div><div id="IDFCSection" class="collapsibleSection"><table><tr><th>Exception</th><th>Condition</th></tr><tr><td><a href="631e1424-60f4-929b-4e52-dda9dcd26316.htm">ArgumentNullException</a></td><td>
+   A non-optional argument was null
+</td></tr></table></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDBC')" onkeypress="SectionExpandCollapse_CheckKey('IDBC', event)" tabindex="0"><img id="IDBCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Remarks</span></div><div id="IDBCSection" class="collapsibleSection">
+   Only the first found difference is returned.
+   If the instances are identical, AssemblyDifferenceNone will be returned.
+</div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDHC')" onkeypress="SectionExpandCollapse_CheckKey('IDHC', event)" tabindex="0"><img id="IDHCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Example</span></div><div id="IDHCSection" class="collapsibleSection"><div id="IDAHC" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAHC_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAHC','cs','1','4');return false;">C#</a></div><div id="IDAHC_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAHC','vb','2','4');return false;">VB</a></div><div id="IDAHC_tab3" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDAHC','cpp','3','4');return false;">C++</a></div><div id="IDAHC_tab4" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDAHC','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAHC_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAHC');return false;" title="Copy">Copy</a></div></div><div id="IDAHC_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="highlight-comment">// Identify the difference, if any, between two assembly instances</span>
+<span class="highlight-keyword">void</span> FindAssemblyDifferences(AssemblyInstance instance1, AssemblyInstance instance2)
+{
+    Autodesk.Revit.DB.Document doc = instance1.Document;
+    AssemblyDifference difference = AssemblyInstance.CompareAssemblyInstances(instance1, instance2);
+
+    AssemblyDifferenceNone diffNone = difference <span class="highlight-keyword">as</span> AssemblyDifferenceNone;
+    <span class="highlight-keyword">if</span> (diffNone != <span class="highlight-keyword">null</span>)
+    {
+        TaskDialog.Show(<span class="highlight-literal">"Revit"</span>, <span class="highlight-literal">"Assemblies are identical"</span>);
+        <span class="highlight-keyword">return</span>;
+    }
+
+    AssemblyDifferenceConfiguration diffConfig = difference <span class="highlight-keyword">as</span> AssemblyDifferenceConfiguration;
+    <span class="highlight-keyword">if</span> (diffConfig != <span class="highlight-keyword">null</span>)
+    {
+        TaskDialog.Show(<span class="highlight-literal">"Revit"</span>, <span class="highlight-literal">"Elements are not arranged in space relative to each other in the same way"</span>);
+        <span class="highlight-keyword">return</span>;
+    }
+
+    AssemblyDifferenceMemberCount diffMemberCount = difference <span class="highlight-keyword">as</span> AssemblyDifferenceMemberCount;
+    <span class="highlight-keyword">if</span> (diffMemberCount != <span class="highlight-keyword">null</span>)
+    {
+        TaskDialog.Show(<span class="highlight-literal">"Revit"</span>, <span class="highlight-literal">"Elements counts differ: "</span> + diffMemberCount.Count1 + <span class="highlight-literal">" &amp; "</span> + diffMemberCount.Count2);
+        <span class="highlight-keyword">return</span>;
+    }
+
+    AssemblyDifferenceNamingCategory diffNameCat = difference <span class="highlight-keyword">as</span> AssemblyDifferenceNamingCategory;
+    <span class="highlight-keyword">if</span> (diffNameCat != <span class="highlight-keyword">null</span>)
+    {
+        TaskDialog.Show(<span class="highlight-literal">"Revit"</span>, <span class="highlight-literal">"Naming categories differ: "</span> +
+            Category.GetCategory(doc, diffNameCat.NamingCategoryId1).Name + <span class="highlight-literal">" &amp; "</span> +
+            Category.GetCategory(doc, diffNameCat.NamingCategoryId2).Name);                   
+        <span class="highlight-keyword">return</span>;
+    }
+
+    AssemblyDifferenceMemberDifference memberDifference = difference <span class="highlight-keyword">as</span> AssemblyDifferenceMemberDifference;
+    <span class="highlight-keyword">if</span> (memberDifference != <span class="highlight-keyword">null</span>)
+    {
+        AssemblyMemberDifference assemblyMemberDifference = memberDifference.MemberDifference <span class="highlight-keyword">as</span> AssemblyMemberDifference;
+
+        AssemblyMemberDifferentCategory differentCategory = assemblyMemberDifference <span class="highlight-keyword">as</span> AssemblyMemberDifferentCategory;
+        <span class="highlight-keyword">if</span> (differentCategory != <span class="highlight-keyword">null</span>)
+        {
+            TaskDialog.Show(<span class="highlight-literal">"Revit"</span>, <span class="highlight-literal">"Element categories differ: "</span> +
+                Category.GetCategory(doc, diffNameCat.NamingCategoryId1).Name + <span class="highlight-literal">" &amp; "</span> +
+                Category.GetCategory(doc, diffNameCat.NamingCategoryId2).Name);
+            <span class="highlight-keyword">return</span>;
+        }
+        AssemblyMemberDifferentGeometry differentGeometry = assemblyMemberDifference <span class="highlight-keyword">as</span> AssemblyMemberDifferentGeometry;
+        <span class="highlight-keyword">if</span> (differentGeometry != <span class="highlight-keyword">null</span>)
+        {
+            TaskDialog.Show(<span class="highlight-literal">"Revit"</span>, <span class="highlight-literal">"Member geometry differs"</span>);
+            <span class="highlight-keyword">return</span>;
+        }
+        AssemblyMemberDifferentParameters differentParameters = assemblyMemberDifference <span class="highlight-keyword">as</span> AssemblyMemberDifferentParameters;
+        <span class="highlight-keyword">if</span> (differentParameters != <span class="highlight-keyword">null</span>)
+        {
+            TaskDialog.Show(<span class="highlight-literal">"Revit"</span>, <span class="highlight-literal">"Member parameters differs"</span>);
+            <span class="highlight-keyword">return</span>;
+        }
+        AssemblyMemberDifferentType differentType = assemblyMemberDifference <span class="highlight-keyword">as</span> AssemblyMemberDifferentType;
+        <span class="highlight-keyword">if</span> (differentType != <span class="highlight-keyword">null</span>)
+        {
+            TaskDialog.Show(<span class="highlight-literal">"Revit"</span>, <span class="highlight-literal">"Element types differ: "</span> + doc.GetElement(differentType.TypeId1).Name + <span class="highlight-literal">" &amp; "</span> + doc.GetElement(differentType.TypeId2).Name);
+            <span class="highlight-keyword">return</span>;
+        }
+    }
+    <span class="highlight-keyword">return</span>;
+}</pre></div><div id="IDAHC_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="highlight-comment">' Identify the difference, if any, between two assembly instances</span>
+<span class="highlight-keyword">Private</span> <span class="highlight-keyword">Sub</span> FindAssemblyDifferences(instance1 <span class="highlight-keyword">As</span> AssemblyInstance, instance2 <span class="highlight-keyword">As</span> AssemblyInstance)
+    <span class="highlight-keyword">Dim</span> doc <span class="highlight-keyword">As</span> Autodesk.Revit.DB.Document = instance1.Document
+    <span class="highlight-keyword">Dim</span> difference <span class="highlight-keyword">As</span> AssemblyDifference = AssemblyInstance.CompareAssemblyInstances(instance1, instance2)
+
+    <span class="highlight-keyword">Dim</span> diffNone <span class="highlight-keyword">As</span> AssemblyDifferenceNone = <span class="highlight-keyword">TryCast</span>(difference, AssemblyDifferenceNone)
+    <span class="highlight-keyword">If</span> diffNone <span class="highlight-keyword">IsNot</span> <span class="highlight-keyword">Nothing</span> <span class="highlight-keyword">Then</span>
+        TaskDialog.Show(<span class="highlight-literal">"Revit"</span>, <span class="highlight-literal">"Assemblies are identical"</span>)
+        <span class="highlight-keyword">Return</span>
+    <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+
+    <span class="highlight-keyword">Dim</span> diffConfig <span class="highlight-keyword">As</span> AssemblyDifferenceConfiguration = <span class="highlight-keyword">TryCast</span>(difference, AssemblyDifferenceConfiguration)
+    <span class="highlight-keyword">If</span> diffConfig <span class="highlight-keyword">IsNot</span> <span class="highlight-keyword">Nothing</span> <span class="highlight-keyword">Then</span>
+        TaskDialog.Show(<span class="highlight-literal">"Revit"</span>, <span class="highlight-literal">"Elements are not arranged in space relative to each other in the same way"</span>)
+        <span class="highlight-keyword">Return</span>
+    <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+
+    <span class="highlight-keyword">Dim</span> diffMemberCount <span class="highlight-keyword">As</span> AssemblyDifferenceMemberCount = <span class="highlight-keyword">TryCast</span>(difference, AssemblyDifferenceMemberCount)
+    <span class="highlight-keyword">If</span> diffMemberCount <span class="highlight-keyword">IsNot</span> <span class="highlight-keyword">Nothing</span> <span class="highlight-keyword">Then</span>
+        TaskDialog.Show(<span class="highlight-literal">"Revit"</span>, <span class="highlight-literal">"Elements counts differ: "</span> + diffMemberCount.Count1 + <span class="highlight-literal">" &amp; "</span> + diffMemberCount.Count2)
+        <span class="highlight-keyword">Return</span>
+    <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+
+    <span class="highlight-keyword">Dim</span> diffNameCat <span class="highlight-keyword">As</span> AssemblyDifferenceNamingCategory = <span class="highlight-keyword">TryCast</span>(difference, AssemblyDifferenceNamingCategory)
+    <span class="highlight-keyword">If</span> diffNameCat <span class="highlight-keyword">IsNot</span> <span class="highlight-keyword">Nothing</span> <span class="highlight-keyword">Then</span>
+        <span class="highlight-keyword">Dim</span> catInt1 <span class="highlight-keyword">As</span> <span class="highlight-keyword">Long</span> = diffNameCat.NamingCategoryId1.Value
+        <span class="highlight-keyword">Dim</span> catInt2 <span class="highlight-keyword">As</span> <span class="highlight-keyword">Long</span> = diffNameCat.NamingCategoryId2.Value
+        TaskDialog.Show(<span class="highlight-literal">"Revit"</span>, <span class="highlight-literal">"Naming categories differ: "</span> + doc.Settings.Categories.Item(<span class="highlight-keyword">DirectCast</span>(catInt1, BuiltInCategory)).Name + <span class="highlight-literal">" &amp; "</span> + doc.Settings.Categories.Item(<span class="highlight-keyword">DirectCast</span>(catInt2, BuiltInCategory)).Name)
+        <span class="highlight-keyword">Return</span>
+    <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+
+    <span class="highlight-keyword">Dim</span> memberDifference <span class="highlight-keyword">As</span> AssemblyDifferenceMemberDifference = <span class="highlight-keyword">TryCast</span>(difference, AssemblyDifferenceMemberDifference)
+    <span class="highlight-keyword">If</span> memberDifference <span class="highlight-keyword">IsNot</span> <span class="highlight-keyword">Nothing</span> <span class="highlight-keyword">Then</span>
+        <span class="highlight-keyword">Dim</span> assemblyMemberDifference <span class="highlight-keyword">As</span> AssemblyMemberDifference = <span class="highlight-keyword">TryCast</span>(memberDifference.MemberDifference, AssemblyMemberDifference)
+
+        <span class="highlight-keyword">Dim</span> differentCategory <span class="highlight-keyword">As</span> AssemblyMemberDifferentCategory = <span class="highlight-keyword">TryCast</span>(assemblyMemberDifference, AssemblyMemberDifferentCategory)
+        <span class="highlight-keyword">If</span> differentCategory <span class="highlight-keyword">IsNot</span> <span class="highlight-keyword">Nothing</span> <span class="highlight-keyword">Then</span>
+            <span class="highlight-keyword">Dim</span> int1 <span class="highlight-keyword">As</span> <span class="highlight-keyword">Long</span> = differentCategory.CategoryId1.Value
+            <span class="highlight-keyword">Dim</span> int2 <span class="highlight-keyword">As</span> <span class="highlight-keyword">Long</span> = differentCategory.CategoryId2.Value
+            TaskDialog.Show(<span class="highlight-literal">"Revit"</span>, <span class="highlight-literal">"Element categories differ: "</span> + doc.Settings.Categories.Item(<span class="highlight-keyword">DirectCast</span>(int1, BuiltInCategory)).Name + <span class="highlight-literal">" &amp; "</span> + doc.Settings.Categories.Item(<span class="highlight-keyword">DirectCast</span>(int2, BuiltInCategory)).Name)
+            <span class="highlight-keyword">Return</span>
+        <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+        <span class="highlight-keyword">Dim</span> differentGeometry <span class="highlight-keyword">As</span> AssemblyMemberDifferentGeometry = <span class="highlight-keyword">TryCast</span>(assemblyMemberDifference, AssemblyMemberDifferentGeometry)
+        <span class="highlight-keyword">If</span> differentGeometry <span class="highlight-keyword">IsNot</span> <span class="highlight-keyword">Nothing</span> <span class="highlight-keyword">Then</span>
+            TaskDialog.Show(<span class="highlight-literal">"Revit"</span>, <span class="highlight-literal">"Member geometry differs"</span>)
+            <span class="highlight-keyword">Return</span>
+        <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+        <span class="highlight-keyword">Dim</span> differentParameters <span class="highlight-keyword">As</span> AssemblyMemberDifferentParameters = <span class="highlight-keyword">TryCast</span>(assemblyMemberDifference, AssemblyMemberDifferentParameters)
+        <span class="highlight-keyword">If</span> differentParameters <span class="highlight-keyword">IsNot</span> <span class="highlight-keyword">Nothing</span> <span class="highlight-keyword">Then</span>
+            TaskDialog.Show(<span class="highlight-literal">"Revit"</span>, <span class="highlight-literal">"Member parameters differs"</span>)
+            <span class="highlight-keyword">Return</span>
+        <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+        <span class="highlight-keyword">Dim</span> differentType <span class="highlight-keyword">As</span> AssemblyMemberDifferentType = <span class="highlight-keyword">TryCast</span>(assemblyMemberDifference, AssemblyMemberDifferentType)
+        <span class="highlight-keyword">If</span> differentType <span class="highlight-keyword">IsNot</span> <span class="highlight-keyword">Nothing</span> <span class="highlight-keyword">Then</span>
+            TaskDialog.Show(<span class="highlight-literal">"Revit"</span>, <span class="highlight-literal">"Element types differ: "</span> + doc.GetElement(differentType.TypeId1).Name + <span class="highlight-literal">" &amp; "</span> + doc.GetElement(differentType.TypeId2).Name)
+            <span class="highlight-keyword">Return</span>
+        <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+    <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+    <span class="highlight-keyword">Return</span>
+<span class="highlight-keyword">End</span> <span class="highlight-keyword">Sub</span></pre></div><div id="IDAHC_code_Div3" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div><div id="IDAHC_code_Div4" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div></div></div></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('seeAlso')" onkeypress="SectionExpandCollapse_CheckKey('seeAlso', event)" tabindex="0"><img id="seeAlsoToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="seeAlsoSection" class="collapsibleSection"><h4>Reference</h4><div><a href="4e60704c-dfe3-72b6-7892-6440503fa078.htm">AssemblyInstance Class</a></div><div><a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB Namespace</a></div></div></div></div><div id="PageFooter" class="pageFooter"><div class="feedbackLink">Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:revitapifeedback%40autodesk.com?Subject=Revit%202025%20API">Autodesk</a></div>
+        <script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        HT_mailLink.href += ": " + document.title + "\u0026body=" + encodeURIComponent("Your feedback is used to improve the documentation and the product. Your e-mail address will not be used for any other purpose and is disposed of after the issue you report is resolved. While working to resolve the issue that you report, you may be contacted via e-mail to get further details or clarification on the feedback you sent. After the issue you report has been addressed, you may receive an e-mail to let you know that your feedback has been addressed.");
+        </script></div></body></html>

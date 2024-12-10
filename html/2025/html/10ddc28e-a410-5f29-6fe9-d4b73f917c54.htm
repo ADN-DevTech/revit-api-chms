@@ -1,0 +1,119 @@
+﻿<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="Microsoft.Help.SelfBranded" content="true" /><meta name="Language" content="en-us" /><meta name="Microsoft.Help.Locale" content="en-us" /><meta name="Microsoft.Help.TopicLocale" content="en-us" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" type="text/css" href="../styles/branding.css" /><link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" /><script type="text/javascript" src="../scripts/branding.js"></script><title>Rebar.CreateFromCurvesAndShape(Document, RebarShape, RebarBarType, RebarHookType, RebarHookType, Element, XYZ, IList&lt;Curve&gt;, RebarHookOrientation, RebarHookOrientation) Method</title><meta name="Title" content="CreateFromCurvesAndShape(Document, RebarShape, RebarBarType, RebarHookType, RebarHookType, Element, XYZ, IList&lt;Curve&gt;, RebarHookOrientation, RebarHookOrientation) Method" /><meta name="Microsoft.Help.Id" content="M:Autodesk.Revit.DB.Structure.Rebar.CreateFromCurvesAndShape(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.Structure.RebarShape,Autodesk.Revit.DB.Structure.RebarBarType,Autodesk.Revit.DB.Structure.RebarHookType,Autodesk.Revit.DB.Structure.RebarHookType,Autodesk.Revit.DB.Element,Autodesk.Revit.DB.XYZ,System.Collections.Generic.IList{Autodesk.Revit.DB.Curve},Autodesk.Revit.DB.Structure.RebarHookOrientation,Autodesk.Revit.DB.Structure.RebarHookOrientation)" /><meta name="Microsoft.Help.ContentType" content="Reference" /><meta name="container" content="Autodesk.Revit.DB.Structure" /><meta name="file" content="10ddc28e-a410-5f29-6fe9-d4b73f917c54" /><meta name="guid" content="10ddc28e-a410-5f29-6fe9-d4b73f917c54" /><meta name="Description" content="Creates a new instance of a shape driven Rebar element within the project. The instance will have the default shape parameters from the RebarShape." /><link rel="stylesheet" type="text/css" href="../styles/branding-Help1.css" /></head><body onload="SetDefaultLanguage('cs');"><input type="hidden" id="userDataCache" class="userDataStyle" /><div id="PageHeader" class="pageHeader">Revit 2025 API</div><div class="pageBody"><div id="TopicContent" class="topicContent"><table class="titleTable"><tr><td class="titleColumn"><h1>Rebar<span id="LST4D58DFAB_0" data-languageSpecificText="cpp=::|nu=."></span>Create<wbr />From<wbr />Curves<wbr />And<wbr />Shape(Document, Rebar<wbr />Shape, Rebar<wbr />Bar<wbr />Type, Rebar<wbr />Hook<wbr />Type, Rebar<wbr />Hook<wbr />Type, Element, XYZ, IList<span id="LST4D58DFAB_1" data-languageSpecificText="cpp=&lt;|cs=&lt;|fs=&lt;|vb=(Of |nu=("></span>Curve<span id="LST4D58DFAB_2" data-languageSpecificText="cpp=&gt;|cs=&gt;|fs=&gt;|vb=)|nu=)"></span>, Rebar<wbr />Hook<wbr />Orientation, Rebar<wbr />Hook<wbr />Orientation) Method</h1></td></tr></table><div class="summary">
+   Creates a new instance of a shape driven Rebar element within the project.
+   The instance will have the default shape parameters from the RebarShape.
+   If the RebarShapeDefinesHooks flag in ReinforcementSettings has been set to true,
+   then both the curves and hooks must match the RebarShape definition.
+   Otherwise, the hooks can be different than the defaults specified in the RebarShape
+</div><br /><strong>Namespace:</strong> <a href="d586b341-f687-9d90-e96d-255806b7d4fc.htm">Autodesk.Revit.DB.Structure</a><br /><strong>Assembly:</strong> RevitAPI (in RevitAPI.dll) Version: 25.0.0.0 (25.0.0.0)<div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDB')" onkeypress="SectionExpandCollapse_CheckKey('IDB', event)" tabindex="0"><img id="IDBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Syntax</span></div><div id="IDBSection" class="collapsibleSection"><div id="IDAB" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAB_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cs','1','4');return false;">C#</a></div><div id="IDAB_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','vb','2','4');return false;">VB</a></div><div id="IDAB_tab3" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cpp','3','4');return false;">C++</a></div><div id="IDAB_tab4" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAB_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAB');return false;" title="Copy">Copy</a></div></div><div id="IDAB_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="keyword">public</span> <span class="keyword">static</span> <span class="identifier">Rebar</span> <span class="identifier">CreateFromCurvesAndShape</span>(
+	<span class="identifier">Document</span> <span class="parameter">doc</span>,
+	<span class="identifier">RebarShape</span> <span class="parameter">rebarShape</span>,
+	<span class="identifier">RebarBarType</span> <span class="parameter">barType</span>,
+	<span class="identifier">RebarHookType</span> <span class="parameter">startHook</span>,
+	<span class="identifier">RebarHookType</span> <span class="parameter">endHook</span>,
+	<span class="identifier">Element</span> <span class="parameter">host</span>,
+	<span class="identifier">XYZ</span> <span class="parameter">norm</span>,
+	<span class="identifier">IList</span>&lt;<span class="identifier">Curve</span>&gt; <span class="parameter">curves</span>,
+	<span class="identifier">RebarHookOrientation</span> <span class="parameter">startHookOrient</span>,
+	<span class="identifier">RebarHookOrientation</span> <span class="parameter">endHookOrient</span>
+)</pre></div><div id="IDAB_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">Public</span> <span class="keyword">Shared</span> <span class="keyword">Function</span> <span class="identifier">CreateFromCurvesAndShape</span> ( 
+	<span class="parameter">doc</span> <span class="keyword">As</span> <span class="identifier">Document</span>,
+	<span class="parameter">rebarShape</span> <span class="keyword">As</span> <span class="identifier">RebarShape</span>,
+	<span class="parameter">barType</span> <span class="keyword">As</span> <span class="identifier">RebarBarType</span>,
+	<span class="parameter">startHook</span> <span class="keyword">As</span> <span class="identifier">RebarHookType</span>,
+	<span class="parameter">endHook</span> <span class="keyword">As</span> <span class="identifier">RebarHookType</span>,
+	<span class="parameter">host</span> <span class="keyword">As</span> <span class="identifier">Element</span>,
+	<span class="parameter">norm</span> <span class="keyword">As</span> <span class="identifier">XYZ</span>,
+	<span class="parameter">curves</span> <span class="keyword">As</span> <span class="identifier">IList</span>(<span class="keyword">Of</span> <span class="identifier">Curve</span>),
+	<span class="parameter">startHookOrient</span> <span class="keyword">As</span> <span class="identifier">RebarHookOrientation</span>,
+	<span class="parameter">endHookOrient</span> <span class="keyword">As</span> <span class="identifier">RebarHookOrientation</span>
+) <span class="keyword">As</span> <span class="identifier">Rebar</span></pre></div><div id="IDAB_code_Div3" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">public</span>:
+<span class="keyword">static</span> <span class="identifier">Rebar</span>^ <span class="identifier">CreateFromCurvesAndShape</span>(
+	<span class="identifier">Document</span>^ <span class="parameter">doc</span>, 
+	<span class="identifier">RebarShape</span>^ <span class="parameter">rebarShape</span>, 
+	<span class="identifier">RebarBarType</span>^ <span class="parameter">barType</span>, 
+	<span class="identifier">RebarHookType</span>^ <span class="parameter">startHook</span>, 
+	<span class="identifier">RebarHookType</span>^ <span class="parameter">endHook</span>, 
+	<span class="identifier">Element</span>^ <span class="parameter">host</span>, 
+	<span class="identifier">XYZ</span>^ <span class="parameter">norm</span>, 
+	<span class="identifier">IList</span>&lt;<span class="identifier">Curve</span>^&gt;^ <span class="parameter">curves</span>, 
+	<span class="identifier">RebarHookOrientation</span> <span class="parameter">startHookOrient</span>, 
+	<span class="identifier">RebarHookOrientation</span> <span class="parameter">endHookOrient</span>
+)</pre></div><div id="IDAB_code_Div4" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">static</span> <span class="keyword">member</span> <span class="identifier">CreateFromCurvesAndShape</span> : 
+        <span class="parameter">doc</span> : <span class="identifier">Document</span> * 
+        <span class="parameter">rebarShape</span> : <span class="identifier">RebarShape</span> * 
+        <span class="parameter">barType</span> : <span class="identifier">RebarBarType</span> * 
+        <span class="parameter">startHook</span> : <span class="identifier">RebarHookType</span> * 
+        <span class="parameter">endHook</span> : <span class="identifier">RebarHookType</span> * 
+        <span class="parameter">host</span> : <span class="identifier">Element</span> * 
+        <span class="parameter">norm</span> : <span class="identifier">XYZ</span> * 
+        <span class="parameter">curves</span> : <span class="identifier">IList</span>&lt;<span class="identifier">Curve</span>&gt; * 
+        <span class="parameter">startHookOrient</span> : <span class="identifier">RebarHookOrientation</span> * 
+        <span class="parameter">endHookOrient</span> : <span class="identifier">RebarHookOrientation</span> <span class="keyword">-&gt;</span> <span class="identifier">Rebar</span> </pre></div></div></div><h4>Parameters</h4><dl><dt class="has-text-weight-normal"><span class="parameter">doc</span>  <a href="db03274b-a107-aa32-9034-f3e0df4bb1ec.htm">Document</a></dt><dd>
+   A document.
+</dd><dt class="has-text-weight-normal"><span class="parameter">rebarShape</span>  <a href="0a370e32-eaba-785e-7e1f-9330929525fc.htm">RebarShape</a></dt><dd>
+   A RebarShape element that defines the shape of the rebar.
+   A RebarShape element matches curves and hooks.
+   A RebarShape element provides RebarStyle of the rebar.
+</dd><dt class="has-text-weight-normal"><span class="parameter">barType</span>  <a href="467b44cc-54e7-3ecf-07e1-ad15d05fe800.htm">RebarBarType</a></dt><dd>
+   A RebarBarType element that defines bar diameter, bend radius and material of the rebar.
+</dd><dt class="has-text-weight-normal"><span class="parameter">startHook</span>  <a href="3c7a78d5-f92b-e58b-e7c9-7927537498fd.htm">RebarHookType</a></dt><dd>
+   A RebarHookType element that defines the hook for the start of the bar.
+   If this parameter is <span class="keyword"><span id="LST4D58DFAB_3" data-languageSpecificText="cpp=nullptr|vb=Nothing|nu=null"></span></span>, it means to create a rebar with no hook.
+</dd><dt class="has-text-weight-normal"><span class="parameter">endHook</span>  <a href="3c7a78d5-f92b-e58b-e7c9-7927537498fd.htm">RebarHookType</a></dt><dd>
+   A RebarHookType element that defines the hook for the end of the bar.
+   If this parameter is <span class="keyword"><span id="LST4D58DFAB_4" data-languageSpecificText="cpp=nullptr|vb=Nothing|nu=null"></span></span>, it means to create a rebar with no hook.
+</dd><dt class="has-text-weight-normal"><span class="parameter">host</span>  <a href="eb16114f-69ea-f4de-0d0d-f7388b105a16.htm">Element</a></dt><dd>
+   The element to which the rebar belongs. The element must support rebar hosting;
+   <span class="noLink">[!:Autodesk::Revit::DB::Structure::RebarHostData]</span>.
+</dd><dt class="has-text-weight-normal"><span class="parameter">norm</span>  <a href="c2fd995c-95c0-58fb-f5de-f3246cbc5600.htm">XYZ</a></dt><dd>
+   The normal to the plane that the rebar curves lie on.
+</dd><dt class="has-text-weight-normal"><span class="parameter">curves</span>  <a href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1" target="_blank" rel="noopener noreferrer">IList</a><span id="LST4D58DFAB_5" data-languageSpecificText="cpp=&lt;|cs=&lt;|fs=&lt;|vb=(Of |nu=("></span><a href="400cc9b6-9ff7-de85-6fd8-c20002209d25.htm">Curve</a><span id="LST4D58DFAB_6" data-languageSpecificText="cpp=&gt;|cs=&gt;|fs=&gt;|vb=)|nu=)"></span></dt><dd>
+   An array of curves that define the shape of the rebar curves.
+   They must belong to the plane defined by the normal and origin.
+   Bends and hooks should not be included in the array of curves.
+</dd><dt class="has-text-weight-normal"><span class="parameter">startHookOrient</span>  <a href="e8365754-0811-8d4e-864a-55bf34af3a87.htm">RebarHookOrientation</a></dt><dd>
+   Defines the orientation of the hook plane at the start of the rebar with respect to the orientation of the first curve and the plane normal.
+   Only two values are permitted:
+   Value = Right: The hook is on your right as you stand at the end of the bar,
+   with the bar behind you, taking the bar's normal as "up."
+   Value = Left: The hook is on your left as you stand at the end of the bar,
+   with the bar behind you, taking the bar's normal as "up."
+</dd><dt class="has-text-weight-normal"><span class="parameter">endHookOrient</span>  <a href="e8365754-0811-8d4e-864a-55bf34af3a87.htm">RebarHookOrientation</a></dt><dd>
+   Defines the orientation of the hook plane at the end of the rebar with respect to the orientation of the last curve and the plane normal.
+   Only two values are permitted:
+   Value = Right: The hook is on your right as you stand at the end of the bar,
+   with the bar behind you, taking the bar's normal as "up."
+   Value = Left: The hook is on your left as you stand at the end of the bar,
+   with the bar behind you, taking the bar's normal as "up."
+</dd></dl><h4>Return Value</h4><a href="70fd7426-f4a4-591c-8c06-3c18dda45e7d.htm">Rebar</a><br />
+   The newly created Rebar instance, or <span class="keyword"><span id="LST4D58DFAB_7" data-languageSpecificText="cpp=nullptr|vb=Nothing|nu=null"></span></span> if the operation fails.
+</div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDMC')" onkeypress="SectionExpandCollapse_CheckKey('IDMC', event)" tabindex="0"><img id="IDMCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Exceptions</span></div><div id="IDMCSection" class="collapsibleSection"><table><tr><th>Exception</th><th>Condition</th></tr><tr><td><a href="2e6e4206-97a8-dd4b-df5d-4269f4bb6088.htm">ArgumentException</a></td><td>
+   The element host was not found in the given document.
+   -or-
+   host is not a valid rebar host.
+   -or-
+   The input curves is empty.
+   -or-
+   The input curves contains at least one curve which is not a bound Line or bound Arc
+   and is not supported for this operation.
+   -or-
+   curves do not form a valid CurveLoop.
+   -or-
+   The input curves contains at least one helical curve and is not supported for this operation.
+</td></tr><tr><td><a href="631e1424-60f4-929b-4e52-dda9dcd26316.htm">ArgumentNullException</a></td><td>
+   A non-optional argument was null
+</td></tr><tr><td><a href="60f148c9-ece0-a6bb-4e12-bb4a9c8c8a24.htm">ArgumentOutOfRangeException</a></td><td>
+   norm has zero length.
+   -or-
+   A value passed for an enumeration argument is not a member of that enumeration
+</td></tr><tr><td><a href="05972c68-fa6d-3a83-d720-ad84fbc4780f.htm">ArgumentsInconsistentException</a></td><td>
+   curves contains non-fillet arcs with radii that are less than the
+   minimum bend radius for the RebarBarType and RebarShape style.
+</td></tr><tr><td><a href="9e715f03-3884-e539-4dd6-8d7545733adc.htm">InvalidOperationException</a></td><td>
+   rebarShape does not match curves.
+</td></tr></table></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('seeAlso')" onkeypress="SectionExpandCollapse_CheckKey('seeAlso', event)" tabindex="0"><img id="seeAlsoToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="seeAlsoSection" class="collapsibleSection"><h4>Reference</h4><div><a href="70fd7426-f4a4-591c-8c06-3c18dda45e7d.htm">Rebar Class</a></div><div><a href="d7771781-4380-5ac1-ea33-3ac49bfac1bc.htm">CreateFromCurvesAndShape Overload</a></div><div><a href="d586b341-f687-9d90-e96d-255806b7d4fc.htm">Autodesk.Revit.DB.Structure Namespace</a></div></div></div></div><div id="PageFooter" class="pageFooter"><div class="feedbackLink">Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:revitapifeedback%40autodesk.com?Subject=Revit%202025%20API">Autodesk</a></div>
+        <script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        HT_mailLink.href += ": " + document.title + "\u0026body=" + encodeURIComponent("Your feedback is used to improve the documentation and the product. Your e-mail address will not be used for any other purpose and is disposed of after the issue you report is resolved. While working to resolve the issue that you report, you may be contacted via e-mail to get further details or clarification on the feedback you sent. After the issue you report has been addressed, you may receive an e-mail to let you know that your feedback has been addressed.");
+        </script></div></body></html>

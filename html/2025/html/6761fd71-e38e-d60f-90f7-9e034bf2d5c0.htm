@@ -1,0 +1,75 @@
+﻿<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="Microsoft.Help.SelfBranded" content="true" /><meta name="Language" content="en-us" /><meta name="Microsoft.Help.Locale" content="en-us" /><meta name="Microsoft.Help.TopicLocale" content="en-us" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" type="text/css" href="../styles/branding.css" /><link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" /><script type="text/javascript" src="../scripts/branding.js"></script><title>PointCloudInstance.GetPoints Method</title><meta name="Title" content="GetPoints Method" /><meta name="Microsoft.Help.Id" content="M:Autodesk.Revit.DB.PointCloudInstance.GetPoints(Autodesk.Revit.DB.PointClouds.PointCloudFilter,System.Double,System.Int32)" /><meta name="Microsoft.Help.ContentType" content="Reference" /><meta name="System.Keywords" content="PointCloudInstance.GetPoints method" /><meta name="System.Keywords" content="GetPoints method" /><meta name="Microsoft.Help.F1" content="Autodesk.Revit.DB.PointCloudInstance.GetPoints" /><meta name="Microsoft.Help.F1" content="PointCloudInstance.GetPoints" /><meta name="Microsoft.Help.F1" content="GetPoints" /><meta name="container" content="Autodesk.Revit.DB" /><meta name="file" content="6761fd71-e38e-d60f-90f7-9e034bf2d5c0" /><meta name="guid" content="6761fd71-e38e-d60f-90f7-9e034bf2d5c0" /><meta name="Microsoft.Help.Category" content="CSharp" /><meta name="Description" content="Extracts a collection of points based on a filter." /><link type="text/css" rel="stylesheet" href="../styles/highlight.css" /><script type="text/javascript" src="../scripts/highlight.js"> </script><link rel="stylesheet" type="text/css" href="../styles/branding-Help1.css" /></head><body onload="SetDefaultLanguage('cs');"><input type="hidden" id="userDataCache" class="userDataStyle" /><div id="PageHeader" class="pageHeader">Revit 2025 API</div><div class="pageBody"><div id="TopicContent" class="topicContent"><table class="titleTable"><tr><td class="titleColumn"><h1>Point<wbr />Cloud<wbr />Instance<span id="LSTC7604500_0" data-languageSpecificText="cpp=::|nu=."></span>Get<wbr />Points Method</h1></td></tr></table><div class="summary">
+   Extracts a collection of points based on a filter.
+</div><br /><strong>Namespace:</strong> <a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB</a><br /><strong>Assembly:</strong> RevitAPI (in RevitAPI.dll) Version: 25.0.0.0 (25.0.0.0)<div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDB')" onkeypress="SectionExpandCollapse_CheckKey('IDB', event)" tabindex="0"><img id="IDBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Syntax</span></div><div id="IDBSection" class="collapsibleSection"><div id="IDAB" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAB_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cs','1','4');return false;">C#</a></div><div id="IDAB_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','vb','2','4');return false;">VB</a></div><div id="IDAB_tab3" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cpp','3','4');return false;">C++</a></div><div id="IDAB_tab4" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAB_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAB');return false;" title="Copy">Copy</a></div></div><div id="IDAB_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="keyword">public</span> <span class="identifier">PointCollection</span> <span class="identifier">GetPoints</span>(
+	<span class="identifier">PointCloudFilter</span> <span class="parameter">filter</span>,
+	<span class="identifier">double</span> <span class="parameter">averageDistance</span>,
+	<span class="identifier">int</span> <span class="parameter">numPoints</span>
+)</pre></div><div id="IDAB_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">Public</span> <span class="keyword">Function</span> <span class="identifier">GetPoints</span> ( 
+	<span class="parameter">filter</span> <span class="keyword">As</span> <span class="identifier">PointCloudFilter</span>,
+	<span class="parameter">averageDistance</span> <span class="keyword">As</span> <span class="identifier">Double</span>,
+	<span class="parameter">numPoints</span> <span class="keyword">As</span> <span class="identifier">Integer</span>
+) <span class="keyword">As</span> <span class="identifier">PointCollection</span></pre></div><div id="IDAB_code_Div3" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">public</span>:
+<span class="identifier">PointCollection</span>^ <span class="identifier">GetPoints</span>(
+	<span class="identifier">PointCloudFilter</span>^ <span class="parameter">filter</span>, 
+	<span class="identifier">double</span> <span class="parameter">averageDistance</span>, 
+	<span class="identifier">int</span> <span class="parameter">numPoints</span>
+)</pre></div><div id="IDAB_code_Div4" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">member</span> <span class="identifier">GetPoints</span> : 
+        <span class="parameter">filter</span> : <span class="identifier">PointCloudFilter</span> * 
+        <span class="parameter">averageDistance</span> : <span class="identifier">float</span> * 
+        <span class="parameter">numPoints</span> : <span class="identifier">int</span> <span class="keyword">-&gt;</span> <span class="identifier">PointCollection</span> </pre></div></div></div><h4>Parameters</h4><dl><dt class="has-text-weight-normal"><span class="parameter">filter</span>  <a href="ca6f916b-2eba-f8e5-8939-1c063330c886.htm">PointCloudFilter</a></dt><dd>
+   The filter to control which points are extracted. The filter should be passed in the coordinates
+   of the Revit model.
+</dd><dt class="has-text-weight-normal"><span class="parameter">averageDistance</span>  <a href="https://learn.microsoft.com/dotnet/api/system.double" target="_blank" rel="noopener noreferrer">Double</a></dt><dd>
+   Desired average distance between "adjacent" cloud points (Revit units of length).
+   The smaller the averageDistance the larger number of points will be returned up to the numPoints limit.
+   Specifying this parameter makes actual number of points returned for a given filter independent of the
+   density of coverage produced by the scanner.
+</dd><dt class="has-text-weight-normal"><span class="parameter">numPoints</span>  <a href="https://learn.microsoft.com/dotnet/api/system.int32" target="_blank" rel="noopener noreferrer">Int32</a></dt><dd>
+   The maximum number of points requested.
+</dd></dl><h4>Return Value</h4><a href="3eaab06f-0da5-dd0a-6063-b3907f6de7a8.htm">PointCollection</a><br />
+   A collection object containing points that pass the filter, but no more than the maximum number requested.
+</div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDGC')" onkeypress="SectionExpandCollapse_CheckKey('IDGC', event)" tabindex="0"><img id="IDGCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Exceptions</span></div><div id="IDGCSection" class="collapsibleSection"><table><tr><th>Exception</th><th>Condition</th></tr><tr><td><a href="2e6e4206-97a8-dd4b-df5d-4269f4bb6088.htm">ArgumentException</a></td><td>
+   The number of points read must range from 1 to 1000000.
+</td></tr><tr><td><a href="631e1424-60f4-929b-4e52-dda9dcd26316.htm">ArgumentNullException</a></td><td>
+   A non-optional argument was null
+</td></tr><tr><td><a href="60f148c9-ece0-a6bb-4e12-bb4a9c8c8a24.htm">ArgumentOutOfRangeException</a></td><td>
+   The given value for averageDistance must be no more than 30000 feet in absolute value.
+</td></tr></table></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDBC')" onkeypress="SectionExpandCollapse_CheckKey('IDBC', event)" tabindex="0"><img id="IDBCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Remarks</span></div><div id="IDBCSection" class="collapsibleSection">
+   If there are more points in the cloud passing the filter than the number requested in this function,
+   the results may not be consistent if the same call is made again.
+</div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDKC')" onkeypress="SectionExpandCollapse_CheckKey('IDKC', event)" tabindex="0"><img id="IDKCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Example</span></div><div id="IDKCSection" class="collapsibleSection"><div id="IDAKC" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAKC_tab1" class="codeSnippetContainerTabSingle">C#</div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAKC_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAKC');return false;" title="Copy">Copy</a></div></div><div id="IDAKC_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="highlight-keyword">private</span> <span class="highlight-keyword">void</span> GetPointCloudDataByIteration(PointCloudInstance pcInstance, PointCloudFilter pointCloudFilter)
+{
+    <span class="highlight-comment">// read points by iteration</span>
+    <span class="highlight-keyword">double</span> averageDistance = <span class="highlight-number">0.001</span>;
+    <span class="highlight-keyword">int</span> numberOfPoints= <span class="highlight-number">10000</span>;
+    <span class="highlight-comment">// Get points. Number of points is determined by the needs of the client. </span>
+    PointCollection points = pcInstance.GetPoints(pointCloudFilter, averageDistance, numberOfPoints);
+    <span class="highlight-keyword">foreach</span> (CloudPoint point <span class="highlight-keyword">in</span> points)
+    {
+        <span class="highlight-comment">// Process each point </span>
+        System.Drawing.Color color = System.Drawing.ColorTranslator.FromWin32(point.Color);
+        String pointDescription = String.Format(<span class="highlight-literal">"({0}, {1}, {2}, {3}"</span>, point.X, point.Y, point.Z, color.ToString());
+    }
+}
+<span class="highlight-comment">// read points by pointer</span>
+<span class="highlight-keyword">public</span> <span class="highlight-keyword">unsafe</span> <span class="highlight-keyword">void</span> GetPointCloudDataByPointer(PointCloudInstance pcInstance, PointCloudFilter pointCloudFilter)
+{
+    <span class="highlight-keyword">double</span> averageDistance = <span class="highlight-number">0.001</span>;
+    <span class="highlight-keyword">int</span> numOfPoints = <span class="highlight-number">10000</span>;
+    <span class="highlight-comment">// Get points. Number of points is determined by the needs of the client.</span>
+    PointCollection points = pcInstance.GetPoints(pointCloudFilter, averageDistance, numOfPoints);
+    CloudPoint* pointBuffer = (CloudPoint*)points.GetPointBufferPointer().ToPointer();
+    <span class="highlight-keyword">int</span> totalCount = points.Count;
+    <span class="highlight-keyword">for</span> (<span class="highlight-keyword">int</span> numberOfPoints = <span class="highlight-number">0</span>; numberOfPoints &lt; totalCount; numberOfPoints++)
+    {
+        CloudPoint point = *(pointBuffer + numberOfPoints);
+        <span class="highlight-comment">// Process each point </span>
+        System.Drawing.Color color = System.Drawing.ColorTranslator.FromWin32(point.Color);
+        String pointDescription = String.Format(<span class="highlight-literal">"({0}, {1}, {2}, {3}"</span>, point.X, point.Y, point.Z, color.ToString());
+    }
+}</pre></div></div></div></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('seeAlso')" onkeypress="SectionExpandCollapse_CheckKey('seeAlso', event)" tabindex="0"><img id="seeAlsoToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="seeAlsoSection" class="collapsibleSection"><h4>Reference</h4><div><a href="d17686cb-b8c5-bee5-44d3-0311d27678e0.htm">PointCloudInstance Class</a></div><div><a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB Namespace</a></div></div></div></div><div id="PageFooter" class="pageFooter"><div class="feedbackLink">Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:revitapifeedback%40autodesk.com?Subject=Revit%202025%20API">Autodesk</a></div>
+        <script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        HT_mailLink.href += ": " + document.title + "\u0026body=" + encodeURIComponent("Your feedback is used to improve the documentation and the product. Your e-mail address will not be used for any other purpose and is disposed of after the issue you report is resolved. While working to resolve the issue that you report, you may be contacted via e-mail to get further details or clarification on the feedback you sent. After the issue you report has been addressed, you may receive an e-mail to let you know that your feedback has been addressed.");
+        </script></div></body></html>

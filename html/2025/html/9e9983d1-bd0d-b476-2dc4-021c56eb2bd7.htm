@@ -1,0 +1,80 @@
+﻿<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="Microsoft.Help.SelfBranded" content="true" /><meta name="Language" content="en-us" /><meta name="Microsoft.Help.Locale" content="en-us" /><meta name="Microsoft.Help.TopicLocale" content="en-us" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" type="text/css" href="../styles/branding.css" /><link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" /><script type="text/javascript" src="../scripts/branding.js"></script><title>Transaction.Commit(FailureHandlingOptions) Method</title><meta name="Title" content="Commit(FailureHandlingOptions) Method" /><meta name="Microsoft.Help.Id" content="M:Autodesk.Revit.DB.Transaction.Commit(Autodesk.Revit.DB.FailureHandlingOptions)" /><meta name="Microsoft.Help.ContentType" content="Reference" /><meta name="container" content="Autodesk.Revit.DB" /><meta name="file" content="9e9983d1-bd0d-b476-2dc4-021c56eb2bd7" /><meta name="guid" content="9e9983d1-bd0d-b476-2dc4-021c56eb2bd7" /><meta name="Microsoft.Help.Category" content="CSharp" /><meta name="Microsoft.Help.Category" content="VB" /><meta name="Description" content="Commits all changes made to the model during the transaction." /><link type="text/css" rel="stylesheet" href="../styles/highlight.css" /><script type="text/javascript" src="../scripts/highlight.js"> </script><link rel="stylesheet" type="text/css" href="../styles/branding-Help1.css" /></head><body onload="SetDefaultLanguage('cs');"><input type="hidden" id="userDataCache" class="userDataStyle" /><div id="PageHeader" class="pageHeader">Revit 2025 API</div><div class="pageBody"><div id="TopicContent" class="topicContent"><table class="titleTable"><tr><td class="titleColumn"><h1>Transaction<span id="LSTE42989D3_0" data-languageSpecificText="cpp=::|nu=."></span>Commit(Failure<wbr />Handling<wbr />Options) Method</h1></td></tr></table><div class="summary">
+   Commits all changes made to the model during the transaction.
+</div><br /><strong>Namespace:</strong> <a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB</a><br /><strong>Assembly:</strong> RevitAPI (in RevitAPI.dll) Version: 25.0.0.0 (25.0.0.0)<div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDB')" onkeypress="SectionExpandCollapse_CheckKey('IDB', event)" tabindex="0"><img id="IDBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Syntax</span></div><div id="IDBSection" class="collapsibleSection"><div id="IDAB" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAB_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cs','1','4');return false;">C#</a></div><div id="IDAB_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','vb','2','4');return false;">VB</a></div><div id="IDAB_tab3" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cpp','3','4');return false;">C++</a></div><div id="IDAB_tab4" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAB_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAB');return false;" title="Copy">Copy</a></div></div><div id="IDAB_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="keyword">public</span> <span class="identifier">TransactionStatus</span> <span class="identifier">Commit</span>(
+	<span class="identifier">FailureHandlingOptions</span> <span class="parameter">options</span>
+)</pre></div><div id="IDAB_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">Public</span> <span class="keyword">Function</span> <span class="identifier">Commit</span> ( 
+	<span class="parameter">options</span> <span class="keyword">As</span> <span class="identifier">FailureHandlingOptions</span>
+) <span class="keyword">As</span> <span class="identifier">TransactionStatus</span></pre></div><div id="IDAB_code_Div3" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">public</span>:
+<span class="identifier">TransactionStatus</span> <span class="identifier">Commit</span>(
+	<span class="identifier">FailureHandlingOptions</span>^ <span class="parameter">options</span>
+)</pre></div><div id="IDAB_code_Div4" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">member</span> <span class="identifier">Commit</span> : 
+        <span class="parameter">options</span> : <span class="identifier">FailureHandlingOptions</span> <span class="keyword">-&gt;</span> <span class="identifier">TransactionStatus</span> </pre></div></div></div><h4>Parameters</h4><dl><dt class="has-text-weight-normal"><span class="parameter">options</span>  <a href="c03bb2e5-f679-bf24-4e87-08b3c3a08385.htm">FailureHandlingOptions</a></dt><dd>
+   A set of <a href="c03bb2e5-f679-bf24-4e87-08b3c3a08385.htm">options</a>
+   to be used for handling eventual failures during this call.
+   <p>The options are only used temporarily during the commitment process. After
+   the transaction is finished, the options will be reset to their default values.</p></dd></dl><h4>Return Value</h4><a href="29b9a7a8-6754-8310-e063-622b569bb6d5.htm">TransactionStatus</a><br />
+   If finished successfully, this method returns TransactionStatus.Committed
+   <p>Note it is possible the RolledBack status is returned instead as an outcome
+   of failure handling. If TransactionStatus.Pending is returned it means that
+   failure handling has not been finalized yet and Revit awaits user's actions.
+   Until committing is fully finalized, no changes to the document can be made
+   (including starting of new transactions).</p><p>Be aware that the returned status does not have to be necessarily the same like
+   the status returned by <a href="fdf98941-eee4-d8af-e3f7-5b6c7ccc3c74.htm">GetStatus<span id="LSTE42989D3_1" data-languageSpecificText="cs=()|vb=|cpp=()|nu=()|fs=()"></span></a> even when the method is called
+   immediately after committing the transaction. Such difference may happen due to actions
+   made by a transaction finalizer, if there was one set.
+   (See <a href="c03bb2e5-f679-bf24-4e87-08b3c3a08385.htm">FailureHandlingOptions</a> for more details.)</p></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDDC')" onkeypress="SectionExpandCollapse_CheckKey('IDDC', event)" tabindex="0"><img id="IDDCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Exceptions</span></div><div id="IDDCSection" class="collapsibleSection"><table><tr><th>Exception</th><th>Condition</th></tr><tr><td><a href="631e1424-60f4-929b-4e52-dda9dcd26316.htm">ArgumentNullException</a></td><td>
+   A non-optional argument was null
+</td></tr><tr><td><a href="9e715f03-3884-e539-4dd6-8d7545733adc.htm">InvalidOperationException</a></td><td>
+   The current status of the transaction is not 'Started'.
+   Transaction must be started before calling Commit or Rollback.
+   -or-
+   The transaction's document is currently in failure mode.
+   No transaction operations are permitted until failure handling is finished.
+</td></tr></table></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDFC')" onkeypress="SectionExpandCollapse_CheckKey('IDFC', event)" tabindex="0"><img id="IDFCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Example</span></div><div id="IDFCSection" class="collapsibleSection"><div id="IDAFC" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAFC_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAFC','cs','1','4');return false;">C#</a></div><div id="IDAFC_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAFC','vb','2','4');return false;">VB</a></div><div id="IDAFC_tab3" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDAFC','cpp','3','4');return false;">C++</a></div><div id="IDAFC_tab4" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDAFC','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAFC_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAFC');return false;" title="Copy">Copy</a></div></div><div id="IDAFC_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="highlight-comment">// All and any transaction should be enclosed in a 'using'</span>
+<span class="highlight-comment">// block or guarded within a try-catch-finally blocks</span>
+<span class="highlight-comment">// to guarantee that a transaction does not out-live its scope.</span>
+<span class="highlight-keyword">using</span> (Transaction transaction = <span class="highlight-keyword">new</span> Transaction(document))
+{
+   <span class="highlight-comment">// Must start the transaction first to be able to modify a document</span>
+   transaction.Start(<span class="highlight-literal">"Creating Level"</span>);
+
+   <span class="highlight-keyword">if</span> (<span class="highlight-keyword">null</span> != Level.Create(document, elevation))
+   {
+      <span class="highlight-comment">// If we have a few transactions chained (for whatever reason)</span>
+      <span class="highlight-comment">// we may wish to collect eventual warnings, if any, and show</span>
+      <span class="highlight-comment">// them only when the last transaction of the chain is committed.</span>
+      FailureHandlingOptions options = transaction.GetFailureHandlingOptions();
+
+      <span class="highlight-comment">// Now, showing of any eventual mini-warnings will be</span>
+      <span class="highlight-comment">// postponed until the following transaction.</span>
+      transaction.Commit(options.SetDelayedMiniWarnings(<span class="highlight-keyword">true</span>));
+
+      <span class="highlight-comment">// Note, after a transaction is committed, the used failure options</span>
+      <span class="highlight-comment">// are lost and replaced with default options again.</span>
+   }
+}</pre></div><div id="IDAFC_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="highlight-comment">' All and any transaction should be enclosed in a 'using'</span>
+<span class="highlight-comment">' block or guarded within a try-catch-finally blocks</span>
+<span class="highlight-comment">' to guarantee that a transaction does not out-live its scope.</span>
+<span class="highlight-keyword">Using</span> transaction <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> Transaction(document)
+    <span class="highlight-comment">' Must start the transaction first to be able to modify a document</span>
+    transaction.Start(<span class="highlight-literal">"Creating Level"</span>)
+
+<span class="highlight-keyword">If</span> Level.Create(document, elevation) <span class="highlight-keyword">IsNot</span> <span class="highlight-keyword">Nothing</span> <span class="highlight-keyword">Then</span>
+   <span class="highlight-comment">' If we have a few transactions chained (for whatever reason)</span>
+   <span class="highlight-comment">' we may wish to collect eventual warnings, if any, and show</span>
+   <span class="highlight-comment">' them only when the last transaction of the chain is committed.</span>
+   <span class="highlight-keyword">Dim</span> options <span class="highlight-keyword">As</span> FailureHandlingOptions = transaction.GetFailureHandlingOptions()
+
+   <span class="highlight-comment">' Now, showing of any eventual mini-warnings will be</span>
+   <span class="highlight-comment">' postponed until the following transaction.</span>
+
+   <span class="highlight-comment">' Note, after a transaction is committed, the used failure options</span>
+   <span class="highlight-comment">' are lost and replaced with default options again.</span>
+   transaction.Commit(options.SetDelayedMiniWarnings(<span class="highlight-keyword">True</span>))
+<span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+<span class="highlight-keyword">End</span> <span class="highlight-keyword">Using</span></pre></div><div id="IDAFC_code_Div3" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div><div id="IDAFC_code_Div4" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div></div></div></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('seeAlso')" onkeypress="SectionExpandCollapse_CheckKey('seeAlso', event)" tabindex="0"><img id="seeAlsoToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="seeAlsoSection" class="collapsibleSection"><h4>Reference</h4><div><a href="308ebf8d-d96d-4643-cd1d-34fffcea53fd.htm">Transaction Class</a></div><div><a href="bb7917ec-9fc7-b0a8-e3b7-2b38015cbc08.htm">Commit Overload</a></div><div><a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB Namespace</a></div></div></div></div><div id="PageFooter" class="pageFooter"><div class="feedbackLink">Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:revitapifeedback%40autodesk.com?Subject=Revit%202025%20API">Autodesk</a></div>
+        <script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        HT_mailLink.href += ": " + document.title + "\u0026body=" + encodeURIComponent("Your feedback is used to improve the documentation and the product. Your e-mail address will not be used for any other purpose and is disposed of after the issue you report is resolved. While working to resolve the issue that you report, you may be contacted via e-mail to get further details or clarification on the feedback you sent. After the issue you report has been addressed, you may receive an e-mail to let you know that your feedback has been addressed.");
+        </script></div></body></html>

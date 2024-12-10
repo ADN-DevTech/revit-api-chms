@@ -1,0 +1,175 @@
+﻿<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="Microsoft.Help.SelfBranded" content="true" /><meta name="Language" content="en-us" /><meta name="Microsoft.Help.Locale" content="en-us" /><meta name="Microsoft.Help.TopicLocale" content="en-us" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" type="text/css" href="../styles/branding.css" /><link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" /><script type="text/javascript" src="../scripts/branding.js"></script><title>Document.Paint(ElementId, Face, FamilyParameter) Method</title><meta name="Title" content="Paint(ElementId, Face, FamilyParameter) Method" /><meta name="Microsoft.Help.Id" content="M:Autodesk.Revit.DB.Document.Paint(Autodesk.Revit.DB.ElementId,Autodesk.Revit.DB.Face,Autodesk.Revit.DB.FamilyParameter)" /><meta name="Microsoft.Help.ContentType" content="Reference" /><meta name="container" content="Autodesk.Revit.DB" /><meta name="file" content="f59f8872-e8d7-5d00-0e8c-44a36a843861" /><meta name="guid" content="f59f8872-e8d7-5d00-0e8c-44a36a843861" /><meta name="Microsoft.Help.Category" content="CSharp" /><meta name="Microsoft.Help.Category" content="VB" /><meta name="Description" content="Paint the element's face with specified material." /><link type="text/css" rel="stylesheet" href="../styles/highlight.css" /><script type="text/javascript" src="../scripts/highlight.js"> </script><link rel="stylesheet" type="text/css" href="../styles/branding-Help1.css" /></head><body onload="SetDefaultLanguage('cs');"><input type="hidden" id="userDataCache" class="userDataStyle" /><div id="PageHeader" class="pageHeader">Revit 2025 API</div><div class="pageBody"><div id="TopicContent" class="topicContent"><table class="titleTable"><tr><td class="titleColumn"><h1>Document<span id="LST37242063_0" data-languageSpecificText="cpp=::|nu=."></span>Paint(Element<wbr />Id, Face, Family<wbr />Parameter) Method</h1></td></tr></table><div class="summary">
+   Paint the element's face with specified material.
+</div><br /><strong>Namespace:</strong> <a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB</a><br /><strong>Assembly:</strong> RevitAPI (in RevitAPI.dll) Version: 25.0.0.0 (25.0.0.0)<div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDB')" onkeypress="SectionExpandCollapse_CheckKey('IDB', event)" tabindex="0"><img id="IDBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Syntax</span></div><div id="IDBSection" class="collapsibleSection"><div id="IDAB" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAB_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cs','1','4');return false;">C#</a></div><div id="IDAB_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','vb','2','4');return false;">VB</a></div><div id="IDAB_tab3" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cpp','3','4');return false;">C++</a></div><div id="IDAB_tab4" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAB_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAB');return false;" title="Copy">Copy</a></div></div><div id="IDAB_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="keyword">public</span> <span class="keyword">void</span> <span class="identifier">Paint</span>(
+	<span class="identifier">ElementId</span> <span class="parameter">elementId</span>,
+	<span class="identifier">Face</span> <span class="parameter">face</span>,
+	<span class="identifier">FamilyParameter</span> <span class="parameter">familyParameter</span>
+)</pre></div><div id="IDAB_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">Public</span> <span class="keyword">Sub</span> <span class="identifier">Paint</span> ( 
+	<span class="parameter">elementId</span> <span class="keyword">As</span> <span class="identifier">ElementId</span>,
+	<span class="parameter">face</span> <span class="keyword">As</span> <span class="identifier">Face</span>,
+	<span class="parameter">familyParameter</span> <span class="keyword">As</span> <span class="identifier">FamilyParameter</span>
+)</pre></div><div id="IDAB_code_Div3" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">public</span>:
+<span class="keyword">void</span> <span class="identifier">Paint</span>(
+	<span class="identifier">ElementId</span>^ <span class="parameter">elementId</span>, 
+	<span class="identifier">Face</span>^ <span class="parameter">face</span>, 
+	<span class="identifier">FamilyParameter</span>^ <span class="parameter">familyParameter</span>
+)</pre></div><div id="IDAB_code_Div4" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">member</span> <span class="identifier">Paint</span> : 
+        <span class="parameter">elementId</span> : <span class="identifier">ElementId</span> * 
+        <span class="parameter">face</span> : <span class="identifier">Face</span> * 
+        <span class="parameter">familyParameter</span> : <span class="identifier">FamilyParameter</span> <span class="keyword">-&gt;</span> <span class="keyword">unit</span> </pre></div></div></div><h4>Parameters</h4><dl><dt class="has-text-weight-normal"><span class="parameter">elementId</span>  <a href="44f3f7b1-3229-3404-93c9-dc5e70337dd6.htm">ElementId</a></dt><dd>
+   The element that the face belongs to.
+</dd><dt class="has-text-weight-normal"><span class="parameter">face</span>  <a href="e32b3b1f-66fc-57cb-6e1c-aa81d1bf3e63.htm">Face</a></dt><dd>
+   The painted element's face.
+</dd><dt class="has-text-weight-normal"><span class="parameter">familyParameter</span>  <a href="6175e974-870e-7fbc-3df7-46105f937a6e.htm">FamilyParameter</a></dt><dd>
+   The family parameter associated with a material.
+</dd></dl></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDEC')" onkeypress="SectionExpandCollapse_CheckKey('IDEC', event)" tabindex="0"><img id="IDECToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Exceptions</span></div><div id="IDECSection" class="collapsibleSection"><table><tr><th>Exception</th><th>Condition</th></tr><tr><td><a href="2e6e4206-97a8-dd4b-df5d-4269f4bb6088.htm">ArgumentException</a></td><td>
+   The element elementId does not exist in the document.
+   -or-
+   The element materialId does not exist in the document.
+   -or-
+   The face doesn't belongs to the element.
+   -or-
+   The family parameter doesn't specify a material element.
+   -or-
+   The element's face cannot be painted.
+</td></tr><tr><td><a href="631e1424-60f4-929b-4e52-dda9dcd26316.htm">ArgumentNullException</a></td><td>
+   A non-optional argument was NULL
+</td></tr><tr><td><a href="9e715f03-3884-e539-4dd6-8d7545733adc.htm">InvalidOperationException</a></td><td>
+   This document is not modifiable.
+   -or-
+   This operation is valid only in family.
+</td></tr><tr><td><a href="53205486-5917-7c33-8e67-e362106ddc97.htm">ModificationForbiddenException</a></td><td>
+   The document is in failure mode: an operation has failed,
+   and Revit requires the user to either cancel the operation
+   or fix the problem (usually by deleting certain elements).
+   -or-
+   The document is being loaded, or is in the midst of another
+   sensitive process.
+</td></tr><tr><td><a href="8f025460-c283-ea99-aa8a-5a36e11528f4.htm">ModificationOutsideTransactionException</a></td><td>
+   The document has no open transaction.
+</td></tr></table></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDKC')" onkeypress="SectionExpandCollapse_CheckKey('IDKC', event)" tabindex="0"><img id="IDKCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Example</span></div><div id="IDKCSection" class="collapsibleSection"><div id="IDAKC" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAKC_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAKC','cs','1','4');return false;">C#</a></div><div id="IDAKC_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAKC','vb','2','4');return false;">VB</a></div><div id="IDAKC_tab3" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDAKC','cpp','3','4');return false;">C++</a></div><div id="IDAKC_tab4" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDAKC','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAKC_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAKC');return false;" title="Copy">Copy</a></div></div><div id="IDAKC_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="highlight-keyword">public</span> <span class="highlight-keyword">void</span> ApplyPaintByMaterialParameter(Document document, Extrusion extrusion, Material material)
+{
+   Face geoFace = <span class="highlight-keyword">null</span>;
+
+   <span class="highlight-keyword">using</span> (Transaction transaction = <span class="highlight-keyword">new</span> Transaction(document, <span class="highlight-literal">"Painting"</span>))
+   {
+      transaction.Start();
+
+      <span class="highlight-comment">// create a new type and material parameter in the document.</span>
+      FamilyManager famMgr = document.FamilyManager;
+      <span class="highlight-keyword">if</span> (famMgr.Types.Size == <span class="highlight-number">0</span>)
+      {
+         FamilyType createdType = famMgr.NewType(<span class="highlight-literal">"New_type"</span>);
+         famMgr.CurrentType = createdType;
+      }
+
+      FamilyParameter materialParam =
+         famMgr.AddParameter(<span class="highlight-literal">"Material_Para"</span>, GroupTypeId.Materials, SpecTypeId.Reference.Material, <span class="highlight-keyword">true</span>);
+
+      famMgr.Set(materialParam, material.Id);
+
+      <span class="highlight-comment">// Before acquiring the geometry, make sure the detail level is set to 'Fine'</span>
+      Options geoOptions = <span class="highlight-keyword">new</span> Options();
+      geoOptions.DetailLevel = ViewDetailLevel.Fine;
+
+      <span class="highlight-comment">// Find the first geometry face of the given extrusion object</span>
+      GeometryElement geoElem = extrusion.get_Geometry(geoOptions);
+      IEnumerator&lt;GeometryObject&gt; geoObjectItor = geoElem.GetEnumerator();
+      <span class="highlight-keyword">while</span> (geoObjectItor.MoveNext())
+      {
+         <span class="highlight-comment">// need to find a solid first</span>
+         Solid theSolid = geoObjectItor.Current <span class="highlight-keyword">as</span> Solid;
+         <span class="highlight-keyword">if</span> (<span class="highlight-keyword">null</span> != theSolid)
+         {
+            <span class="highlight-keyword">foreach</span> (Face face <span class="highlight-keyword">in</span> theSolid.Faces)
+            {
+               geoFace = face;
+               <span class="highlight-keyword">break</span>;
+            }
+         }
+      }
+
+      <span class="highlight-keyword">if</span> (<span class="highlight-keyword">null</span> == geoFace)
+      {
+         TaskDialog.Show(<span class="highlight-literal">"Failure"</span>, <span class="highlight-literal">"Could not find a face to paint."</span>);
+         transaction.RollBack();
+         <span class="highlight-keyword">return</span>;
+      }
+
+      <span class="highlight-comment">// Paint a material family parameter to the extrusion face.</span>
+      document.Paint(extrusion.Id, geoFace, materialParam);
+      transaction.Commit();
+   }
+
+   <span class="highlight-comment">// For illustration purposes only, check if the painted material indeed got applied</span>
+
+   <span class="highlight-keyword">bool</span> isPainted = document.IsPainted(extrusion.Id, geoFace);
+   <span class="highlight-keyword">if</span> (isPainted)
+   {
+      ElementId paintedMatId = document.GetPaintedMaterial(extrusion.Id, geoFace);
+      <span class="highlight-keyword">if</span> (paintedMatId == material.Id)
+      {
+         TaskDialog.Show(<span class="highlight-literal">"Painting material"</span>, <span class="highlight-literal">"Face painted successfully."</span>);
+      }
+   }
+}</pre></div><div id="IDAKC_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="highlight-keyword">Public</span> <span class="highlight-keyword">Sub</span> ApplyPaintByMaterialParameter(document <span class="highlight-keyword">As</span> Document, extrusion <span class="highlight-keyword">As</span> Extrusion, material <span class="highlight-keyword">As</span> Material)
+    <span class="highlight-keyword">Dim</span> geoFace <span class="highlight-keyword">As</span> Face = <span class="highlight-keyword">Nothing</span>
+
+    <span class="highlight-keyword">Using</span> transaction <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> Transaction(document, <span class="highlight-literal">"Painting"</span>)
+        transaction.Start()
+
+        <span class="highlight-comment">' create a new type and material parameter in the document.</span>
+        <span class="highlight-keyword">Dim</span> famMgr <span class="highlight-keyword">As</span> FamilyManager = document.FamilyManager
+        <span class="highlight-keyword">If</span> famMgr.Types.Size = <span class="highlight-number">0</span> <span class="highlight-keyword">Then</span>
+            <span class="highlight-keyword">Dim</span> createdType <span class="highlight-keyword">As</span> FamilyType = famMgr.NewType(<span class="highlight-literal">"New_type"</span>)
+            famMgr.CurrentType = createdType
+        <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+
+    <span class="highlight-keyword">Dim</span> materialParam <span class="highlight-keyword">As</span> FamilyParameter = famMgr.AddParameter(<span class="highlight-literal">"Material_Para"</span>, GroupTypeId.Materials, SpecTypeId.Reference.Material, <span class="highlight-keyword">True</span>)
+
+    famMgr.[<span class="highlight-keyword">Set</span>](materialParam, material.Id)
+
+        <span class="highlight-comment">' Before acquiring the geometry, make sure the detail level is set to 'Fine'</span>
+        <span class="highlight-keyword">Dim</span> geoOptions <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> Options()
+        geoOptions.DetailLevel = ViewDetailLevel.Fine
+
+        <span class="highlight-comment">' Find the first geometry face of the given extrusion object</span>
+        <span class="highlight-keyword">Dim</span> geoElem <span class="highlight-keyword">As</span> GeometryElement = extrusion.Geometry(geoOptions)
+        <span class="highlight-keyword">Dim</span> geoObjectItor <span class="highlight-keyword">As</span> IEnumerator(<span class="highlight-keyword">Of</span> GeometryObject) = geoElem.GetEnumerator()
+        <span class="highlight-keyword">While</span> geoObjectItor.MoveNext()
+            <span class="highlight-comment">' need to find a solid first</span>
+            <span class="highlight-keyword">Dim</span> theSolid <span class="highlight-keyword">As</span> Solid = <span class="highlight-keyword">TryCast</span>(geoObjectItor.Current, Solid)
+            <span class="highlight-keyword">If</span> theSolid <span class="highlight-keyword">IsNot</span> <span class="highlight-keyword">Nothing</span> <span class="highlight-keyword">Then</span>
+                <span class="highlight-keyword">For</span> <span class="highlight-keyword">Each</span> face <span class="highlight-keyword">As</span> Face <span class="highlight-keyword">In</span> theSolid.Faces
+                    geoFace = face
+                    <span class="highlight-keyword">Exit</span> <span class="highlight-keyword">For</span>
+                <span class="highlight-keyword">Next</span>
+            <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+        <span class="highlight-keyword">End</span> <span class="highlight-keyword">While</span>
+
+        <span class="highlight-keyword">If</span> geoFace <span class="highlight-keyword">Is</span> <span class="highlight-keyword">Nothing</span> <span class="highlight-keyword">Then</span>
+            TaskDialog.Show(<span class="highlight-literal">"Failure"</span>, <span class="highlight-literal">"Could not find a face to paint."</span>)
+            transaction.RollBack()
+            <span class="highlight-keyword">Return</span>
+        <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+
+        <span class="highlight-comment">' Paint a material family parameter to the extrusion face.</span>
+        document.Paint(extrusion.Id, geoFace, materialParam)
+        transaction.Commit()
+    <span class="highlight-keyword">End</span> <span class="highlight-keyword">Using</span>
+
+    <span class="highlight-comment">' For illustration purposes only, check if the painted material indeed got applied</span>
+
+    <span class="highlight-keyword">Dim</span> isPainted <span class="highlight-keyword">As</span> <span class="highlight-keyword">Boolean</span> = document.IsPainted(extrusion.Id, geoFace)
+    <span class="highlight-keyword">If</span> isPainted <span class="highlight-keyword">Then</span>
+        <span class="highlight-keyword">Dim</span> paintedMatId <span class="highlight-keyword">As</span> ElementId = document.GetPaintedMaterial(extrusion.Id, geoFace)
+        <span class="highlight-keyword">If</span> paintedMatId = material.Id <span class="highlight-keyword">Then</span>
+            TaskDialog.Show(<span class="highlight-literal">"Painting material"</span>, <span class="highlight-literal">"Face painted successfully."</span>)
+        <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+    <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+<span class="highlight-keyword">End</span> <span class="highlight-keyword">Sub</span></pre></div><div id="IDAKC_code_Div3" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div><div id="IDAKC_code_Div4" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div></div></div></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('seeAlso')" onkeypress="SectionExpandCollapse_CheckKey('seeAlso', event)" tabindex="0"><img id="seeAlsoToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="seeAlsoSection" class="collapsibleSection"><h4>Reference</h4><div><a href="db03274b-a107-aa32-9034-f3e0df4bb1ec.htm">Document Class</a></div><div><a href="f6a99488-ae33-46f8-849d-4c68869f68cd.htm">Paint Overload</a></div><div><a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB Namespace</a></div></div></div></div><div id="PageFooter" class="pageFooter"><div class="feedbackLink">Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:revitapifeedback%40autodesk.com?Subject=Revit%202025%20API">Autodesk</a></div>
+        <script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        HT_mailLink.href += ": " + document.title + "\u0026body=" + encodeURIComponent("Your feedback is used to improve the documentation and the product. Your e-mail address will not be used for any other purpose and is disposed of after the issue you report is resolved. While working to resolve the issue that you report, you may be contacted via e-mail to get further details or clarification on the feedback you sent. After the issue you report has been addressed, you may receive an e-mail to let you know that your feedback has been addressed.");
+        </script></div></body></html>

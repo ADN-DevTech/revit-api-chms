@@ -1,0 +1,140 @@
+﻿<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="Microsoft.Help.SelfBranded" content="true" /><meta name="Language" content="en-us" /><meta name="Microsoft.Help.Locale" content="en-us" /><meta name="Microsoft.Help.TopicLocale" content="en-us" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" type="text/css" href="../styles/branding.css" /><link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" /><script type="text/javascript" src="../scripts/branding.js"></script><title>NumberingSchema.MoveSequence Method</title><meta name="Title" content="MoveSequence Method" /><meta name="Microsoft.Help.Id" content="M:Autodesk.Revit.DB.NumberingSchema.MoveSequence(System.String,System.String)" /><meta name="Microsoft.Help.ContentType" content="Reference" /><meta name="System.Keywords" content="NumberingSchema.MoveSequence method" /><meta name="System.Keywords" content="MoveSequence method" /><meta name="Microsoft.Help.F1" content="Autodesk.Revit.DB.NumberingSchema.MoveSequence" /><meta name="Microsoft.Help.F1" content="NumberingSchema.MoveSequence" /><meta name="Microsoft.Help.F1" content="MoveSequence" /><meta name="container" content="Autodesk.Revit.DB" /><meta name="file" content="9ae38f60-e76f-5bd7-1d71-bd57cf06f641" /><meta name="guid" content="9ae38f60-e76f-5bd7-1d71-bd57cf06f641" /><meta name="Microsoft.Help.Category" content="CSharp" /><meta name="Microsoft.Help.Category" content="VB" /><meta name="Description" content="Moves all elements of a numbering sequence from one partition to another." /><link type="text/css" rel="stylesheet" href="../styles/highlight.css" /><script type="text/javascript" src="../scripts/highlight.js"> </script><link rel="stylesheet" type="text/css" href="../styles/branding-Help1.css" /></head><body onload="SetDefaultLanguage('cs');"><input type="hidden" id="userDataCache" class="userDataStyle" /><div id="PageHeader" class="pageHeader">Revit 2025 API</div><div class="pageBody"><div id="TopicContent" class="topicContent"><table class="titleTable"><tr><td class="titleColumn"><h1>Numbering<wbr />Schema<span id="LST3F0A7E1F_0" data-languageSpecificText="cpp=::|nu=."></span>Move<wbr />Sequence Method</h1></td></tr></table><div class="summary">
+   Moves all elements of a numbering sequence from one partition to another.
+</div><br /><strong>Namespace:</strong> <a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB</a><br /><strong>Assembly:</strong> RevitAPI (in RevitAPI.dll) Version: 25.0.0.0 (25.0.0.0)<div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDB')" onkeypress="SectionExpandCollapse_CheckKey('IDB', event)" tabindex="0"><img id="IDBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Syntax</span></div><div id="IDBSection" class="collapsibleSection"><div id="IDAB" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAB_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cs','1','4');return false;">C#</a></div><div id="IDAB_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','vb','2','4');return false;">VB</a></div><div id="IDAB_tab3" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cpp','3','4');return false;">C++</a></div><div id="IDAB_tab4" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAB_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAB');return false;" title="Copy">Copy</a></div></div><div id="IDAB_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="keyword">public</span> <span class="keyword">void</span> <span class="identifier">MoveSequence</span>(
+	<span class="identifier">string</span> <span class="parameter">fromPartition</span>,
+	<span class="identifier">string</span> <span class="parameter">newPartition</span>
+)</pre></div><div id="IDAB_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">Public</span> <span class="keyword">Sub</span> <span class="identifier">MoveSequence</span> ( 
+	<span class="parameter">fromPartition</span> <span class="keyword">As</span> <span class="identifier">String</span>,
+	<span class="parameter">newPartition</span> <span class="keyword">As</span> <span class="identifier">String</span>
+)</pre></div><div id="IDAB_code_Div3" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">public</span>:
+<span class="keyword">void</span> <span class="identifier">MoveSequence</span>(
+	<span class="identifier">String</span>^ <span class="parameter">fromPartition</span>, 
+	<span class="identifier">String</span>^ <span class="parameter">newPartition</span>
+)</pre></div><div id="IDAB_code_Div4" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">member</span> <span class="identifier">MoveSequence</span> : 
+        <span class="parameter">fromPartition</span> : <span class="identifier">string</span> * 
+        <span class="parameter">newPartition</span> : <span class="identifier">string</span> <span class="keyword">-&gt;</span> <span class="keyword">unit</span> </pre></div></div></div><h4>Parameters</h4><dl><dt class="has-text-weight-normal"><span class="parameter">fromPartition</span>  <a href="https://learn.microsoft.com/dotnet/api/system.string" target="_blank" rel="noopener noreferrer">String</a></dt><dd>
+   Name of the partition that determines which numbering sequence to move.
+   The sequence must exist already, otherwise an exception will be thrown.
+</dd><dt class="has-text-weight-normal"><span class="parameter">newPartition</span>  <a href="https://learn.microsoft.com/dotnet/api/system.string" target="_blank" rel="noopener noreferrer">String</a></dt><dd>
+   Name of a partition into which the source sequence is going to be moved.
+   The schema must not have a sequence for this partition yet
+   (i.e. the schema does not have an element that was assigned to such a partition.)
+   <p>Leading and trailing white space is ignored in the given string and will be
+   removed automatically.</p></dd></dl></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDEC')" onkeypress="SectionExpandCollapse_CheckKey('IDEC', event)" tabindex="0"><img id="IDECToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Exceptions</span></div><div id="IDECSection" class="collapsibleSection"><table><tr><th>Exception</th><th>Condition</th></tr><tr><td><a href="2e6e4206-97a8-dd4b-df5d-4269f4bb6088.htm">ArgumentException</a></td><td>
+   The sequence fromPartition does not exist in the schema.
+   -or-
+   The sequence newPartition does already exist in the schema.
+   -or-
+   the given newPartition cannot be used as a valid name of a numbering partition
+   because it contains characters that are considered invalid, such as
+   non-printable characters or those that cannot be used in a file's name.
+</td></tr><tr><td><a href="631e1424-60f4-929b-4e52-dda9dcd26316.htm">ArgumentNullException</a></td><td>
+   A non-optional argument was null
+</td></tr><tr><td><a href="9e715f03-3884-e539-4dd6-8d7545733adc.htm">InvalidOperationException</a></td><td>
+   Either the schema or its document cannot be modified at present.
+   -or-
+   Thrown if there is an element that cannot have new value of the NUMBER_PARTITION_PARAM
+   parameter assigned. It may be an indication that the element is not free to be edited at present.
+</td></tr></table></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDBC')" onkeypress="SectionExpandCollapse_CheckKey('IDBC', event)" tabindex="0"><img id="IDBCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Remarks</span></div><div id="IDBCSection" class="collapsibleSection"><p>All numbers assigned to elements in the sequence remain the same.</p><p>This operation modifies the Partition parameter of all elements
+   in the given sequence. Therefore, all the elements must be accessible
+   for editing.</p><p>Elements can be moved only to a partition that does not exist yet. To move elements
+   to an existing partition use the <a href="0a89ca78-ca34-93fa-4fa7-71883a535497.htm">AppendSequence</a> method.</p></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDIC')" onkeypress="SectionExpandCollapse_CheckKey('IDIC', event)" tabindex="0"><img id="IDICToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Example</span></div><div id="IDICSection" class="collapsibleSection"><div id="IDAIC" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAIC_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAIC','cs','1','4');return false;">C#</a></div><div id="IDAIC_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAIC','vb','2','4');return false;">VB</a></div><div id="IDAIC_tab3" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDAIC','cpp','3','4');return false;">C++</a></div><div id="IDAIC_tab4" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDAIC','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAIC_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAIC');return false;" title="Copy">Copy</a></div></div><div id="IDAIC_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="highlight-comment">/// &lt;summary&gt;</span>
+<span class="highlight-comment">/// This method uses multiple moving operations to swap numbers</span>
+<span class="highlight-comment">/// for Rebars in two numbering sequences. The sequences are</span>
+<span class="highlight-comment">/// identified by the names of two numbering partitions.</span>
+<span class="highlight-comment">/// &lt;/summary&gt;</span>
+<span class="highlight-comment">/// &lt;param name="document"&gt;Document to modify&lt;/param&gt;</span>
+<span class="highlight-comment">/// &lt;param name="part1"&gt;Name of the partition of one numbering sequence&lt;/param&gt;</span>
+<span class="highlight-comment">/// &lt;param name="part2"&gt;Name of the partition of another numbering sequence&lt;/param&gt;</span>
+<span class="highlight-keyword">private</span> <span class="highlight-keyword">void</span> SwapNumberingSequences(Document document, <span class="highlight-keyword">string</span> part1, <span class="highlight-keyword">string</span> part2)
+{
+    <span class="highlight-comment">// Obtain a schema object for a particular kind of elements </span>
+    NumberingSchema schema = NumberingSchema.GetNumberingSchema(document,NumberingSchemaTypes.StructuralNumberingSchemas.Rebar);
+
+    <span class="highlight-keyword">using</span> (Transaction transaction = <span class="highlight-keyword">new</span> Transaction(document))
+    {
+        <span class="highlight-comment">// Changes to numbering sequences must be made inside a transaction</span>
+        transaction.Start(<span class="highlight-literal">"Swap Numbering Sequences"</span>);
+
+        <span class="highlight-comment">// We will use a temporary partition for the swap operation,</span>
+        <span class="highlight-comment">// for the move operation only works if the target partition </span>
+        <span class="highlight-comment">// does not exist yet in the same numbering schema.</span>
+        <span class="highlight-comment">// (We assume this TEMPORARY partition does not exist.)</span>
+        <span class="highlight-keyword">string</span> tempPartition = <span class="highlight-literal">"TEMPORARY"</span>;
+
+        <span class="highlight-comment">// Step 1</span>
+        <span class="highlight-comment">// First we move all elements from one sequence into </span>
+        <span class="highlight-comment">// a partition we know does not exist. This action will</span>
+        <span class="highlight-comment">// create the temporary partition and remove the original</span>
+        <span class="highlight-comment">// one (part1).</span>
+        schema.MoveSequence(part1, tempPartition);
+
+        <span class="highlight-comment">// Step 2</span>
+        <span class="highlight-comment">// With the sequence in partition 'part1' removed</span>
+        <span class="highlight-comment">// we can now move elements from the second sequence to it.</span>
+        <span class="highlight-comment">// This action will re-create a sequence in partition 'part1'</span>
+        <span class="highlight-comment">// and remove the sequence in partition 'part2'</span>
+        schema.MoveSequence(part2, part1);
+
+        <span class="highlight-comment">// Step 3</span>
+        <span class="highlight-comment">// Finally, we can move elements 'parked' in the temporary</span>
+        <span class="highlight-comment">// sequence to partition 'part2', for that partition was</span>
+        <span class="highlight-comment">// removed in the previous step and thus can now be created</span>
+        <span class="highlight-comment">// again. The temporary partition will be automatically </span>
+        <span class="highlight-comment">// removed upon completing this step.</span>
+        schema.MoveSequence(tempPartition, part2);
+
+        transaction.Commit();
+    }
+}</pre></div><div id="IDAIC_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="highlight-comment">''' &lt;summary&gt;</span>
+<span class="highlight-comment">''' This method uses multiple moving operations to swap numbers</span>
+<span class="highlight-comment">''' for Rebars in two numbering sequences. The sequences are</span>
+<span class="highlight-comment">''' identified by the names of two numbering partitions.</span>
+<span class="highlight-comment">''' &lt;/summary&gt;</span>
+<span class="highlight-comment">''' &lt;param name="document"&gt;Document to modify&lt;/param&gt;</span>
+<span class="highlight-comment">''' &lt;param name="part1"&gt;Name of the partition of one numbering sequence&lt;/param&gt;</span>
+<span class="highlight-comment">''' &lt;param name="part2"&gt;Name of the partition of another numbering sequence&lt;/param&gt;</span>
+<span class="highlight-keyword">Private</span> <span class="highlight-keyword">Sub</span> SwapNumberingSequences(document <span class="highlight-keyword">As</span> Document, part1 <span class="highlight-keyword">As</span> <span class="highlight-keyword">String</span>, part2 <span class="highlight-keyword">As</span> <span class="highlight-keyword">String</span>)
+    <span class="highlight-comment">' Obtain a schema object for a particular kind of elements </span>
+    <span class="highlight-keyword">Dim</span> schema <span class="highlight-keyword">As</span> NumberingSchema = NumberingSchema.GetNumberingSchema(document, NumberingSchemaTypes.StructuralNumberingSchemas.Rebar)
+
+    <span class="highlight-keyword">Using</span> transaction <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> Transaction(document)
+        <span class="highlight-comment">' Changes to numbering sequences must be made inside a transaction</span>
+        transaction.Start(<span class="highlight-literal">"Swap Numbering Sequences"</span>)
+
+        <span class="highlight-comment">' We will use a temporary partition for the swap operation,</span>
+        <span class="highlight-comment">' for the move operation only works if the target partition </span>
+        <span class="highlight-comment">' does not exist yet in the same numbering schema.</span>
+        <span class="highlight-comment">' (We assume this TEMPORARY partition does not exist.)</span>
+        <span class="highlight-keyword">Dim</span> tempPartition <span class="highlight-keyword">As</span> <span class="highlight-keyword">String</span> = <span class="highlight-literal">"TEMPORARY"</span>
+
+        <span class="highlight-comment">' Step 1</span>
+        <span class="highlight-comment">' First we move all elements from one sequence into </span>
+        <span class="highlight-comment">' a partition we know does not exist. This action will</span>
+        <span class="highlight-comment">' create the temporary partition and remove the original</span>
+        <span class="highlight-comment">' one (part1).</span>
+        schema.MoveSequence(part1, tempPartition)
+
+        <span class="highlight-comment">' Step 2</span>
+        <span class="highlight-comment">' With the sequence in partition 'part1' removed</span>
+        <span class="highlight-comment">' we can now move elements from the second sequence to it.</span>
+        <span class="highlight-comment">' This action will re-create a sequence in partition 'part1'</span>
+        <span class="highlight-comment">' and remove the sequence in partition 'part2'</span>
+        schema.MoveSequence(part2, part1)
+
+        <span class="highlight-comment">' Step 3</span>
+        <span class="highlight-comment">' Finally, we can move elements 'parked' in the temporary</span>
+        <span class="highlight-comment">' sequence to partition 'part2', for that partition was</span>
+        <span class="highlight-comment">' removed in the previous step and thus can now be created</span>
+        <span class="highlight-comment">' again. The temporary partition will be automatically </span>
+        <span class="highlight-comment">' removed upon completing this step.</span>
+        schema.MoveSequence(tempPartition, part2)
+
+        transaction.Commit()
+    <span class="highlight-keyword">End</span> <span class="highlight-keyword">Using</span>
+<span class="highlight-keyword">End</span> <span class="highlight-keyword">Sub</span></pre></div><div id="IDAIC_code_Div3" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div><div id="IDAIC_code_Div4" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div></div></div></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('seeAlso')" onkeypress="SectionExpandCollapse_CheckKey('seeAlso', event)" tabindex="0"><img id="seeAlsoToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="seeAlsoSection" class="collapsibleSection"><h4>Reference</h4><div><a href="8f2b22da-5963-301f-44d8-10c68828c436.htm">NumberingSchema Class</a></div><div><a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB Namespace</a></div></div></div></div><div id="PageFooter" class="pageFooter"><div class="feedbackLink">Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:revitapifeedback%40autodesk.com?Subject=Revit%202025%20API">Autodesk</a></div>
+        <script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        HT_mailLink.href += ": " + document.title + "\u0026body=" + encodeURIComponent("Your feedback is used to improve the documentation and the product. Your e-mail address will not be used for any other purpose and is disposed of after the issue you report is resolved. While working to resolve the issue that you report, you may be contacted via e-mail to get further details or clarification on the feedback you sent. After the issue you report has been addressed, you may receive an e-mail to let you know that your feedback has been addressed.");
+        </script></div></body></html>

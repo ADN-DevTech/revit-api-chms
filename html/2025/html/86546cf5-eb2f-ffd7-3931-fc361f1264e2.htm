@@ -1,0 +1,162 @@
+﻿<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="Microsoft.Help.SelfBranded" content="true" /><meta name="Language" content="en-us" /><meta name="Microsoft.Help.Locale" content="en-us" /><meta name="Microsoft.Help.TopicLocale" content="en-us" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" type="text/css" href="../styles/branding.css" /><link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" /><script type="text/javascript" src="../scripts/branding.js"></script><title>Application.DocumentPrinting Event</title><meta name="Title" content="DocumentPrinting Event" /><meta name="Microsoft.Help.Id" content="E:Autodesk.Revit.ApplicationServices.Application.DocumentPrinting" /><meta name="Microsoft.Help.ContentType" content="Reference" /><meta name="System.Keywords" content="Application.DocumentPrinting event" /><meta name="System.Keywords" content="DocumentPrinting event" /><meta name="Microsoft.Help.F1" content="Autodesk.Revit.ApplicationServices.Application.DocumentPrinting" /><meta name="Microsoft.Help.F1" content="Application.DocumentPrinting" /><meta name="Microsoft.Help.F1" content="DocumentPrinting" /><meta name="container" content="Autodesk.Revit.ApplicationServices" /><meta name="file" content="86546cf5-eb2f-ffd7-3931-fc361f1264e2" /><meta name="guid" content="86546cf5-eb2f-ffd7-3931-fc361f1264e2" /><meta name="Microsoft.Help.Category" content="CSharp" /><meta name="Microsoft.Help.Category" content="VB" /><meta name="Description" content="Subscribe to the DocumentPrinting event to be notified when Revit is just about to print a view or ViewSet of the document." /><link type="text/css" rel="stylesheet" href="../styles/highlight.css" /><script type="text/javascript" src="../scripts/highlight.js"> </script><link rel="stylesheet" type="text/css" href="../styles/branding-Help1.css" /></head><body onload="SetDefaultLanguage('cs');"><input type="hidden" id="userDataCache" class="userDataStyle" /><div id="PageHeader" class="pageHeader">Revit 2025 API</div><div class="pageBody"><div id="TopicContent" class="topicContent"><table class="titleTable"><tr><td class="titleColumn"><h1>Application<span id="LST686D9B49_0" data-languageSpecificText="cpp=::|nu=."></span>Document<wbr />Printing Event</h1></td></tr></table><div class="summary">
+   Subscribe to the DocumentPrinting event to be notified when Revit is just about to print a view or ViewSet of the document.
+</div><br /><strong>Namespace:</strong> <a href="91957e18-2935-006c-83ab-3b5b9dbb5928.htm">Autodesk.Revit.ApplicationServices</a><br /><strong>Assembly:</strong> RevitAPI (in RevitAPI.dll) Version: 25.0.0.0 (25.0.0.0)<div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDB')" onkeypress="SectionExpandCollapse_CheckKey('IDB', event)" tabindex="0"><img id="IDBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Syntax</span></div><div id="IDBSection" class="collapsibleSection"><div id="IDAB" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAB_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cs','1','4');return false;">C#</a></div><div id="IDAB_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','vb','2','4');return false;">VB</a></div><div id="IDAB_tab3" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cpp','3','4');return false;">C++</a></div><div id="IDAB_tab4" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAB_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAB');return false;" title="Copy">Copy</a></div></div><div id="IDAB_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="keyword">public</span> event <span class="identifier">EventHandler</span>&lt;<span class="identifier">DocumentPrintingEventArgs</span>&gt; <span class="identifier">DocumentPrinting</span></pre></div><div id="IDAB_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">Public</span> Event <span class="identifier">DocumentPrinting</span> <span class="keyword">As</span> <span class="identifier">EventHandler</span>(<span class="keyword">Of</span> <span class="identifier">DocumentPrintingEventArgs</span>)</pre></div><div id="IDAB_code_Div3" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">public</span>:
+ <span class="keyword">event</span> <span class="identifier">EventHandler</span>&lt;<span class="identifier">DocumentPrintingEventArgs</span>^&gt;^ <span class="identifier">DocumentPrinting</span> {
+	<span class="keyword">void</span> <span class="keyword">add</span> (<span class="identifier">EventHandler</span>&lt;<span class="identifier">DocumentPrintingEventArgs</span>^&gt;^ <span class="parameter">value</span>);
+	<span class="keyword">void</span> <span class="keyword">remove</span> (<span class="identifier">EventHandler</span>&lt;<span class="identifier">DocumentPrintingEventArgs</span>^&gt;^ <span class="parameter">value</span>);
+}</pre></div><div id="IDAB_code_Div4" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">member</span> <span class="identifier">DocumentPrinting</span> : <span class="identifier">IEvent</span>&lt;<span class="identifier">EventHandler</span>&lt;<span class="identifier">DocumentPrintingEventArgs</span>&gt;,
+    <span class="identifier">DocumentPrintingEventArgs</span>&gt;</pre></div></div></div><h4>Value</h4><a href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1" target="_blank" rel="noopener noreferrer">EventHandler</a><span id="LST686D9B49_1" data-languageSpecificText="cpp=&lt;|cs=&lt;|fs=&lt;|vb=(Of |nu=("></span><a href="cae91da6-7e05-e47c-5957-15330428c303.htm">DocumentPrintingEventArgs</a><span id="LST686D9B49_2" data-languageSpecificText="cpp=&gt;|cs=&gt;|fs=&gt;|vb=)|nu=)"></span></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDBC')" onkeypress="SectionExpandCollapse_CheckKey('IDBC', event)" tabindex="0"><img id="IDBCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Remarks</span></div><div id="IDBCSection" class="collapsibleSection"><p>This event is raised when Revit is just about to print a view or ViewSet of the document.</p><p>
+   Handlers of this event are permitted to make modifications to any document (including the active document),
+   except for documents that are currently in read-only mode.
+   </p><p>Event is cancellable. To cancel it, call the 'Cancel()' method of event's argument to True.
+   Your application is responsible for providing feedback to the user about the reason for the cancellation.</p><p>The following API functions are not available for current document during this event:
+   <ul><li>All overloads of Autodesk.Revit.DB.Document.Export()</li><li>Autodesk::Revit::DB::Document::Print</li><li><a href="1ea1e825-8044-7a27-d9b9-ca463443c3b9.htm">Print<span id="LST686D9B49_3" data-languageSpecificText="cs=()|vb=|cpp=()|nu=()|fs=()"></span></a> and similar overloads.</li><li><a href="0c9524b7-33b5-8c76-2843-c7024f03e4d7.htm">SubmitPrint<span id="LST686D9B49_4" data-languageSpecificText="cs=()|vb=|cpp=()|nu=()|fs=()"></span></a> and similar overloads.</li><li><span class="noLink">[!:Autodesk::Revit::DB::Document::Close()]</span> and similar overloads.</li><li><span class="noLink">[!:Autodesk::Revit::DB::Document::Save()]</span> .</li><li><span class="noLink">[!:Autodesk::Revit::DB::Document::SaveAs(String)]</span> and similar overloads.</li></ul></p><p>Exception <a href="9e715f03-3884-e539-4dd6-8d7545733adc.htm">InvalidOperationException</a> will be thrown if any of the above methods is called during this event.</p><p>After this event, for each view being printed, <a href="9dab43ee-41f1-99d3-6480-d32af1675ad4.htm">ViewPrinting</a> and <a href="5f995f6a-15d8-b1c3-9bc4-3bd203dc16f6.htm">ViewPrinted</a> events will be raised.
+   Another event <span class="noLink">[!:Autodesk::Revit::DB::Document::DocumentPrinted]</span> will be raised immediately after document printing
+   is finished.</p></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDDC')" onkeypress="SectionExpandCollapse_CheckKey('IDDC', event)" tabindex="0"><img id="IDDCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Example</span></div><div id="IDDCSection" class="collapsibleSection"><div id="IDADC" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDADC_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDADC','cs','1','4');return false;">C#</a></div><div id="IDADC_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDADC','vb','2','4');return false;">VB</a></div><div id="IDADC_tab3" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDADC','cpp','3','4');return false;">C++</a></div><div id="IDADC_tab4" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDADC','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDADC_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDADC');return false;" title="Copy">Copy</a></div></div><div id="IDADC_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="highlight-keyword">public</span> <span class="highlight-keyword">class</span> Application_DocumentPrinting : IExternalApplication
+{
+    <span class="highlight-comment">/// &lt;ExampleMethod&gt;</span>
+    <span class="highlight-comment">/// &lt;summary&gt;</span>
+    <span class="highlight-comment">/// Implement the OnStartup method to register events when Revit starts.</span>
+    <span class="highlight-comment">/// &lt;/summary&gt;</span>
+    <span class="highlight-keyword">public</span> Result OnStartup(UIControlledApplication application)
+    {
+        <span class="highlight-comment">// Register related events</span>
+       application.ControlledApplication.DocumentPrinting += <span class="highlight-keyword">new</span> EventHandler&lt;Autodesk.Revit.DB.Events.DocumentPrintingEventArgs&gt;(AppDocumentPrinting);
+        <span class="highlight-keyword">return</span> Result.Succeeded;
+    }
+
+    <span class="highlight-comment">/// &lt;summary&gt;</span>
+    <span class="highlight-comment">/// Implement this method to unregister the subscribed events when Revit exits.</span>
+    <span class="highlight-comment">/// &lt;/summary&gt;</span>
+    <span class="highlight-keyword">public</span> Result OnShutdown(UIControlledApplication application)
+    {
+        <span class="highlight-comment">// unregister events</span>
+       application.ControlledApplication.DocumentPrinting -= <span class="highlight-keyword">new</span> EventHandler&lt;Autodesk.Revit.DB.Events.DocumentPrintingEventArgs&gt;(AppDocumentPrinting);
+        <span class="highlight-keyword">return</span> Result.Succeeded;
+    }
+    <span class="highlight-comment">/// &lt;TrivialCode&gt;</span>
+    <span class="highlight-comment">/// Code ID: 501</span>
+    <span class="highlight-comment">/// For DocumentPrinting class description</span>
+    <span class="highlight-comment">/// &lt;/TrivialCode&gt;</span>
+
+
+    <span class="highlight-comment">/// &lt;summary&gt;</span>
+    <span class="highlight-comment">/// Handler method for DocumentPrinting event, it will display some event arguments.</span>
+    <span class="highlight-comment">/// &lt;/summary&gt;</span>
+    <span class="highlight-keyword">public</span> <span class="highlight-keyword">void</span> AppDocumentPrinting(<span class="highlight-keyword">object</span> sender, Autodesk.Revit.DB.Events.DocumentPrintingEventArgs args)
+    {
+        StringBuilder info = <span class="highlight-keyword">new</span> StringBuilder();
+        info.AppendLine(<span class="highlight-literal">"DocumentPrintingEventArgs Parameters ------&gt;"</span>);
+
+        info.AppendLine(<span class="highlight-literal">"    Event Cancellable   : "</span> + args.Cancellable);
+        info.AppendLine(<span class="highlight-literal">"    Views to be printed : "</span>); <span class="highlight-comment">// Views</span>
+        Application app = sender <span class="highlight-keyword">as</span> Application;
+        DumpViewsInfo(app, args.GetViewElementIds(), <span class="highlight-literal">"    "</span>, <span class="highlight-keyword">ref</span> info);
+
+        TaskDialog.Show(<span class="highlight-literal">"Revit"</span>,info.ToString());
+    }
+
+
+    <span class="highlight-comment">/// &lt;summary&gt;</span>
+    <span class="highlight-comment">/// Dump information of views: ViewType, Id and ViewName.</span>
+    <span class="highlight-comment">/// &lt;/summary&gt;</span>
+    <span class="highlight-comment">/// &lt;param name="views"&gt;Views to be displayed in message box.&lt;/param&gt;</span>
+    <span class="highlight-comment">/// &lt;param name="prefix"&gt;Prefix mark for each line added to message box.&lt;/param&gt;</span>
+    <span class="highlight-comment">/// &lt;param name="info"&gt;String where data is stored for display&lt;/param&gt;</span>
+    <span class="highlight-keyword">private</span> <span class="highlight-keyword">static</span> <span class="highlight-keyword">void</span> DumpViewsInfo(Application app, System.Collections.Generic.IList&lt;ElementId&gt; viewIds, String prefix, <span class="highlight-keyword">ref</span> StringBuilder info)
+    {
+        <span class="highlight-keyword">int</span> index = <span class="highlight-number">0</span>;
+        UIApplication uiApp = <span class="highlight-keyword">new</span> UIApplication(app);
+        <span class="highlight-keyword">foreach</span> (ElementId curViewId <span class="highlight-keyword">in</span> viewIds)
+        {
+            Autodesk.Revit.DB.View curView = uiApp.ActiveUIDocument.Document.GetElement(curViewId) <span class="highlight-keyword">as</span> Autodesk.Revit.DB.View;
+            DumpViewInfo(curView, String.Format(<span class="highlight-literal">"{0}#{1}"</span>, prefix, index++), <span class="highlight-keyword">ref</span> info);
+        }
+    }
+
+    <span class="highlight-comment">/// &lt;summary&gt;</span>
+    <span class="highlight-comment">/// Dump information of single view: ViewType, Id and ViewName.</span>
+    <span class="highlight-comment">/// &lt;/summary&gt;</span>
+    <span class="highlight-comment">/// &lt;param name="view"&gt;View element to be displayed in message box.&lt;/param&gt;</span>
+    <span class="highlight-comment">/// &lt;param name="prefix"&gt;Prefix mark for each line sent to message box.&lt;/param&gt;</span>
+    <span class="highlight-comment">/// &lt;param name="info"&gt;String where data is stored for display&lt;/param&gt;</span>
+    <span class="highlight-keyword">private</span> <span class="highlight-keyword">static</span> <span class="highlight-keyword">void</span> DumpViewInfo(Autodesk.Revit.DB.View view, String prefix, <span class="highlight-keyword">ref</span> StringBuilder info)
+    {
+        info.AppendLine(String.Format(<span class="highlight-literal">"{0} Id: {1}, ViewName: {2}, ViewType: {3}"</span>,
+            prefix, view.Id.ToString(), view.Name, view.ViewType));
+    }
+    <span class="highlight-comment">/// &lt;/ExampleMethod&gt;</span>
+}</pre></div><div id="IDADC_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="highlight-keyword">Public</span> <span class="highlight-keyword">Class</span> Application_DocumentPrinting
+    <span class="highlight-keyword">Implements</span> IExternalApplication
+    <span class="highlight-comment">' &lt;ExampleMethod&gt;</span>
+    <span class="highlight-comment">' &lt;summary&gt;</span>
+    <span class="highlight-comment">' Implement the OnStartup method to register events when Revit starts.</span>
+    <span class="highlight-comment">' &lt;/summary&gt;</span>
+    <span class="highlight-keyword">Public</span> <span class="highlight-keyword">Function</span> OnStartup(application <span class="highlight-keyword">As</span> UIControlledApplication) <span class="highlight-keyword">As</span> Autodesk.Revit.UI.Result <span class="highlight-keyword">Implements</span> IExternalApplication.OnStartup
+        <span class="highlight-comment">' Register related events</span>
+        <span class="highlight-keyword">AddHandler</span> application.ControlledApplication.DocumentPrinting, <span class="highlight-keyword">AddressOf</span> AppDocumentPrinting
+        <span class="highlight-keyword">Return</span> Result.Succeeded
+    <span class="highlight-keyword">End</span> <span class="highlight-keyword">Function</span>
+
+    <span class="highlight-comment">' &lt;summary&gt;</span>
+    <span class="highlight-comment">' Implement this method to unregister the subscribed events when Revit exits.</span>
+    <span class="highlight-comment">' &lt;/summary&gt;</span>
+    <span class="highlight-keyword">Public</span> <span class="highlight-keyword">Function</span> OnShutdown(application <span class="highlight-keyword">As</span> UIControlledApplication) <span class="highlight-keyword">As</span> Autodesk.Revit.UI.Result <span class="highlight-keyword">Implements</span> IExternalApplication.OnShutdown
+        <span class="highlight-comment">' unregister events</span>
+        <span class="highlight-keyword">RemoveHandler</span> application.ControlledApplication.DocumentPrinting, <span class="highlight-keyword">AddressOf</span> AppDocumentPrinting
+        <span class="highlight-keyword">Return</span> Result.Succeeded
+    <span class="highlight-keyword">End</span> <span class="highlight-keyword">Function</span>
+    <span class="highlight-comment">' &lt;TrivialCode&gt;</span>
+    <span class="highlight-comment">' Code ID: 501</span>
+    <span class="highlight-comment">' For DocumentPrinting class description</span>
+    <span class="highlight-comment">' &lt;/TrivialCode&gt;</span>
+
+
+    <span class="highlight-comment">' &lt;summary&gt;</span>
+    <span class="highlight-comment">' Handler method for DocumentPrinting event, it will display some event arguments.</span>
+    <span class="highlight-comment">' &lt;/summary&gt;</span>
+    <span class="highlight-keyword">Public</span> <span class="highlight-keyword">Sub</span> AppDocumentPrinting(sender <span class="highlight-keyword">As</span> <span class="highlight-keyword">Object</span>, args <span class="highlight-keyword">As</span> Autodesk.Revit.DB.Events.DocumentPrintingEventArgs)
+        <span class="highlight-keyword">Dim</span> info <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> StringBuilder()
+        info.AppendLine(<span class="highlight-literal">"DocumentPrintingEventArgs Parameters ------&gt;"</span>)
+
+        info.AppendLine(<span class="highlight-literal">"    Event Cancellable   : "</span> &amp; Convert.ToString(args.Cancellable))
+        info.AppendLine(<span class="highlight-literal">"    Views to be printed : "</span>)
+        <span class="highlight-comment">' Views</span>
+        <span class="highlight-keyword">Dim</span> app <span class="highlight-keyword">As</span> Application = <span class="highlight-keyword">TryCast</span>(sender, Application)
+        DumpViewsInfo(app, args.GetViewElementIds(), <span class="highlight-literal">"    "</span>, info)
+
+        TaskDialog.Show(<span class="highlight-literal">"Revit"</span>, info.ToString())
+    <span class="highlight-keyword">End</span> <span class="highlight-keyword">Sub</span>
+
+
+    <span class="highlight-comment">' &lt;summary&gt;</span>
+    <span class="highlight-comment">' Dump information of views: ViewType, Id and ViewName.</span>
+    <span class="highlight-comment">' &lt;/summary&gt;</span>
+    <span class="highlight-comment">' &lt;param name="views"&gt;Views to be displayed in message box.&lt;/param&gt;</span>
+    <span class="highlight-comment">' &lt;param name="prefix"&gt;Prefix mark for each line added to message box.&lt;/param&gt;</span>
+    <span class="highlight-comment">' &lt;param name="info"&gt;String where data is stored for display&lt;/param&gt;</span>
+    <span class="highlight-keyword">Private</span> <span class="highlight-keyword">Shared</span> <span class="highlight-keyword">Sub</span> DumpViewsInfo(app <span class="highlight-keyword">As</span> Application, viewIds <span class="highlight-keyword">As</span> System.Collections.Generic.IList(<span class="highlight-keyword">Of</span> ElementId), prefix <span class="highlight-keyword">As</span> [<span class="highlight-keyword">String</span>], <span class="highlight-keyword">ByRef</span> info <span class="highlight-keyword">As</span> StringBuilder)
+        <span class="highlight-keyword">Dim</span> index <span class="highlight-keyword">As</span> <span class="highlight-keyword">Integer</span> = <span class="highlight-number">0</span>
+        <span class="highlight-keyword">Dim</span> uiApp <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> UIApplication(app)
+        <span class="highlight-keyword">For</span> <span class="highlight-keyword">Each</span> curViewId <span class="highlight-keyword">As</span> ElementId <span class="highlight-keyword">In</span> viewIds
+            <span class="highlight-keyword">Dim</span> curView <span class="highlight-keyword">As</span> Autodesk.Revit.DB.View = <span class="highlight-keyword">TryCast</span>(uiApp.ActiveUIDocument.Document.GetElement(curViewId), Autodesk.Revit.DB.View)
+            DumpViewInfo(curView, [<span class="highlight-keyword">String</span>].Format(<span class="highlight-literal">"{0}#{1}"</span>, prefix, System.Math.Max(System.Threading.Interlocked.Increment(index), index - <span class="highlight-number">1</span>)), info)
+        <span class="highlight-keyword">Next</span>
+    <span class="highlight-keyword">End</span> <span class="highlight-keyword">Sub</span>
+
+    <span class="highlight-comment">' &lt;summary&gt;</span>
+    <span class="highlight-comment">' Dump information of single view: ViewType, Id and ViewName.</span>
+    <span class="highlight-comment">' &lt;/summary&gt;</span>
+    <span class="highlight-comment">' &lt;param name="view"&gt;View element to be displayed in message box.&lt;/param&gt;</span>
+    <span class="highlight-comment">' &lt;param name="prefix"&gt;Prefix mark for each line sent to message box.&lt;/param&gt;</span>
+    <span class="highlight-comment">' &lt;param name="info"&gt;String where data is stored for display&lt;/param&gt;</span>
+    <span class="highlight-keyword">Private</span> <span class="highlight-keyword">Shared</span> <span class="highlight-keyword">Sub</span> DumpViewInfo(view <span class="highlight-keyword">As</span> Autodesk.Revit.DB.View, prefix <span class="highlight-keyword">As</span> [<span class="highlight-keyword">String</span>], <span class="highlight-keyword">ByRef</span> info <span class="highlight-keyword">As</span> StringBuilder)
+        info.AppendLine([<span class="highlight-keyword">String</span>].Format(<span class="highlight-literal">"{0} Id: {1}, ViewName: {2}, ViewType: {3}"</span>, prefix, view.Id.ToString(), view.Name, view.ViewType))
+    <span class="highlight-keyword">End</span> <span class="highlight-keyword">Sub</span>
+    <span class="highlight-comment">' &lt;/ExampleMethod&gt;</span>
+<span class="highlight-keyword">End</span> <span class="highlight-keyword">Class</span></pre></div><div id="IDADC_code_Div3" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div><div id="IDADC_code_Div4" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div></div></div></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('seeAlso')" onkeypress="SectionExpandCollapse_CheckKey('seeAlso', event)" tabindex="0"><img id="seeAlsoToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="seeAlsoSection" class="collapsibleSection"><h4>Reference</h4><div><a href="94db8ea8-d2c3-5e71-8030-466bcb8e4426.htm">Application Class</a></div><div><a href="91957e18-2935-006c-83ab-3b5b9dbb5928.htm">Autodesk.Revit.ApplicationServices Namespace</a></div></div></div></div><div id="PageFooter" class="pageFooter"><div class="feedbackLink">Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:revitapifeedback%40autodesk.com?Subject=Revit%202025%20API">Autodesk</a></div>
+        <script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        HT_mailLink.href += ": " + document.title + "\u0026body=" + encodeURIComponent("Your feedback is used to improve the documentation and the product. Your e-mail address will not be used for any other purpose and is disposed of after the issue you report is resolved. While working to resolve the issue that you report, you may be contacted via e-mail to get further details or clarification on the feedback you sent. After the issue you report has been addressed, you may receive an e-mail to let you know that your feedback has been addressed.");
+        </script></div></body></html>

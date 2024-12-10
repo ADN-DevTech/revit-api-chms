@@ -1,0 +1,215 @@
+﻿<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="Microsoft.Help.SelfBranded" content="true" /><meta name="Language" content="en-us" /><meta name="Microsoft.Help.Locale" content="en-us" /><meta name="Microsoft.Help.TopicLocale" content="en-us" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" type="text/css" href="../styles/branding.css" /><link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" /><script type="text/javascript" src="../scripts/branding.js"></script><title>ElementTransformUtils.CopyElements(Document, ICollection&lt;ElementId&gt;, Document, Transform, CopyPasteOptions) Method</title><meta name="Title" content="CopyElements(Document, ICollection&lt;ElementId&gt;, Document, Transform, CopyPasteOptions) Method" /><meta name="Microsoft.Help.Id" content="M:Autodesk.Revit.DB.ElementTransformUtils.CopyElements(Autodesk.Revit.DB.Document,System.Collections.Generic.ICollection{Autodesk.Revit.DB.ElementId},Autodesk.Revit.DB.Document,Autodesk.Revit.DB.Transform,Autodesk.Revit.DB.CopyPasteOptions)" /><meta name="Microsoft.Help.ContentType" content="Reference" /><meta name="container" content="Autodesk.Revit.DB" /><meta name="file" content="b22df8f6-3fa3-e177-ffa5-ba6c639fb3dc" /><meta name="guid" content="b22df8f6-3fa3-e177-ffa5-ba6c639fb3dc" /><meta name="Microsoft.Help.Category" content="CSharp" /><meta name="Microsoft.Help.Category" content="VB" /><meta name="Description" content="Copies a set of elements from source document to destination document." /><link type="text/css" rel="stylesheet" href="../styles/highlight.css" /><script type="text/javascript" src="../scripts/highlight.js"> </script><link rel="stylesheet" type="text/css" href="../styles/branding-Help1.css" /></head><body onload="SetDefaultLanguage('cs');"><input type="hidden" id="userDataCache" class="userDataStyle" /><div id="PageHeader" class="pageHeader">Revit 2025 API</div><div class="pageBody"><div id="TopicContent" class="topicContent"><table class="titleTable"><tr><td class="titleColumn"><h1>Element<wbr />Transform<wbr />Utils<span id="LST9349C205_0" data-languageSpecificText="cpp=::|nu=."></span>Copy<wbr />Elements(Document, ICollection<span id="LST9349C205_1" data-languageSpecificText="cpp=&lt;|cs=&lt;|fs=&lt;|vb=(Of |nu=("></span>Element<wbr />Id<span id="LST9349C205_2" data-languageSpecificText="cpp=&gt;|cs=&gt;|fs=&gt;|vb=)|nu=)"></span>, Document, Transform, Copy<wbr />Paste<wbr />Options) Method</h1></td></tr></table><div class="summary">
+   Copies a set of elements from source document to destination document.
+</div><br /><strong>Namespace:</strong> <a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB</a><br /><strong>Assembly:</strong> RevitAPI (in RevitAPI.dll) Version: 25.0.0.0 (25.0.0.0)<div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDB')" onkeypress="SectionExpandCollapse_CheckKey('IDB', event)" tabindex="0"><img id="IDBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Syntax</span></div><div id="IDBSection" class="collapsibleSection"><div id="IDAB" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAB_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cs','1','4');return false;">C#</a></div><div id="IDAB_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','vb','2','4');return false;">VB</a></div><div id="IDAB_tab3" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cpp','3','4');return false;">C++</a></div><div id="IDAB_tab4" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAB_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAB');return false;" title="Copy">Copy</a></div></div><div id="IDAB_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="keyword">public</span> <span class="keyword">static</span> <span class="identifier">ICollection</span>&lt;<span class="identifier">ElementId</span>&gt; <span class="identifier">CopyElements</span>(
+	<span class="identifier">Document</span> <span class="parameter">sourceDocument</span>,
+	<span class="identifier">ICollection</span>&lt;<span class="identifier">ElementId</span>&gt; <span class="parameter">elementsToCopy</span>,
+	<span class="identifier">Document</span> <span class="parameter">destinationDocument</span>,
+	<span class="identifier">Transform</span> <span class="parameter">transform</span>,
+	<span class="identifier">CopyPasteOptions</span> <span class="parameter">options</span>
+)</pre></div><div id="IDAB_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">Public</span> <span class="keyword">Shared</span> <span class="keyword">Function</span> <span class="identifier">CopyElements</span> ( 
+	<span class="parameter">sourceDocument</span> <span class="keyword">As</span> <span class="identifier">Document</span>,
+	<span class="parameter">elementsToCopy</span> <span class="keyword">As</span> <span class="identifier">ICollection</span>(<span class="keyword">Of</span> <span class="identifier">ElementId</span>),
+	<span class="parameter">destinationDocument</span> <span class="keyword">As</span> <span class="identifier">Document</span>,
+	<span class="parameter">transform</span> <span class="keyword">As</span> <span class="identifier">Transform</span>,
+	<span class="parameter">options</span> <span class="keyword">As</span> <span class="identifier">CopyPasteOptions</span>
+) <span class="keyword">As</span> <span class="identifier">ICollection</span>(<span class="keyword">Of</span> <span class="identifier">ElementId</span>)</pre></div><div id="IDAB_code_Div3" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">public</span>:
+<span class="keyword">static</span> <span class="identifier">ICollection</span>&lt;<span class="identifier">ElementId</span>^&gt;^ <span class="identifier">CopyElements</span>(
+	<span class="identifier">Document</span>^ <span class="parameter">sourceDocument</span>, 
+	<span class="identifier">ICollection</span>&lt;<span class="identifier">ElementId</span>^&gt;^ <span class="parameter">elementsToCopy</span>, 
+	<span class="identifier">Document</span>^ <span class="parameter">destinationDocument</span>, 
+	<span class="identifier">Transform</span>^ <span class="parameter">transform</span>, 
+	<span class="identifier">CopyPasteOptions</span>^ <span class="parameter">options</span>
+)</pre></div><div id="IDAB_code_Div4" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">static</span> <span class="keyword">member</span> <span class="identifier">CopyElements</span> : 
+        <span class="parameter">sourceDocument</span> : <span class="identifier">Document</span> * 
+        <span class="parameter">elementsToCopy</span> : <span class="identifier">ICollection</span>&lt;<span class="identifier">ElementId</span>&gt; * 
+        <span class="parameter">destinationDocument</span> : <span class="identifier">Document</span> * 
+        <span class="parameter">transform</span> : <span class="identifier">Transform</span> * 
+        <span class="parameter">options</span> : <span class="identifier">CopyPasteOptions</span> <span class="keyword">-&gt;</span> <span class="identifier">ICollection</span>&lt;<span class="identifier">ElementId</span>&gt; </pre></div></div></div><h4>Parameters</h4><dl><dt class="has-text-weight-normal"><span class="parameter">sourceDocument</span>  <a href="db03274b-a107-aa32-9034-f3e0df4bb1ec.htm">Document</a></dt><dd>
+   The document that contains the elements to copy.
+</dd><dt class="has-text-weight-normal"><span class="parameter">elementsToCopy</span>  <a href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1" target="_blank" rel="noopener noreferrer">ICollection</a><span id="LST9349C205_3" data-languageSpecificText="cpp=&lt;|cs=&lt;|fs=&lt;|vb=(Of |nu=("></span><a href="44f3f7b1-3229-3404-93c9-dc5e70337dd6.htm">ElementId</a><span id="LST9349C205_4" data-languageSpecificText="cpp=&gt;|cs=&gt;|fs=&gt;|vb=)|nu=)"></span></dt><dd>
+   The set of elements to copy.
+</dd><dt class="has-text-weight-normal"><span class="parameter">destinationDocument</span>  <a href="db03274b-a107-aa32-9034-f3e0df4bb1ec.htm">Document</a></dt><dd>
+   The destination document to paste the elements into.
+</dd><dt class="has-text-weight-normal"><span class="parameter">transform</span>  <a href="58dd01c8-b3fc-7142-e4f3-c524079a282d.htm">Transform</a></dt><dd>
+   The transform for the new elements. Can be <span class="keyword"><span id="LST9349C205_5" data-languageSpecificText="cpp=nullptr|vb=Nothing|nu=null"></span></span> if no transform is required.
+</dd><dt class="has-text-weight-normal"><span class="parameter">options</span>  <a href="d8f58fd5-2106-7a88-6218-106a30415791.htm">CopyPasteOptions</a></dt><dd>
+   Optional settings. Can be <span class="keyword"><span id="LST9349C205_6" data-languageSpecificText="cpp=nullptr|vb=Nothing|nu=null"></span></span> if default settings should be used.
+</dd></dl><h4>Return Value</h4><a href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1" target="_blank" rel="noopener noreferrer">ICollection</a><span id="LST9349C205_7" data-languageSpecificText="cpp=&lt;|cs=&lt;|fs=&lt;|vb=(Of |nu=("></span><a href="44f3f7b1-3229-3404-93c9-dc5e70337dd6.htm">ElementId</a><span id="LST9349C205_8" data-languageSpecificText="cpp=&gt;|cs=&gt;|fs=&gt;|vb=)|nu=)"></span><br />
+   The ids of the newly created copied elements.
+</div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDIC')" onkeypress="SectionExpandCollapse_CheckKey('IDIC', event)" tabindex="0"><img id="IDICToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Exceptions</span></div><div id="IDICSection" class="collapsibleSection"><table><tr><th>Exception</th><th>Condition</th></tr><tr><td><a href="2e6e4206-97a8-dd4b-df5d-4269f4bb6088.htm">ArgumentException</a></td><td>
+   The given element id set is empty.
+   -or-
+   One or more elements in elementsToCopy do not exist in the document.
+   -or-
+   Some of the elements cannot be copied, because they are view-specific.
+   -or-
+   The input set of elements contains Sketch members along with other elements or there is no active Sketch edit mode.
+</td></tr><tr><td><a href="631e1424-60f4-929b-4e52-dda9dcd26316.htm">ArgumentNullException</a></td><td>
+   A non-optional argument was null
+</td></tr><tr><td><a href="9e715f03-3884-e539-4dd6-8d7545733adc.htm">InvalidOperationException</a></td><td>
+   It is not allowed to copy Sketch members between non-parallel sketches.
+   -or-
+   The elements cannot be copied.
+</td></tr><tr><td><a href="aea34480-ceb5-b49f-129d-0799e7bb1c21.htm">OperationCanceledException</a></td><td>
+   User cancelled the operation.
+</td></tr></table></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDBC')" onkeypress="SectionExpandCollapse_CheckKey('IDBC', event)" tabindex="0"><img id="IDBCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Remarks</span></div><div id="IDBCSection" class="collapsibleSection"><p>Copies are placed at their respective original locations or locations specified by the optional transformation.</p><p>This method can be used for copying non-view specific elements only. For copying view-specific elements, use the view-specific form of the CopyElements method.</p><p>The destination document can be the same as the source document.</p><p>This method performs rehosting of elements where applicable.</p></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDNC')" onkeypress="SectionExpandCollapse_CheckKey('IDNC', event)" tabindex="0"><img id="IDNCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Example</span></div><div id="IDNCSection" class="collapsibleSection"><div id="IDANC" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDANC_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDANC','cs','1','4');return false;">C#</a></div><div id="IDANC_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDANC','vb','2','4');return false;">VB</a></div><div id="IDANC_tab3" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDANC','cpp','3','4');return false;">C++</a></div><div id="IDANC_tab4" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDANC','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDANC_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDANC');return false;" title="Copy">Copy</a></div></div><div id="IDANC_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="highlight-comment">// Copy wall element.</span>
+<span class="highlight-keyword">public</span> <span class="highlight-keyword">void</span> CopyWall(Autodesk.Revit.DB.Document sourceDocument, Autodesk.Revit.DB.Document destinationDocument, Autodesk.Revit.DB.Wall wall)
+{
+   Transform transform = Transform.CreateTranslation(<span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">150</span>, <span class="highlight-number">150</span>, <span class="highlight-number">0</span>));
+   CopyPasteOptions options = <span class="highlight-keyword">new</span> CopyPasteOptions();
+
+   ElementTransformUtils.CopyElements(sourceDocument, <span class="highlight-keyword">new</span> List&lt;ElementId&gt; { wall.Id }, destinationDocument, transform, options);
+}
+
+<span class="highlight-comment">// The method copies existing Sketch curves inside of the Floor sketch.</span>
+<span class="highlight-keyword">public</span> <span class="highlight-keyword">void</span> CopySketchMembersInsideOfSketch(Autodesk.Revit.DB.Document document, Autodesk.Revit.DB.Floor floor)
+{
+   <span class="highlight-keyword">var</span> floorSketch = document.GetElement(floor.SketchId) <span class="highlight-keyword">as</span> Sketch;
+
+   <span class="highlight-comment">// Start Sketch edit mode to copy Sketch members inside of the Sketch</span>
+   SketchEditScope sketchScope = <span class="highlight-keyword">new</span> SketchEditScope(document, <span class="highlight-literal">"Edit floor sketch"</span>);
+   sketchScope.Start(floor.SketchId);
+
+   <span class="highlight-comment">// Start transaction to be able to modify the document</span>
+   <span class="highlight-keyword">using</span> (Transaction tr = <span class="highlight-keyword">new</span> Transaction(document, <span class="highlight-literal">"Copy sketch members"</span>))
+   {
+      tr.Start();
+
+      <span class="highlight-keyword">var</span> transform = Transform.CreateTranslation(<span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">150</span>, <span class="highlight-number">150</span>, <span class="highlight-number">0</span>));
+      <span class="highlight-keyword">var</span> copiedIds = ElementTransformUtils.CopyElements(
+         document, floorSketch.GetAllElements(), document, transform, <span class="highlight-keyword">new</span> CopyPasteOptions());
+
+      tr.Commit();
+   }
+
+   sketchScope.Commit(<span class="highlight-keyword">new</span> CustomFailuresPreprocessor());
+}
+
+<span class="highlight-comment">// The method copies Sketch members from the Floor to the Ceiling Sketch.</span>
+<span class="highlight-keyword">public</span> <span class="highlight-keyword">void</span> CopySketchMembersBetweenSketch(Autodesk.Revit.DB.Floor floor, Autodesk.Revit.DB.Ceiling ceiling)
+{
+   <span class="highlight-keyword">var</span> ceilingSketch = ceiling.Document.GetElement(ceiling.SketchId) <span class="highlight-keyword">as</span> Sketch;
+   <span class="highlight-keyword">var</span> floorSketch = floor.Document.GetElement(floor.SketchId) <span class="highlight-keyword">as</span> Sketch;
+
+   <span class="highlight-comment">// Sketch members can be copied only between parallel Sketches.</span>
+   <span class="highlight-keyword">if</span> (!MathComparisonUtils.IsAlmostEqual(
+      Math.Abs(floorSketch.SketchPlane.GetPlane().Normal.DotProduct(ceilingSketch.SketchPlane.GetPlane().Normal)), <span class="highlight-number">1.0</span>))
+   {
+      <span class="highlight-keyword">return</span>;
+   }
+
+   <span class="highlight-comment">// Start Sketch edit mode, for the ceiling sketch, to copy and paste floor Sketch members to the ceiling</span>
+   SketchEditScope sketchScope = <span class="highlight-keyword">new</span> SketchEditScope(ceiling.Document, <span class="highlight-literal">"Edit ceiling sketch"</span>);
+   sketchScope.Start(ceiling.SketchId);
+
+   <span class="highlight-comment">// Start transaction to be able to modify the document</span>
+   <span class="highlight-keyword">using</span> (Transaction tr = <span class="highlight-keyword">new</span> Transaction(ceiling.Document, <span class="highlight-literal">"Copy sketch members"</span>))
+   {
+      tr.Start();
+
+      <span class="highlight-keyword">var</span> transform = Transform.CreateTranslation(<span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">150</span>, <span class="highlight-number">150</span>, <span class="highlight-number">0</span>));
+      <span class="highlight-keyword">var</span> copiedIds = ElementTransformUtils.CopyElements(
+         floor.Document, floorSketch.GetAllElements(), ceiling.Document, transform, <span class="highlight-keyword">new</span> CopyPasteOptions());
+
+      tr.Commit();
+   }
+
+   sketchScope.Commit(<span class="highlight-keyword">new</span> CustomFailuresPreprocessor());
+}
+
+<span class="highlight-comment">// The method copies ModelCurves from the document to the Sketch.</span>
+<span class="highlight-keyword">public</span> <span class="highlight-keyword">void</span> CopyModelCurvesFromDocumentToSketch(Autodesk.Revit.DB.Sketch sketch, List&lt;ElementId&gt; modelCurveIds)
+{
+   <span class="highlight-comment">// Start Sketch edit mode to insert ModelCurves into the Floor Sketch.</span>
+   SketchEditScope sketchScope = <span class="highlight-keyword">new</span> SketchEditScope(sketch.Document, <span class="highlight-literal">"Edit floor sketch"</span>);
+   sketchScope.Start(sketch.Id);
+
+   <span class="highlight-comment">// Start transaction to be able to modify the document</span>
+   <span class="highlight-keyword">using</span> (Transaction tr = <span class="highlight-keyword">new</span> Transaction(sketch.Document, <span class="highlight-literal">"Copy sketch members"</span>))
+   {
+      tr.Start();
+
+      <span class="highlight-keyword">var</span> transform = Transform.CreateTranslation(<span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">150</span>, <span class="highlight-number">150</span>, <span class="highlight-number">0</span>));
+      <span class="highlight-keyword">var</span> copiedIds = ElementTransformUtils.CopyElements(
+         sketch.Document, modelCurveIds, sketch.Document, transform, <span class="highlight-keyword">new</span> CopyPasteOptions());
+
+      tr.Commit();
+   }
+
+   <span class="highlight-comment">// Sketch curves should not have open loops or intersections to be successfully committed.</span>
+   sketchScope.Commit(<span class="highlight-keyword">new</span> CustomFailuresPreprocessor());
+}</pre></div><div id="IDANC_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="highlight-comment">'Copy wall element.</span>
+<span class="highlight-keyword">Public</span> <span class="highlight-keyword">Sub</span> CopyWall(<span class="highlight-keyword">ByVal</span> sourceDocument <span class="highlight-keyword">As</span> Autodesk.Revit.DB.Document, <span class="highlight-keyword">ByVal</span> destinationDocument <span class="highlight-keyword">As</span> Autodesk.Revit.DB.Document, <span class="highlight-keyword">ByVal</span> wall <span class="highlight-keyword">As</span> Autodesk.Revit.DB.Wall)
+    <span class="highlight-keyword">Dim</span> transform <span class="highlight-keyword">As</span> Transform = Transform.CreateTranslation(<span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">150</span>, <span class="highlight-number">150</span>, <span class="highlight-number">0</span>))
+    <span class="highlight-keyword">Dim</span> options <span class="highlight-keyword">As</span> CopyPasteOptions = <span class="highlight-keyword">New</span> CopyPasteOptions()
+    ElementTransformUtils.CopyElements(sourceDocument, <span class="highlight-keyword">New</span> List(<span class="highlight-keyword">Of</span> ElementId) From {
+        wall.Id
+    }, destinationDocument, transform, options)
+<span class="highlight-keyword">End</span> <span class="highlight-keyword">Sub</span>
+
+<span class="highlight-comment">'The method copies existing Sketch curves inside of the Floor sketch.</span>
+<span class="highlight-keyword">Public</span> <span class="highlight-keyword">Sub</span> CopySketchMembersInsideOfSketch(<span class="highlight-keyword">ByVal</span> document <span class="highlight-keyword">As</span> Autodesk.Revit.DB.Document, <span class="highlight-keyword">ByVal</span> floor <span class="highlight-keyword">As</span> Autodesk.Revit.DB.Floor)
+    <span class="highlight-keyword">Dim</span> floorSketch = <span class="highlight-keyword">TryCast</span>(document.GetElement(floor.SketchId), Sketch)
+
+    <span class="highlight-comment">'Start Sketch edit mode to copy Sketch members inside of the Sketch</span>
+    <span class="highlight-keyword">Dim</span> sketchScope <span class="highlight-keyword">As</span> SketchEditScope = <span class="highlight-keyword">New</span> SketchEditScope(document, <span class="highlight-literal">"Edit floor sketch"</span>)
+    sketchScope.Start(floor.SketchId)
+
+    <span class="highlight-comment">'Start Sketch edit mode to copy Sketch members inside of the Sketch</span>
+    <span class="highlight-keyword">Using</span> tr <span class="highlight-keyword">As</span> Transaction = <span class="highlight-keyword">New</span> Transaction(document, <span class="highlight-literal">"Copy sketch members"</span>)
+        tr.Start()
+        <span class="highlight-keyword">Dim</span> transform <span class="highlight-keyword">As</span> Transform = Transform.CreateTranslation(<span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">150</span>, <span class="highlight-number">150</span>, <span class="highlight-number">0</span>))
+        <span class="highlight-keyword">Dim</span> copiedIds = ElementTransformUtils.CopyElements(document, floorSketch.GetAllElements(), document, transform, <span class="highlight-keyword">New</span> CopyPasteOptions())
+        tr.Commit()
+    <span class="highlight-keyword">End</span> <span class="highlight-keyword">Using</span>
+
+    sketchScope.Commit(<span class="highlight-keyword">New</span> CustomFailuresPreprocessor())
+<span class="highlight-keyword">End</span> <span class="highlight-keyword">Sub</span>
+
+<span class="highlight-comment">'The method copies Sketch members from the Floor to the Ceiling Sketch.</span>
+<span class="highlight-keyword">Public</span> <span class="highlight-keyword">Sub</span> CopySketchMembersBetweenSketch(<span class="highlight-keyword">ByVal</span> floor <span class="highlight-keyword">As</span> Autodesk.Revit.DB.Floor, <span class="highlight-keyword">ByVal</span> ceiling <span class="highlight-keyword">As</span> Autodesk.Revit.DB.Ceiling)
+    <span class="highlight-keyword">Dim</span> ceilingSketch = <span class="highlight-keyword">TryCast</span>(ceiling.Document.GetElement(ceiling.SketchId), Sketch)
+    <span class="highlight-keyword">Dim</span> floorSketch = <span class="highlight-keyword">TryCast</span>(floor.Document.GetElement(floor.SketchId), Sketch)
+
+    <span class="highlight-comment">'Sketch members can be copied only between parallel Sketches.</span>
+    <span class="highlight-keyword">If</span> <span class="highlight-keyword">Not</span> MathComparisonUtils.IsAlmostEqual(Math.Abs(floorSketch.SketchPlane.GetPlane().Normal.DotProduct(ceilingSketch.SketchPlane.GetPlane().Normal)), <span class="highlight-number">1.0</span>) <span class="highlight-keyword">Then</span>
+        <span class="highlight-keyword">Return</span>
+    <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+
+    <span class="highlight-comment">'Start Sketch edit mode, for the ceiling sketch, to copy and paste floor Sketch members to the ceiling</span>
+    <span class="highlight-keyword">Dim</span> sketchScope <span class="highlight-keyword">As</span> SketchEditScope = <span class="highlight-keyword">New</span> SketchEditScope(ceiling.Document, <span class="highlight-literal">"Edit ceiling sketch"</span>)
+    sketchScope.Start(ceiling.SketchId)
+
+    <span class="highlight-comment">'Start transaction to be able to modify the document</span>
+    <span class="highlight-keyword">Using</span> tr <span class="highlight-keyword">As</span> Transaction = <span class="highlight-keyword">New</span> Transaction(ceiling.Document, <span class="highlight-literal">"Copy sketch members"</span>)
+        tr.Start()
+        <span class="highlight-keyword">Dim</span> transform <span class="highlight-keyword">As</span> Transform = Transform.CreateTranslation(<span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">150</span>, <span class="highlight-number">150</span>, <span class="highlight-number">0</span>))
+        <span class="highlight-keyword">Dim</span> copiedIds = ElementTransformUtils.CopyElements(floor.Document, floorSketch.GetAllElements(), ceiling.Document, transform, <span class="highlight-keyword">New</span> CopyPasteOptions())
+        tr.Commit()
+    <span class="highlight-keyword">End</span> <span class="highlight-keyword">Using</span>
+
+    sketchScope.Commit(<span class="highlight-keyword">New</span> CustomFailuresPreprocessor())
+<span class="highlight-keyword">End</span> <span class="highlight-keyword">Sub</span>
+
+<span class="highlight-comment">'The method copies ModelCurves from the document to the Sketch.</span>
+<span class="highlight-keyword">Public</span> <span class="highlight-keyword">Sub</span> CopyModelCurvesFromDocumentToSketch(<span class="highlight-keyword">ByVal</span> sketch <span class="highlight-keyword">As</span> Autodesk.Revit.DB.Sketch, <span class="highlight-keyword">ByVal</span> modelCurveIds <span class="highlight-keyword">As</span> List(<span class="highlight-keyword">Of</span> ElementId))
+    <span class="highlight-comment">'Start Sketch edit mode to insert ModelCurves into the Floor Sketch.</span>
+    <span class="highlight-keyword">Dim</span> sketchScope <span class="highlight-keyword">As</span> SketchEditScope = <span class="highlight-keyword">New</span> SketchEditScope(sketch.Document, <span class="highlight-literal">"Edit floor sketch"</span>)
+    sketchScope.Start(sketch.Id)
+
+    <span class="highlight-comment">'Start transaction to be able to modify the document</span>
+    <span class="highlight-keyword">Using</span> tr <span class="highlight-keyword">As</span> Transaction = <span class="highlight-keyword">New</span> Transaction(sketch.Document, <span class="highlight-literal">"Copy sketch members"</span>)
+        tr.Start()
+        <span class="highlight-keyword">Dim</span> transform <span class="highlight-keyword">As</span> Transform = Transform.CreateTranslation(<span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">150</span>, <span class="highlight-number">150</span>, <span class="highlight-number">0</span>))
+        <span class="highlight-keyword">Dim</span> copiedIds = ElementTransformUtils.CopyElements(sketch.Document, modelCurveIds, sketch.Document, transform, <span class="highlight-keyword">New</span> CopyPasteOptions())
+        tr.Commit()
+    <span class="highlight-keyword">End</span> <span class="highlight-keyword">Using</span>
+
+    <span class="highlight-comment">'Sketch curves should not have open loops or intersections to be successfully committed.</span>
+    sketchScope.Commit(<span class="highlight-keyword">New</span> CustomFailuresPreprocessor())
+<span class="highlight-keyword">End</span> <span class="highlight-keyword">Sub</span></pre></div><div id="IDANC_code_Div3" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div><div id="IDANC_code_Div4" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div></div></div></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('seeAlso')" onkeypress="SectionExpandCollapse_CheckKey('seeAlso', event)" tabindex="0"><img id="seeAlsoToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="seeAlsoSection" class="collapsibleSection"><h4>Reference</h4><div><a href="82e737d5-fda4-bc10-6099-88999cd51300.htm">ElementTransformUtils Class</a></div><div><a href="7b56b5c2-3aff-f42b-ab47-de1f89a1070f.htm">CopyElements Overload</a></div><div><a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB Namespace</a></div></div></div></div><div id="PageFooter" class="pageFooter"><div class="feedbackLink">Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:revitapifeedback%40autodesk.com?Subject=Revit%202025%20API">Autodesk</a></div>
+        <script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        HT_mailLink.href += ": " + document.title + "\u0026body=" + encodeURIComponent("Your feedback is used to improve the documentation and the product. Your e-mail address will not be used for any other purpose and is disposed of after the issue you report is resolved. While working to resolve the issue that you report, you may be contacted via e-mail to get further details or clarification on the feedback you sent. After the issue you report has been addressed, you may receive an e-mail to let you know that your feedback has been addressed.");
+        </script></div></body></html>

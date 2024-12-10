@@ -1,0 +1,75 @@
+﻿<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="Microsoft.Help.SelfBranded" content="true" /><meta name="Language" content="en-us" /><meta name="Microsoft.Help.Locale" content="en-us" /><meta name="Microsoft.Help.TopicLocale" content="en-us" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" type="text/css" href="../styles/branding.css" /><link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" /><script type="text/javascript" src="../scripts/branding.js"></script><title>WorksharingUtils.CheckoutWorksets(Document, ISet&lt;WorksetId&gt;, TransactWithCentralOptions) Method</title><meta name="Title" content="CheckoutWorksets(Document, ISet&lt;WorksetId&gt;, TransactWithCentralOptions) Method" /><meta name="Microsoft.Help.Id" content="M:Autodesk.Revit.DB.WorksharingUtils.CheckoutWorksets(Autodesk.Revit.DB.Document,System.Collections.Generic.ISet{Autodesk.Revit.DB.WorksetId},Autodesk.Revit.DB.TransactWithCentralOptions)" /><meta name="Microsoft.Help.ContentType" content="Reference" /><meta name="container" content="Autodesk.Revit.DB" /><meta name="file" content="39b55560-c85b-bebc-e825-b76b5ba313a7" /><meta name="guid" content="39b55560-c85b-bebc-e825-b76b5ba313a7" /><meta name="Description" content="Obtains ownership for the current user of as many specified worksets as possible." /><link rel="stylesheet" type="text/css" href="../styles/branding-Help1.css" /></head><body onload="SetDefaultLanguage('cs');"><input type="hidden" id="userDataCache" class="userDataStyle" /><div id="PageHeader" class="pageHeader">Revit 2025 API</div><div class="pageBody"><div id="TopicContent" class="topicContent"><table class="titleTable"><tr><td class="titleColumn"><h1>Worksharing<wbr />Utils<span id="LSTD4B9987C_0" data-languageSpecificText="cpp=::|nu=."></span>Checkout<wbr />Worksets(Document, ISet<span id="LSTD4B9987C_1" data-languageSpecificText="cpp=&lt;|cs=&lt;|fs=&lt;|vb=(Of |nu=("></span>Workset<wbr />Id<span id="LSTD4B9987C_2" data-languageSpecificText="cpp=&gt;|cs=&gt;|fs=&gt;|vb=)|nu=)"></span>, Transact<wbr />With<wbr />Central<wbr />Options) Method</h1></td></tr></table><div class="summary">
+   Obtains ownership for the current user of as many specified worksets as possible.
+</div><br /><strong>Namespace:</strong> <a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB</a><br /><strong>Assembly:</strong> RevitAPI (in RevitAPI.dll) Version: 25.0.0.0 (25.0.0.0)<div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDB')" onkeypress="SectionExpandCollapse_CheckKey('IDB', event)" tabindex="0"><img id="IDBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Syntax</span></div><div id="IDBSection" class="collapsibleSection"><div id="IDAB" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAB_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cs','1','4');return false;">C#</a></div><div id="IDAB_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','vb','2','4');return false;">VB</a></div><div id="IDAB_tab3" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cpp','3','4');return false;">C++</a></div><div id="IDAB_tab4" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAB_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAB');return false;" title="Copy">Copy</a></div></div><div id="IDAB_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="keyword">public</span> <span class="keyword">static</span> <span class="identifier">ISet</span>&lt;<span class="identifier">WorksetId</span>&gt; <span class="identifier">CheckoutWorksets</span>(
+	<span class="identifier">Document</span> <span class="parameter">document</span>,
+	<span class="identifier">ISet</span>&lt;<span class="identifier">WorksetId</span>&gt; <span class="parameter">worksetsToCheckout</span>,
+	<span class="identifier">TransactWithCentralOptions</span> <span class="parameter">options</span>
+)</pre></div><div id="IDAB_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">Public</span> <span class="keyword">Shared</span> <span class="keyword">Function</span> <span class="identifier">CheckoutWorksets</span> ( 
+	<span class="parameter">document</span> <span class="keyword">As</span> <span class="identifier">Document</span>,
+	<span class="parameter">worksetsToCheckout</span> <span class="keyword">As</span> <span class="identifier">ISet</span>(<span class="keyword">Of</span> <span class="identifier">WorksetId</span>),
+	<span class="parameter">options</span> <span class="keyword">As</span> <span class="identifier">TransactWithCentralOptions</span>
+) <span class="keyword">As</span> <span class="identifier">ISet</span>(<span class="keyword">Of</span> <span class="identifier">WorksetId</span>)</pre></div><div id="IDAB_code_Div3" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">public</span>:
+<span class="keyword">static</span> <span class="identifier">ISet</span>&lt;<span class="identifier">WorksetId</span>^&gt;^ <span class="identifier">CheckoutWorksets</span>(
+	<span class="identifier">Document</span>^ <span class="parameter">document</span>, 
+	<span class="identifier">ISet</span>&lt;<span class="identifier">WorksetId</span>^&gt;^ <span class="parameter">worksetsToCheckout</span>, 
+	<span class="identifier">TransactWithCentralOptions</span>^ <span class="parameter">options</span>
+)</pre></div><div id="IDAB_code_Div4" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">static</span> <span class="keyword">member</span> <span class="identifier">CheckoutWorksets</span> : 
+        <span class="parameter">document</span> : <span class="identifier">Document</span> * 
+        <span class="parameter">worksetsToCheckout</span> : <span class="identifier">ISet</span>&lt;<span class="identifier">WorksetId</span>&gt; * 
+        <span class="parameter">options</span> : <span class="identifier">TransactWithCentralOptions</span> <span class="keyword">-&gt;</span> <span class="identifier">ISet</span>&lt;<span class="identifier">WorksetId</span>&gt; </pre></div></div></div><h4>Parameters</h4><dl><dt class="has-text-weight-normal"><span class="parameter">document</span>  <a href="db03274b-a107-aa32-9034-f3e0df4bb1ec.htm">Document</a></dt><dd>
+   The document containing the worksets.
+</dd><dt class="has-text-weight-normal"><span class="parameter">worksetsToCheckout</span>  <a href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iset-1" target="_blank" rel="noopener noreferrer">ISet</a><span id="LSTD4B9987C_3" data-languageSpecificText="cpp=&lt;|cs=&lt;|fs=&lt;|vb=(Of |nu=("></span><a href="8bece327-c269-8101-b4c2-38632f593fe6.htm">WorksetId</a><span id="LSTD4B9987C_4" data-languageSpecificText="cpp=&gt;|cs=&gt;|fs=&gt;|vb=)|nu=)"></span></dt><dd>
+   The ids of the worksets to attempt to check out.
+</dd><dt class="has-text-weight-normal"><span class="parameter">options</span>  <a href="f5da22fa-55ee-9196-cafd-5323d8e9ca0a.htm">TransactWithCentralOptions</a></dt><dd>
+   Options to customize access to the central model.
+   <span class="keyword"><span id="LSTD4B9987C_5" data-languageSpecificText="cpp=nullptr|vb=Nothing|nu=null"></span></span> is allowed and means no customization.
+</dd></dl><h4>Return Value</h4><a href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iset-1" target="_blank" rel="noopener noreferrer">ISet</a><span id="LSTD4B9987C_6" data-languageSpecificText="cpp=&lt;|cs=&lt;|fs=&lt;|vb=(Of |nu=("></span><a href="8bece327-c269-8101-b4c2-38632f593fe6.htm">WorksetId</a><span id="LSTD4B9987C_7" data-languageSpecificText="cpp=&gt;|cs=&gt;|fs=&gt;|vb=)|nu=)"></span><br />
+   The ids of all specified worksets that are now owned,
+   including all that were owned prior to the function call.
+</div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDGC')" onkeypress="SectionExpandCollapse_CheckKey('IDGC', event)" tabindex="0"><img id="IDGCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Exceptions</span></div><div id="IDGCSection" class="collapsibleSection"><table><tr><th>Exception</th><th>Condition</th></tr><tr><td><a href="2e6e4206-97a8-dd4b-df5d-4269f4bb6088.htm">ArgumentException</a></td><td>
+   document is not a workshared document.
+   -or-
+   document is not a primary document, it is a linked document.
+   -or-
+   document is read-only: It cannot be modified.
+   -or-
+   document has an open editing transaction and is accepting changes.
+   -or-
+   There are one or more ids with no corresponding workset.
+   -or-
+   Saving is not allowed in the current application mode.
+</td></tr><tr><td><a href="631e1424-60f4-929b-4e52-dda9dcd26316.htm">ArgumentNullException</a></td><td>
+   A non-optional argument was null
+</td></tr><tr><td><a href="20094e4f-8326-8378-e5bc-452341d131c2.htm">CentralFileCommunicationException</a></td><td>
+   The file-based central model could not be reached,
+   e.g. the network is down or the file server is down.
+</td></tr><tr><td><a href="3e38b7b1-1ee8-c7f0-6cdd-bacf67bf61f4.htm">CentralModelAccessDeniedException</a></td><td>
+   Access to the central model was denied due to lack of access privileges.
+   -or-
+   Access to the central model was denied. A possible reason is because the model was under maintenance.
+</td></tr><tr><td><a href="ad511076-c435-23c1-5720-1205c4ed28b9.htm">CentralModelContentionException</a></td><td>
+   The central model are locked by another client.
+</td></tr><tr><td><a href="0e2ac15f-ca64-42c3-b3ef-e6f7ca1cb59a.htm">CentralModelException</a></td><td>
+   The central model is overwritten by other user.
+   -or-
+   The central model is missing.
+   -or-
+   An internal error happened on the central model, please contact the server administrator.
+</td></tr><tr><td><a href="9b54c5a2-22f3-ac30-3efd-7ef80adff6ea.htm">CentralModelVersionArchivedException</a></td><td>
+   Last central version merged into the local model has been archived in the central model.
+   This exception could only be thrown from cloud models.
+</td></tr><tr><td><a href="9e715f03-3884-e539-4dd6-8d7545733adc.htm">InvalidOperationException</a></td><td>
+   Operation is not permitted when there is any open sub-transaction, transaction, or transaction group.
+</td></tr><tr><td><a href="a0003d89-0113-6623-65da-0db5c568bfb6.htm">RevitServerCommunicationException</a></td><td>
+   The server-based central model could not be accessed
+   because of a network communication error.
+</td></tr><tr><td><a href="6dcd093c-d643-07cd-535f-36ffa9d2db52.htm">RevitServerInternalException</a></td><td>
+   An internal error happened on the server, please contact the server administrator.
+</td></tr></table></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDBC')" onkeypress="SectionExpandCollapse_CheckKey('IDBC', event)" tabindex="0"><img id="IDBCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Remarks</span></div><div id="IDBCSection" class="collapsibleSection">
+   For best performance, check out all worksets in one big call, rather than many small calls.
+</div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('seeAlso')" onkeypress="SectionExpandCollapse_CheckKey('seeAlso', event)" tabindex="0"><img id="seeAlsoToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="seeAlsoSection" class="collapsibleSection"><h4>Reference</h4><div><a href="ae7857a0-4e9b-f9c1-84c7-8b250af68068.htm">WorksharingUtils Class</a></div><div><a href="189cde61-a876-1c58-749d-8ce40b84b542.htm">CheckoutWorksets Overload</a></div><div><a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB Namespace</a></div></div></div></div><div id="PageFooter" class="pageFooter"><div class="feedbackLink">Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:revitapifeedback%40autodesk.com?Subject=Revit%202025%20API">Autodesk</a></div>
+        <script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        HT_mailLink.href += ": " + document.title + "\u0026body=" + encodeURIComponent("Your feedback is used to improve the documentation and the product. Your e-mail address will not be used for any other purpose and is disposed of after the issue you report is resolved. While working to resolve the issue that you report, you may be contacted via e-mail to get further details or clarification on the feedback you sent. After the issue you report has been addressed, you may receive an e-mail to let you know that your feedback has been addressed.");
+        </script></div></body></html>

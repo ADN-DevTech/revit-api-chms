@@ -1,0 +1,173 @@
+﻿<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="Microsoft.Help.SelfBranded" content="true" /><meta name="Language" content="en-us" /><meta name="Microsoft.Help.Locale" content="en-us" /><meta name="Microsoft.Help.TopicLocale" content="en-us" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" type="text/css" href="../styles/branding.css" /><link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" /><script type="text/javascript" src="../scripts/branding.js"></script><title>Document.SynchronizeWithCentral Method</title><meta name="Title" content="SynchronizeWithCentral Method" /><meta name="Microsoft.Help.Id" content="M:Autodesk.Revit.DB.Document.SynchronizeWithCentral(Autodesk.Revit.DB.TransactWithCentralOptions,Autodesk.Revit.DB.SynchronizeWithCentralOptions)" /><meta name="Microsoft.Help.ContentType" content="Reference" /><meta name="System.Keywords" content="Document.SynchronizeWithCentral method" /><meta name="System.Keywords" content="SynchronizeWithCentral method" /><meta name="Microsoft.Help.F1" content="Autodesk.Revit.DB.Document.SynchronizeWithCentral" /><meta name="Microsoft.Help.F1" content="Document.SynchronizeWithCentral" /><meta name="Microsoft.Help.F1" content="SynchronizeWithCentral" /><meta name="container" content="Autodesk.Revit.DB" /><meta name="file" content="7de73a7b-68f0-87f2-f6a9-97d824024877" /><meta name="guid" content="7de73a7b-68f0-87f2-f6a9-97d824024877" /><meta name="Microsoft.Help.Category" content="CSharp" /><meta name="Microsoft.Help.Category" content="VB" /><meta name="Description" content="Performs reload latest until the model in the current session is up to date and then saves changes back to central. A save to central is performed even if no changes were made." /><link type="text/css" rel="stylesheet" href="../styles/highlight.css" /><script type="text/javascript" src="../scripts/highlight.js"> </script><link rel="stylesheet" type="text/css" href="../styles/branding-Help1.css" /></head><body onload="SetDefaultLanguage('cs');"><input type="hidden" id="userDataCache" class="userDataStyle" /><div id="PageHeader" class="pageHeader">Revit 2025 API</div><div class="pageBody"><div id="TopicContent" class="topicContent"><table class="titleTable"><tr><td class="titleColumn"><h1>Document<span id="LSTAEB21083_0" data-languageSpecificText="cpp=::|nu=."></span>Synchronize<wbr />With<wbr />Central Method</h1></td></tr></table><div class="summary">
+   Performs reload latest until the model in the current session is up to date and then saves changes back to central.
+   A save to central is performed even if no changes were made.
+</div><br /><strong>Namespace:</strong> <a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB</a><br /><strong>Assembly:</strong> RevitAPI (in RevitAPI.dll) Version: 25.0.0.0 (25.0.0.0)<div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDB')" onkeypress="SectionExpandCollapse_CheckKey('IDB', event)" tabindex="0"><img id="IDBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Syntax</span></div><div id="IDBSection" class="collapsibleSection"><div id="IDAB" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAB_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cs','1','4');return false;">C#</a></div><div id="IDAB_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','vb','2','4');return false;">VB</a></div><div id="IDAB_tab3" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cpp','3','4');return false;">C++</a></div><div id="IDAB_tab4" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAB_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAB');return false;" title="Copy">Copy</a></div></div><div id="IDAB_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="keyword">public</span> <span class="keyword">void</span> <span class="identifier">SynchronizeWithCentral</span>(
+	<span class="identifier">TransactWithCentralOptions</span> <span class="parameter">transactOptions</span>,
+	<span class="identifier">SynchronizeWithCentralOptions</span> <span class="parameter">syncOptions</span>
+)</pre></div><div id="IDAB_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">Public</span> <span class="keyword">Sub</span> <span class="identifier">SynchronizeWithCentral</span> ( 
+	<span class="parameter">transactOptions</span> <span class="keyword">As</span> <span class="identifier">TransactWithCentralOptions</span>,
+	<span class="parameter">syncOptions</span> <span class="keyword">As</span> <span class="identifier">SynchronizeWithCentralOptions</span>
+)</pre></div><div id="IDAB_code_Div3" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">public</span>:
+<span class="keyword">void</span> <span class="identifier">SynchronizeWithCentral</span>(
+	<span class="identifier">TransactWithCentralOptions</span>^ <span class="parameter">transactOptions</span>, 
+	<span class="identifier">SynchronizeWithCentralOptions</span>^ <span class="parameter">syncOptions</span>
+)</pre></div><div id="IDAB_code_Div4" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">member</span> <span class="identifier">SynchronizeWithCentral</span> : 
+        <span class="parameter">transactOptions</span> : <span class="identifier">TransactWithCentralOptions</span> * 
+        <span class="parameter">syncOptions</span> : <span class="identifier">SynchronizeWithCentralOptions</span> <span class="keyword">-&gt;</span> <span class="keyword">unit</span> </pre></div></div></div><h4>Parameters</h4><dl><dt class="has-text-weight-normal"><span class="parameter">transactOptions</span>  <a href="f5da22fa-55ee-9196-cafd-5323d8e9ca0a.htm">TransactWithCentralOptions</a></dt><dd>
+   Options to customize behavior accessing the central model.
+</dd><dt class="has-text-weight-normal"><span class="parameter">syncOptions</span>  <a href="96eaf3af-971d-da6d-a857-88d6e602ffd4.htm">SynchronizeWithCentralOptions</a></dt><dd>
+   Options to customize behavior of SynchronizeWithCentral.
+</dd></dl></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDDC')" onkeypress="SectionExpandCollapse_CheckKey('IDDC', event)" tabindex="0"><img id="IDDCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Exceptions</span></div><div id="IDDCSection" class="collapsibleSection"><table><tr><th>Exception</th><th>Condition</th></tr><tr><td><a href="631e1424-60f4-929b-4e52-dda9dcd26316.htm">ArgumentNullException</a></td><td>
+   A non-optional argument was null
+</td></tr><tr><td><a href="20094e4f-8326-8378-e5bc-452341d131c2.htm">CentralFileCommunicationException</a></td><td>
+   The file-based central model could not be reached, because e.g. the network is down or the file server is down.
+</td></tr><tr><td><a href="3e38b7b1-1ee8-c7f0-6cdd-bacf67bf61f4.htm">CentralModelAccessDeniedException</a></td><td>
+   Access to the central model was denied due to lack of access privileges.
+   -or-
+   Access to the central model was denied. A possible reason is because the model was under maintenance.
+</td></tr><tr><td><a href="ad511076-c435-23c1-5720-1205c4ed28b9.htm">CentralModelContentionException</a></td><td>
+   The central model is locked by another client.
+</td></tr><tr><td><a href="0e2ac15f-ca64-42c3-b3ef-e6f7ca1cb59a.htm">CentralModelException</a></td><td>
+   Username does not match the one used to create the local file.
+   -or-
+   Revit could not save all of the worksets that have been changed.  Try again.
+   -or-
+   Some of the elements you changed in this model are now editable by someone else, or you checked out worksets that were at risk
+   or relinquished in the central model but not this file.  You cannot synchronize with the central model until the other user
+   relinquishes these elements without making changes.
+   -or-
+   The central model has been replaced by a local model.
+   -or-
+   Local incompatible because it was closed without saving after synchronizing with central.
+   -or-
+   The central model is missing.
+   -or-
+   The central model is incompatible.
+   -or-
+   The central model is corrupt or not an RVT file.
+   -or-
+   The central model was rolled back.
+   -or-
+   The central model's elements have been relinquished
+   -or-
+   Your data or permissions saving is aborted by another user.
+   -or-
+   The central model is overritten by other user.
+   -or-
+   An internal error happened on the central model, please contact the server administrator.
+</td></tr><tr><td><a href="73250198-dbc6-e760-4297-ec062f00f574.htm">FileNotFoundException</a></td><td>
+   Cannot access the local file.
+</td></tr><tr><td><a href="9e715f03-3884-e539-4dd6-8d7545733adc.htm">InvalidOperationException</a></td><td>
+   This Document is not a primary document, it is a linked document.
+   -or-
+   This Document is read-only: It cannot be modified.
+   -or-
+   This Document has an open editing transaction and is accepting changes.
+   -or-
+   This Document is not a project document.
+   -or-
+   This Document is in an edit mode.
+   -or-
+   Saving is not allowed in the current application mode.
+   -or-
+   This Document does not have a central location: Worksharing needs to be enabled and central model saved.
+   -or-
+   This Document is a local file that is not owned by the current user, who therefore is not allowed to modify it.
+   -or-
+   The local file is read-only.
+   It can not be saved before or after synchronizing with central.
+   -or-
+   This Document is not a workshared document.
+   -or-
+   Saving local before first reload latest and after saving changes to central
+   in Synchronize with Central is mandatory for server-based local models.
+   -or-
+   Operation is not permitted when there is any open sub-transaction, transaction, or transaction group.
+</td></tr><tr><td><a href="aea34480-ceb5-b49f-129d-0799e7bb1c21.htm">OperationCanceledException</a></td><td>
+   Synchronize With Central was canceled by the user or by an API event callback.
+</td></tr><tr><td><a href="a0003d89-0113-6623-65da-0db5c568bfb6.htm">RevitServerCommunicationException</a></td><td>
+   The server-based central model could not be reached
+   because of a network communication error.
+</td></tr><tr><td><a href="6dcd093c-d643-07cd-535f-36ffa9d2db52.htm">RevitServerInternalException</a></td><td>
+   The disk space is running low on server, please contact the server administrator.
+   -or-
+   An internal error happened on the server, please contact the server administrator.
+</td></tr><tr><td><a href="b9b68e56-c767-4680-a65b-73d268ee8860.htm">RevitServerUnauthenticatedUserException</a></td><td>
+   User is not signed in with Autodesk id.
+</td></tr><tr><td><a href="9e8c1efc-8719-fe01-f311-cfade7b177ed.htm">RevitServerUnauthorizedException</a></td><td>
+   User is not authorized to access the specified A360 project.
+</td></tr></table></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDQC')" onkeypress="SectionExpandCollapse_CheckKey('IDQC', event)" tabindex="0"><img id="IDQCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Example</span></div><div id="IDQCSection" class="collapsibleSection"><div id="IDAQC" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAQC_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAQC','cs','1','4');return false;">C#</a></div><div id="IDAQC_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAQC','vb','2','4');return false;">VB</a></div><div id="IDAQC_tab3" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDAQC','cpp','3','4');return false;">C++</a></div><div id="IDAQC_tab4" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDAQC','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAQC_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAQC');return false;" title="Copy">Copy</a></div></div><div id="IDAQC_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="highlight-keyword">public</span> <span class="highlight-keyword">void</span> SyncWithoutRelinquishing(Document doc)
+{
+    <span class="highlight-comment">// Set options for accessing central model</span>
+    TransactWithCentralOptions transOpts = <span class="highlight-keyword">new</span> TransactWithCentralOptions();
+    SynchLockCallback transCallBack = <span class="highlight-keyword">new</span> SynchLockCallback();
+    <span class="highlight-comment">// Override default behavior of waiting to try again if the central model is locked</span>
+    transOpts.SetLockCallback(transCallBack);
+
+    <span class="highlight-comment">// Set options for synchronizing with central</span>
+    SynchronizeWithCentralOptions syncOpts = <span class="highlight-keyword">new</span> SynchronizeWithCentralOptions();
+    <span class="highlight-comment">// Sync without relinquishing any checked out elements or worksets</span>
+    RelinquishOptions relinquishOpts = <span class="highlight-keyword">new</span> RelinquishOptions(<span class="highlight-keyword">false</span>);
+    syncOpts.SetRelinquishOptions(relinquishOpts);
+    <span class="highlight-comment">// Do not automatically save local model after sync</span>
+    syncOpts.SaveLocalAfter = <span class="highlight-keyword">false</span>;
+    syncOpts.Comment = <span class="highlight-literal">"Changes to Workset1"</span>;
+
+    <span class="highlight-keyword">try</span>
+    {
+        doc.SynchronizeWithCentral(transOpts, syncOpts);
+    }
+    <span class="highlight-keyword">catch</span> (Exception e)
+    {
+        TaskDialog.Show(<span class="highlight-literal">"Synchronize Failed"</span>, e.Message);
+    }
+}
+
+<span class="highlight-comment">// This class implements the ICentralLockedCallback to override Revit's default</span>
+<span class="highlight-comment">// behavior for how to handle when the central model is locked by another user</span>
+<span class="highlight-keyword">class</span> SynchLockCallback : ICentralLockedCallback
+{
+    <span class="highlight-comment">// If unable to lock central, give up rather than waiting</span>
+    <span class="highlight-keyword">public</span> <span class="highlight-keyword">bool</span> ShouldWaitForLockAvailability()
+    {
+        <span class="highlight-keyword">return</span> <span class="highlight-keyword">false</span>;
+    }
+
+}</pre></div><div id="IDAQC_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="highlight-keyword">Public</span> <span class="highlight-keyword">Sub</span> SyncWithoutRelinquishing(doc <span class="highlight-keyword">As</span> Document)
+    <span class="highlight-comment">' Set options for accessing central model</span>
+    <span class="highlight-keyword">Dim</span> transOpts <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> TransactWithCentralOptions()
+    <span class="highlight-keyword">Dim</span> transCallBack <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> SynchLockCallback()
+    <span class="highlight-comment">' Override default behavior of waiting to try again if the central model is locked</span>
+    transOpts.SetLockCallback(transCallBack)
+
+    <span class="highlight-comment">' Set options for synchronizing with central</span>
+    <span class="highlight-keyword">Dim</span> syncOpts <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> SynchronizeWithCentralOptions()
+    <span class="highlight-comment">' Sync without relinquishing any checked out elements or worksets</span>
+    <span class="highlight-keyword">Dim</span> relinquishOpts <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> RelinquishOptions(<span class="highlight-keyword">False</span>)
+    syncOpts.SetRelinquishOptions(relinquishOpts)
+    <span class="highlight-comment">' Do not automatically save local model after sync</span>
+    syncOpts.SaveLocalAfter = <span class="highlight-keyword">False</span>
+    syncOpts.Comment = <span class="highlight-literal">"Changes to Workset1"</span>
+
+    <span class="highlight-keyword">Try</span>
+        doc.SynchronizeWithCentral(transOpts, syncOpts)
+    <span class="highlight-keyword">Catch</span> e <span class="highlight-keyword">As</span> Exception
+        TaskDialog.Show(<span class="highlight-literal">"Synchronize Failed"</span>, e.Message)
+    <span class="highlight-keyword">End</span> <span class="highlight-keyword">Try</span>
+<span class="highlight-keyword">End</span> <span class="highlight-keyword">Sub</span>
+
+<span class="highlight-comment">' This class implements the ICentralLockedCallback to override Revit's default</span>
+<span class="highlight-comment">' behavior for how to handle when the central model is locked by another user</span>
+<span class="highlight-keyword">Private</span> <span class="highlight-keyword">Class</span> SynchLockCallback
+    <span class="highlight-keyword">Implements</span> ICentralLockedCallback
+    <span class="highlight-comment">' If unable to lock central, give up rather than waiting</span>
+    <span class="highlight-keyword">Public</span> <span class="highlight-keyword">Function</span> ShouldWaitForLockAvailability() <span class="highlight-keyword">As</span> <span class="highlight-keyword">Boolean</span> <span class="highlight-keyword">Implements</span> ICentralLockedCallback.ShouldWaitForLockAvailability
+        <span class="highlight-keyword">Return</span> <span class="highlight-keyword">False</span>
+    <span class="highlight-keyword">End</span> <span class="highlight-keyword">Function</span>
+
+<span class="highlight-keyword">End</span> <span class="highlight-keyword">Class</span></pre></div><div id="IDAQC_code_Div3" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div><div id="IDAQC_code_Div4" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div></div></div></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('seeAlso')" onkeypress="SectionExpandCollapse_CheckKey('seeAlso', event)" tabindex="0"><img id="seeAlsoToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="seeAlsoSection" class="collapsibleSection"><h4>Reference</h4><div><a href="db03274b-a107-aa32-9034-f3e0df4bb1ec.htm">Document Class</a></div><div><a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB Namespace</a></div></div></div></div><div id="PageFooter" class="pageFooter"><div class="feedbackLink">Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:revitapifeedback%40autodesk.com?Subject=Revit%202025%20API">Autodesk</a></div>
+        <script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        HT_mailLink.href += ": " + document.title + "\u0026body=" + encodeURIComponent("Your feedback is used to improve the documentation and the product. Your e-mail address will not be used for any other purpose and is disposed of after the issue you report is resolved. While working to resolve the issue that you report, you may be contacted via e-mail to get further details or clarification on the feedback you sent. After the issue you report has been addressed, you may receive an e-mail to let you know that your feedback has been addressed.");
+        </script></div></body></html>

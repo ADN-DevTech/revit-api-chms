@@ -1,0 +1,86 @@
+﻿<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="Microsoft.Help.SelfBranded" content="true" /><meta name="Language" content="en-us" /><meta name="Microsoft.Help.Locale" content="en-us" /><meta name="Microsoft.Help.TopicLocale" content="en-us" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" type="text/css" href="../styles/branding.css" /><link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" /><script type="text/javascript" src="../scripts/branding.js"></script><title>Arc.Create(XYZ, Double, Double, Double, XYZ, XYZ) Method</title><meta name="Title" content="Create(XYZ, Double, Double, Double, XYZ, XYZ) Method" /><meta name="Microsoft.Help.Id" content="M:Autodesk.Revit.DB.Arc.Create(Autodesk.Revit.DB.XYZ,System.Double,System.Double,System.Double,Autodesk.Revit.DB.XYZ,Autodesk.Revit.DB.XYZ)" /><meta name="Microsoft.Help.ContentType" content="Reference" /><meta name="container" content="Autodesk.Revit.DB" /><meta name="file" content="bb8e759b-a0a6-ce55-59df-529f228d5c06" /><meta name="guid" content="bb8e759b-a0a6-ce55-59df-529f228d5c06" /><meta name="Microsoft.Help.Category" content="CSharp" /><meta name="Microsoft.Help.Category" content="VB" /><meta name="Description" content="Creates a new geometric arc object based on center, radius, unit vectors, and angles." /><link type="text/css" rel="stylesheet" href="../styles/highlight.css" /><script type="text/javascript" src="../scripts/highlight.js"> </script><link rel="stylesheet" type="text/css" href="../styles/branding-Help1.css" /></head><body onload="SetDefaultLanguage('cs');"><input type="hidden" id="userDataCache" class="userDataStyle" /><div id="PageHeader" class="pageHeader">Revit 2025 API</div><div class="pageBody"><div id="TopicContent" class="topicContent"><table class="titleTable"><tr><td class="titleColumn"><h1>Arc<span id="LST5A3095D0_0" data-languageSpecificText="cpp=::|nu=."></span>Create(XYZ, Double, Double, Double, XYZ, XYZ) Method</h1></td></tr></table><div class="summary">
+   Creates a new geometric arc object based on center, radius, unit vectors, and angles.
+</div><br /><strong>Namespace:</strong> <a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB</a><br /><strong>Assembly:</strong> RevitAPI (in RevitAPI.dll) Version: 25.0.0.0 (25.0.0.0)<div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDB')" onkeypress="SectionExpandCollapse_CheckKey('IDB', event)" tabindex="0"><img id="IDBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Syntax</span></div><div id="IDBSection" class="collapsibleSection"><div id="IDAB" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAB_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cs','1','4');return false;">C#</a></div><div id="IDAB_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','vb','2','4');return false;">VB</a></div><div id="IDAB_tab3" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cpp','3','4');return false;">C++</a></div><div id="IDAB_tab4" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAB_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAB');return false;" title="Copy">Copy</a></div></div><div id="IDAB_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="keyword">public</span> <span class="keyword">static</span> <span class="identifier">Arc</span> <span class="identifier">Create</span>(
+	<span class="identifier">XYZ</span> <span class="parameter">center</span>,
+	<span class="identifier">double</span> <span class="parameter">radius</span>,
+	<span class="identifier">double</span> <span class="parameter">startAngle</span>,
+	<span class="identifier">double</span> <span class="parameter">endAngle</span>,
+	<span class="identifier">XYZ</span> <span class="parameter">xAxis</span>,
+	<span class="identifier">XYZ</span> <span class="parameter">yAxis</span>
+)</pre></div><div id="IDAB_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">Public</span> <span class="keyword">Shared</span> <span class="keyword">Function</span> <span class="identifier">Create</span> ( 
+	<span class="parameter">center</span> <span class="keyword">As</span> <span class="identifier">XYZ</span>,
+	<span class="parameter">radius</span> <span class="keyword">As</span> <span class="identifier">Double</span>,
+	<span class="parameter">startAngle</span> <span class="keyword">As</span> <span class="identifier">Double</span>,
+	<span class="parameter">endAngle</span> <span class="keyword">As</span> <span class="identifier">Double</span>,
+	<span class="parameter">xAxis</span> <span class="keyword">As</span> <span class="identifier">XYZ</span>,
+	<span class="parameter">yAxis</span> <span class="keyword">As</span> <span class="identifier">XYZ</span>
+) <span class="keyword">As</span> <span class="identifier">Arc</span></pre></div><div id="IDAB_code_Div3" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">public</span>:
+<span class="keyword">static</span> <span class="identifier">Arc</span>^ <span class="identifier">Create</span>(
+	<span class="identifier">XYZ</span>^ <span class="parameter">center</span>, 
+	<span class="identifier">double</span> <span class="parameter">radius</span>, 
+	<span class="identifier">double</span> <span class="parameter">startAngle</span>, 
+	<span class="identifier">double</span> <span class="parameter">endAngle</span>, 
+	<span class="identifier">XYZ</span>^ <span class="parameter">xAxis</span>, 
+	<span class="identifier">XYZ</span>^ <span class="parameter">yAxis</span>
+)</pre></div><div id="IDAB_code_Div4" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">static</span> <span class="keyword">member</span> <span class="identifier">Create</span> : 
+        <span class="parameter">center</span> : <span class="identifier">XYZ</span> * 
+        <span class="parameter">radius</span> : <span class="identifier">float</span> * 
+        <span class="parameter">startAngle</span> : <span class="identifier">float</span> * 
+        <span class="parameter">endAngle</span> : <span class="identifier">float</span> * 
+        <span class="parameter">xAxis</span> : <span class="identifier">XYZ</span> * 
+        <span class="parameter">yAxis</span> : <span class="identifier">XYZ</span> <span class="keyword">-&gt;</span> <span class="identifier">Arc</span> </pre></div></div></div><h4>Parameters</h4><dl><dt class="has-text-weight-normal"><span class="parameter">center</span>  <a href="c2fd995c-95c0-58fb-f5de-f3246cbc5600.htm">XYZ</a></dt><dd>
+   The center of the arc.
+</dd><dt class="has-text-weight-normal"><span class="parameter">radius</span>  <a href="https://learn.microsoft.com/dotnet/api/system.double" target="_blank" rel="noopener noreferrer">Double</a></dt><dd>
+   The radius of the arc.
+</dd><dt class="has-text-weight-normal"><span class="parameter">startAngle</span>  <a href="https://learn.microsoft.com/dotnet/api/system.double" target="_blank" rel="noopener noreferrer">Double</a></dt><dd>
+   The start angle of the arc (in radians).
+</dd><dt class="has-text-weight-normal"><span class="parameter">endAngle</span>  <a href="https://learn.microsoft.com/dotnet/api/system.double" target="_blank" rel="noopener noreferrer">Double</a></dt><dd>
+   The end angle of the arc (in radians).
+</dd><dt class="has-text-weight-normal"><span class="parameter">xAxis</span>  <a href="c2fd995c-95c0-58fb-f5de-f3246cbc5600.htm">XYZ</a></dt><dd>
+   The x axis to define the arc plane. Must be normalized.
+</dd><dt class="has-text-weight-normal"><span class="parameter">yAxis</span>  <a href="c2fd995c-95c0-58fb-f5de-f3246cbc5600.htm">XYZ</a></dt><dd>
+   The y axis to define the arc plane. Must be normalized.
+</dd></dl><h4>Return Value</h4><a href="1f5f541e-9335-aef3-0e75-59eed9ae2221.htm">Arc</a><br />
+   The new arc.
+</div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDJC')" onkeypress="SectionExpandCollapse_CheckKey('IDJC', event)" tabindex="0"><img id="IDJCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Exceptions</span></div><div id="IDJCSection" class="collapsibleSection"><table><tr><th>Exception</th><th>Condition</th></tr><tr><td><a href="631e1424-60f4-929b-4e52-dda9dcd26316.htm">ArgumentNullException</a></td><td>
+   A non-optional argument was NULL
+</td></tr><tr><td><a href="60f148c9-ece0-a6bb-4e12-bb4a9c8c8a24.htm">ArgumentOutOfRangeException</a></td><td>
+   xAxis is not length 1.0.
+   -or-
+   yAxis is not length 1.0.
+   -or-
+   The given value for radius must be between 0 and 30000 feet.
+</td></tr><tr><td><a href="05972c68-fa6d-3a83-d720-ad84fbc4780f.htm">ArgumentsInconsistentException</a></td><td>
+   The vectors xAxis and yAxis are not perpendicular.
+   -or-
+   Start angle must be less than end angle.
+   -or-
+   Curve length is too small for Revit's tolerance (as identified by Application.ShortCurveTolerance).
+</td></tr></table></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDBC')" onkeypress="SectionExpandCollapse_CheckKey('IDBC', event)" tabindex="0"><img id="IDBCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Remarks</span></div><div id="IDBCSection" class="collapsibleSection">
+   If the angle range is equal to or greater than 2 * PI, the curve will be
+   automatically converted to an unbounded circle.
+</div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDNC')" onkeypress="SectionExpandCollapse_CheckKey('IDNC', event)" tabindex="0"><img id="IDNCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Example</span></div><div id="IDNCSection" class="collapsibleSection"><div id="IDANC" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDANC_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDANC','cs','1','4');return false;">C#</a></div><div id="IDANC_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDANC','vb','2','4');return false;">VB</a></div><div id="IDANC_tab3" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDANC','cpp','3','4');return false;">C++</a></div><div id="IDANC_tab4" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDANC','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDANC_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDANC');return false;" title="Copy">Copy</a></div></div><div id="IDANC_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="highlight-comment">// Create a new arc defined by its center, radios, angles and 2 axes</span>
+<span class="highlight-keyword">double</span> radius = <span class="highlight-number">10</span>;
+<span class="highlight-keyword">double</span> startAngle = <span class="highlight-number">0</span>;      <span class="highlight-comment">// In radian</span>
+<span class="highlight-keyword">double</span> endAngle = Math.PI;        <span class="highlight-comment">// In radian</span>
+XYZ center = <span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">5</span>, <span class="highlight-number">0</span>, <span class="highlight-number">0</span>);
+XYZ xAxis = <span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">1</span>, <span class="highlight-number">0</span>, <span class="highlight-number">0</span>);   <span class="highlight-comment">// The x axis to define the arc plane. Must be normalized</span>
+XYZ yAxis = <span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">0</span>, <span class="highlight-number">1</span>, <span class="highlight-number">0</span>);   <span class="highlight-comment">// The y axis to define the arc plane. Must be normalized</span>
+
+Arc arc = Arc.Create(center, radius, startAngle, endAngle, xAxis, yAxis);</pre></div><div id="IDANC_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="highlight-comment">' Create a new arc defined by its center, radios, angles and 2 axes</span>
+<span class="highlight-keyword">Dim</span> radius <span class="highlight-keyword">As</span> <span class="highlight-keyword">Double</span> = <span class="highlight-number">10</span>
+<span class="highlight-keyword">Dim</span> startAngle <span class="highlight-keyword">As</span> <span class="highlight-keyword">Double</span> = <span class="highlight-number">0</span>
+<span class="highlight-comment">' In radian</span>
+<span class="highlight-keyword">Dim</span> endAngle <span class="highlight-keyword">As</span> <span class="highlight-keyword">Double</span> = Math.PI
+<span class="highlight-comment">' In radian</span>
+<span class="highlight-keyword">Dim</span> center <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">5</span>, <span class="highlight-number">0</span>, <span class="highlight-number">0</span>)
+<span class="highlight-keyword">Dim</span> xAxis <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">1</span>, <span class="highlight-number">0</span>, <span class="highlight-number">0</span>)
+<span class="highlight-comment">' The x axis to define the arc plane. Must be normalized</span>
+<span class="highlight-keyword">Dim</span> yAxis <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">0</span>, <span class="highlight-number">1</span>, <span class="highlight-number">0</span>)
+<span class="highlight-comment">' The y axis to define the arc plane. Must be normalized</span>
+<span class="highlight-keyword">Dim</span> arc__1 <span class="highlight-keyword">As</span> Arc = Arc.Create(center, radius, startAngle, endAngle, xAxis, yAxis)</pre></div><div id="IDANC_code_Div3" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div><div id="IDANC_code_Div4" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div></div></div></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('seeAlso')" onkeypress="SectionExpandCollapse_CheckKey('seeAlso', event)" tabindex="0"><img id="seeAlsoToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="seeAlsoSection" class="collapsibleSection"><h4>Reference</h4><div><a href="1f5f541e-9335-aef3-0e75-59eed9ae2221.htm">Arc Class</a></div><div><a href="37b85ab9-0840-97e9-31b4-a0699e99f132.htm">Create Overload</a></div><div><a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB Namespace</a></div></div></div></div><div id="PageFooter" class="pageFooter"><div class="feedbackLink">Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:revitapifeedback%40autodesk.com?Subject=Revit%202025%20API">Autodesk</a></div>
+        <script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        HT_mailLink.href += ": " + document.title + "\u0026body=" + encodeURIComponent("Your feedback is used to improve the documentation and the product. Your e-mail address will not be used for any other purpose and is disposed of after the issue you report is resolved. While working to resolve the issue that you report, you may be contacted via e-mail to get further details or clarification on the feedback you sent. After the issue you report has been addressed, you may receive an e-mail to let you know that your feedback has been addressed.");
+        </script></div></body></html>

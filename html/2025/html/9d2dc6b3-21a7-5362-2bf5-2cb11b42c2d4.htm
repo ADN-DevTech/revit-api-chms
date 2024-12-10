@@ -1,0 +1,95 @@
+﻿<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="Microsoft.Help.SelfBranded" content="true" /><meta name="Language" content="en-us" /><meta name="Microsoft.Help.Locale" content="en-us" /><meta name="Microsoft.Help.TopicLocale" content="en-us" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" type="text/css" href="../styles/branding.css" /><link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" /><script type="text/javascript" src="../scripts/branding.js"></script><title>IExportContext.OnMaterial Method</title><meta name="Title" content="OnMaterial Method" /><meta name="Microsoft.Help.Id" content="M:Autodesk.Revit.DB.IExportContext.OnMaterial(Autodesk.Revit.DB.MaterialNode)" /><meta name="Microsoft.Help.ContentType" content="Reference" /><meta name="System.Keywords" content="IExportContext.OnMaterial method" /><meta name="System.Keywords" content="OnMaterial method" /><meta name="Microsoft.Help.F1" content="Autodesk.Revit.DB.IExportContext.OnMaterial" /><meta name="Microsoft.Help.F1" content="IExportContext.OnMaterial" /><meta name="Microsoft.Help.F1" content="OnMaterial" /><meta name="container" content="Autodesk.Revit.DB" /><meta name="file" content="9d2dc6b3-21a7-5362-2bf5-2cb11b42c2d4" /><meta name="guid" content="9d2dc6b3-21a7-5362-2bf5-2cb11b42c2d4" /><meta name="Microsoft.Help.Category" content="CSharp" /><meta name="Microsoft.Help.Category" content="VB" /><meta name="Description" content="This method marks a change of the material." /><link type="text/css" rel="stylesheet" href="../styles/highlight.css" /><script type="text/javascript" src="../scripts/highlight.js"> </script><link rel="stylesheet" type="text/css" href="../styles/branding-Help1.css" /></head><body onload="SetDefaultLanguage('cs');"><input type="hidden" id="userDataCache" class="userDataStyle" /><div id="PageHeader" class="pageHeader">Revit 2025 API</div><div class="pageBody"><div id="TopicContent" class="topicContent"><table class="titleTable"><tr><td class="titleColumn"><h1>IExport<wbr />Context<span id="LSTC881501_0" data-languageSpecificText="cpp=::|nu=."></span>On<wbr />Material Method</h1></td></tr></table><div class="summary">
+   This method marks a change of the material.
+</div><br /><strong>Namespace:</strong> <a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB</a><br /><strong>Assembly:</strong> RevitAPI (in RevitAPI.dll) Version: 25.0.0.0 (25.0.0.0)<div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDB')" onkeypress="SectionExpandCollapse_CheckKey('IDB', event)" tabindex="0"><img id="IDBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Syntax</span></div><div id="IDBSection" class="collapsibleSection"><div id="IDAB" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAB_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cs','1','4');return false;">C#</a></div><div id="IDAB_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','vb','2','4');return false;">VB</a></div><div id="IDAB_tab3" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cpp','3','4');return false;">C++</a></div><div id="IDAB_tab4" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAB_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAB');return false;" title="Copy">Copy</a></div></div><div id="IDAB_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="keyword">void</span> <span class="identifier">OnMaterial</span>(
+	<span class="identifier">MaterialNode</span> <span class="parameter">node</span>
+)</pre></div><div id="IDAB_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">Sub</span> <span class="identifier">OnMaterial</span> ( 
+	<span class="parameter">node</span> <span class="keyword">As</span> <span class="identifier">MaterialNode</span>
+)</pre></div><div id="IDAB_code_Div3" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">void</span> <span class="identifier">OnMaterial</span>(
+	<span class="identifier">MaterialNode</span>^ <span class="parameter">node</span>
+)</pre></div><div id="IDAB_code_Div4" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">abstract</span> <span class="identifier">OnMaterial</span> : 
+        <span class="parameter">node</span> : <span class="identifier">MaterialNode</span> <span class="keyword">-&gt;</span> <span class="keyword">unit</span> </pre></div></div></div><h4>Parameters</h4><dl><dt class="has-text-weight-normal"><span class="parameter">node</span>  <a href="c70338a6-7f40-e89e-607b-47162df3a5ef.htm">MaterialNode</a></dt><dd>
+   A node describing the current material.
+</dd></dl></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDDC')" onkeypress="SectionExpandCollapse_CheckKey('IDDC', event)" tabindex="0"><img id="IDDCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Example</span></div><div id="IDDCSection" class="collapsibleSection"><div id="IDADC" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDADC_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDADC','cs','1','4');return false;">C#</a></div><div id="IDADC_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDADC','vb','2','4');return false;">VB</a></div><div id="IDADC_tab3" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDADC','cpp','3','4');return false;">C++</a></div><div id="IDADC_tab4" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDADC','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDADC_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDADC');return false;" title="Copy">Copy</a></div></div><div id="IDADC_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve">ElementId currentMaterialId = ElementId.InvalidElementId;
+Color currentColor = <span class="highlight-keyword">new</span> Color(<span class="highlight-number">0</span>,<span class="highlight-number">0</span>,<span class="highlight-number">0</span>);
+<span class="highlight-keyword">double</span> currentTransparency = <span class="highlight-number">0</span>;
+Asset currentAppearance = <span class="highlight-keyword">null</span>;
+
+<span class="highlight-comment">/// &lt;summary&gt;</span>
+<span class="highlight-comment">/// This code demonstrates how to process material information</span>
+<span class="highlight-comment">/// &lt;/summary&gt;</span>
+<span class="highlight-comment">/// &lt;remarks&gt;</span>
+<span class="highlight-comment">/// OnMaterial method can be invoked for every single out-coming mesh</span>
+<span class="highlight-comment">/// even when the material has not actually changed. Thus it is usually</span>
+<span class="highlight-comment">/// beneficial to store the current material and only get its attributes</span>
+<span class="highlight-comment">/// when the material actually changes.</span>
+<span class="highlight-comment">/// &lt;/remarks&gt;</span>
+<span class="highlight-keyword">public</span> <span class="highlight-keyword">void</span> OnMaterial(MaterialNode node)
+{
+   <span class="highlight-comment">// acquire properties of the material if it is different</span>
+   <span class="highlight-comment">// than the material we have set as the currently applicable</span>
+   <span class="highlight-keyword">if</span> (currentMaterialId != node.MaterialId)
+   {
+      <span class="highlight-keyword">if</span> (node.MaterialId != ElementId.InvalidElementId)
+      {
+         currentColor = node.Color;
+         currentTransparency = node.Transparency;
+      }
+      <span class="highlight-keyword">else</span>
+      {
+         <span class="highlight-comment">// the default material is being used in this case</span>
+      }
+
+      <span class="highlight-comment">// Appearance Asset is mainly for Revit internal use. However, if it is utilized </span>
+      <span class="highlight-comment">// in the export context, it needs to be checked whether or not the asset of the </span>
+      <span class="highlight-comment">// material is overridden by some local modification (e.g. by applying a decal)</span>
+
+      <span class="highlight-keyword">if</span> (node.HasOverriddenAppearance)
+      {
+         currentAppearance = node.GetAppearanceOverride();
+      }
+      <span class="highlight-keyword">else</span>
+      {
+         currentAppearance = node.GetAppearance();
+      }
+   }
+}</pre></div><div id="IDADC_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="highlight-keyword">Private</span> currentMaterialId <span class="highlight-keyword">As</span> ElementId = ElementId.InvalidElementId
+<span class="highlight-keyword">Private</span> currentColor <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> Color(<span class="highlight-number">0</span>, <span class="highlight-number">0</span>, <span class="highlight-number">0</span>)
+<span class="highlight-keyword">Private</span> currentTransparency <span class="highlight-keyword">As</span> <span class="highlight-keyword">Double</span> = <span class="highlight-number">0</span>
+<span class="highlight-keyword">Private</span> currentAppearance <span class="highlight-keyword">As</span> Asset = <span class="highlight-keyword">Nothing</span>
+
+<span class="highlight-comment">' &lt;summary&gt;</span>
+<span class="highlight-comment">' This code demonstrates how to process material information</span>
+<span class="highlight-comment">' &lt;/summary&gt;</span>
+<span class="highlight-comment">' &lt;remarks&gt;</span>
+<span class="highlight-comment">' OnMaterial method can be invoked for every single out-coming mesh</span>
+<span class="highlight-comment">' even when the material has not actually changed. Thus it is usually</span>
+<span class="highlight-comment">' beneficial to store the current material and only get its attributes</span>
+<span class="highlight-comment">' when the material actually changes.</span>
+<span class="highlight-comment">' &lt;/remarks&gt;</span>
+<span class="highlight-keyword">Public</span> <span class="highlight-keyword">Sub</span> OnMaterial(node <span class="highlight-keyword">As</span> MaterialNode) <span class="highlight-keyword">Implements</span> IExportContext.OnMaterial
+    <span class="highlight-comment">' acquire properties of the material if it is different</span>
+    <span class="highlight-comment">' than the material we have set as the currently applicable</span>
+    <span class="highlight-keyword">If</span> currentMaterialId &lt;&gt; node.MaterialId <span class="highlight-keyword">Then</span>
+        <span class="highlight-keyword">If</span> node.MaterialId &lt;&gt; ElementId.InvalidElementId <span class="highlight-keyword">Then</span>
+            currentColor = node.Color
+            currentTransparency = node.Transparency
+            <span class="highlight-comment">' the default material is being used in this case</span>
+        <span class="highlight-keyword">Else</span>
+        <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+
+        <span class="highlight-comment">' Appearance Asset is mainly for Revit internal use. However, if it is utilized </span>
+        <span class="highlight-comment">' in the export context, it needs to be checked whether or not the asset of the </span>
+        <span class="highlight-comment">' material is overridden by some local modification (e.g. by applying a decal)</span>
+
+        <span class="highlight-keyword">If</span> node.HasOverriddenAppearance <span class="highlight-keyword">Then</span>
+            currentAppearance = node.GetAppearanceOverride()
+        <span class="highlight-keyword">Else</span>
+            currentAppearance = node.GetAppearance()
+        <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+    <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+<span class="highlight-keyword">End</span> <span class="highlight-keyword">Sub</span></pre></div><div id="IDADC_code_Div3" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div><div id="IDADC_code_Div4" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div></div></div></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('seeAlso')" onkeypress="SectionExpandCollapse_CheckKey('seeAlso', event)" tabindex="0"><img id="seeAlsoToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="seeAlsoSection" class="collapsibleSection"><h4>Reference</h4><div><a href="7d0dc6df-db0e-6a07-3b42-8dde1bedb3c1.htm">IExportContext Interface</a></div><div><a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB Namespace</a></div></div></div></div><div id="PageFooter" class="pageFooter"><div class="feedbackLink">Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:revitapifeedback%40autodesk.com?Subject=Revit%202025%20API">Autodesk</a></div>
+        <script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        HT_mailLink.href += ": " + document.title + "\u0026body=" + encodeURIComponent("Your feedback is used to improve the documentation and the product. Your e-mail address will not be used for any other purpose and is disposed of after the issue you report is resolved. While working to resolve the issue that you report, you may be contacted via e-mail to get further details or clarification on the feedback you sent. After the issue you report has been addressed, you may receive an e-mail to let you know that your feedback has been addressed.");
+        </script></div></body></html>

@@ -1,0 +1,136 @@
+﻿<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="Microsoft.Help.SelfBranded" content="true" /><meta name="Language" content="en-us" /><meta name="Microsoft.Help.Locale" content="en-us" /><meta name="Microsoft.Help.TopicLocale" content="en-us" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" type="text/css" href="../styles/branding.css" /><link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" /><script type="text/javascript" src="../scripts/branding.js"></script><title>Document.NewMechanicalSystem Method</title><meta name="Title" content="NewMechanicalSystem Method" /><meta name="Microsoft.Help.Id" content="M:Autodesk.Revit.Creation.Document.NewMechanicalSystem(Autodesk.Revit.DB.Connector,Autodesk.Revit.DB.ConnectorSet,Autodesk.Revit.DB.Mechanical.DuctSystemType)" /><meta name="Microsoft.Help.ContentType" content="Reference" /><meta name="System.Keywords" content="Document.NewMechanicalSystem method" /><meta name="System.Keywords" content="NewMechanicalSystem method" /><meta name="Microsoft.Help.F1" content="Autodesk.Revit.Creation.Document.NewMechanicalSystem" /><meta name="Microsoft.Help.F1" content="Document.NewMechanicalSystem" /><meta name="Microsoft.Help.F1" content="NewMechanicalSystem" /><meta name="container" content="Autodesk.Revit.Creation" /><meta name="file" content="d9d6fd18-6cf3-d7d3-31a1-d7d7ef45cfa0" /><meta name="guid" content="d9d6fd18-6cf3-d7d3-31a1-d7d7ef45cfa0" /><meta name="Microsoft.Help.Category" content="CSharp" /><meta name="Microsoft.Help.Category" content="VB" /><meta name="Description" content="Creates a new MEP mechanical system element." /><link type="text/css" rel="stylesheet" href="../styles/highlight.css" /><script type="text/javascript" src="../scripts/highlight.js"> </script><link rel="stylesheet" type="text/css" href="../styles/branding-Help1.css" /></head><body onload="SetDefaultLanguage('cs');"><input type="hidden" id="userDataCache" class="userDataStyle" /><div id="PageHeader" class="pageHeader">Revit 2025 API</div><div class="pageBody"><div id="TopicContent" class="topicContent"><table class="titleTable"><tr><td class="titleColumn"><h1>Document<span id="LST72E0836B_0" data-languageSpecificText="cpp=::|nu=."></span>New<wbr />Mechanical<wbr />System Method</h1></td></tr></table><div class="summary">Creates a new MEP mechanical system element.</div><br /><strong>Namespace:</strong> <a href="ded320da-058a-4edd-0418-0582389559a7.htm">Autodesk.Revit.Creation</a><br /><strong>Assembly:</strong> RevitAPI (in RevitAPI.dll) Version: 25.0.0.0 (25.0.0.0)<div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDB')" onkeypress="SectionExpandCollapse_CheckKey('IDB', event)" tabindex="0"><img id="IDBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Syntax</span></div><div id="IDBSection" class="collapsibleSection"><div id="IDAB" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDAB_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cs','1','4');return false;">C#</a></div><div id="IDAB_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','vb','2','4');return false;">VB</a></div><div id="IDAB_tab3" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','cpp','3','4');return false;">C++</a></div><div id="IDAB_tab4" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDAB','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDAB_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDAB');return false;" title="Copy">Copy</a></div></div><div id="IDAB_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="keyword">public</span> <span class="identifier">MechanicalSystem</span> <span class="identifier">NewMechanicalSystem</span>(
+	<span class="identifier">Connector</span> <span class="parameter">baseEquipmentConnector</span>,
+	<span class="identifier">ConnectorSet</span> <span class="parameter">connectors</span>,
+	<span class="identifier">DuctSystemType</span> <span class="parameter">ductSystemType</span>
+)</pre></div><div id="IDAB_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">Public</span> <span class="keyword">Function</span> <span class="identifier">NewMechanicalSystem</span> ( 
+	<span class="parameter">baseEquipmentConnector</span> <span class="keyword">As</span> <span class="identifier">Connector</span>,
+	<span class="parameter">connectors</span> <span class="keyword">As</span> <span class="identifier">ConnectorSet</span>,
+	<span class="parameter">ductSystemType</span> <span class="keyword">As</span> <span class="identifier">DuctSystemType</span>
+) <span class="keyword">As</span> <span class="identifier">MechanicalSystem</span></pre></div><div id="IDAB_code_Div3" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">public</span>:
+<span class="identifier">MechanicalSystem</span>^ <span class="identifier">NewMechanicalSystem</span>(
+	<span class="identifier">Connector</span>^ <span class="parameter">baseEquipmentConnector</span>, 
+	<span class="identifier">ConnectorSet</span>^ <span class="parameter">connectors</span>, 
+	<span class="identifier">DuctSystemType</span> <span class="parameter">ductSystemType</span>
+)</pre></div><div id="IDAB_code_Div4" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="keyword">member</span> <span class="identifier">NewMechanicalSystem</span> : 
+        <span class="parameter">baseEquipmentConnector</span> : <span class="identifier">Connector</span> * 
+        <span class="parameter">connectors</span> : <span class="identifier">ConnectorSet</span> * 
+        <span class="parameter">ductSystemType</span> : <span class="identifier">DuctSystemType</span> <span class="keyword">-&gt;</span> <span class="identifier">MechanicalSystem</span> </pre></div></div></div><h4>Parameters</h4><dl><dt class="has-text-weight-normal"><span class="parameter">baseEquipmentConnector</span>  <a href="11e07082-b3f2-26a1-de79-16535f44716c.htm">Connector</a></dt><dd>
+One connector within base equipment which is used to connect with the system. 
+The base equipment is optional for the system, so this argument may be <span class="keyword"><span id="LST72E0836B_1" data-languageSpecificText="cpp=nullptr|vb=Nothing|nu=null"></span></span>.
+The baseEquipmentConnector should not be included in the connectors.
+</dd><dt class="has-text-weight-normal"><span class="parameter">connectors</span>  <a href="a9821fc1-54cf-5f69-13a9-25d506ecb048.htm">ConnectorSet</a></dt><dd>
+Connectors that will connect to the system.
+The owner elements of these connectors will be added into system as its elements.
+</dd><dt class="has-text-weight-normal"><span class="parameter">ductSystemType</span>  <a href="108631a7-6d3a-a5f6-cc0c-0579ca8cf999.htm">DuctSystemType</a></dt><dd>The system type.</dd></dl><h4>Return Value</h4><a href="ef83dd58-07d6-4f9a-8dc6-f4b1fd8246d2.htm">MechanicalSystem</a><br /> 
+If creation was successful then an instance of mechanical system is returned, 
+otherwise an exception with information will be thrown.
+</div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDEC')" onkeypress="SectionExpandCollapse_CheckKey('IDEC', event)" tabindex="0"><img id="IDECToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Exceptions</span></div><div id="IDECSection" class="collapsibleSection"><table><tr><th>Exception</th><th>Condition</th></tr><tr><td><a href="9e715f03-3884-e539-4dd6-8d7545733adc.htm">InvalidOperationException</a></td><td>
+Thrown when calling this function outside of the Autodesk Revit MEP product.
+</td></tr><tr><td><a href="631e1424-60f4-929b-4e52-dda9dcd26316.htm">ArgumentNullException</a></td><td>
+Thrown when the input connectors parameter value is <span class="keyword"><span id="LST72E0836B_2" data-languageSpecificText="cpp=nullptr|vb=Nothing|nu=null"></span></span>.
+</td></tr><tr><td><a href="60f148c9-ece0-a6bb-4e12-bb4a9c8c8a24.htm">ArgumentOutOfRangeException</a></td><td>
+Thrown when the ductSystemType parameter is out of permitted scope.
+</td></tr><tr><td><a href="2e6e4206-97a8-dd4b-df5d-4269f4bb6088.htm">ArgumentException</a></td><td>
+Thrown when some connectors can't be used to create the mechanical system.
+All the input connectors and base equipment connector should match system type and domain with the system,
+and they should not have been used in another system.
+The owner of BaseConnector should be a mechanical equipment, and the owner of other connectors should be a mechanical equipment or air terminal.
+</td></tr><tr><td><a href="9e715f03-3884-e539-4dd6-8d7545733adc.htm">InvalidOperationException</a></td><td>
+Thrown when the mechanical system creation failed.
+</td></tr></table></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDKC')" onkeypress="SectionExpandCollapse_CheckKey('IDKC', event)" tabindex="0"><img id="IDKCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Remarks</span></div><div id="IDKCSection" class="collapsibleSection"> This method will regenerate the document even in manual regeneration mode. </div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDLC')" onkeypress="SectionExpandCollapse_CheckKey('IDLC', event)" tabindex="0"><img id="IDLCToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Example</span></div><div id="IDLCSection" class="collapsibleSection"><div id="IDALC" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDALC_tab1" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDALC','cs','1','4');return false;">C#</a></div><div id="IDALC_tab2" class="codeSnippetContainerTab"><a href="#" onclick="ChangeTab('IDALC','vb','2','4');return false;">VB</a></div><div id="IDALC_tab3" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDALC','cpp','3','4');return false;">C++</a></div><div id="IDALC_tab4" class="codeSnippetContainerTabPhantom"><a href="#" onclick="ChangeTab('IDALC','fs','4','4');return false;">F#</a></div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDALC_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDALC');return false;" title="Copy">Copy</a></div></div><div id="IDALC_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="highlight-comment">// create a connector set for new mechanical system</span>
+ConnectorSet connectorSet = <span class="highlight-keyword">new</span> ConnectorSet();
+<span class="highlight-comment">// Base equipment connector</span>
+Connector baseConnector = <span class="highlight-keyword">null</span>;
+
+<span class="highlight-comment">// Select a Parallel Fan Powered VAV and some Supply Diffusers</span>
+<span class="highlight-comment">// prior to running this example</span>
+ConnectorSetIterator csi = <span class="highlight-keyword">null</span>;
+ICollection&lt;ElementId&gt; selectedIds = uiDocument.Selection.GetElementIds();
+Document document = uiDocument.Document;
+<span class="highlight-keyword">foreach</span> (ElementId id <span class="highlight-keyword">in</span> selectedIds)
+{
+    Element e = document.GetElement(id);
+    <span class="highlight-keyword">if</span> (e <span class="highlight-keyword">is</span> FamilyInstance)
+    {
+        FamilyInstance fi = e <span class="highlight-keyword">as</span> FamilyInstance;
+        Family family = fi.Symbol.Family;
+        <span class="highlight-comment">// Assume the selected Mechanical Equipment is the base equipment for new system</span>
+        <span class="highlight-keyword">if</span> (family.FamilyCategory.Name == <span class="highlight-literal">"Mechanical Equipment"</span>)
+        {
+            <span class="highlight-comment">//Find the "Out" and "SupplyAir" connector on the base equipment</span>
+            <span class="highlight-keyword">if</span> (<span class="highlight-keyword">null</span> != fi.MEPModel)
+            {
+                csi = fi.MEPModel.ConnectorManager.Connectors.ForwardIterator();
+                <span class="highlight-keyword">while</span> (csi.MoveNext())
+                {
+                    Connector conn = csi.Current <span class="highlight-keyword">as</span> Connector;
+                    <span class="highlight-keyword">if</span> (conn.Direction == FlowDirectionType.Out &amp;&amp; conn.DuctSystemType == DuctSystemType.SupplyAir)
+                    {
+                        baseConnector = conn;
+                        <span class="highlight-keyword">break</span>;
+                    }
+                }
+            }
+        }
+        <span class="highlight-keyword">else</span> <span class="highlight-keyword">if</span> (family.FamilyCategory.Name == <span class="highlight-literal">"Air Terminals"</span>)
+        {
+            <span class="highlight-comment">// add selected Air Terminals to connector set for new mechanical system</span>
+            csi = fi.MEPModel.ConnectorManager.Connectors.ForwardIterator();
+            csi.MoveNext();
+            connectorSet.Insert(csi.Current <span class="highlight-keyword">as</span> Connector);
+        }
+    }
+}
+
+MechanicalSystem mechanicalSys = <span class="highlight-keyword">null</span>;
+<span class="highlight-keyword">if</span> (<span class="highlight-keyword">null</span> != baseConnector &amp;&amp; connectorSet.Size &gt; <span class="highlight-number">0</span>)
+{
+    <span class="highlight-comment">// create a new SupplyAir mechanical system</span>
+    mechanicalSys = uiDocument.Document.Create.NewMechanicalSystem(baseConnector, connectorSet, DuctSystemType.SupplyAir);
+}</pre></div><div id="IDALC_code_Div2" class="codeSnippetContainerCode" style="display: none"><pre xml:space="preserve"><span class="highlight-comment">' create a connector set for new mechanical system</span>
+<span class="highlight-keyword">Dim</span> connectorSet <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> ConnectorSet()
+<span class="highlight-comment">' Base equipment connector</span>
+<span class="highlight-keyword">Dim</span> baseConnector <span class="highlight-keyword">As</span> Connector = <span class="highlight-keyword">Nothing</span>
+
+<span class="highlight-comment">' Select a Parallel Fan Powered VAV and some Supply Diffusers</span>
+<span class="highlight-comment">' prior to running this example</span>
+<span class="highlight-keyword">Dim</span> csi <span class="highlight-keyword">As</span> ConnectorSetIterator = <span class="highlight-keyword">Nothing</span>
+<span class="highlight-keyword">Dim</span> selectedIds <span class="highlight-keyword">As</span> ICollection(<span class="highlight-keyword">Of</span> ElementId) = uiDocument.Selection.GetElementIds()
+<span class="highlight-keyword">Dim</span> document <span class="highlight-keyword">As</span> Document = uiDocument.Document
+<span class="highlight-keyword">For</span> <span class="highlight-keyword">Each</span> id <span class="highlight-keyword">As</span> ElementId <span class="highlight-keyword">In</span> selectedIds
+    <span class="highlight-keyword">Dim</span> e <span class="highlight-keyword">As</span> Element = document.GetElement(id)
+    <span class="highlight-keyword">If</span> <span class="highlight-keyword">TypeOf</span> e <span class="highlight-keyword">Is</span> FamilyInstance <span class="highlight-keyword">Then</span>
+        <span class="highlight-keyword">Dim</span> fi <span class="highlight-keyword">As</span> FamilyInstance = <span class="highlight-keyword">TryCast</span>(e, FamilyInstance)
+        <span class="highlight-keyword">Dim</span> family <span class="highlight-keyword">As</span> Family = fi.Symbol.Family
+        <span class="highlight-comment">' Assume the selected Mechanical Equipment is the base equipment for new system</span>
+        <span class="highlight-keyword">If</span> family.FamilyCategory.Name = <span class="highlight-literal">"Mechanical Equipment"</span> <span class="highlight-keyword">Then</span>
+            <span class="highlight-comment">'Find the "Out" and "SupplyAir" connector on the base equipment</span>
+            <span class="highlight-keyword">If</span> fi.MEPModel <span class="highlight-keyword">IsNot</span> <span class="highlight-keyword">Nothing</span> <span class="highlight-keyword">Then</span>
+                csi = fi.MEPModel.ConnectorManager.Connectors.ForwardIterator()
+                <span class="highlight-keyword">While</span> csi.MoveNext()
+                    <span class="highlight-keyword">Dim</span> conn <span class="highlight-keyword">As</span> Connector = <span class="highlight-keyword">TryCast</span>(csi.Current, Connector)
+                    <span class="highlight-keyword">If</span> conn.Direction = FlowDirectionType.Out <span class="highlight-keyword">AndAlso</span> conn.DuctSystemType = DuctSystemType.SupplyAir <span class="highlight-keyword">Then</span>
+                        baseConnector = conn
+                        <span class="highlight-keyword">Exit</span> <span class="highlight-keyword">While</span>
+                    <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+                <span class="highlight-keyword">End</span> <span class="highlight-keyword">While</span>
+            <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+        <span class="highlight-keyword">ElseIf</span> family.FamilyCategory.Name = <span class="highlight-literal">"Air Terminals"</span> <span class="highlight-keyword">Then</span>
+            <span class="highlight-comment">' add selected Air Terminals to connector set for new mechanical system</span>
+            csi = fi.MEPModel.ConnectorManager.Connectors.ForwardIterator()
+            csi.MoveNext()
+            connectorSet.Insert(<span class="highlight-keyword">TryCast</span>(csi.Current, Connector))
+        <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+    <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+<span class="highlight-keyword">Next</span>
+
+<span class="highlight-keyword">Dim</span> mechanicalSys <span class="highlight-keyword">As</span> MechanicalSystem = <span class="highlight-keyword">Nothing</span>
+<span class="highlight-keyword">If</span> baseConnector <span class="highlight-keyword">IsNot</span> <span class="highlight-keyword">Nothing</span> <span class="highlight-keyword">AndAlso</span> connectorSet.Size &gt; <span class="highlight-number">0</span> <span class="highlight-keyword">Then</span>
+    <span class="highlight-comment">' create a new SupplyAir mechanical system</span>
+    mechanicalSys = uiDocument.Document.Create.NewMechanicalSystem(baseConnector, connectorSet, DuctSystemType.SupplyAir)
+<span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span></pre></div><div id="IDALC_code_Div3" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div><div id="IDALC_code_Div4" class="codeSnippetContainerCode" style="display: none"><p>No code example is currently available or this language may not be supported.</p></div></div></div></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('seeAlso')" onkeypress="SectionExpandCollapse_CheckKey('seeAlso', event)" tabindex="0"><img id="seeAlsoToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="seeAlsoSection" class="collapsibleSection"><h4>Reference</h4><div><a href="ab1718f9-45fb-b3d3-827e-32ff81cf929c.htm">Document Class</a></div><div><a href="ded320da-058a-4edd-0418-0582389559a7.htm">Autodesk.Revit.Creation Namespace</a></div></div></div></div><div id="PageFooter" class="pageFooter"><div class="feedbackLink">Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:revitapifeedback%40autodesk.com?Subject=Revit%202025%20API">Autodesk</a></div>
+        <script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        HT_mailLink.href += ": " + document.title + "\u0026body=" + encodeURIComponent("Your feedback is used to improve the documentation and the product. Your e-mail address will not be used for any other purpose and is disposed of after the issue you report is resolved. While working to resolve the issue that you report, you may be contacted via e-mail to get further details or clarification on the feedback you sent. After the issue you report has been addressed, you may receive an e-mail to let you know that your feedback has been addressed.");
+        </script></div></body></html>
