@@ -13,6 +13,18 @@ provide web presentations of the same content.
 
 You should probably use them instead wink wink.
 
+### Processing the `CHM` Source `html` Snippets
+
+The CHM source source `html` snippets cannot be processed directly with command line tools such as `grep` due to their sheer number:
+
+```
+% grep x *htm
+zsh: argument list too long: grep
+```
+
+Instead, a text file `filenames.txt` containing a list of all the HTML filenames can be generated using `ls`.
+That list can be read to process the files easily one by one using a Python script such
+as [chmhtmextractor.py](https://github.com/jeremytammik/chmhtmextractor) or other tools.
 
 ### LFS
 
