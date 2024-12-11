@@ -1,0 +1,170 @@
+﻿<html xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt"><head><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8" /><META NAME="save" CONTENT="history" /><title>TessellatedShapeBuilder Class</title><meta name="Language" content="en-us" /><meta name="System.Keywords" content="TessellatedShapeBuilder class" /><meta name="System.Keywords" content="Autodesk.Revit.DB.TessellatedShapeBuilder class" /><meta name="System.Keywords" content="TessellatedShapeBuilder class, about TessellatedShapeBuilder class" /><meta name="Microsoft.Help.F1" content="Autodesk.Revit.DB.TessellatedShapeBuilder" /><meta name="Microsoft.Help.Id" content="T:Autodesk.Revit.DB.TessellatedShapeBuilder" /><meta name="Description" content="A class that permits structured building of geometry or a mesh from a collection of connected faces. Contains all closed face sets and custom precisions." /><meta name="Microsoft.Help.ContentType" content="Reference" /><link rel="stylesheet" type="text/css" href="../styles/Presentation.css" /><link rel="stylesheet" type="text/css" href="ms-help://Hx/HxRuntime/HxLink.css" /><script type="text/javascript" src="../scripts/EventUtilities.js"> </script><script type="text/javascript" src="../scripts/SplitScreen.js"> </script><script type="text/javascript" src="../scripts/Dropdown.js"> </script><script type="text/javascript" src="../scripts/script_manifold.js"> </script><script type="text/javascript" src="../scripts/script_feedBack.js"> </script><script type="text/javascript" src="../scripts/CheckboxMenu.js"> </script><script type="text/javascript" src="../scripts/CommonUtilities.js"> </script><meta name="container" content="Autodesk.Revit.DB" /><meta name="file" content="a144b0e3-c997-eac1-5c00-51c56d9e66f2" /><meta name="guid" content="a144b0e3-c997-eac1-5c00-51c56d9e66f2" /><xml><MSHelp:Attr Name="AssetID" Value="T:Autodesk.Revit.DB.TessellatedShapeBuilder" /><MSHelp:TOCTitle Title="TessellatedShapeBuilder Class" /><MSHelp:RLTitle Title="TessellatedShapeBuilder Class (Autodesk.Revit.DB)" /><MSHelp:Keyword Index="A" Term="T:Autodesk.Revit.DB.TessellatedShapeBuilder" /><MSHelp:Keyword Index="A" Term="frlrfAutodeskRevitDBTessellatedShapeBuilderClassTopic" /><MSHelp:Keyword Index="K" Term="TessellatedShapeBuilder class" /><MSHelp:Keyword Index="K" Term="Autodesk.Revit.DB.TessellatedShapeBuilder class" /><MSHelp:Keyword Index="K" Term="TessellatedShapeBuilder class, about TessellatedShapeBuilder class" /><MSHelp:Keyword Index="F" Term="Autodesk.Revit.DB.TessellatedShapeBuilder" /><MSHelp:Attr Name="HelpPriority" Value="2" /><MSHelp:Attr Name="APIType" Value="Managed" /><MSHelp:Attr Name="APILocation" Value="RevitAPI.dll" /><MSHelp:Attr Name="APIName" Value="Autodesk.Revit.DB.TessellatedShapeBuilder" /><MSHelp:Attr Name="DevLang" Value="CSharp" /><MSHelp:Attr Name="DevLang" Value="VB" /><MSHelp:Attr Name="Locale" Value="en-us" /><MSHelp:Attr Name="TopicType" Value="kbSyntax" /><MSHelp:Attr Name="TopicType" Value="apiref" /><MSHelp:Attr Name="Abstract" Value="A class that permits structured building of geometry or a mesh from a collection of connected faces. Contains all closed face sets and custom precisions." /><MSHelp:Attr Name="AssemblyVersion" Value="22.0.0.0" /></xml><link type="text/css" rel="stylesheet" href="../styles/highlight.css" /><script type="text/javascript" src="../scripts/highlight.js"> </script></head><body><input type="hidden" id="userDataCache" class="userDataStyle" /><input type="hidden" id="hiddenScrollOffset" /><img id="collapseImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" alt="Collapse image" title="Collapse image" /><img id="expandImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" alt="Expand Image" title="Expand Image" /><img id="collapseAllImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" /><img id="expandAllImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" /><img id="dropDownImage" style="display:none; height:0; width:0;" src="../icons/dropdown.gif" /><img id="dropDownHoverImage" style="display:none; height:0; width:0;" src="../icons/dropdownHover.gif" /><img id="copyImage" style="display:none; height:0; width:0;" src="../icons/copycode.gif" alt="Copy image" title="Copy image" /><img id="copyHoverImage" style="display:none; height:0; width:0;" src="../icons/copycodeHighlight.gif" alt="CopyHover image" title="CopyHover image" /><div id="header"><table id="topTable" cellspacing="0" cellpadding="0"><tr><td><span onclick="ExpandCollapseAll(toggleAllImage)" style="cursor:default;" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage, event)" tabindex="0"><img ID="toggleAllImage" class="toggleAll" src="../icons/collapse_all.gif" /> <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label><label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span><span>    </span><span id="devlangsDropdown" class="filter" tabindex="0"><img id="devlangsDropdownImage" src="../icons/dropdown.gif" /> <label id="devlangsMenuAllLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: All </nobr></label><label id="devlangsMenuMultipleLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: Multiple </nobr></label><label id="devlangsMenuCSharpLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: C# </nobr></label><label id="devlangsMenuVisualBasicLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: Visual Basic </nobr></label><label id="devlangsMenuManagedCPlusPlusLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: Visual C++ </nobr></label></span></td></tr></table><div id="devlangsMenu"><input id="CSharpCheckbox" type="checkbox" data="CSharp,cs,'persist'" value="on" onClick="SetLanguage(this)" /><label class="checkboxLabel" for="CSharpCheckbox">C#</label><br /><input id="VisualBasicCheckbox" type="checkbox" data="VisualBasic,vb,'persist'" value="on" onClick="SetLanguage(this)" /><label class="checkboxLabel" for="VisualBasicCheckbox">Visual Basic</label><br /><input id="ManagedCPlusPlusCheckbox" type="checkbox" data="ManagedCPlusPlus,cpp,'persist'" value="on" onClick="SetLanguage(this)" /><label class="checkboxLabel" for="ManagedCPlusPlusCheckbox">Visual C++</label><br /></div><table id="bottomTable" cellpadding="0" cellspacing="0"><tr id="headerTableRow1"><td align="left"><span id="runningHeaderText">Revit 2022 API</span></td></tr><tr id="headerTableRow2"><td align="left"><span id="nsrTitle">TessellatedShapeBuilder Class</span></td></tr><tr id="headerTableRow3"><td align="left"><a href="a2e292ce-8cc5-df9e-98c4-f28e32ae0932.htm">Members</a> <a href="#exampleToggle" onclick="OpenSection(exampleToggle)">Example</a> <a href="#seeAlsoToggle" onclick="OpenSection(seeAlsoToggle)">See Also</a> <span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback('revitapifeedback@autodesk.com','Revit 2022 API','','','','%0\dYour%20feedback%20is%20used%20to%20improve%20the%20documentation%20and%20the%20product.%20Your%20e-mail%20address%20will%20not%20be%20used%20for%20any%20other%20purpose%20and%20is%20disposed%20of%20after%20the%20issue%20you%20report%20is%20resolved.%20%20While%20working%20to%20resolve%20the%20issue%20that%20you%20report,%20you%20may%20be%20contacted%20via%20e-mail%20to%20get%20further%20details%20or%20clarification%20on%20the%20feedback%20you%20sent.%20After%20the%20issue%20you%20report%20has%20been%20addressed,%20you%20may%20receive%20an%20e-mail%20to%20let%20you%20know%20that%20your%20feedback%20has%20been%20addressed.%0\A%0\d','Customer%20Feedback');">Send Feedback</a></span></td></tr></table><table id="gradientTable"><tr><td class="nsrBottom" background="../icons/gradient.gif" /></tr></table></div><div id="mainSection"><div id="mainBody"><div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" /><span style="color: DarkGray"></span><div class="summary">
+   A class that permits structured building of geometry or
+   a mesh from a collection of connected faces.
+   Contains all closed face sets and custom precisions.
+</div><p /><b>Namespace:</b> <a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB</a><br /><b>Assembly:</b> <span sdata="assembly">RevitAPI</span> (in RevitAPI.dll) Version: 22.0.0.0 (22.1.0.0)<br /><b>Since:</b> 
+   2015
+<h1 class="heading"><span onclick="ExpandCollapse(syntaxToggle)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(syntaxToggle, event)" tabindex="0"><img id="syntaxToggle" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Syntax</span></h1><div id="syntaxSection" class="section" name="collapseableSection" style=""><div id="syntaxCodeBlocks" class="code"><span codeLanguage="CSharp"><table><tr><th>C#</th></tr><tr><td><pre xml:space="preserve"><span class="keyword">public</span> <span class="keyword">class</span> <span class="identifier">TessellatedShapeBuilder</span> : <a href="66c1678c-2e01-e0de-1386-5a0e1eb3ccff.htm">ShapeBuilder</a></pre></td></tr></table></span><span codeLanguage="VisualBasicDeclaration"><table><tr><th>Visual Basic</th></tr><tr><td><pre xml:space="preserve"><span class="keyword">Public</span> <span class="keyword">Class</span> <span class="identifier">TessellatedShapeBuilder</span> _
+	<span class="keyword">Inherits</span> <a href="66c1678c-2e01-e0de-1386-5a0e1eb3ccff.htm">ShapeBuilder</a></pre></td></tr></table></span><span codeLanguage="ManagedCPlusPlus"><table><tr><th>Visual C++</th></tr><tr><td><pre xml:space="preserve"><span class="keyword">public</span> <span class="keyword">ref class</span> <span class="identifier">TessellatedShapeBuilder</span> : <span class="keyword">public</span> <a href="66c1678c-2e01-e0de-1386-5a0e1eb3ccff.htm">ShapeBuilder</a></pre></td></tr></table></span></div></div><h1 class="heading"><span onclick="ExpandCollapse(remarksToggle)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(remarksToggle, event)" tabindex="0"><img id="remarksToggle" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Remarks</span></h1><div id="remarksSection" class="section" name="collapseableSection" style="">
+   Creates a geometry populated with faces defined by TessellatedFace objects
+   stored in the input connected face sets.
+   The faces defined by each connected face set may form an open shell or
+   the boundary of a solid 3D region.
+   All faces are planar and have polyline boundaries, defined
+   as sequences of 3d coordinates.
+   Faces are added to the builder as a part of connected face sets,
+   representing faces which share edges.
+   Order of faces in the sets is irrelevant. Faces can only
+   be added to the builder when a face set has been opened and is available
+   to take in faces (use <a href="186da29a-caa2-99ea-1b2a-722c1656c44a.htm">OpenConnectedFaceSet(Boolean)</a> to open a new face set).
+   Before attempting to build Revit geometry from the builder
+   the current face set should be closed
+   (<a href="0bebb71c-317e-3dbc-1304-169561e22214.htm">CloseConnectedFaceSet<span class="languageSpecificText"><span class="cs">()</span><span class="cpp">()</span><span class="nu">()</span><span class="fs">()</span></span></a>).
+   The builder allows for the possibility of multiple face sets.
+   The builder will try to create a geometry valid in Revit despite
+   inconsistencies or omissions in the input data.
+   <ul><li> For each connected face set, it will check the face orientations and
+   change them wherever needed so that the orientations of the faces
+   in that set are consistent. </li><li> If a connected face set is closed, it will check if the face normals
+   point outward. If not, it will reverse the orientations of all faces.
+   That means, each closed connected face set will represent a solid. </li></ul>
+   Limitations in the current implementation:
+   <ul><li> It does not support the definition of a "void", even if the user had
+   set the orientations of the faces to define a "void". </li><li> If there is more than one connected face set, it does not check if they
+   intersect or overlap each other. </li></ul></div><h1 class="heading"><span onclick="ExpandCollapse(exampleToggle)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(exampleToggle, event)" tabindex="0"><img id="exampleToggle" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Examples</span></h1><div id="exampleSection" class="section" name="collapseableSection" style=""><span id="cbc_1" x-lang="CSharp" codeLanguage="CSharp"><div class="highlight-title"><span class="highlight-copycode" onkeypress="javascript:CopyColorizedCodeCheckKey(this.parentNode, event);" tabindex="0" onmouseover="CopyCodeChangeIcon(this)" onmouseout="CopyCodeChangeIcon(this)" onclick="javascript:CopyColorizedCode(this.parentNode);"><img style="margin-right: 5px;" src="../icons/CopyCode.gif" />Copy</span>C#</div><div class="code"><pre xml:space="preserve"><span class="highlight-comment">// Create a pyramid-shaped DirectShape using given material for the faces</span>
+<span class="highlight-keyword">public</span> <span class="highlight-keyword">void</span> CreateTessellatedShape(Document doc, ElementId materialId)
+{
+    List&lt;XYZ&gt; loopVertices = <span class="highlight-keyword">new</span> List&lt;XYZ&gt;(<span class="highlight-number">4</span>);
+
+    TessellatedShapeBuilder builder = <span class="highlight-keyword">new</span> TessellatedShapeBuilder();
+
+    builder.OpenConnectedFaceSet(<span class="highlight-keyword">true</span>);
+    <span class="highlight-comment">// create a pyramid with a square base 4' x 4' and 5' high</span>
+    <span class="highlight-keyword">double</span> length = <span class="highlight-number">4.0</span>;
+    <span class="highlight-keyword">double</span> height = <span class="highlight-number">5.0</span>;
+
+    XYZ basePt1 = XYZ.Zero;
+    XYZ basePt2 = <span class="highlight-keyword">new</span> XYZ(length, <span class="highlight-number">0</span>, <span class="highlight-number">0</span>);
+    XYZ basePt3 = <span class="highlight-keyword">new</span> XYZ(length, length, <span class="highlight-number">0</span>);
+    XYZ basePt4 = <span class="highlight-keyword">new</span> XYZ(<span class="highlight-number">0</span>, length, <span class="highlight-number">0</span>);
+    XYZ apex = <span class="highlight-keyword">new</span> XYZ(length / <span class="highlight-number">2</span>, length / <span class="highlight-number">2</span>, height);
+
+    loopVertices.Add(basePt1);
+    loopVertices.Add(basePt2);
+    loopVertices.Add(basePt3);
+    loopVertices.Add(basePt4);
+    builder.AddFace(<span class="highlight-keyword">new</span> TessellatedFace(loopVertices, materialId));
+
+    loopVertices.Clear();
+    loopVertices.Add(basePt1);
+    loopVertices.Add(apex);
+    loopVertices.Add(basePt2);
+    builder.AddFace(<span class="highlight-keyword">new</span> TessellatedFace(loopVertices, materialId));
+
+    loopVertices.Clear();
+    loopVertices.Add(basePt2);
+    loopVertices.Add(apex);
+    loopVertices.Add(basePt3);
+    builder.AddFace(<span class="highlight-keyword">new</span> TessellatedFace(loopVertices, materialId));
+
+    loopVertices.Clear();
+    loopVertices.Add(basePt3);
+    loopVertices.Add(apex);
+    loopVertices.Add(basePt4);
+    builder.AddFace(<span class="highlight-keyword">new</span> TessellatedFace(loopVertices, materialId));
+
+    loopVertices.Clear();
+    loopVertices.Add(basePt4);
+    loopVertices.Add(apex);
+    loopVertices.Add(basePt1);
+    builder.AddFace(<span class="highlight-keyword">new</span> TessellatedFace(loopVertices, materialId));
+
+    builder.CloseConnectedFaceSet();
+    builder.Target = TessellatedShapeBuilderTarget.Solid;
+    builder.Fallback = TessellatedShapeBuilderFallback.Abort;
+    builder.Build();
+
+    TessellatedShapeBuilderResult result = builder.GetBuildResult();
+
+    <span class="highlight-keyword">using</span> (Transaction t = <span class="highlight-keyword">new</span> Transaction(doc, <span class="highlight-literal">"Create tessellated direct shape"</span>))
+    {
+        t.Start();
+
+        DirectShape ds = DirectShape.CreateElement(doc, <span class="highlight-keyword">new</span> ElementId(BuiltInCategory.OST_GenericModel));
+       ds.ApplicationId = <span class="highlight-literal">"Application id"</span>;
+       ds.ApplicationDataId = <span class="highlight-literal">"Geometry object id"</span>;
+
+        ds.SetShape(result.GetGeometricalObjects());
+        t.Commit();
+    }
+}</pre></div></span><span id="cbc_2" x-lang="VisualBasic" codeLanguage="VisualBasic"><div class="highlight-title"><span class="highlight-copycode" onkeypress="javascript:CopyColorizedCodeCheckKey(this.parentNode, event);" tabindex="0" onmouseover="CopyCodeChangeIcon(this)" onmouseout="CopyCodeChangeIcon(this)" onclick="javascript:CopyColorizedCode(this.parentNode);"><img style="margin-right: 5px;" src="../icons/CopyCode.gif" />Copy</span>VB.NET</div><div class="code"><pre xml:space="preserve"><span class="highlight-comment">' Create a pyramid-shaped DirectShape using given material for the faces</span>
+<span class="highlight-keyword">Public</span> <span class="highlight-keyword">Sub</span> CreateTessellatedShape(doc <span class="highlight-keyword">As</span> Document, materialId <span class="highlight-keyword">As</span> ElementId)
+    <span class="highlight-keyword">Dim</span> loopVertices <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> List(<span class="highlight-keyword">Of</span> XYZ)(<span class="highlight-number">4</span>)
+
+    <span class="highlight-keyword">Dim</span> builder <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> TessellatedShapeBuilder()
+
+    builder.OpenConnectedFaceSet(<span class="highlight-keyword">True</span>)
+    <span class="highlight-comment">' create a pyramid with a square base 4' x 4' and 5' high</span>
+    <span class="highlight-keyword">Dim</span> length <span class="highlight-keyword">As</span> <span class="highlight-keyword">Double</span> = <span class="highlight-number">4.0</span>
+    <span class="highlight-keyword">Dim</span> height <span class="highlight-keyword">As</span> <span class="highlight-keyword">Double</span> = <span class="highlight-number">5.0</span>
+
+    <span class="highlight-keyword">Dim</span> basePt1 <span class="highlight-keyword">As</span> XYZ = XYZ.Zero
+    <span class="highlight-keyword">Dim</span> basePt2 <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> XYZ(length, <span class="highlight-number">0</span>, <span class="highlight-number">0</span>)
+    <span class="highlight-keyword">Dim</span> basePt3 <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> XYZ(length, length, <span class="highlight-number">0</span>)
+    <span class="highlight-keyword">Dim</span> basePt4 <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> XYZ(<span class="highlight-number">0</span>, length, <span class="highlight-number">0</span>)
+    <span class="highlight-keyword">Dim</span> apex <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> XYZ(length / <span class="highlight-number">2</span>, length / <span class="highlight-number">2</span>, height)
+
+    loopVertices.Add(basePt1)
+    loopVertices.Add(basePt2)
+    loopVertices.Add(basePt3)
+    loopVertices.Add(basePt4)
+    builder.AddFace(<span class="highlight-keyword">New</span> TessellatedFace(loopVertices, materialId))
+
+    loopVertices.Clear()
+    loopVertices.Add(basePt1)
+    loopVertices.Add(apex)
+    loopVertices.Add(basePt2)
+    builder.AddFace(<span class="highlight-keyword">New</span> TessellatedFace(loopVertices, materialId))
+
+    loopVertices.Clear()
+    loopVertices.Add(basePt2)
+    loopVertices.Add(apex)
+    loopVertices.Add(basePt3)
+    builder.AddFace(<span class="highlight-keyword">New</span> TessellatedFace(loopVertices, materialId))
+
+    loopVertices.Clear()
+    loopVertices.Add(basePt3)
+    loopVertices.Add(apex)
+    loopVertices.Add(basePt4)
+    builder.AddFace(<span class="highlight-keyword">New</span> TessellatedFace(loopVertices, materialId))
+
+    loopVertices.Clear()
+    loopVertices.Add(basePt4)
+    loopVertices.Add(apex)
+    loopVertices.Add(basePt1)
+    builder.AddFace(<span class="highlight-keyword">New</span> TessellatedFace(loopVertices, materialId))
+
+    builder.CloseConnectedFaceSet()
+    builder.Target = TessellatedShapeBuilderTarget.Solid
+    builder.Fallback = TessellatedShapeBuilderFallback.Abort
+    builder.Build()
+
+    <span class="highlight-keyword">Dim</span> result <span class="highlight-keyword">As</span> TessellatedShapeBuilderResult = builder.GetBuildResult()
+
+    <span class="highlight-keyword">Using</span> t <span class="highlight-keyword">As</span> <span class="highlight-keyword">New</span> Transaction(doc, <span class="highlight-literal">"Create tessellated direct shape"</span>)
+        t.Start()
+
+        <span class="highlight-keyword">Dim</span> ds <span class="highlight-keyword">As</span> DirectShape = DirectShape.CreateElement(doc, <span class="highlight-keyword">New</span> ElementId(BuiltInCategory.OST_GenericModel))
+        ds.ApplicationId = <span class="highlight-literal">"Application id"</span>
+        ds.ApplicationDataId = <span class="highlight-literal">"Geometry object id"</span>
+
+        ds.SetShape(result.GetGeometricalObjects())
+        t.Commit()
+    <span class="highlight-keyword">End</span> <span class="highlight-keyword">Using</span>
+<span class="highlight-keyword">End</span> <span class="highlight-keyword">Sub</span></pre></div></span></div><h1 class="heading"><span onclick="ExpandCollapse(familyToggle)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(familyToggle, event)" tabindex="0"><img id="familyToggle" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Inheritance Hierarchy</span></h1><div id="familySection" class="section" name="collapseableSection" style=""><span class="nolink">System<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>Object</span><br />  <a href="66c1678c-2e01-e0de-1386-5a0e1eb3ccff.htm">Autodesk.Revit.DB<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>ShapeBuilder</a><br />    <span class="selflink">Autodesk.Revit.DB<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>TessellatedShapeBuilder</span><br /></div><h1 class="heading"><span onclick="ExpandCollapse(seeAlsoToggle)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(seeAlsoToggle, event)" tabindex="0"><img id="seeAlsoToggle" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />See Also</span></h1><div id="seeAlsoSection" class="section" name="collapseableSection" style=""><div class="seeAlsoStyle"><a href="a2e292ce-8cc5-df9e-98c4-f28e32ae0932.htm">TessellatedShapeBuilder Members</a></div><div class="seeAlsoStyle"><a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB Namespace</a></div></div></div><div id="footer"><div class="footerLine"><img width="100%" height="3px" src="../icons/footer.gif" alt="Footer image" title="Footer image" /></div><A NAME="feedback"></A><span id="fb" class="feedbackcss"></span><p />Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:revitapifeedback%40autodesk.com?Subject=Revit 2022 API">Autodesk</a><script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        var HT_mailLinkText = HT_mailLink.innerHTML;
+        HT_mailLink.href += ": " + document.title;
+        HT_mailLink.innerHTML = HT_mailLinkText;
+        </script></div></div></body></html>

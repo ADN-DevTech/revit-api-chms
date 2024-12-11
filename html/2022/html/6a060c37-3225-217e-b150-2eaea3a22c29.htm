@@ -1,0 +1,198 @@
+﻿<html xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt"><head><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8" /><META NAME="save" CONTENT="history" /><title>OnPolymesh Method </title><meta name="Language" content="en-us" /><meta name="System.Keywords" content="OnPolymesh method" /><meta name="System.Keywords" content="IExportContext.OnPolymesh method" /><meta name="Microsoft.Help.F1" content="Autodesk.Revit.DB.IExportContext.OnPolymesh" /><meta name="Microsoft.Help.Id" content="M:Autodesk.Revit.DB.IExportContext.OnPolymesh(Autodesk.Revit.DB.PolymeshTopology)" /><meta name="Description" content="This method is called when a tessellated polymesh of a 3d face is being output." /><meta name="Microsoft.Help.ContentType" content="Reference" /><link rel="stylesheet" type="text/css" href="../styles/Presentation.css" /><link rel="stylesheet" type="text/css" href="ms-help://Hx/HxRuntime/HxLink.css" /><script type="text/javascript" src="../scripts/EventUtilities.js"> </script><script type="text/javascript" src="../scripts/SplitScreen.js"> </script><script type="text/javascript" src="../scripts/Dropdown.js"> </script><script type="text/javascript" src="../scripts/script_manifold.js"> </script><script type="text/javascript" src="../scripts/script_feedBack.js"> </script><script type="text/javascript" src="../scripts/CheckboxMenu.js"> </script><script type="text/javascript" src="../scripts/CommonUtilities.js"> </script><meta name="container" content="Autodesk.Revit.DB" /><meta name="file" content="6a060c37-3225-217e-b150-2eaea3a22c29" /><meta name="guid" content="6a060c37-3225-217e-b150-2eaea3a22c29" /><xml><MSHelp:Attr Name="AssetID" Value="M:Autodesk.Revit.DB.IExportContext.OnPolymesh(Autodesk.Revit.DB.PolymeshTopology)" /><MSHelp:TOCTitle Title="OnPolymesh Method " /><MSHelp:RLTitle Title="IExportContext.OnPolymesh Method  (Autodesk.Revit.DB)" /><MSHelp:Keyword Index="A" Term="M:Autodesk.Revit.DB.IExportContext.OnPolymesh(Autodesk.Revit.DB.PolymeshTopology)" /><MSHelp:Keyword Index="A" Term="frlrfAutodeskRevitDBIExportContextClassOnPolymeshTopic" /><MSHelp:Keyword Index="K" Term="OnPolymesh method" /><MSHelp:Keyword Index="K" Term="IExportContext.OnPolymesh method" /><MSHelp:Keyword Index="F" Term="Autodesk.Revit.DB.IExportContext.OnPolymesh" /><MSHelp:Attr Name="APIType" Value="Managed" /><MSHelp:Attr Name="APILocation" Value="RevitAPI.dll" /><MSHelp:Attr Name="APIName" Value="Autodesk.Revit.DB.IExportContext.OnPolymesh" /><MSHelp:Attr Name="DevLang" Value="CSharp" /><MSHelp:Attr Name="DevLang" Value="VB" /><MSHelp:Attr Name="Locale" Value="en-us" /><MSHelp:Attr Name="TopicType" Value="kbSyntax" /><MSHelp:Attr Name="TopicType" Value="apiref" /><MSHelp:Attr Name="Abstract" Value="This method is called when a tessellated polymesh of a 3d face is being output." /><MSHelp:Attr Name="AssemblyVersion" Value="22.0.0.0" /></xml><link type="text/css" rel="stylesheet" href="../styles/highlight.css" /><script type="text/javascript" src="../scripts/highlight.js"> </script></head><body><input type="hidden" id="userDataCache" class="userDataStyle" /><input type="hidden" id="hiddenScrollOffset" /><img id="collapseImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" alt="Collapse image" title="Collapse image" /><img id="expandImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" alt="Expand Image" title="Expand Image" /><img id="collapseAllImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" /><img id="expandAllImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" /><img id="dropDownImage" style="display:none; height:0; width:0;" src="../icons/dropdown.gif" /><img id="dropDownHoverImage" style="display:none; height:0; width:0;" src="../icons/dropdownHover.gif" /><img id="copyImage" style="display:none; height:0; width:0;" src="../icons/copycode.gif" alt="Copy image" title="Copy image" /><img id="copyHoverImage" style="display:none; height:0; width:0;" src="../icons/copycodeHighlight.gif" alt="CopyHover image" title="CopyHover image" /><div id="header"><table id="topTable" cellspacing="0" cellpadding="0"><tr><td><span onclick="ExpandCollapseAll(toggleAllImage)" style="cursor:default;" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage, event)" tabindex="0"><img ID="toggleAllImage" class="toggleAll" src="../icons/collapse_all.gif" /> <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label><label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span><span>    </span><span id="devlangsDropdown" class="filter" tabindex="0"><img id="devlangsDropdownImage" src="../icons/dropdown.gif" /> <label id="devlangsMenuAllLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: All </nobr></label><label id="devlangsMenuMultipleLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: Multiple </nobr></label><label id="devlangsMenuCSharpLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: C# </nobr></label><label id="devlangsMenuVisualBasicLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: Visual Basic </nobr></label><label id="devlangsMenuManagedCPlusPlusLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: Visual C++ </nobr></label></span></td></tr></table><div id="devlangsMenu"><input id="CSharpCheckbox" type="checkbox" data="CSharp,cs,'persist'" value="on" onClick="SetLanguage(this)" /><label class="checkboxLabel" for="CSharpCheckbox">C#</label><br /><input id="VisualBasicCheckbox" type="checkbox" data="VisualBasic,vb,'persist'" value="on" onClick="SetLanguage(this)" /><label class="checkboxLabel" for="VisualBasicCheckbox">Visual Basic</label><br /><input id="ManagedCPlusPlusCheckbox" type="checkbox" data="ManagedCPlusPlus,cpp,'persist'" value="on" onClick="SetLanguage(this)" /><label class="checkboxLabel" for="ManagedCPlusPlusCheckbox">Visual C++</label><br /></div><table id="bottomTable" cellpadding="0" cellspacing="0"><tr id="headerTableRow1"><td align="left"><span id="runningHeaderText">Revit 2022 API</span></td></tr><tr id="headerTableRow2"><td align="left"><span id="nsrTitle">IExportContext<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>OnPolymesh Method </span></td></tr><tr id="headerTableRow3"><td align="left"><a href="7d0dc6df-db0e-6a07-3b42-8dde1bedb3c1.htm">IExportContext Interface</a> <a href="#exampleToggle" onclick="OpenSection(exampleToggle)">Example</a> <a href="#seeAlsoToggle" onclick="OpenSection(seeAlsoToggle)">See Also</a> <span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback('revitapifeedback@autodesk.com','Revit 2022 API','','','','%0\dYour%20feedback%20is%20used%20to%20improve%20the%20documentation%20and%20the%20product.%20Your%20e-mail%20address%20will%20not%20be%20used%20for%20any%20other%20purpose%20and%20is%20disposed%20of%20after%20the%20issue%20you%20report%20is%20resolved.%20%20While%20working%20to%20resolve%20the%20issue%20that%20you%20report,%20you%20may%20be%20contacted%20via%20e-mail%20to%20get%20further%20details%20or%20clarification%20on%20the%20feedback%20you%20sent.%20After%20the%20issue%20you%20report%20has%20been%20addressed,%20you%20may%20receive%20an%20e-mail%20to%20let%20you%20know%20that%20your%20feedback%20has%20been%20addressed.%0\A%0\d','Customer%20Feedback');">Send Feedback</a></span></td></tr></table><table id="gradientTable"><tr><td class="nsrBottom" background="../icons/gradient.gif" /></tr></table></div><div id="mainSection"><div id="mainBody"><div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" /><span style="color: DarkGray"></span><div class="summary">
+   This method is called when a tessellated polymesh of a 3d face is being output.
+</div><p /><b>Namespace:</b> <a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB</a><br /><b>Assembly:</b> <span sdata="assembly">RevitAPI</span> (in RevitAPI.dll) Version: 22.0.0.0 (22.1.0.0)<br /><b>Since:</b> 
+   2014
+<h1 class="heading"><span onclick="ExpandCollapse(syntaxToggle)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(syntaxToggle, event)" tabindex="0"><img id="syntaxToggle" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Syntax</span></h1><div id="syntaxSection" class="section" name="collapseableSection" style=""><div id="syntaxCodeBlocks" class="code"><span codeLanguage="CSharp"><table><tr><th>C#</th></tr><tr><td><pre xml:space="preserve"><span class="keyword">void</span> <span class="identifier">OnPolymesh</span>(
+	<a href="fef5982c-3825-eed0-f792-1e0bff5509c2.htm">PolymeshTopology</a> <span class="parameter">node</span>
+)</pre></td></tr></table></span><span codeLanguage="VisualBasicDeclaration"><table><tr><th>Visual Basic</th></tr><tr><td><pre xml:space="preserve"><span class="keyword">Sub</span> <span class="identifier">OnPolymesh</span> ( _
+	<span class="parameter">node</span> <span class="keyword">As</span> <a href="fef5982c-3825-eed0-f792-1e0bff5509c2.htm">PolymeshTopology</a> _
+)</pre></td></tr></table></span><span codeLanguage="ManagedCPlusPlus"><table><tr><th>Visual C++</th></tr><tr><td><pre xml:space="preserve"><span class="keyword">void</span> <span class="identifier">OnPolymesh</span>(
+	<a href="fef5982c-3825-eed0-f792-1e0bff5509c2.htm">PolymeshTopology</a>^ <span class="parameter">node</span>
+)</pre></td></tr></table></span></div><div id="parameters"><h4 class="subHeading">Parameters</h4><dl paramName="node"><dt><span class="parameter">node</span></dt><dd>Type: <a href="fef5982c-3825-eed0-f792-1e0bff5509c2.htm">Autodesk.Revit.DB<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>PolymeshTopology</a><br />
+   A node representing topology of the polymesh
+</dd></dl></div></div><h1 class="heading"><span onclick="ExpandCollapse(exampleToggle)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(exampleToggle, event)" tabindex="0"><img id="exampleToggle" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Examples</span></h1><div id="exampleSection" class="section" name="collapseableSection" style=""><span id="cbc_1" x-lang="CSharp" codeLanguage="CSharp"><div class="highlight-title"><span class="highlight-copycode" onkeypress="javascript:CopyColorizedCodeCheckKey(this.parentNode, event);" tabindex="0" onmouseover="CopyCodeChangeIcon(this)" onmouseout="CopyCodeChangeIcon(this)" onclick="javascript:CopyColorizedCode(this.parentNode);"><img style="margin-right: 5px;" src="../icons/CopyCode.gif" />Copy</span>C#</div><div class="code"><pre xml:space="preserve"><span class="highlight-comment">/// &lt;summary&gt;</span>
+<span class="highlight-comment">/// This method is called up for every face that was processed and tessellated</span>
+<span class="highlight-comment">/// &lt;/summary&gt;</span>
+<span class="highlight-comment">/// &lt;remarks&gt;</span>
+<span class="highlight-comment">/// The node provides all information about geometric topology if the mesh.</span>
+<span class="highlight-comment">/// It is assumed that a concrete exporter would consume the part it can </span>
+<span class="highlight-comment">/// understand and/or support (vertices, normals, UVs, etc.) and convert</span>
+<span class="highlight-comment">/// them into the final, export format.</span>
+<span class="highlight-comment">/// &lt;/remarks&gt;</span>
+<span class="highlight-keyword">public</span> <span class="highlight-keyword">void</span> OnPolymesh(PolymeshTopology node)
+{
+   <span class="highlight-comment">// Note: the current material will get applied to the polymesh.</span>
+
+   <span class="highlight-comment">// If a stack of transformation is maintained by the context object,</span>
+   <span class="highlight-comment">// the current combined transform will be applied to the points.</span>
+   Transform currentTransform = m_TransformationStack.Peek();
+
+   <span class="highlight-comment">// basic properties of the mesh</span>
+
+   <span class="highlight-keyword">int</span> numberOfFacet = node.NumberOfFacets;
+   <span class="highlight-keyword">int</span> numberOfPoints = node.NumberOfPoints;
+   <span class="highlight-keyword">int</span> numberOfUVs = node.NumberOfUVs;
+   <span class="highlight-keyword">int</span> numberOfNormal = node.NumberOfNormals;
+
+   <span class="highlight-comment">// Note: Normals are associated with either points or facets of the polymesh</span>
+   <span class="highlight-comment">// The export code must account for different processing of these two cases.</span>
+
+   <span class="highlight-comment">// A) process points of the polymesh</span>
+
+   <span class="highlight-keyword">if</span>( node.DistributionOfNormals == DistributionOfNormals.AtEachPoint )
+   {
+      ExportMeshPoints(node.GetPoints(), currentTransform, node.GetNormals() );
+   }
+   <span class="highlight-keyword">else</span> <span class="highlight-keyword">if</span>( node.DistributionOfNormals == DistributionOfNormals.OnePerFace )
+   {
+      ExportMeshPoints(node.GetPoints(), currentTransform, node.GetNormal(<span class="highlight-number">0</span>) );
+   }
+   <span class="highlight-keyword">else</span>  <span class="highlight-comment">// DistributionOfNormals.OnEachFacet</span>
+   {
+      <span class="highlight-comment">// In this case, there is normal vector associated with each facet</span>
+      <span class="highlight-comment">// Depending on the export, our format either support this case,</span>
+      <span class="highlight-comment">// of we would have to determine what normals to apply at each </span>
+      <span class="highlight-comment">// point by a way of combining normal of the surrounding facets.</span>
+      ExportMeshPoints(node.GetPoints(), currentTransform );
+   }
+
+   <span class="highlight-comment">// B Process facets of the polymesh</span>
+
+   <span class="highlight-keyword">if</span>( node.DistributionOfNormals == DistributionOfNormals.OnEachFacet )
+   {
+      ExportMeshFacets(node.GetFacets(), node.GetNormals() );
+   }
+   <span class="highlight-keyword">else</span>
+   {
+      ExportMeshFacets(node.GetFacets(), <span class="highlight-keyword">null</span> );
+   }
+
+   <span class="highlight-comment">// B) Process UV coordinates if available (and applicable)</span>
+
+   <span class="highlight-keyword">if</span>( node.NumberOfUVs &gt; <span class="highlight-number">0</span> )
+   {
+      ExportMeshUVs( node.GetUVs() );
+   }
+}
+
+<span class="highlight-keyword">private</span> <span class="highlight-keyword">void</span> ExportMeshPoints(IList&lt;XYZ&gt; points, Transform trf, IList&lt;XYZ&gt; normals)
+{
+   <span class="highlight-comment">// process points with normals</span>
+}
+
+<span class="highlight-keyword">private</span> <span class="highlight-keyword">void</span> ExportMeshPoints(IList&lt;XYZ&gt; points, Transform trf, XYZ normal)
+{
+   <span class="highlight-comment">// process points with only one normal vector (a planar face)</span>
+}
+
+<span class="highlight-keyword">private</span> <span class="highlight-keyword">void</span> ExportMeshPoints(IList&lt;XYZ&gt; points, Transform trf)
+{
+   <span class="highlight-comment">// process points without normal (assuming normals are associated with facets instead)</span>
+}
+
+<span class="highlight-keyword">private</span> <span class="highlight-keyword">void</span> ExportMeshFacets(IList&lt;PolymeshFacet&gt; facets, IList&lt;XYZ&gt; normals)
+{
+   <span class="highlight-keyword">if</span> (normals == <span class="highlight-keyword">null</span>)
+   {
+      <span class="highlight-comment">// process facets without normals  (assuming normals are associated with points instead)</span>
+   }
+   <span class="highlight-keyword">else</span>
+   {
+      <span class="highlight-comment">// process facets with normals</span>
+   }
+}
+
+<span class="highlight-keyword">private</span> <span class="highlight-keyword">void</span> ExportMeshUVs(IList&lt;UV&gt; UVs)
+{
+   <span class="highlight-comment">// process UVs</span>
+}</pre></div></span><span id="cbc_2" x-lang="VisualBasic" codeLanguage="VisualBasic"><div class="highlight-title"><span class="highlight-copycode" onkeypress="javascript:CopyColorizedCodeCheckKey(this.parentNode, event);" tabindex="0" onmouseover="CopyCodeChangeIcon(this)" onmouseout="CopyCodeChangeIcon(this)" onclick="javascript:CopyColorizedCode(this.parentNode);"><img style="margin-right: 5px;" src="../icons/CopyCode.gif" />Copy</span>VB.NET</div><div class="code"><pre xml:space="preserve"><span class="highlight-comment">' &lt;summary&gt;</span>
+<span class="highlight-comment">' This method is called up for every face that was processed and tessellated</span>
+<span class="highlight-comment">' &lt;/summary&gt;</span>
+<span class="highlight-comment">' &lt;remarks&gt;</span>
+<span class="highlight-comment">' The node provides all information about geometric topology if the mesh.</span>
+<span class="highlight-comment">' It is assumed that a concrete exporter would consume the part it can </span>
+<span class="highlight-comment">' understand and/or support (vertices, normals, UVs, etc.) and convert</span>
+<span class="highlight-comment">' them into the final, export format.</span>
+<span class="highlight-comment">' &lt;/remarks&gt;</span>
+<span class="highlight-keyword">Public</span> <span class="highlight-keyword">Sub</span> OnPolymesh(node <span class="highlight-keyword">As</span> PolymeshTopology) <span class="highlight-keyword">Implements</span> IExportContext.OnPolymesh
+    <span class="highlight-comment">' Note: the current material will get applied to the polymesh.</span>
+
+
+    <span class="highlight-comment">' If a stack of transformation is maintained by the context object,</span>
+    <span class="highlight-comment">' the current combined transform will be applied to the points.</span>
+    <span class="highlight-keyword">Dim</span> currentTransform <span class="highlight-keyword">As</span> Transform = m_TransformationStack.Peek()
+
+    <span class="highlight-comment">' basic properties of the mesh</span>
+
+
+    <span class="highlight-keyword">Dim</span> numberOfFacet <span class="highlight-keyword">As</span> <span class="highlight-keyword">Integer</span> = node.NumberOfFacets
+    <span class="highlight-keyword">Dim</span> numberOfPoints <span class="highlight-keyword">As</span> <span class="highlight-keyword">Integer</span> = node.NumberOfPoints
+    <span class="highlight-keyword">Dim</span> numberOfUVs <span class="highlight-keyword">As</span> <span class="highlight-keyword">Integer</span> = node.NumberOfUVs
+    <span class="highlight-keyword">Dim</span> numberOfNormal <span class="highlight-keyword">As</span> <span class="highlight-keyword">Integer</span> = node.NumberOfNormals
+
+    <span class="highlight-comment">' Note: Normals are associated with either points or facets of the polymesh</span>
+    <span class="highlight-comment">' The export code must account for different processing of these two cases.</span>
+
+
+    <span class="highlight-comment">' A) process points of the polymesh</span>
+
+
+    <span class="highlight-keyword">If</span> node.DistributionOfNormals = DistributionOfNormals.AtEachPoint <span class="highlight-keyword">Then</span>
+        ExportMeshPoints(node.GetPoints(), currentTransform, node.GetNormals())
+    <span class="highlight-keyword">ElseIf</span> node.DistributionOfNormals = DistributionOfNormals.OnePerFace <span class="highlight-keyword">Then</span>
+        ExportMeshPoints(node.GetPoints(), currentTransform, node.GetNormal(<span class="highlight-number">0</span>))
+    <span class="highlight-keyword">Else</span>
+        <span class="highlight-comment">' DistributionOfNormals.OnEachFacet</span>
+        <span class="highlight-comment">' In this case, there is normal vector associated with each facet</span>
+        <span class="highlight-comment">' Depending on the export, our format either support this case,</span>
+        <span class="highlight-comment">' of we would have to determine what normals to apply at each </span>
+        <span class="highlight-comment">' point by a way of combining normal of the surrounding facets.</span>
+        ExportMeshPoints(node.GetPoints(), currentTransform)
+    <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+
+    <span class="highlight-comment">' B Process facets of the polymesh</span>
+
+
+    <span class="highlight-keyword">If</span> node.DistributionOfNormals = DistributionOfNormals.OnEachFacet <span class="highlight-keyword">Then</span>
+        ExportMeshFacets(node.GetFacets(), node.GetNormals())
+    <span class="highlight-keyword">Else</span>
+        ExportMeshFacets(node.GetFacets(), <span class="highlight-keyword">Nothing</span>)
+    <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+
+    <span class="highlight-comment">' B) Process UV coordinates if available (and applicable)</span>
+
+
+    <span class="highlight-keyword">If</span> node.NumberOfUVs &gt; <span class="highlight-number">0</span> <span class="highlight-keyword">Then</span>
+        ExportMeshUVs(node.GetUVs())
+    <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+<span class="highlight-keyword">End</span> <span class="highlight-keyword">Sub</span>
+
+<span class="highlight-keyword">Private</span> <span class="highlight-keyword">Sub</span> ExportMeshPoints(points <span class="highlight-keyword">As</span> IList(<span class="highlight-keyword">Of</span> XYZ), trf <span class="highlight-keyword">As</span> Transform, normals <span class="highlight-keyword">As</span> IList(<span class="highlight-keyword">Of</span> XYZ))
+    <span class="highlight-comment">' process points with normals</span>
+<span class="highlight-keyword">End</span> <span class="highlight-keyword">Sub</span>
+
+<span class="highlight-keyword">Private</span> <span class="highlight-keyword">Sub</span> ExportMeshPoints(points <span class="highlight-keyword">As</span> IList(<span class="highlight-keyword">Of</span> XYZ), trf <span class="highlight-keyword">As</span> Transform, normal <span class="highlight-keyword">As</span> XYZ)
+    <span class="highlight-comment">' process points with only one normal vector (a planar face)</span>
+<span class="highlight-keyword">End</span> <span class="highlight-keyword">Sub</span>
+
+<span class="highlight-keyword">Private</span> <span class="highlight-keyword">Sub</span> ExportMeshPoints(points <span class="highlight-keyword">As</span> IList(<span class="highlight-keyword">Of</span> XYZ), trf <span class="highlight-keyword">As</span> Transform)
+    <span class="highlight-comment">' process points without normal (assuming normals are associated with facets instead)</span>
+<span class="highlight-keyword">End</span> <span class="highlight-keyword">Sub</span>
+
+<span class="highlight-keyword">Private</span> <span class="highlight-keyword">Sub</span> ExportMeshFacets(facets <span class="highlight-keyword">As</span> IList(<span class="highlight-keyword">Of</span> PolymeshFacet), normals <span class="highlight-keyword">As</span> IList(<span class="highlight-keyword">Of</span> XYZ))
+    <span class="highlight-comment">' process facets without normals  (assuming normals are associated with points instead)</span>
+    <span class="highlight-keyword">If</span> normals <span class="highlight-keyword">Is</span> <span class="highlight-keyword">Nothing</span> <span class="highlight-keyword">Then</span>
+        <span class="highlight-comment">' process facets with normals</span>
+    <span class="highlight-keyword">Else</span>
+    <span class="highlight-keyword">End</span> <span class="highlight-keyword">If</span>
+<span class="highlight-keyword">End</span> <span class="highlight-keyword">Sub</span>
+
+<span class="highlight-keyword">Private</span> <span class="highlight-keyword">Sub</span> ExportMeshUVs(UVs <span class="highlight-keyword">As</span> IList(<span class="highlight-keyword">Of</span> UV))
+    <span class="highlight-comment">' process UVs</span>
+<span class="highlight-keyword">End</span> <span class="highlight-keyword">Sub</span></pre></div></span></div><h1 class="heading"><span onclick="ExpandCollapse(seeAlsoToggle)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(seeAlsoToggle, event)" tabindex="0"><img id="seeAlsoToggle" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />See Also</span></h1><div id="seeAlsoSection" class="section" name="collapseableSection" style=""><div class="seeAlsoStyle"><a href="7d0dc6df-db0e-6a07-3b42-8dde1bedb3c1.htm">IExportContext Interface</a></div><div class="seeAlsoStyle"><a href="87546ba7-461b-c646-cbb1-2cb8f5bff8b2.htm">Autodesk.Revit.DB Namespace</a></div></div></div><div id="footer"><div class="footerLine"><img width="100%" height="3px" src="../icons/footer.gif" alt="Footer image" title="Footer image" /></div><A NAME="feedback"></A><span id="fb" class="feedbackcss"></span><p />Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:revitapifeedback%40autodesk.com?Subject=Revit 2022 API">Autodesk</a><script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        var HT_mailLinkText = HT_mailLink.innerHTML;
+        HT_mailLink.href += ": " + document.title;
+        HT_mailLink.innerHTML = HT_mailLinkText;
+        </script></div></div></body></html>

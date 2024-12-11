@@ -1,0 +1,2677 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>What's New</title>
+
+<style>
+
+h1,h2,h3, h4
+{
+font-family:"Trebuchet MS",sans-serif;
+color:#27f;
+}
+
+h2, h4
+{
+color:#000;
+}
+
+
+p, tr, td, span, div, li
+{
+font-family:sans-serif;
+font-size:10pt;
+}
+</style>
+
+</head>
+
+<body>
+    <h1 style="color:#000" ;>Major changes and renovations to the Revit API</h1>
+    <h1 id="RevitAPIChanges2022-APIChanges">API changes</h1>
+    <h2>Parameter API changes (migration to ForgeTypeId)</h2>
+    <p>In Revit 2021, Revit API functionality for units of measurement migrated from enumerated identifiers to extensible identifiers represented by the ForgeTypeId class. ForgeTypeId is now used as the identifier type for more data structures in the Revit API.</p>
+    <p>A ForgeTypeId instance holds a string, called a "typeid", that uniquely identifies a Forge schema. A Forge schema is a JSON document describing a data structure, supporting data interchange between applications. A typeid string includes a namespace and version number and may look something like "autodesk.spec.aec:length-1.0.0" or "autodesk.unit.unit:meters-1.0.0".  By default, comparison of ForgeTypeId values in the Revit API ignores the version number.</p>
+    <p>The new classes:</p>
+    <ul>
+        <li>Autodesk.Revit.DB.DisciplineTypeId</li>
+        <li>Autodesk.Revit.DB.GroupTypeId</li>
+        <li>Autodesk.Revit.DB.ParameterTypeId</li>
+    </ul>
+    <p>contain properties of type ForgeTypeId, following the pattern established in Revit 2021 with the UnitTypeId, SymbolTypeId, and SpecTypeId classes. Values from the DisciplineTypeId class can be used in code to replace values of the deprecated UnitGroup enumeration. For example, where you previously used UnitGroup.Structural, you would now use DisciplineTypeId.Structural. Values from the GroupTypeId and ParameterTypeId classes can be used to replace values of the BuiltInParameter and BuiltInParameterGroup enumerations, respectively, which have not yet been deprecated.</p>
+    <p>The SpecTypeId class contains several new nested classes containing ForgeTypeId properties identifying non-floating-point data types, such as integers and strings. ForgeTypeId properties in SpecTypeId and its nested classes can be used to replace values of the deprecated ParameterType enumeration.  These tables list the deprecated types and their replacements, as well as some migrated types where the original enumeration is not yet fully deprecated:</p>
+    <table border="1" class="wrapped">
+        <colgroup> <col /> <col /> </colgroup>
+        <tbody>
+            <tr>
+                <th>Deprecated enumeration</th>
+                <th>Replacement</th>
+            </tr>
+            <tr>
+                <td>
+                    <p>UnitGroup</p>
+                </td>
+                <td>
+                    <p>DisciplineTypeId</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1">
+                    <p>ParameterType</p>
+                </td>
+                <td colspan="1">
+                    <p>SpecTypeId</p>
+                    <p>SpecTypeId.Boolean</p>
+                    <p>SpecTypeId.Int</p>
+                    <p>SpecTypeId.Reference</p>
+                    <p>SpecTypeId.String</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="auto-cursor-target">
+        <br />
+    </p>
+    <table border="1" class="wrapped">
+        <colgroup> <col /> <col /> </colgroup>
+        <tbody>
+            <tr>
+                <th colspan="1">Original enumeration</th>
+                <th>Preferred replacements as ForgeTypeId</th>
+            </tr>
+            <tr>
+                <td colspan="1">BuiltInParameterGroup</td>
+                <td>
+                    <p>GroupTypeId</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1">BuiltInParameter</td>
+                <td>
+                    <p>ParameterTypeId</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p>The mapping of enumerations to different ForgeTypeId members has implications for previously existing APIs related to parameter access, parameter definitions, shared parameter creation and binding, global parameters and other utilities.  </p>
+    <h3>Changes to Parameter Access APIs</h3>
+    <table border="1" class="wrapped">
+        <colgroup> <col /> <col /> </colgroup>
+        <tbody>
+            <tr>
+                <th colspan="1">Original member</th>
+                <th>Preferred replacement</th>
+            </tr>
+            <tr>
+                <td colspan="1">Document.TypeOfStorage[BuiltInParameter]</td>
+                <td>
+                    <p>Document.GetTypeOfStorage(ForgeTypeId)</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1">
+                    <p>Element.Parameter[BuiltInParameter]</p>
+                </td>
+                <td colspan="1">
+                    <p>Element.GetParameter(ForgeTypeId)</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1">Parameter.Id</td>
+                <td colspan="1">
+                    <p>Parameter.GetTypeId()</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <h3>Changes to Parameter Definition APIs</h3>
+    <p>In the Definition class, the ParameterType property and the GetSpecTypeId() method are both deprecated in favor of the new method GetDataType(). GetDataType() is more general than the functions it replaces, providing a data type identifier for any parameter.</p>
+    <ul>
+        <li>For parameters associated with units of measurement, GetDataType() returns a measurable spec identifier. Use UnitUtils.IsMeasurableSpec(ForgeTypeId) to detect a measurable spec identifier.</li>
+        <li>For Family Type parameters, GetDataType() returns a category identifier. Use Category.IsBuiltInCategory(ForgeTypeId) to detect a category identifier.</li>
+        <li>For all other parameters, GetDataType() returns a spec identifier. Use Parameter.IsSpec(ForgeTypeId) to detect a spec identifier, including measurable specs.</li>
+    </ul>
+    <p>Use Parameter.IsValidDataType(ForgeTypeId) to detect any parameter data type identifier – i.e., any measurable or non-measurable spec or category.</p>
+    <table border="1" class="wrapped">
+        <colgroup> <col /> <col /> </colgroup>
+        <tbody>
+            <tr>
+                <th>Deprecated member</th>
+                <th>Replacement member</th>
+            </tr>
+            <tr>
+                <td>
+                    <p>Definition.GetSpecTypeId()</p>
+                    <p>Definition.ParameterType</p>
+                </td>
+                <td>
+                    <p>Definition.GetDataType()</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        <br />
+    </p>
+    <table border="1" class="wrapped">
+        <colgroup> <col /> <col /> </colgroup>
+        <tbody>
+            <tr>
+                <th colspan="1">Original member</th>
+                <th>Preferred replacement</th>
+            </tr>
+            <tr>
+                <td colspan="1">Definition.ParameterGroup</td>
+                <td>
+                    <p>Definition.GetGroupTypeId()</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1">InternalDefinition.BuiltInParameter</td>
+                <td colspan="1">
+                    <p>InternalDefinition.GetParameterTypeId()</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1">InternalDefinition.ParameterGroup</td>
+                <td colspan="1">
+                    <p>InternalDefinition.GetGroupTypeId()</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1">InternalDefinition.ParameterGroup</td>
+                <td colspan="1">
+                    <p>InternalDefinition.SetGroupTypeId(ForgeTypeId)</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1">InternalDefinition.Id</td>
+                <td colspan="1">InternalDefinition.GetTypeId()</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3>Changes to Shared Parameter Creation and Binding APIs</h3>
+    <p>In the ExternalDefinitionCreationOptions class, used to create shared parameters, the implementation now offers better input validation and new capabilities.</p>
+    <p>The deprecated class constructor and Type property setter taking ParameterType values now throw an exception for input values ParameterType.Invalid or ParameterType.FamilyType. It was not possible to use this interface to create Family Type shared parameters.</p>
+    <p>However, it is now possible to create Family Type shared parameters using the replacement functions based on ForgeTypeId. The class constructor taking ForgeTypeId and the SetDataType(ForgeTypeId) method accept any spec or category identifier. Using a category identifier produces a Family Type shared parameter of the given category. Use Category.GetBuiltInCategoryTypeId(BuiltInCategory) to obtain the ForgeTypeId identifier for a given category.</p>
+    <p>Use Parameter.IsValidDataType(ForgeTypeId) to detect any parameter data type identifier – i.e., any measurable or non-measurable spec or category.</p>
+    <table border="1" class="relative-table wrapped" style="width: 990.0px;">
+        <colgroup> <col style="width: 0.0px;" /> <col style="width: 0.0px;" /> </colgroup>
+        <tbody>
+            <tr>
+                <th>Deprecated member</th>
+                <th>Replacement member</th>
+            </tr>
+            <tr>
+                <td>
+                    <p>ExternalDefinitionCreationOptions(string, ParameterType)</p>
+                </td>
+                <td>
+                    <p>ExternalDefinitionCreationOptions(string, ForgeTypeId)</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>ExternalDefinitionCreationOptions.Type</p>
+                </td>
+                <td>
+                    <p>ExternalDefinitionCreationOptions.GetDataType()</p>
+                    <p>ExternalDefinitionCreationOptions.SetDataType(ForgeTypeId)</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="auto-cursor-target">
+        <br />
+    </p>
+    <table border="1" class="wrapped">
+        <colgroup> <col /> <col /> </colgroup>
+        <tbody>
+            <tr>
+                <th colspan="1">Original member</th>
+                <th>Preferred replacement</th>
+            </tr>
+            <tr>
+                <td colspan="1">BindingMap.Insert(Definition, Binding, BuiltInParameterGroup)</td>
+                <td>
+                    <p>BindingMap.Insert(Definition, Binding, ForgeTypeId)</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1">BindingMap.ReInsert(Definition, Binding, BuiltInParameterGroup)</td>
+                <td colspan="1">
+                    <p>BindingMap.ReInsert(Definition, Binding, ForgeTypeId)</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        <br />
+    </p>
+    <p>Shared parameters can also be created and leveraged in families using members of the FamilyManager class.  </p>
+    <table border="1" class="wrapped">
+        <colgroup> <col /> <col /> </colgroup>
+        <tbody>
+            <tr>
+                <th>Deprecated member</th>
+                <th>Replacement member</th>
+            </tr>
+            <tr>
+                <td>
+                    <p>FamilyManager.AddParameter(string, BuiltInParameterGroup, ParameterType, bool)</p>
+                </td>
+                <td>
+                    <p>FamilyManager.AddParameter(string, ForgeTypeId, ForgeTypeId, bool)</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        <strong>
+            <br />
+        </strong>
+    </p>
+    <table border="1" class="wrapped">
+        <colgroup> <col /> <col /> </colgroup>
+        <tbody>
+            <tr>
+                <th colspan="1">Original member</th>
+                <th>Preferred replacement</th>
+            </tr>
+            <tr>
+                <td colspan="1">FamilyManager.AddParameter(ExternalDefinition, BuiltInParameterGroup, bool)</td>
+                <td>
+                    <p>FamilyManager.AddParameter(ExternalDefinition, ForgeTypeId, bool)</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1">FamilyManager.AddParameter(string, BuiltInParameterGroup, Category, bool)</td>
+                <td colspan="1">
+                    <p>FamilyManager.AddParameter(string, ForgeTypeId, Category, bool)</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1">FamilyManager.IsUserAssignableParameterGroup(BuiltInParameterGroup)</td>
+                <td colspan="1">
+                    <p>FamilyManager.IsUserAssignableParameterGroup(ForgeTypeId)</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1">FamilyManager.Parameter[BuiltInParameter]</td>
+                <td colspan="1">
+                    <p>FamilyManager.GetParameter(ForgeTypeId)</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1">FamilyManager.ReplaceParameter(FamilyParameter, ExternalDefinition, BuiltInParameterGroup, bool)</td>
+                <td colspan="1">
+                    <p>FamilyManager.ReplaceParameter(FamilyParameter, ExternalDefinition, ForgeTypeId, bool)</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1">FamilyManager.ReplaceParameter(FamilyParameter, string, BuiltInParameterGroup, bool)</td>
+                <td colspan="1">
+                    <p>FamilyManager.ReplaceParameter(FamilyParameter, string, ForgeTypeId, bool)</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <h3>
+        <strong>Changes to GlobalParameter APIs</strong>
+    </h3>
+    <table border="1" class="wrapped">
+        <colgroup> <col /> <col /> </colgroup>
+        <tbody>
+            <tr>
+                <th>Deprecated member</th>
+                <th>Replacement member</th>
+            </tr>
+            <tr>
+                <td>
+                    <p>GlobalParameter.Create(Document, string, ParameterType)</p>
+                </td>
+                <td>
+                    <p>GlobalParameter.Create(Document, string, ForgeTypeId)</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1">
+                    <p>GlobalParameter.IsValidDataType(ParameterType)</p>
+                </td>
+                <td colspan="1">
+                    <p>Parameter.IsSpec(ForgeTypeId)</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <h3>New and changed utility APIs</h3>
+    <p>The LabelUtils class, used to obtain user-visible names for enumerations, has several changes according to the mapping from enumerations to ForgeTypeId. In addition to the replacements listed below, a new method:</p>
+    <ul>
+        <li>LabelUtils.GetLabelForDiscipline(ForgeTypeId)</li>
+    </ul>
+    <p>returns the user visible name corresponding to a Revit discipline in the current Revit language. The implementation of the method:</p>
+    <ul>
+        <li>LabelUtils.GetLabelForSpec(ForgeTypeId) </li>
+    </ul>
+    <p>has been expanded to accept a ForgeTypeId argument identifying any parameter data type. For a category identifier input, GetLabelForSpec(ForgeTypeId) returns the label of the Family Type spec for that category, e.g. "Family Type: Wall Tags".</p>
+    <table border="1" class="wrapped">
+        <colgroup> <col /> <col /> </colgroup>
+        <tbody>
+            <tr>
+                <th>Deprecated member</th>
+                <th>Replacement member</th>
+            </tr>
+            <tr>
+                <td>
+                    <p>LabelUtils.GetLabelFor(ParameterType)</p>
+                </td>
+                <td>
+                    <p>LabelUtils.GetLabelForSpec(ForgeTypeId)</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        <br />
+    </p>
+    <table border="1" class="wrapped">
+        <colgroup> <col /> <col style="width: 424.0px;" /> </colgroup>
+        <tbody>
+            <tr>
+                <th colspan="1">Original member</th>
+                <th>Preferred replacement</th>
+            </tr>
+            <tr>
+                <td colspan="1">LabelUtils.GetLabelFor(BuiltInParameter)</td>
+                <td colspan="1">
+                    <p>LabelUtils.GetLabelForBuiltInParameter(ForgeTypeId)</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1">LabelUtils.GetLabelFor(BuiltInParameter, LanguageType)</td>
+                <td colspan="1">
+                    <p>LabelUtils.GetLabelForBuiltInParameter(ForgeTypeId, LanguageType)</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1">LabelUtils.GetLabelFor(BuiltInParameterGroup)</td>
+                <td colspan="1">
+                    <p>LabelUtils.GetLabelForGroup(ForgeTypeId)</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        <br />ParameterUtils is a new class with static utility functions related to ForgeTypeId parameter identifiers:
+    </p>
+    <ul>
+        <li>ParameterUtils.GetAllBuiltInGroups()</li>
+        <li>ParameterUtils.GetAllBuiltInParameters()</li>
+        <li>ParameterUtils.IsBuiltInGroup(ForgeTypeId)</li>
+        <li>ParameterUtils.IsBuiltInParameter(ForgeTypeId)</li>
+    </ul>
+    <p class="auto-cursor-target">The ParameterUtils class contains several methods that are new in this release but also deprecated. They are offered only to assist clients in migrating code from the BuiltInParameter and BuiltInParameterGroup enumerations to the ForgeTypeId class.</p>
+    <table border="1" class="wrapped">
+        <colgroup> <col /> </colgroup>
+        <tbody>
+            <tr>
+                <th>Introduced for porting assistance but deprecated</th>
+            </tr>
+            <tr>
+                <td>
+                    <p>ParameterUtils.GetBuiltInParameter(ForgeTypeId)</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>ParameterUtils.GetBuiltInParameterGroup(ForgeTypeId)</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>ParameterUtils.GetParameterGroupTypeId(BuiltInParameterGroup)</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1">
+                    <p>ParameterUtils.GetParameterTypeId(BuiltInParameter)</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        <br />SpecUtils is a new class with static utility functions related to ForgeTypeId spec identifiers:
+    </p>
+    <ul>
+        <li>SpecUtils.GetAllSpecs()</li>
+        <li>SpecUtils.IsSpec(ForgeTypeId)</li>
+        <li>SpecUtils.IsValidDataType(ForgeTypeId)</li>
+    </ul>
+    <p class="auto-cursor-target">The SpecUtils class contains two methods that are new in this release but also deprecated. They are offered only to assist clients in migrating code from the ParameterType enumeration to the ForgeTypeId class.</p>
+    <table border="1" class="wrapped">
+        <colgroup> <col /> </colgroup>
+        <tbody>
+            <tr>
+                <th>Introduced for porting assistance but deprecated</th>
+            </tr>
+            <tr>
+                <td colspan="1">
+                    <p>SpecUtils.GetParameterType(ForgeTypeId)</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1">
+                    <p>SpecUtils.GetSpecTypeId(ParameterType)</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        <br />Changes were made to UnitUtils to clarify the meaning of some operations and to offer functions related to disciplines.
+    </p>
+    <p>The methods GetAllSpecs() and IsSpec(ForgeTypeId) are renamed to GetAllMeasurableSpecs() and IsMeasurableSpec(ForgeTypeId) to clarify that they apply only to measurable specs, describing floating-point values associated with units of measurement, and to avoid confusion with the new Parameter class static methods GetAllSpecs() and IsSpec(ForgeTypeId), which apply to specs of all value types. </p>
+    <p>The new method:</p>
+    <ul>
+        <li>UnitUtils.GetAllDisciplines()</li>
+    </ul>
+    <p>provides a list of all available Revit disciplines, suitable for iteration. Previously iteration would have used the members of the UnitGroup enumeration.</p>
+    <table border="1" class="wrapped">
+        <colgroup> <col /> <col /> </colgroup>
+        <tbody>
+            <tr>
+                <th>Deprecated</th>
+                <th>Replacement</th>
+            </tr>
+            <tr>
+                <td colspan="1">
+                    <p>UnitUtils.GetAllSpecs()</p>
+                </td>
+                <td colspan="1">
+                    <p>UnitUtils.GetAllMeasurableSpecs()</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1">
+                    <p>UnitUtils.GetUnitGroup(ForgeTypeId)</p>
+                </td>
+                <td colspan="1">
+                    <p>UnitUtils.GetDiscipline(ForgeTypeId)</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1">
+                    <p>UnitUtils.IsSpec(ForgeTypeId)</p>
+                </td>
+                <td colspan="1">
+                    <p>UnitUtils.IsMeasurableSpec(ForgeTypeId)</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        <br />
+    </p>
+    <h2>Renamed/replaced Parameter Group members</h2>
+    <p>As a part of changes made to support externalized parameter groups, three BuiltInParameterGroup enumeration values were renamed:</p>
+    <table border="1" class="wrapped">
+        <colgroup> <col /> <col /> </colgroup>
+        <tbody>
+            <tr>
+                <th>Original</th>
+                <th>Replacement</th>
+            </tr>
+            <tr>
+                <td colspan="1">
+                    <p>PG_ELECTRICAL</p>
+                </td>
+                <td colspan="1">
+                    <p>PG_ELECTRICAL_ENGINEERING</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1">
+                    <p>PG_AELECTRICAL</p>
+                </td>
+                <td colspan="1">
+                    <p>PG_ELECTRICAL</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1">
+                    <p>PG_TERMINTATION</p>
+                </td>
+                <td colspan="1">
+                    <p>PG_TERMINATION</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p>Note that because the name PG_ELECTRICAL now identifies a different group, client applications which do not adjust will find parameters they create now in "Electrical" instead of "Electrical Engineering".</p>
+    <p>
+        <br />
+    </p>
+    <h2>Document &amp; Worksharing API changes</h2>
+    <h3>SaveAsCloudModel() now supports save of a new Revit Cloud Worksharing central model</h3>
+    <p>The method:</p>
+    <ul>
+        <li>Document.SaveAsCloudModel(Guid, Guid, String, String)</li>
+    </ul>
+    <p>has been enhanced to support upload of local workshared file into BIM 360 Design as a Revit Cloud Worksharing central model.</p>
+    <p>In addition, the exception UnauthenticatedUserException is removed from the documented exceptions for this method.</p>
+    <h3>Revit Links to Cloud Models</h3>
+    <p>The methods:</p>
+    <ul>
+        <li>RevitLinkType.Create(Document, ModelPath, RevitLinkOptions)</li>
+        <li>RevitLinkType.LoadFrom(ModelPath, WorksetConfiguration)</li>
+    </ul>
+    <p>have been enhanced to support creation of new cloud model Revit links. You may use ModelPathUtils. ConvertCloudGUIDsToCloudPath() to create a cloud path to use as an argument to these methods.</p>
+    <p>These other link methods:</p>
+    <ul>
+        <li>RevitLinkType.IsLoaded()</li>
+        <li>RevitLinkType.Load()</li>
+        <li>RevitLinkType.Reload()</li>
+        <li>RevitLinkType.Unload()</li>
+    </ul>
+    <p>will work with any cloud Revit link created by a Revit user or through the APIs above.</p>
+    <h3>Worksharing API exception changes</h3>
+    <p>Several exceptions have changed from existing worksharing API.   For the method Document.SaveAsCloudModel():</p>
+    <table border="1" class="relative-table wrapped" style="width: 741.111px;">
+        <colgroup> <col style="width: 0.0px;" /> <col style="width: 0.0px;" /> <col style="width: 0.0px;" /> </colgroup>
+        <thead>
+            <tr>
+                <th>
+                    <p>Situation</p>
+                </th>
+                <th>
+                    <p>Previous exception</p>
+                </th>
+                <th colspan="1">
+                    <p>Current exception</p>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>User doesn't sign in</td>
+                <td>
+                    <p>ArgumentException</p>
+                </td>
+                <td colspan="1">RevitServerUnauthenticatedUserException</td>
+            </tr>
+            <tr>
+                <td colspan="1">Duplicated model name</td>
+                <td colspan="1">
+                    <p>RevitServerInternalException</p>
+                </td>
+                <td colspan="1">RevitServerModelAlreadyExistsException</td>
+            </tr>
+            <tr>
+                <td colspan="1">Hub/Project/Folder doesn't exist</td>
+                <td colspan="1">
+                    <p>ArgumentException</p>
+                </td>
+                <td colspan="1">RevitServerUnauthorizedException</td>
+            </tr>
+            <tr>
+                <td colspan="1">Folder is Plans folder or its sub folder</td>
+                <td colspan="1">
+                    <p>ArgumentException</p>
+                </td>
+                <td colspan="1">RevitServerUnauthorizedException</td>
+            </tr>
+            <tr>
+                <td colspan="1">Folder doesn't have "Edit" permission</td>
+                <td colspan="1">
+                    <p>ArgumentException</p>
+                </td>
+                <td colspan="1">RevitServerUnauthorizedException</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>In addition, the function will now throw RevitServerModelNameBreaksConventionException when the model name breaks the project naming convention. </p>
+    <p>For the method ModelPathUtils.ConvertCloudGUIDsToCloudPath():</p>
+    <table border="1" class="relative-table wrapped" style="width: 786.111px;">
+        <colgroup> <col style="width: 0.0px;" /> <col style="width: 0.0px;" /> <col style="width: 0.0px;" /> </colgroup>
+        <thead>
+            <tr>
+                <th>Situation</th>
+                <th>
+                    <p>Previous exception</p>
+                </th>
+                <th colspan="1">
+                    <p>Current exception</p>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="1">Region doesn't exist</td>
+                <td colspan="1">RevitServerCommunicationException</td>
+                <td colspan="1">RevitServerUnauthorizedException</td>
+            </tr>
+            <tr>
+                <td colspan="1">Project doesn't exist</td>
+                <td colspan="1">CentralModelMissingException</td>
+                <td colspan="1">RevitServerUnauthorizedException</td>
+            </tr>
+            <tr>
+                <td colspan="1">Model doesn't exist</td>
+                <td colspan="1">No exception</td>
+                <td colspan="1">RevitServerUnauthorizedException</td>
+            </tr>
+            <tr>
+                <td colspan="1">Model exists in a folder that doesn't have the "Edit" permission, but has View above permission</td>
+                <td colspan="1">
+                    <p>RevitServerUnauthorizedException</p>
+                </td>
+                <td colspan="1">No exception</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3>Worksharing API replacements</h3>
+    <p>Some properties have been removed and replaced in this release. Because these were an immediate replacement, applications referencing the replaced properties will need to be updated immediately for this release.</p>
+    <table border="1" class="wrapped">
+        <colgroup> <col /> <col /> </colgroup>
+        <tbody>
+            <tr>
+                <th>Removed member</th>
+                <th>Replaced member</th>
+            </tr>
+            <tr>
+                <td>
+                    <p>DocumentSavingAsEventArgs.IsSavingAsMasterFile</p>
+                </td>
+                <td>
+                    <p>DocumentSavingAsEventArgs.IsSavingAsCentralFile</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>DocumentSavedAsEventArgs.IsSavingAsMasterFile</p>
+                </td>
+                <td>
+                    <p>DocumentSavedAsEventArgs.IsSavingAsCentralFile</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        <br />
+    </p>
+    <h2>Sketched element API changes</h2>
+    <h3>Floor creation API replacements</h3>
+    <p>The following members have been replaced:</p>
+    <table border="1" class="relative-table wrapped" style="width: 990.0px;">
+        <colgroup> <col /> <col /> </colgroup>
+        <tbody>
+            <tr>
+                <th>Deprecated member</th>
+                <th>Replacement member</th>
+            </tr>
+            <tr>
+                <td>
+                    <p>Autodesk.Revit.Creation.Document.NewFloor() (all overloads)</p>
+                </td>
+                <td>
+                    <p>Floor.Create(Document document, IList&lt;CurveLoop&gt; profile, ElementId floorTypeId, ElementId levelId)</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Autodesk.Revit.Creation.Document.NewSlab()</p>
+                </td>
+                <td>
+                    <p>Floor.Create(Document document, IList&lt;CurveLoop&gt; profile, ElementId floorTypeId, ElementId levelId, bool isStructural, Line slopeArrow, double slope)</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1">Autodesk.Revit.Creation.Document.NewFoundationSlab()</td>
+                <td colspan="1">Floor.Create(Document document, IList&lt;CurveLoop&gt; profile, ElementId floorTypeId, ElementId levelId)</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        <br />
+    </p>
+    <h2>IndependentTag API Changes</h2>
+    <h3>Rotation</h3>
+    <p>The new property</p>
+    <ul>
+        <li>RotationAngle</li>
+    </ul>
+    <p>can be used to get or set the rotation of the tag relative to its view.</p>
+    <h3>Multiple References </h3>
+    <p>
+        <span style="color: rgb(0,0,0);">IndependentTag now supports multiple references to various elements or sub-elements.</span>
+    </p>
+    <p>
+        <span style="color: rgb(0,0,0);">A number of properties were deprecated. The users can now access the desired leader or tagged element using their References.</span>
+    </p>
+    <table border="1" class="relative-table wrapped" style="width: 37.2865%;">
+        <colgroup> <col style="width: 44.9541%;" /> <col style="width: 55.0459%;" /> </colgroup>
+        <tbody>
+            <tr>
+                <th>
+                    <p style="text-align: left;">
+                        <span style="color: rgb(0,0,0);">Deprecated Member</span>
+                    </p>
+                </th>
+                <th>
+                    <p style="text-align: left;">
+                        <span style="color: rgb(0,0,0);">Replacement Members</span>
+                    </p>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        <span style="color: rgb(0,0,0);">IndependentTag.TaggedLocalElementId </span>
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        <span style="color: rgb(0,0,0);">IndependentTag.GetTaggedLocalElementIds() </span>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        <span style="color: rgb(0,0,0);">IndependentTag.TaggedElementId </span>
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        <span style="color: rgb(0,0,0);">IndependentTag.GetTaggedElementIds() </span>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1">
+                    <span style="color: rgb(0,0,0);">IndependentTag.GetTaggedLocalElement()</span>
+                </td>
+                <td colspan="1">
+                    <span style="color: rgb(0,0,0);">IndependentTag.GetTaggedLocalElements()</span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1">
+                    <span style="color: rgb(0,0,0);">IndependentTag.GetTaggedReference()</span>
+                </td>
+                <td colspan="1">
+                    <span style="color: rgb(0,0,0);">IndependentTag.GetTaggedReferences()</span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1">
+                    <p>
+                        <span style="color: rgb(0,0,0);">IndependentTag.HasElbow </span>
+                    </p>
+                </td>
+                <td colspan="1">
+                    <p>
+                        <span style="color: rgb(0,0,0);">IndependentTag.HasLeaderElbow()</span>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1">
+                    <p>
+                        <span style="color: rgb(0,0,0);">IndependentTag.LeaderElbow </span>
+                    </p>
+                </td>
+                <td colspan="1">
+                    <p>
+                        <span style="color: rgb(0,0,0);">IndependentTag.GetLeaderElbow() </span> <br />
+                        <span style="color: rgb(0,0,0);">IndependentTag.SetLeaderElbow()</span>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1">
+                    <p>
+                        <span style="color: rgb(0,0,0);">IndependentTag.LeaderEnd </span>
+                    </p>
+                </td>
+                <td colspan="1">
+                    <p>
+                        <span style="color: rgb(0,0,0);">IndependentTag.GetLeaderEnd() </span> <br />
+                        <span style="color: rgb(0,0,0);">IndependentTag.SetLeaderEnd()</span>
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        <span style="color: rgb(0,0,0);">All deprecated members still work in multi leader scenario by using only the first tagged reference.</span>
+    </p>
+    <p>
+        <br />
+    </p>
+    <p>
+        <span style="color: rgb(0,0,0);">The new members:</span>
+    </p>
+    <ul>
+        <li>
+            <span style="color: rgb(0,0,0);">IndependentTag.AddReferences()</span>
+        </li>
+        <li>
+            <span style="color: rgb(0,0,0);">IndependentTag.RemoveReferences()</span>
+        </li>
+        <li>
+            <span style="color: rgb(0,0,0);">IndependentTag.</span> <span style="color: rgb(0,0,0);">MultiLeader</span>
+        </li>
+    </ul>
+    <p>
+        <span style="color: rgb(0,0,0);">are used to bulk add or remove references from a tag, and to </span> <span style="color: rgb(0,0,0);">query if the tag references multiple elements.</span>
+    </p>
+    <p>
+        <br />
+    </p>
+    <h2>Revision API changes</h2>
+    <p>
+        <strong>RevisionSettings API replacements</strong> <br />
+        <br />
+    </p>
+    <p>The following methods have been deprecated and replaced due to terminology changes in the Revisions user interface:</p>
+    <table border="1" class="wrapped">
+        <colgroup> <col /> <col /> </colgroup>
+        <tbody>
+            <tr>
+                <th>Deprecated API</th>
+                <th>Replacement</th>
+            </tr>
+            <tr>
+                <td>
+                    <p>RevisionSettings.GetNumericRevisionSettings()</p>
+                </td>
+                <td>
+                    <p>RevisionNumberingSequence.GetAllRevisionNumberingSequences()</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>RevisionSettings.SetNumericRevisionSettings()</p>
+                </td>
+                <td>
+                    <p>RevisionNumberingSequence.SetNumericRevisionSettings()</p>
+                </td>
+            </tr>
+            <tr>
+                <td>RevisionSettings.GetAlphanumericRevisionSettings()</td>
+                <td>RevisionNumberingSequence.GetAllRevisionNumberingSequences()</td>
+            </tr>
+            <tr>
+                <td>
+                    <p>RevisionSettings.SetAlphanumericRevisionSettings()</p>
+                </td>
+                <td>
+                    <p>RevisionNumberingSequence.SetAlphanumericRevisionSettings()</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        <br />
+    </p>
+    <h2>Structural reinforcement API changes</h2>
+    <p>Reinforcement bars now uses two diameter values instead of just one:</p>
+    <ul>
+        <li>The model diameter which is used to model the reinforcement bars</li>
+        <li>The nominal diameter which is used for formula computations</li>
+    </ul>
+    <p>The following members were deprecated and replaced.  Note that the deprecated members always reference the bar's "model diameter".</p>
+    <table border="1" class="relative-table wrapped" style="width: 62.0954%;">
+        <colgroup> <col style="width: 24.1379%;" /> <col style="width: 75.8621%;" /> </colgroup>
+        <tbody>
+            <tr>
+                <th>Deprecated member</th>
+                <th>Replacement members</th>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        <span style="color: rgb(36,41,46);">BarTypeDiameterOptions.BarDiameter</span>
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        <span style="color: rgb(36,41,46);">BarTypeDiameterOptions.BarModelDiameter</span>
+                    </p>
+                    <p>
+                        <span style="color: rgb(36,41,46);">BarTypeDiameterOptions.BarNominalDiameter</span>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1">
+                    <span style="color: rgb(36,41,46);">RebarBarType.BarDiameter</span>
+                </td>
+                <td colspan="1">
+                    <p>
+                        <span style="color: rgb(36,41,46);">RebarBarType.BarModelDiameter</span>
+                    </p>
+                    <p>
+                        <span style="color: rgb(36,41,46);">RebarBarType.BarNominalDiameter</span>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1">RebarBendData.BarDiameter</td>
+                <td colspan="1">
+                    <p>RebarBendData.BarModelDiameter</p>
+                    <p>
+                        <span style="color: rgb(36,41,46);">RebarBendData.BarNominalDiameter</span>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1">
+                    <span style="color: rgb(36,41,46);">RebarUpdateCurvesData.GetBarDiameter </span>
+                </td>
+                <td colspan="1">
+                    <p>
+                        <span style="color: rgb(36,41,46);">RebarUpdateCurvesData.GetBarModelDiameter</span>
+                    </p>
+                    <p>
+                        <span style="color: rgb(36,41,46);">RebarUpdateCurvesData.GetBarNominalDiameter</span>
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        <br />
+    </p>
+    <h2>Import/Export API changes</h2>
+    <h3>Import() and Link() methods now treat View as optional</h3>
+    <p>The methods:</p>
+    <ul>
+        <li>Document.Import()</li>
+        <li>Document.Link()</li>
+    </ul>
+    <p>that take a View as an argument have been updated to accept null for that argument. This applies to all overloads of these methods except those that work with DWF. This View argument used to be required, but now null will be used to take an appropriate default action for the import operations.</p>
+    <h3>Export API replacements</h3>
+    <p>The following property has been removed and replaced in this release. Because these were an immediate replacement, applications referencing the replaced property will need to be updated immediately for this release.</p>
+    <table border="1" class="wrapped">
+        <colgroup> <col /> <col /> </colgroup>
+        <tbody>
+            <tr>
+                <th>Removed member</th>
+                <th>Replaced member</th>
+            </tr>
+            <tr>
+                <td>
+                    <p>DGNExportOptions.MasterUnits</p>
+                </td>
+                <td>
+                    <p>DGNExportOptions.WorkingUnits</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        <br />
+    </p>
+    <h2>MEP API changes</h2>
+    <h3>Electrical API changes</h3>
+    <p>The following method and property have been deprecated;  the old methods referred to temperature in terms on "long", which did not match the capabilities in the UI, and had an error when referring to non-Fahrenheit temperature values.   </p>
+    <table border="1" class="wrapped">
+        <colgroup> <col /> <col /> </colgroup>
+        <tbody>
+            <tr>
+                <th>Deprecated API</th>
+                <th>Replacement</th>
+            </tr>
+            <tr>
+                <td>
+                    <p>TemperatureRatingType.AddCorrectionFactor(long temperature, double factor)</p>
+                </td>
+                <td>
+                    <p>TemperatureRatingType.AddCorrectionFactor(double temperature, double factor)</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>CorrectionFactor.Temperature</p>
+                </td>
+                <td>
+                    <p>CorrectionFactor.GetTemperature()</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <h3>Fabrication API changes</h3>
+    <p>In a terminology change, the fabrication service "group" was renamed as a "palette" in order to align with changes made in the Revit user interface.  This affected the following members:</p>
+    <p>
+        <br />
+    </p>
+    <table border="1" class="wrapped">
+        <colgroup> <col /> <col /> </colgroup>
+        <tbody>
+            <tr>
+                <th>Deprecated API</th>
+                <th>Replacement</th>
+            </tr>
+            <tr>
+                <td>
+                    <p>FabricationNetworkChangeService.SetGroupId()</p>
+                </td>
+                <td>
+                    <p>FabricationNetworkChangeService.SetPaletteId()</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>FabricationNetworkChangeService.SetRestrictGroup()</p>
+                </td>
+                <td>
+                    <p>FabricationNetworkChangeService.SetRestrictPalette()</p>
+                </td>
+            </tr>
+            <tr>
+                <td>FabricationService.GroupCount</td>
+                <td>FabricationService.PaletteCount</td>
+            </tr>
+            <tr>
+                <td>
+                    <p>FabricationService.IsValidGroupIndex()</p>
+                </td>
+                <td>
+                    <p>FabricationService.IsValidPaletteIndex()</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>FabricationService.GetGroupName()</p>
+                </td>
+                <td>
+                    <p>FabricationService.GetPaletteName()</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>FabricationService.IsGroupExcluded()</p>
+                </td>
+                <td>
+                    <p>FabricationService.IsPaletteExcluded()</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>FabricationService.SetServiceGroupExclusions()</p>
+                </td>
+                <td>
+                    <p>FabricationService.SetServicePaletteExclusions()</p>
+                </td>
+            </tr>
+            <tr>
+                <td>FabricationServiceButton.GroupIndex</td>
+                <td>FabricationServiceButton.PaletteIndex</td>
+            </tr>
+            <tr>
+                <td>FabricationPartSizeMap.GroupId</td>
+                <td>FabricationPartSizeMap.PaletteId</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        <br />
+    </p>
+    <p>The following properties have been deprecated.  Because they are not currently used and relate to not yet available capabilities, there is no replacement for these members.</p>
+    <table border="1" class="wrapped">
+        <colgroup> <col /> <col /> </colgroup>
+        <tbody>
+            <tr>
+                <th>Deprecated API</th>
+                <th>Replacement</th>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        <span style="color: rgb(36,41,46);">FabricationConfigurationInfo.CloudVersion</span>
+                    </p>
+                </td>
+                <td>
+                    <p>None</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        <span style="color: rgb(36,41,46);">FabricationConfigurationInfo.IsConnected</span>
+                    </p>
+                </td>
+                <td>
+                    <p>None</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <h2>PostableCommand enumeration update</h2>
+    <p>Many updates have been made to the PostableCommand enumeration to match the current set of Revit commands. </p>
+    <p>A good number of commands were newly added to the enumeration:</p>
+    <table border="1" class="wrapped">
+        <colgroup> <col style="width: 50.0pt;" /> </colgroup>
+        <tbody>
+            <tr>
+                <td>
+                    <span>Anchors</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>BatchPrint</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Bolts</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Collaborate</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>CollaborateInCloud</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>ConnectionSettings</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>ContourCut</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>CoordinationModel</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>CoordinationSelectLink</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Cope</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>CopeSkewed </span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>CopyMonitorSelectLink</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>CopyMonitorUseCurrentProject</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>CornerCut </span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>CutBy </span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>CutThrough </span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>DeleteEnergyModel</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Dynamo</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>GetAutodeskContent</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>GlobalParameters</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Holes</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>ImportImage</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>ImportPDF</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>LinkImage</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>LinkPDF</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>LinkTopography</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>LoadAsGroupIntoOpenProjects</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>LoadFamilyIntoProjectAndClose</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>LoadIntoProject </span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>LoadRebarShapeIntoProjectAndClose</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>ManageCloudModels</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Miter </span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Multiplanar</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>MultiPointRouting</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>NewFamily</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>NewProject</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>OpenFamily</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>OpenIFC</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>OpenIFCOptions</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>OpenProject</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Optimize</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>PAndIDModeler</span>
+                </td>
+            </tr>
+            <tr>
+                <td>PAndIDSettings</td>
+            </tr>
+            <tr>
+                <td>
+                    <span>PathOfTravel</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Plate</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>PublishSettings </span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>RepairCentralModel</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>ResetSharedCoordinates</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>RevealObstacles</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>SaveAsCloudModel</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>SaveAsFamily</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>SawCutFlange </span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>SawCutWeb </span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>ShapeStatus</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>SharedViews</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>ShearStuds</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Shorten</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>ShowWarningsInViews</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>SpaceNaming</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>StructuralConnection </span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>StructuralRebarCoupler</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>SystemsAnalysis</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>SystemZone</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>TitleBlock</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>ToggleHome</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>TogglePAndIDModelerBrowser</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>ToggleRevealHiddenElementsMode</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Walkthrough</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Welds </span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>WorksharingMonitor</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="auto-cursor-target">
+        <br />
+    </p>
+    <p>Some enumeration values were renamed to match the current naming of the commands in the Revit UI.  There is no way to preserve the old name as obsoleted so code referring to these values will need to be updated:</p>
+    <table border="1" class="wrapped">
+        <colgroup> <col style="width: 50.0pt;" /> <col /> </colgroup>
+        <tbody>
+            <tr>
+                <th colspan="1">
+                    <strong>Removed</strong>
+                </th>
+                <th colspan="1">
+                    <strong>Replacement</strong>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <span>ExportMassModelGBXML </span>
+                </td>
+                <td>
+                    <span>ExportGBXML </span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>ModelBrowserContainer </span>
+                </td>
+                <td>
+                    <span>ToggleHome </span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>PlaceOnHost </span>
+                </td>
+                <td>
+                    <span>PlaceOnStairOrRamp</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Playlist </span>
+                </td>
+                <td>
+                    <span>DynamoPlayer </span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>RunEnergySimulation </span>
+                </td>
+                <td>
+                    <span>Generate </span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>ShowEnergyModel </span>
+                </td>
+                <td>
+                    <span>CreateEnergyModel </span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>UseCurrentProject </span>
+                </td>
+                <td>
+                    <span>CoordinationReviewUseCurrentProject</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="auto-cursor-target">
+        <br />
+    </p>
+    <p>Finally, some commands have been removed from the Revit UI. These commands can no longer be posted, so the values have been removed from the enumeration:</p>
+    <table border="1" class="wrapped">
+        <colgroup> <col style="width: 50.0pt;" /> </colgroup>
+        <tbody>
+            <tr>
+                <td>
+                    <span>ExportBuildingSite </span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>PublishDGNToAutodeskBuzzsaw</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>PublishDWFToAutodeskBuzzsaw </span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>PublishDWGToAutodeskBuzzsaw </span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>PublishDXFToAutodeskBuzzsaw </span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>PublishSATToAutodeskBuzzsaw </span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>RecentFiles </span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>ResultsAndCompare </span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>StairBySketch </span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>ViewRange </span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        <br />
+    </p>
+    <h2>BuiltInFailures changes</h2>
+    <p>Some changes have been made to existing BuiltInFailure definitions.  Code that looks for or handles specific failures may need updating, as it is not possible to obsolete the replaced members, so they have been removed in this release.</p>
+    <table border="1" class="wrapped">
+        <colgroup> <col /> <col /> <col /> </colgroup>
+        <tbody>
+            <tr>
+                <th>Failure submodule</th>
+                <th>
+                    Removed <span>FailureDefinition</span>
+                </th>
+                <th>Replacement FailureDefinition</th>
+            </tr>
+            <tr>
+                <td>WallFailures</td>
+                <td>ExtrudedWallMustBeVertical</td>
+                <td>ExtrudedWallDisallowedForCrossSectionType</td>
+            </tr>
+            <tr>
+                <td>GroupFailures</td>
+                <td>FailedToSetMasterGroupId</td>
+                <td>FailedToSetLeaderGroupId</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        <br />
+    </p>
+    <h2>Filter API change</h2>
+    <p>The constructor for the class FilterStringRule has been obsoleted and replaced.  The previous constructor has a Boolean argument for case sensitivity that was not used in View Filters and could not be used properly from the API, as all string comparisons in filters are case-insensitive:</p>
+    <table border="1" class="wrapped">
+        <colgroup> <col /> <col /> </colgroup>
+        <tbody>
+            <tr>
+                <th>Obsoleted member</th>
+                <th>Replacement member</th>
+            </tr>
+            <tr>
+                <td>FilterStringRule(FilterableValueProvider, FilterStringRuleEvaluator, String, boolean)</td>
+                <td>
+                    <span>FilterStringRule(FilterableValueProvider, FilterStringRuleEvaluator, String)</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p>The method FilterStringRuleEvaluator.Evaluate() still has an argument "caseSensitive", but it's never called by filter code with this argument set to true.</p>
+    <p>
+        <br />
+    </p>
+    <h2>Ruby macros no longer supported</h2>
+    <p>Due to technology limitations, the Macro Manager no longer supports Ruby language in Revit Macros. The option to create new Ruby macros has been removed from the UI and API, and existing Ruby Macros in previous version documents will be deleted during upgrade.</p>
+    <p>
+        <br />
+    </p>
+    <h2>TransmissionData API change</h2>
+    <p>Autodesk.Revit.DB.TransmissionData.UserData is now used to store the systems analysis reports path, if any report exists in the document. This is to allow eTransmit to include external reports. The API method itself is not changed.</p>
+    <p>
+        <br />
+    </p>
+    <h2>Removal of obsoleted APIs</h2>
+    <p>The following previously obsoleted APIs have been removed:</p>
+    <ul>
+        <li>ModelPathUtils.ConvertCloudGUIDsToCloudPath(Guid projectId, Guid modelId)</li>
+        <li>Document.SaveAsCloudModel(String folderId, String modelName)</li>
+        <li>MEPModel.ElectricalSystems</li>
+        <li>MEPModel.AssignedElectricalSystems</li>
+        <li>StructuralConnectionHandler.Create(Document doc, List&lt;ElementId&gt; idsToConnect)</li>
+    </ul>
+    <p>
+        <br />
+    </p>
+    <h1>API additions</h1>
+    <p>
+        <br />
+    </p>
+    <h2>Sketched Elements API</h2>
+    <h3>Ceiling creation</h3>
+    <p>The new methods:</p>
+    <ul>
+        <li>Ceiling.Create(Document document, IList&lt;CurveLoop&gt; curveLoops, ElementId ceilingTypeId, ElementId level)</li>
+        <li>Ceiling.Create(Document document, IList&lt;CurveLoop&gt; curveLoops, ElementId ceilingTypeId, ElementId levelId, Line slopeArrow, double slope)</li>
+    </ul>
+    <p>create a new instance of a ceiling in a Revit project, with one overload supporting a sloped ceiling.fac</p>
+    <h3>Floor APIs</h3>
+    <p>In addition to the replacement Floor creation methods described above, the new method:</p>
+    <ul>
+        <li>Floor.GetDefaultFloorType(Document document, bool isFoundation)</li>
+    </ul>
+    <p>returns the id of the default floor or foundation type for a document.</p>
+    <h3>Wall APIs</h3>
+    <p>The new methods:</p>
+    <ul>
+        <li>Wall.CreateProfileSketch()</li>
+        <li>Wall.RemoveProfileSketch()</li>
+        <li>Wall.CanHaveProfileSketch()</li>
+    </ul>
+    <p>provide access to add and remove profile sketches to wall elements that support them.  Once a sketch is added, the profile sketch can be edited using SketchEditScope.</p>
+    <h3>Slanted and Tapered Walls</h3>
+    <p>The new members:</p>
+    <ul>
+        <li>Wall.CrossSection</li>
+        <li>Wall.IsWallCrossSectionValid()</li>
+    </ul>
+    <p>allow assignment of a cross section type to a given wall, and determine if that type can be assigned.  </p>
+    <p>The new enumerations:</p>
+    <ul>
+        <li>Autodesk.Revit.DB.WallCrossSection</li>
+        <li>Autodesk.Revit.DB.WidthMeasuredAt</li>
+        <li>Autodesk.Revit.DB.InsertOrientation</li>
+    </ul>
+    <p>enumerate the values for options related to alternate wall cross section values, especially the options available for Tapered walls.  </p>
+    <h3>Sketch APIs</h3>
+    <p>The new methods:</p>
+    <ul>
+        <li>Ceiling.SketchId</li>
+        <li>Floor.SketchId</li>
+        <li>Wall.SketchId</li>
+        <li>Opening.SketchId</li>
+    </ul>
+    <p>return the id of the element's sketch.</p>
+    <p>The method:</p>
+    <ul>
+        <li>Sketch.OwnerId</li>
+    </ul>
+    <p>returns the id of the element that owns this sketch.</p>
+    <p>The new method:</p>
+    <ul>
+        <li>Sketch.GetAllElements()</li>
+    </ul>
+    <p>returns the ids of all the elements owned by the sketch, including elements of type:</p>
+    <ul>
+        <li>Autodesk.Revit.DB.ModelCurve</li>
+        <li>Autodesk.Revit.DB.ReferencePlane</li>
+        <li>Autodesk.Revit.DB.Dimension</li>
+    </ul>
+    <p>This method works for any Sketch you can obtain from a Sketch-based element (Ceiling, Extrusion, etc.). It is available both in and outside of a SketchEditScope. </p>
+    <h3>Editing Sketches with SketchEditScope</h3>
+    <p>Using the new class:</p>
+    <ul>
+        <li>Autodesk.Revit.DB.SketchEditScope</li>
+    </ul>
+    <p>allows an application to edit sketch based elements while preserving the unchanged elements that are already present in the sketch.  While a Sketch editing session is active, you can add, delete or modify Sketch elements (curves, dimensions, reference planes). When you finish the session, the edited Sketch-based element will be updated.  Only certain sketches are currently supported for editing:</p>
+    <ul>
+        <li>Ceiling sketches</li>
+        <li>Floor sketches</li>
+        <li>Wall profile sketches</li>
+        <li>Opening sketches</li>
+    </ul>
+    <p>using the new members:</p>
+    <ul>
+        <li>SketchEditScope constructor - creates a new SketchEditScope</li>
+        <li>SketchEditScope.Start() - starts editing a particular sketch, including starting the associated transaction.  After this is started only elements owned by the Sketch and new elements to be added to the Sketch may be modified.</li>
+        <li>SketchEditScope.IsSketchEditingSupported() - checks if a particular sketch can be edited with a SketchEditScope.</li>
+    </ul>
+    <h3>Boundary validation for sketched elements</h3>
+    <p>The new method:</p>
+    <ul>
+        <li>BoundaryValidation.IsValidHorizontalBoundary() </li>
+    </ul>
+    <p>validates input curves form a valid horizontal boundary for Ceiling or Floor creation.</p>
+    <h3>CompoundStructure API</h3>
+    <p>The new method:</p>
+    <ul>
+        <li>
+            <span style="color: rgb(36,41,46);">CompoundStructure.CanSplitAndMergeRegionsBeUsed()</span>
+        </li>
+    </ul>
+    <p>
+        <span style="color: rgb(36,41,46);">checks whether split and merge regions operations can be used for this compound structure.  This validator is associated with the use of the existing M</span> <span style="color: rgb(36,41,46);">ergeRegionsAdjacentToSegment() and SplitRegion() methods.</span>
+    </p>
+    <p>
+        <br />
+    </p>
+    <h2>Color Fill API</h2>
+    <p>
+        <span class="TextRun SCXW37417535 BCX7" style="color: rgb(0,0,0);">Multiple new classes provide access to color fills.  These classes expose</span> <span class="TextRun SCXW37417535 BCX7" style="color: rgb(0,0,0);"> color</span> <span class="TextRun SCXW37417535 BCX7" style="color: rgb(0,0,0);"> </span> <span class="TextRun SCXW37417535 BCX7" style="color: rgb(0,0,0);">fill schemes, entries and color</span> <span class="TextRun SCXW37417535 BCX7" style="color: rgb(0,0,0);"> </span> <span class="TextRun SCXW37417535 BCX7" style="color: rgb(0,0,0);">f</span> <span class="TextRun SCXW37417535 BCX7" style="color: rgb(0,0,0);">ill legends.  You can also also a</span> <span class="TextRun SCXW37417535 BCX7" style="color: rgb(0,0,0);">ccess</span> <span class="TextRun SCXW37417535 BCX7" style="color: rgb(0,0,0);"> the color</span> <span class="TextRun SCXW37417535 BCX7" style="color: rgb(0,0,0);"> f</span> <span class="TextRun SCXW37417535 BCX7" style="color: rgb(0,0,0);">ill scheme applied to a particular view.</span>
+    </p>
+    <h3>Color Fill Schemes</h3>
+    <p>
+        <span class="TextRun SCXW37417535 BCX7" style="color: rgb(0,0,0);">The new class:</span>
+    </p>
+    <ul>
+        <li>Autodesk.Revit.DB.ColorFillScheme</li>
+    </ul>
+    <p>represents a color scheme that can be applied to plan and section views.  Key new members of this class include:</p>
+    <ul>
+        <li>ColorFillScheme.AddEntry()</li>
+        <li>ColorFillScheme.RemoveEntry()</li>
+        <li>ColorFillScheme.UpdateEntry()</li>
+        <li>ColorFillScheme.GetEntries()</li>
+        <li>ColorFillScheme.SetEntries()</li>
+        <li>ColorFillScheme.SortEntries()</li>
+        <li>ColorFillScheme.AreaSchemeId</li>
+        <li>ColorFillScheme.CategoryId</li>
+        <li>ColorFillScheme.ParameterDefinition</li>
+        <li>ColorFillScheme.StorageType</li>
+        <li>ColorFillScheme.Title</li>
+        <li>ColorFillScheme.Duplicate</li>
+        <li>ColorFillScheme.GetFormatOptions()</li>
+        <li>ColorFillScheme.SetFormatOptions()</li>
+        <li>ColorFillScheme.GetSupportedParameterIds()</li>
+    </ul>
+    <h3>Color Fill Scheme Entries</h3>
+    <p>
+        <span class="TextRun SCXW37417535 BCX7" style="color: rgb(0,0,0);">The new class:</span>
+    </p>
+    <ul>
+        <li>Autodesk.Revit.DB.ColorFillSchemeEntry</li>
+    </ul>
+    <p>represents an entry in a color scheme.  Key new members of this class include:</p>
+    <ul>
+        <li>ColorFillSchemeEntry.Color</li>
+        <li>ColorFillSchemeEntry.FillPatternId</li>
+        <li>ColorFillSchemeEntry.Caption</li>
+        <li>ColorFillSchemeEntry.StorageType</li>
+        <li>ColorFillSchemeEntry.IsVisible</li>
+        <li>ColorFillSchemeEntry.IsInUse</li>
+        <li>ColorFillSchemeEntry.GetIntegerValue()</li>
+        <li>ColorFillSchemeEntry.GetDoubleValue</li>
+        <li>ColorFillSchemeEntry.GetStringValue()</li>
+        <li>ColorFillSchemeEntry.GetElementIdValue()</li>
+        <li>ColorFillSchemeEntry.SetIntegerValue()</li>
+        <li>ColorFillSchemeEntry.SetDoubleValue()</li>
+        <li>ColorFillSchemeEntry.SetStringValue()</li>
+        <li>ColorFillSchemeEntry.SetElementIdValue()</li>
+    </ul>
+    <h3>View access to Color Fills</h3>
+    <p>The new members:</p>
+    <ul>
+        <li>
+            <span>View.GetColorFillSchemeId()</span>
+        </li>
+        <li>View.SetColorFillSchemeId()</li>
+    </ul>
+    <p>provide access to read and apply the color fill scheme associated with a particular category in the view.</p>
+    <h3>Color Fill Legends</h3>
+    <p>The new class:</p>
+    <ul>
+        <li>Autodesk.Revit.DB.ColorFillLegend</li>
+    </ul>
+    <p>offers the ability to create, read and modify properties of color fill legend annotation elements in a particular owner view.  Key new members of this class include:</p>
+    <ul>
+        <li>ColorFillLegend.Create()</li>
+        <li>ColorFillLegend.GetColumnWidths()</li>
+        <li>ColorFillLegend.SetColumnWidths()</li>
+        <li>ColorFillLegend.ColorFillCategoryId</li>
+        <li>ColorFillLegend.Height</li>
+        <li>ColorFillLegend.Origin</li>
+    </ul>
+    <p>
+        <br />
+    </p>
+    <h2>Export API additions</h2>
+    <h3>Export to PDF</h3>
+    <p>The new method:</p>
+    <ul>
+        <li>Document.Export(String, IList&lt;ElementId&gt;, PDFExportOptions)</li>
+    </ul>
+    <p>exports one or more views and sheets in PDF format.  </p>
+    <p>The options provided, in the new class:</p>
+    <ul>
+        <li>Autodesk.Revit.DB.PDFExportOptions</li>
+    </ul>
+    <p>include graphical options, paper and output format options, and the option to combine output views and sheets into a single PDF or to produce a different PDF for each view and sheet with a specific naming convention.</p>
+    <h3>PDF Export Settings</h3>
+    <p>The new element class:</p>
+    <ul>
+        <li>Autodesk.Revit.DB.ExportPDFSettings</li>
+    </ul>
+    <p>represents a named stored PDF export option available in a document.    You can use this class to extract the options from this element to use for exporting to PDF, or modify or create new stored settings with different options.  </p>
+    <p>
+        <br />
+    </p>
+    <h2>Civil Alignments API</h2>
+    <p>
+        Revit now provides support for Civil Alignments and their associated annotations. Alignments are imported from InfraWorks as a part of the workflow to transfer Civil Structures. The API supports read of alignment properties and geometric information, along with read/write and create of associated annotations. All new classes for the Alignments API are exposed through a different assembly in the Revit installation, located at: <strong>Addins\CivilAlignments\Autodesk.CivilAlignments.DBApplication.dll</strong>
+    </p>
+    <p>The new class:</p>
+    <ul>
+        <li>Autodesk.Revit.DB.Infrastructure.Alignment</li>
+    </ul>
+    <p>represents an alignment and can be used to find alignments in a document, and to query a particular alignment's properties and to analyze alignment geometry. This object is not an Element, but the underlying Element can be obtained from this object if needed.</p>
+    <p>The new class:</p>
+    <ul>
+        <li>Autodesk.Revit.DB.Infrastructure.AlignmentStationLabel</li>
+    </ul>
+    <p>represents an alignment station label annotation and can be used to find such labels in a document as well as to create and modify such labels. This object is not an Element, but the underlying Element (which is a SpotDimension instance) can be obtained from this object if needed.</p>
+    <p>The new classes:</p>
+    <ul>
+        <li>Autodesk.Revit.DB.Infrastructure.AlignmentStationLabelOptions</li>
+        <li>Autodesk.Revit.DB.Infrastructure.AlignmentStationLabelSetOptions</li>
+    </ul>
+    <p>provide options for creating a single alignment label or for creating a set of alignment labels.</p>
+    <p>
+        <br />
+    </p>
+    <h2>DirectShape API Additions</h2>
+    <h3>Reference Curves, Planes, and Points</h3>
+    <p>The new methods:</p>
+    <ul>
+        <li>DirectShape.AddReferenceCurve()</li>
+        <li>DirectShape.AddReferencePlane()</li>
+        <li>DirectShape.AddReferencePoint()</li>
+        <li>DirectShapeType.AddReferenceCurve()</li>
+        <li>DirectShapeType.AddReferencePlane()</li>
+        <li>DirectShapeType.AddReferencePoint()</li>
+    </ul>
+    <p>enable the creation of reference curves, planes and points inside DirectShape elements.   Explicit bounds can be provided for direct shape reference curves and planes.  Revit tools that can use named references within families will also be able to select the references inside the DirectShape elements.</p>
+    <p>The overloads for these methods include an optional DirectShapeReferenceOptions input.  Use:</p>
+    <ul>
+        <li>DirectShapeReferenceOptions.Name</li>
+    </ul>
+    <p>to set the assigned name for the reference.  If the name is specified, it is visible when picking the reference's geometry. Otherwise, the default DirectShape element name is displayed.</p>
+    <p>The new validator:</p>
+    <ul>
+        <li>DirectShapeReferenceOptions.IsValidReferenceName()</li>
+    </ul>
+    <p>validates the name assigned to DirectShapeReferenceOptions.Name.</p>
+    <p>The new validators:</p>
+    <ul>
+        <li>DirectShape.IsValidReferenceCurve()</li>
+        <li>DirectShape.IsValidReferencePlaneBoundingBoxUV()</li>
+        <li>DirectShapeType.IsValidReferenceCurve()</li>
+        <li>DirectShapeType.IsValidReferencePlaneBoundingBoxUV()</li>
+    </ul>
+    <p>validates the inputs needed for specifying a plane or curve explicit reference in the DirectShape.</p>
+    <h3>External Geometry</h3>
+    <p>The new class:</p>
+    <ul>
+        <li>ExternalGeometryId</li>
+    </ul>
+    <p>represents an identifier for geometry from external sources. </p>
+    <p>The new members:</p>
+    <ul>
+        <li>ExternalGeometryId.IsValidExternalGeometryId()</li>
+        <li>ExternalGeometryId.Id</li>
+    </ul>
+    <p>provide validation of an identifier and a means to access the identifier as a String.</p>
+    <p>The new class:</p>
+    <ul>
+        <li>ExternallyTaggedGeometryObject</li>
+    </ul>
+    <p>serves as a base class for externally tagged geometry. </p>
+    <p>The new members:</p>
+    <ul>
+        <li>ExternallyTaggedGeometryObject.ExternalId</li>
+    </ul>
+    <p>provides the ExternalGeometryId associated with the geometry.</p>
+    <p>The new class:</p>
+    <ul>
+        <li>ExternallyTaggedNonBRep</li>
+    </ul>
+    <p>represents non-BRep geometry with an external identifier. </p>
+    <p>The new class:</p>
+    <ul>
+        <li>ExternallyTaggedBRep</li>
+    </ul>
+    <p>represents BRep (Solid) geometry with external identifiers for the BRep itself and any subset of Faces or Edges.</p>
+    <p>The new class:</p>
+    <ul>
+        <li>BRepBuilderPersistentIds</li>
+    </ul>
+    <p>Provides a mechanism to associate external identifiers with geometry created by a BRepBuilder.</p>
+    <p>The new members:</p>
+    <ul>
+        <li>BRepBuilderPersistentIds.AddSubTag()</li>
+        <li>BRepBuilderPersistentIds.IsValidExternalGeometryIdForNewCorrespondence()</li>
+        <li>BRepBuilderPersistentIds.IsValidBRepBuilderGeometryIdForNewCorrespondence()</li>
+        <li>BRepBuilderPersistentIds.IsAssociatedBRepBuilderValid()</li>
+        <li>BRepBuilderPersistentIds.IsBRepBuilderGeometryIdFaceOrEdge()</li>
+    </ul>
+    <p>provide an ability to associate “tags” with Faces and Edges created by BRepBuilder.</p>
+    <p>A new member:</p>
+    <ul>
+        <li>BRepBuilder.GetResult()</li>
+    </ul>
+    <p>accepting a BRepBuilderPersistentIds has been added which returns an ExternallyTaggedBRep.</p>
+    <p>The new class:</p>
+    <ul>
+        <li>ExternallyTaggedGeometryValidation</li>
+    </ul>
+    <p>provides validators</p>
+    <ul>
+        <li>ExternallyTaggedGeometryValidation.IsValidGeometry</li>
+        <li>ExternallyTaggedGeometryValidation.IsNonSolid</li>
+        <li>ExternallyTaggedGeometryValidation.IsSolid</li>
+    </ul>
+    <p>to help determine validity of a GeometryObject for use with the new externally tagged geometry.</p>
+    <p>The new members:</p>
+    <ul>
+        <li>DirectShape.AddExternallyTaggedGeometry()</li>
+        <li>DirectShape.GetExternallyTaggedGeometry()</li>
+        <li>DirectShape.HasExternallyTaggedGeometry()</li>
+        <li>DirectShape.UpdateExternallyTaggedGeometry()</li>
+        <li>DirectShape.RemoveExternallyTaggedGeometry()</li>
+        <li>DirectShape.ResetExternallyTaggedGeometry()</li>
+        <li>DirectShapeType.AddExternallyTaggedGeometry()</li>
+        <li>DirectShapeType.GetExternallyTaggedGeometry()</li>
+        <li>DirectShapeType.HasExternallyTaggedGeometry()</li>
+        <li>DirectShapeType.UpdateExternallyTaggedGeometry()</li>
+        <li>DirectShapeType.RemoveExternallyTaggedGeometry()</li>
+        <li>DirectShapeType.ResetExternallyTaggedGeometry()</li>
+    </ul>
+    <p>provide a means to add, remove, update, or retrieve an ExternallyTaggedGeometryObject to/from a DirectShape or DirectShapeType.</p>
+    <h3>Custom Family names</h3>
+    <p>The new member:</p>
+    <ul>
+        <li>DirectShapeType.SetFamilyName()</li>
+    </ul>
+    <p>provides the ability to set a custom Family name for a DirectShapeType.</p>
+    <p>The new validator:</p>
+    <ul>
+        <li>DirectShapeType.CanChangeFamilyName()</li>
+    </ul>
+    <p>provides the ability to check if a DirectShapeType supports a custom Family name.  Certain categories do not support custom Family names.</p>
+    <p>
+        <br />
+    </p>
+    <h2>Document &amp; Worksharing API additions</h2>
+    <h3>Cloud Model API additions</h3>
+    <p>Four new methods allow access to identifying forge IDs for Cloud Models:</p>
+    <ul>
+        <li>Document.GetHubId(): ForgeDM hub id where the model locates. </li>
+        <li>Document.GetProjectId(): ForgeDM project id where the model locates. </li>
+        <li>Document.GetCloudFolderId(bool forceRefresh): ForgeDM folder id where the model locates.  </li>
+        <li>Document.GetCloudModelUrn(): A ForgeDM Urn identifying the model. </li>
+    </ul>
+    <p>These methods all return strings, which will be empty for a document which is not a cloud model. </p>
+    <h3>OpenOptions API</h3>
+    <p>The new property:</p>
+    <ul>
+        <li>OpenOptions.IgnoreExtensibleStorageSchemaConflict</li>
+    </ul>
+    <p>allows your application to ignore a schema conflict error on open. The default is false. Setting this to true will ignore the exception of schema conflict while opening the model. Data in the existing schema with the conflicting ID will be erased from the model.</p>
+    <p>
+        <br />
+    </p>
+    <h2>View API additions</h2>
+    <h3>Label for views on sheets (Viewport)</h3>
+    <p>The new property:</p>
+    <ul>
+        <li>Viewport.LabelOffset</li>
+    </ul>
+    <p>controls the two-dimensional label offset from left bottom corner of the viewport (as established with Rotation set to None) to the left end of the viewport label line. </p>
+    <p>The new property:</p>
+    <ul>
+        <li>Viewport.LabelLineLength</li>
+    </ul>
+    <p>controls the length of the viewport label line in sheet space.</p>
+    <h3>Callout view</h3>
+    <p>The new method:</p>
+    <ul>
+        <li>View.GetCalloutParentId()</li>
+    </ul>
+    <p>returns the ID of a view which this callout references, or InvalidElementId if there is not parent.</p>
+    <p>The new property:</p>
+    <ul>
+        <li>View.IsCallout</li>
+    </ul>
+    <p>identifies if the view is a callout view.</p>
+    <h3>Grids in 3D views</h3>
+    <p>Several new methods in View3D control grid visibility in 3D Views:</p>
+    <ul>
+        <li>View3D.GetLevelsThatShowGrids()</li>
+        <li>View3D.ShowGridsOnLevel(ElementId levelId)</li>
+        <li>View3D.HideGridsOnLevel(ElementId levelId)</li>
+        <li>View3D.ShowGridsOnLevels(ElementIdset levelIds)</li>
+    </ul>
+    <p>
+        <br />
+    </p>
+    <h2>Graphics API additions</h2>
+    <h3>Temporary in-canvas graphics</h3>
+    <p>The new class:</p>
+    <ul>
+        <li>TemporaryGraphicsManager</li>
+    </ul>
+    <p>allows the creation of temporary graphics in the canvas and can be used to create in-canvas controls. </p>
+    <p>It has the following members:</p>
+    <ul>
+        <li>
+            <span style="color: rgb(36,41,46);">TemporaryGraphicsManager.GetTemporaryGraphicsManager() </span>
+        </li>
+        <li>
+            <span style="color: rgb(36,41,46);">
+                TemporaryGraphicsManager.AddControl() <br />
+            </span>
+        </li>
+        <li>
+            <span style="color: rgb(36,41,46);">TemporaryGraphicsManager.UpdateControl()</span>
+        </li>
+        <li>
+            <span>TemporaryGraphicsManager.RemoveControl()</span>
+        </li>
+        <li>
+            <span style="color: rgb(36,41,46);">TemporaryGraphicsManager.SetVisibility()</span>
+        </li>
+        <li>
+            <span style="color: rgb(36,41,46);">TemporaryGraphicsManager.GetAll()</span>
+        </li>
+        <li>
+            <span style="color: rgb(36,41,46);">TemporaryGraphicsManager.Clear</span>()<span style="color: rgb(36,41,46);">
+                <br />
+            </span>
+        </li>
+    </ul>
+    <p>The new class:</p>
+    <ul>
+        <li>
+            <span style="color: rgb(36,41,46);">InCanvasControlData</span>
+        </li>
+    </ul>
+    <p>
+        <span style="color: rgb(36,41,46);">stores a reference to the image used in the temporary graphics. It has the following properties:</span>
+    </p>
+    <ul>
+        <li>
+            <span style="color: rgb(36,41,46);">InCanvasControlData.ImagePath</span>
+        </li>
+        <li>
+            <span style="color: rgb(36,41,46);"> <span>InCanvasControlData.Position</span> </span>
+        </li>
+    </ul>
+    <p>
+        <br />
+    </p>
+    <h2>Label API additions</h2>
+    <p>The new methods:</p>
+    <ul>
+        <li>Level.GetNearestLevelId(Document document, double elevation)</li>
+        <li>Level.GetNearestLevelId(Document document, double elevation, out double offset)</li>
+    </ul>
+    <p>return the id of the Level which is closest to the specified elevation. The level can be at, above or below the target elevation. If there is more than one Level at the same distance from the elevation, the Level with the lowest id will be returned. </p>
+    <p>
+        <br />
+    </p>
+    <h2>Parameter API additions</h2>
+    <p>The new class:</p>
+    <ul>
+        <li>Autodesk.Revit.DB.MultipleValuesIndicationSettings</li>
+    </ul>
+    <p>allows access to the custom value for used in instances of the Properties Palette, Tags and Schedules when multiple elements are referenced and the value of the parameter is different.</p>
+    <p>The new members:</p>
+    <ul>
+        <li>MultipleValuesIndicationSettings.GetMultipleValuesIndicationSettings()</li>
+        <li>MultipleValuesIndicationSettings.Custom</li>
+        <li>MultipleValuesIndicationSettings.CustomValue</li>
+        <li>MultipleValuesIndicationSettings.Value</li>
+    </ul>
+    <p>provide access to the settings in the document, the option for the custom value, and read-only access to the value that will be used (either the custom value or the default).</p>
+    <p>
+        <br />
+    </p>
+    <h2>Dimension API additions</h2>
+    <h3>Dimension layout</h3>
+    <p>Several new properties allow access to positioning for various parts of a dimension:</p>
+    <ul>
+        <li>Dimension.TextPosition</li>
+        <li>Dimension.LeaderEndPosition</li>
+        <li>Dimension.HasLeader</li>
+        <li>SpotDimension.LeaderElbowPosition</li>
+        <li>SpotDimension.LeaderHasElbow</li>
+    </ul>
+    <h3>DimensionType prefix/suffix</h3>
+    <p>The new properties:</p>
+    <ul>
+        <li>DimensionType.Prefix</li>
+        <li>DimensionType.Suffix</li>
+    </ul>
+    <p>allow access to the corresponding values in the dimension type.</p>
+    <p>
+        <br />
+    </p>
+    <h2>Category API additions</h2>
+    <h3>Built in Categories</h3>
+    <p>The new methods:</p>
+    <ul>
+        <li>Category.GetBuiltInCategoryTypeId(BuiltInCategory)</li>
+        <li>Category.GetBuiltInCategory(ForgeTypeId)</li>
+        <li>Category.IsBuiltInCategory(ForgeTypeId)</li>
+    </ul>
+    <p>allow access to BuiltInCategories. </p>
+    <p>
+        <br />
+    </p>
+    <h2>Shared Coordinates API additions</h2>
+    <h3>Reset Shared Coordinates</h3>
+    <p class="p1">The new method:</p>
+    <ul>
+        <li class="p1">Document.ResetSharedCoordinates()</li>
+    </ul>
+    <p class="p1">resets the shared coordinates for the host model. It provides the same functionality as the UI Command "Reset Shared Coordinates". </p>
+    <p>After resetting coordinates, the following changes will take place:</p>
+    <ol>
+        <li>GIS coordinate system will be erased</li>
+        <li>Shared coordinates relationships with other linked models will be eliminated.</li>
+        <li>The Survey Point will be moved back to the startup location, where it coincides with the Internal Origin.</li>
+        <li>The angle between Project North and True North will be reset to 0.</li>
+    </ol>
+    <p>Note: There will be no changes to linked models.</p>
+    <h3>Clipped state of BasePoint</h3>
+    <p>The new property: </p>
+    <ul>
+        <li>bool BasePoint.Clipped</li>
+    </ul>
+    <p>will get or set the clipped state of the survey point BasePoint based on the active ProjectLocation of its Document. For the project base point, the get method will always return false, and the set method will throw an exception. </p>
+    <p>
+        <br />
+    </p>
+    <h2>Revision API additions</h2>
+    <p>
+        <strong>Revision sequences and API additions</strong>
+    </p>
+    <p>The new class:</p>
+    <ul>
+        <li>Autodesk.Revit.DB.RevisionNumberingSequence</li>
+    </ul>
+    <p>defines the sequences by which numbers are assigned to Revisions. Revision numbering is either numeric or alphanumeric. Revision numbering is assigned to Revisions to control the numbering scheme of that Revision. Alphanumeric from the API corresponds to the UI concept of "Custom".</p>
+    <p>The new members:</p>
+    <ul>
+        <li>RevisionNumberingSequence.CreateNumericSequence()</li>
+        <li>RevisionNumberingSequence.CreateAlphanumericSequence()</li>
+        <li>RevisionNumberingSequence.GetSequenceName()</li>
+        <li>RevisionNumberingSequence.SetSequenceName()</li>
+        <li>RevisionNumberingSequence.GetNumericRevisionSettings()</li>
+        <li>RevisionNumberingSequence.SetNumericRevisionSettings()</li>
+        <li>RevisionNumberingSequence.GetAlphanumericRevisionSettings()</li>
+        <li>RevisionNumberingSequence.SetAlphanumericRevisionSettings()</li>
+        <li>RevisionNumberingSequence.GetAllRevisionNumberingSequences()</li>
+        <li>RevisionNumberingSequence.HasValidRevisionSettingsForNumberType()</li>
+        <li>RevisionNumberingSequence.HasValidNumericRevisionSettings()</li>
+        <li>RevisionNumberingSequence.HasValidAlphanumericRevisionSettings()</li>
+        <li>RevisionNumberingSequence.NumberType</li>
+    </ul>
+    <p>provide the ability to create, read and modify the settings related to Revision numbering sequences.</p>
+    <p>The new methods:</p>
+    <ul>
+        <li>Revision.GetRevisionNumberingSequenceId()</li>
+        <li>Revision.SetRevisionNumberingSequenceId()</li>
+    </ul>
+    <p>provide access to the id of the revision numbering sequence which controls this revision's numbering:<br /> </p>
+    <p>The new methods:</p>
+    <ul>
+        <li>NumericRevisionSettings.GetMinimumDigits() - get the minimum number of digits for a revision number.</li>
+        <li>NumericRevisionSettings.SetMinimumDigits() - set the minimum number of digits for a revision number.</li>
+    </ul>
+    <p>provide access to the setting controlling the minimum number of digits for a revision number.</p>
+    <p>
+        <br />
+    </p>
+    <h2>Phasing API additions</h2>
+    <p>The new methods:</p>
+    <ul>
+        <li>Element.IsDemolishedPhaseOrderValid()</li>
+        <li>Element.IsCreatedPhaseOrderValid()</li>
+    </ul>
+    <p>validate the order of phases on a given element with respect to the input phase id, ensuring that an object is not assigned a phase where it is demolished before it was created. </p>
+    <p>
+        <br />
+    </p>
+    <h2>Geometry API additions</h2>
+    <p>The new property:</p>
+    <ul>
+        <li>Mesh.IsClosed </li>
+    </ul>
+    <p>checks if each edge in the mesh belongs to at least two faces.  </p>
+    <p>
+        <br />
+    </p>
+    <h2>Point Cloud API additions</h2>
+    <p>The new method:</p>
+    <ul>
+        <li>PointCloudType.GetReCapProject()</li>
+    </ul>
+    <p>provides a direct entry point to get access to an object from the ReCap SDK (ReCapWrapper.RCProject) from Revit. This object represents the point cloud from the RC file path stored in PointCloudType. The ReCap assembly ReCapWrapper.dll will need to be included into code using this method.  </p>
+    <p>The coordinate system in RCProject is defined by the Point Cloud. Please refer to ReCap SDK documentation for RCProject.getCoordinateSystem(). If you need points converted to the modeling coordinate system in Revit, you can obtain the transformation matrix from PointCloudInstance.GetTransform().</p>
+    <p>
+        <br />
+    </p>
+    <h2>Schedule API additions</h2>
+    <h3>Multiple Value Indication - schedule customization</h3>
+    <p>The existing class:</p>
+    <ul>
+        <li>ScheduleField</li>
+    </ul>
+    <p>has several new properties which allow customization of the multiple value indication per field:</p>
+    <ul>
+        <li>ScheduleField.MultipleValuesDisplayType</li>
+        <li>ScheduleField.MultipleValuesText - The text to be used when a field has multiple values</li>
+        <li>ScheduleField.MultipleValuesCustomText - The text to be used when a field has multiple values and the display type is set to <span style="color: rgb(36,41,46);">ScheduleFieldMultipleValuesDisplayType</span>.Custom</li>
+    </ul>
+    <p>The new Enum:</p>
+    <ul>
+        <li>ScheduleFieldMultipleValuesDisplayType</li>
+    </ul>
+    <p>defines how the schedule field's multiple value indication is displayed (using the project setting, a custom text or a predefined text "&lt;varies&gt;").</p>
+    <p>
+        <br />
+    </p>
+    <h2>Import API additions</h2>
+    <h3>Import/Link Rhino</h3>
+    <p>The new methods:</p>
+    <ul>
+        <li>Document.Import(String, ImportOptions3DM, View)</li>
+        <li>Document.Link(String, ImportOptions3DM, View)</li>
+    </ul>
+    <p>import or link a 3DM file into the document.</p>
+    <p>
+        <br />
+    </p>
+    <h2>Structural API additions</h2>
+    <h3>Moving individual rebar in a Rebar Set</h3>
+    <p>
+        <span style="color: rgb(0,0,0);">The new methods:</span>
+    </p>
+    <ul>
+        <li>
+            <span style="color: rgb(0,0,0);">Rebar.MoveBarInSet()</span>
+        </li>
+        <li>
+            <span style="color: rgb(0,0,0);">Rebar.GetBarIndexFromReference()</span>
+        </li>
+        <li>
+            <span style="color: rgb(0,0,0);">Rebar.GetMovedBarTransform()</span>
+        </li>
+        <li>
+            <span style="color: rgb(0,0,0);"> <span style="color: rgb(36,41,46);">Rebar.ResetMovedBarTransform()</span> </span>
+        </li>
+    </ul>
+    <p>
+        <span style="color: rgb(36,41,46);">allow an application to move an individual bar, and to read and reset the transform of the individual bar in a Rebar Set.</span>
+    </p>
+    <h3>Removing individual bars from a Rebar Set</h3>
+    <p>
+        <span style="color: rgb(0,0,0);">The new function:</span>
+    </p>
+    <ul>
+        <li>
+            <span style="color: rgb(0,0,0);">
+                <span style="color: rgb(0,0,0);">Rebar.SetBarIncluded()</span> <br class="_mce_tagged_br" />
+            </span>
+        </li>
+    </ul>
+    <p>
+        <span style="color: rgb(0,0,0);"> <span style="color: rgb(0,0,0);">allows you to designate a particular bar at a given index to be included or not.</span> </span>
+    </p>
+    <p>
+        <span style="color: rgb(0,0,0);"> <span style="color: rgb(0,0,0);">The existing properties:</span> </span>
+    </p>
+    <ul>
+        <li>
+            <span style="color: rgb(0,0,0);">
+                <span style="color: rgb(0,0,0);">
+                    <span style="color: rgb(0,0,0);">Rebar.IncludeFirstBar</span> <br class="_mce_tagged_br" />
+                </span>
+            </span>
+        </li>
+        <li>
+            <span style="color: rgb(0,0,0);">
+                <span style="color: rgb(0,0,0);">
+                    <span style="color: rgb(0,0,0);">
+                        <span style="color: rgb(0,0,0);">Rebar.IncludeFirstBar</span> <br />
+                    </span>
+                </span>
+            </span>
+        </li>
+    </ul>
+    <p>
+        <span style="color: rgb(0,0,0);"> <span style="color: rgb(0,0,0);"> <span style="color: rgb(0,0,0);"> <span style="color: rgb(0,0,0);">continue to function as before, and setting these to true are equivalent to removing the bar at the first or last position index.</span> </span> </span> </span>
+    </p>
+    <p>
+        <span style="color: rgb(0,0,0);">The existing function:</span>
+    </p>
+    <ul>
+        <li>
+            <span style="color: rgb(0,0,0);">Rebar.DoesBarExistAtPosition()</span> <span style="color: rgb(0,0,0);">
+                <br />
+            </span>
+        </li>
+    </ul>
+    <p>
+        <span style="color: rgb(0,0,0);">now supports returning false for any bar position index and not just the first or last bar.</span>
+    </p>
+    <h3>Moving and Removing bars owned by PathReinforcement</h3>
+    <p>
+        <span style="color: rgb(0,0,0);">The new methods:</span>
+    </p>
+    <ul>
+        <li>
+            <span style="color: rgb(0,0,0);">
+                <span style="color: rgb(0,0,0);">RebarInSystem.SetBarIncluded()</span> <br class="_mce_tagged_br" />
+            </span>
+        </li>
+        <li>
+            <span style="color: rgb(0,0,0);"> <span style="color: rgb(0,0,0);">RebarInSystem.MoveBarInSet()</span> </span>
+        </li>
+        <li>
+            <span style="color: rgb(0,0,0);">
+                <span style="color: rgb(0,0,0);">
+                    <span style="color: rgb(0,0,0);">RebarInSystem.<span style="color: rgb(0,0,0);">GetMovedBarTransform()</span> </span> <br />
+                </span>
+            </span>
+        </li>
+        <li>
+            <span style="color: rgb(0,0,0);">
+                <span style="color: rgb(0,0,0);">
+                    <span style="color: rgb(0,0,0);">
+                        <span style="color: rgb(0,0,0);">
+                            <span style="color: rgb(0,0,0);">RebarInSystem.<span style="color: rgb(0,0,0);">ResetMovedBarTransform()</span> </span> <br />
+                        </span>
+                    </span>
+                </span>
+            </span>
+        </li>
+        <li>
+            <span style="color: rgb(0,0,0);">
+                <span style="color: rgb(0,0,0);">
+                    <span style="color: rgb(0,0,0);">
+                        <span style="color: rgb(0,0,0);">
+                            <span style="color: rgb(0,0,0);">
+                                <span style="color: rgb(0,0,0);">
+                                    <span style="color: rgb(0,0,0);">RebarInSystem.C<span style="color: rgb(0,0,0);">anEditIndividualBars()</span> </span> <br />
+                                </span>
+                            </span>
+                        </span>
+                    </span>
+                </span>
+            </span>
+        </li>
+    </ul>
+    <p>
+        <span style="color: rgb(0,0,0);"> <span style="color: rgb(0,0,0);"> <span style="color: rgb(0,0,0);"> <span style="color: rgb(0,0,0);"> <span style="color: rgb(0,0,0);"> <span style="color: rgb(0,0,0);"> <span style="color: rgb(0,0,0);"> <span style="color: rgb(0,0,0);">provide access to move, include or remove individual bars only for RebarInSystem elements that are owned by PathReinforcement.  (This is not supported for RebarInSystem owned by AreaReinforcement).</span> </span> </span> </span> </span> </span> </span> </span>
+    </p>
+    <h3>Area Reinforcement Layers</h3>
+    <p>
+        <span style="color: rgb(0,0,0);">The new methods:</span>
+    </p>
+    <ul>
+        <li>
+            <span style="color: rgb(0,0,0);">AreaReinforcement.GetNumberOfLines()</span>
+        </li>
+        <li>
+            <span style="color: rgb(0,0,0);">
+                <span>AreaReinforcement.</span>GetLineFromLayerAtIndex()<br />
+            </span>
+        </li>
+        <li>
+            <span style="color: rgb(0,0,0);">
+                <span>AreaReinforcement.</span>SetLineIncluded()<br />
+            </span>
+        </li>
+        <li>
+            <span style="color: rgb(0,0,0);">
+                <span>AreaReinforcement.</span>IsLineIncluded()<br />
+            </span>
+        </li>
+        <li>
+            <span style="color: rgb(0,0,0);">
+                <span>AreaReinforcement.</span>MoveLine()<br />
+            </span>
+        </li>
+        <li>
+            <span style="color: rgb(0,0,0);">
+                <span>AreaReinforcement.</span>GetMovedLineTransform()<br />
+            </span>
+        </li>
+        <li>
+            <span style="color: rgb(0,0,0);"> <span>AreaReinforcement.</span>ResetMovedLineTransform()</span>
+        </li>
+        <li>
+            <span style="color: rgb(0,0,0);">AreaReinforcement.SetLayerActive()</span>
+        </li>
+        <li>
+            <span style="color: rgb(0,0,0);">AreaReinforcement.IsLayerActive()</span>
+        </li>
+        <li>
+            <span style="color: rgb(0,0,0);">AreaReinforcement.GetLayerDirection()</span>
+        </li>
+    </ul>
+    <p>
+        <span style="color: rgb(0,0,0);">provide access to the layers of Area Reinforcement elements, and to manipulate (move and remove) the individual lines exposed through those layers.</span>
+    </p>
+    <h3>Rebar conversion</h3>
+    <p>The new methods:</p>
+    <ul>
+        <li>
+            AreaReinforcement.C<span style="color: rgb(0,0,0);">onvertRebarInSystemToRebars()</span>
+        </li>
+        <li>
+            PathReinforcement.C<span style="color: rgb(0,0,0);">onvertRebarInSystemToRebars()</span> <span style="color: rgb(0,0,0);">
+                <br />
+            </span>
+        </li>
+    </ul>
+    <p>convert all of the RebarInSystem elements owned by the input element into equivalent Rebar elements.</p>
+    <h3>Rebar geometry</h3>
+    <p>The new methods:</p>
+    <ul>
+        <li>
+            Rebar.G<span style="color: rgb(36,41,46);">etTransformedCenterlineCurves()</span>
+        </li>
+        <li>
+            <span style="color: rgb(36,41,46);">
+                <span>RebarInSystem.G<span>etTransformedCenterlineCurves()</span> </span> <br />
+            </span>
+        </li>
+    </ul>
+    <p>
+        <span style="color: rgb(36,41,46);">return the centerline curves for a given bar, where the geometry of the curves</span> are in the actual transformed position. The BarPositionTransform (representing the relative position of any individual bar in the set - a translation along the distribution path) and MovedBarTransform (representing the movement of the bar relative to its default position along the distribution path) will be applied to the returned curves.
+    </p>
+    <h3>Freeform Rebar </h3>
+    <p>The new properties:</p>
+    <ul>
+        <li>RebarFreeFormAccessor.RebarStyle</li>
+        <li>RebarFreeFormAccessor.StirrupTieAttachmentType</li>
+    </ul>
+    <p>provides read and write access to the corresponding properties of freeform rebar elements.</p>
+    <p>The new method:</p>
+    <ul>
+        <li>RebarFreeFormAccessor.SetReportedShape()</li>
+    </ul>
+    <p>changes the rebar shape of a freeform rebar that is currently using the RebarWorkInstructions.Straight option to the provided rebar shape.</p>
+    <p>
+        <br />
+    </p>
+    <h2>MEP API additions</h2>
+    <h3>Building and Space Type additions</h3>
+    <p>Several new properties have been added for Building and Space Types:</p>
+    <ul>
+        <li>HVACLoadType.HeatingSetPoint - The heating temperature set point in unit Kelvin (K).</li>
+        <li>HVACLoadType.CoolingSetPoint - The cooling temperature set point in unit Kelvin (K).</li>
+        <li>HVACLoadType.HumidificationSetPoint - The humidification set point as a number between 0 and 1.</li>
+        <li>HVACLoadType.DehumidificationSetPoint - The dehumidification set point as a number between 0 and 1.</li>
+    </ul>
+    <h3>Zone additions</h3>
+    <p>The new property:</p>
+    <ul>
+        <li>GenericZone.LevelOffset</li>
+    </ul>
+    <p>gets or sets the offset distance from this zone to the associated level.</p>
+    <h3>Mechanical Systems Analysis Set Points</h3>
+    <p>
+        <span style="color: rgb(0,0,0);">The new properties:</span>
+    </p>
+    <ul>
+        <li>
+            <span style="color: rgb(0,0,0);">
+                HVACLoadType.HeatingSetPoint<br class="_mce_tagged_br" />
+            </span>
+        </li>
+        <li>
+            <span style="color: rgb(0,0,0);">HVACLoadType.CoolingSetPoint</span>
+        </li>
+        <li>
+            <span style="color: rgb(0,0,0);">HVACLoadType.HumidificationSetPoint</span>
+        </li>
+        <li>
+            <span style="color: rgb(0,0,0);">HVACLoadType.DehumidificationSetPoint</span>
+        </li>
+    </ul>
+    <p>
+        <span style="color: rgb(0,0,0);">provide access to the heating temperature, cooling temperature, humidification and dehumidifcation set point values.  Temperature set points are in Kelvin, while humidity set points are percentages ranging from 0 to 1.</span>
+    </p>
+    <h3>Analysis Report Style</h3>
+    <p>
+        <span style="color: rgb(0,0,0);">The new property:</span>
+    </p>
+    <ul>
+        <li>
+            <span style="color: rgb(0,0,0);">ViewSystemsAnalysisReport.ReportStyle</span>
+        </li>
+    </ul>
+    <p>
+        <span style="color: rgb(0,0,0);">
+            <span style="color: rgb(36,41,46);">accesses the report style used in a particular analysis report view. </span> <br class="_mce_tagged_br" />
+        </span>
+    </p>
+    <h3>MEP Hidden Line Settings</h3>
+    <p>The new class:</p>
+    <ul>
+        <li>Autodesk.Revit.DB.Mechanical.MEPHiddenLineSettings</li>
+    </ul>
+    <p>represents the settings of the mechanical hidden line display (e.g. ducts and pipes). It can be obtained from the static method:</p>
+    <ul>
+        <li>MEPHiddenLineSettings.GetMEPHiddenLineSettings(Document)</li>
+    </ul>
+    <p>It offers the following properties:</p>
+    <ul>
+        <li>MEPHiddenLineSettings.DrawHiddenLine</li>
+        <li>MEPHiddenLineSettings.LineStyle </li>
+        <li>MEPHiddenLineSettings.InsideGap</li>
+        <li>MEPHiddenLineSettings.OutsideGap</li>
+        <li>MEPHiddenLineSettings.SingleLineGap</li>
+    </ul>
+    <h3>Electrical Panel Schedule</h3>
+    <p>The new property:</p>
+    <ul>
+        <li>PanelScheduleData.IsAutoShadingForLoadDisplay</li>
+    </ul>
+    <p>indicates if a panel schedule will display shading for Load cells automatically.</p>
+    <h3>Conversion to Fabrication</h3>
+    <p>The new method to the DesignToFabricationConverter class:</p>
+    <ul>
+        <li>DesignToFabricationConverter.SetMapForFamilySymbolToFabricationPartType()</li>
+    </ul>
+    <p>The method will set a map used when the design to fabrication tool is running.  The map relationships will be used to replace any family instance that is based upon the family symbols found in the map with the corresponding fabrication part for the fabrication part type set in the mapping. </p>
+    <p>
+        <br />
+    </p>
+    <h2>Energy Analysis API additions</h2>
+    <p>
+        <span style="color: rgb(36,41,46);">The options used to produce an energy model or export to gbXML have been unified.</span>
+    </p>
+    <p>
+        <span style="color: rgb(36,41,46);">The new enumeration value:</span>
+    </p>
+    <ul>
+        <li>
+            <span style="color: rgb(36,41,46);">AnalysisMode.RoomsOrSpaces</span>
+        </li>
+    </ul>
+    <p>
+        <span style="color: rgb(36,41,46);">indicates that the energy analysis model should be based on volumes from rooms or spaces defined in the building model.</span>
+    </p>
+    <p>
+        <span style="color: rgb(36,41,46);">The new enumeration values:</span>
+    </p>
+    <ul>
+        <li>
+            <span style="color: rgb(36,41,46);">EnergyModelType.AnalysisMode</span>
+        </li>
+        <li>ExportEnergyModelType.AnalysisMode</li>
+    </ul>
+    <p>allow specification of the energy model production based on the given analysis type.</p>
+</body>
+
+</html>
