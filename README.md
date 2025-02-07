@@ -18,6 +18,8 @@ the [RevitSdkSamples repository](https://github.com/jeremytammik/RevitSdkSamples
 
 ### Processing the `CHM` Source `html` Snippets
 
+I extracted the source source `html` snippets from the CHM using [kchmviewer](https://sourceforge.net/projects/kchmviewer/).
+
 The CHM source source `html` snippets cannot be processed directly with command line tools such as `grep` due to their sheer number:
 
 ```
